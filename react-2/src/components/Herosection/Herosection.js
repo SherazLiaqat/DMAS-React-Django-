@@ -24,7 +24,7 @@ function Herosection() {
             buttonSize='btn--large'
             onClick={console.log('hey')}
           >
-            ESTIMATION <i class="fas fa-clock"/>
+            ESTIMATION <i class="fas fa-lightbulb"/>
           </Button>
         </div>
       </div>

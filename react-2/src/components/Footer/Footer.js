@@ -46,8 +46,8 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>News</h2>
-            <Link to='/'>Earthquake</Link>
-            <Link to='/'>Flood</Link>
+            <Link to='/Eartquakeinfo'>Earthquake</Link>
+            <Link to='/Floodinfo'>Flood</Link>
             <Link to='/'>Heavy Rain</Link>
             <Link to='/'>Fire</Link>
           </div>

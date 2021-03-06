@@ -13,22 +13,23 @@ function Cards() {
               src='images/img-5.jpg'
               text='Explore the Earthquake Information...'
               label='Eartquake'
-              path='components\Pages\Infopages\Earthquakeinfo.js'
+              
+              path='/Eartquakeinfo'
             />
             <CardItem
               src='images/img-2.jpg'
               text='Explore the Flood Information...'
               
               label='Flood'
-              path='/Blog'
+              path='/Floodinfo'
             />
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='images/img-3.jpg'
+              src='images\img-1.jpg'
               text='Explore the Tsaunami Information...'
               label='Tsaunami'
-              path='/services'
+              path='/'
             />
             <CardItem
               src='images/img-4.jpg'
