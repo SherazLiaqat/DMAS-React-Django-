@@ -54,7 +54,7 @@ function Footer() {
           <div className='footer-link-items'>
             <h2>Social Media</h2>
             <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
+            <Link  to={{pathname: '/Blog'}}>NavigateNow</Link>
             <Link to='/'>Youtube</Link>
             <Link to='/'>Twitter</Link>
           </div>

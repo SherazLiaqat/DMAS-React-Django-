@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer/Footer';
-import Signup from './components/Pages/Authenticationpages/Loginpages/Signup';
+import Signup from './components/Pages/Authenticationpages/Signuppages/Signup';
 import Awareness from './components/Pages/Awareness';
 import Home from './components/Pages/Home';
 import Product from './components/Pages/Product';
@@ -33,7 +33,7 @@ function App(){
      
       </Switch>
      
-    
+      
     <Switch>
     <Route path='/Earthquakeinfo'  component={Earthquakeinfo}exact />
     <Route path='/Floodinfo'  component={Floodinfo}exact />

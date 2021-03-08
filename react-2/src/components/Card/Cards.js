@@ -22,7 +22,11 @@ function Cards() {
               text='Explore the Flood Information...'
               
               label='Flood'
+<<<<<<< HEAD
               path='/Blog'
+=======
+              path='/ Blog'
+>>>>>>> fa136498d8c173d6cdc9ffb4a110a4e4bb6de1db
             />
           </ul>
           <ul className='cards__items'>
