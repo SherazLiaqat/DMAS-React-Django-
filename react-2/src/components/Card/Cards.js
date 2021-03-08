@@ -14,14 +14,14 @@ function Cards() {
               text='Explore the Earthquake Information...'
               label='Eartquake'
               
-              path='/Eartquakeinfo'
+              path='/Earthquakeinfo'
             />
             <CardItem
               src='images/img-2.jpg'
               text='Explore the Flood Information...'
               
               label='Flood'
-              path='/Floodinfo'
+              path='/ Blog'
             />
           </ul>
           <ul className='cards__items'>
@@ -41,7 +41,7 @@ function Cards() {
               src='images/img-8.jpg'
               text='Explore the Sand-Storm Information...'
               label='Sand-Storm'
-              path='/sign-up'
+              path='/Blog'
             />
           </ul>
         </div>
