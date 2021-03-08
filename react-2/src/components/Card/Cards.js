@@ -1,7 +1,8 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from '../../components/Card/CardItems';
-import Earthquakeinfo from '../Pages/Infopages/Earthquakeinfo'
+import Earthquakeinfo from '../Pages/Infopages/Earthquakeinfo';
+import Awareness from '../../components/Pages/Awareness';
 function Cards() {
   return (
     <div className='cards'>
@@ -14,14 +15,14 @@ function Cards() {
               text='Explore the Earthquake Information...'
               label='Earthquake'
               
-              path='/Earthquakeinfo'
+              path='/'
             />
             <CardItem
               src='images/img-2.jpg'
               text='Explore the Flood Information...'
               
               label='Flood'
-              path='/Floodinfo'
+              path='/Blog'
             />
           </ul>
           <ul className='cards__items'>

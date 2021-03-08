@@ -3,7 +3,7 @@ import React from 'react';
 import Card from '../Card/Cards';
 import Footer from '../Footer/Footer'
 import Earthquakeinfo from './Infopages/Earthquakeinfo'
-import Flood from '../Pages/Infopages/Floodinfo';
+import Floodinfo from '../Pages/Infopages/Floodinfo';
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 
 function Awareness() {
@@ -13,7 +13,14 @@ function Awareness() {
         
         
        
-        <Card/>
+        <Card>
+        
+    
+    
+    
+    
+
+        </Card>
      
         </Router>
      

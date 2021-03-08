@@ -1,9 +1,11 @@
 import React from 'react'
+import './Earthquakeinfo.css';
 import Footer from '../../../components/Footer/Footer';
+
 export const Earthquakeinfo = () => {
     return (
         <>
-       < div className="container py-3">
+       < div className="container">
 
         <div  className="column right-side">
             <h1 className="title is-3">Earthquake Awareness / Preparedness</h1>
