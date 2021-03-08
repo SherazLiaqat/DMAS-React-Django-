@@ -1,0 +1,29 @@
+.form-content-right {
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    background: linear-gradient(90deg, rgb(61, 86, 109) 0%, rgb(195, 218, 240) 100%);
+    
+  }
+  .hello{
+    margin-left: 20%;
+  }
+  .form-inputs {
+    margin-bottom: 0.5rem;
+    width: 50%;
+  }
+  .form-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+    color:black;
+  }
+  .span-login{
+      margin-bottom: 10px;
+      margin-left: 20%;
+      
+  }
+  .span-login a {
+    text-decoration: none;
+    color:red;
+    font-weight: 600;
+  }

@@ -21,7 +21,7 @@
   }
   
   .footer-subscription > p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    font-family:  'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
   }
   
@@ -141,7 +141,8 @@
     color: #fff;
     margin-bottom: 16px;
     text-align: center;
-    
+     font-family:  'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif,Impact
   }
   
   @media screen and (max-width: 820px) {

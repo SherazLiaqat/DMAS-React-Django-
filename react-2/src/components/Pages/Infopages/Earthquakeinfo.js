@@ -8,19 +8,18 @@ export const Earthquakeinfo = () => {
        < div className="container">
 
         <div  className="column right-side">
-            <h1 className="title is-3">Earthquake Awareness / Preparedness</h1>
-            <h4 className="title is-4">“Drop, Cover, Hold”</h4></div>
+            <h1 className="title-3">Earthquake Awareness / Preparedness</h1>
+            <h4 className="title-4">“Drop, Cover, Hold”</h4></div>
     
             <div className="content">
-                <div classNamename="rich-text">
-                    <p></p><img alt="sm_dropcoverholdon.jpg" class="richtext-image right is-pulled-right" height="49" 
-                        src="/media/images/sm_dropcoverholdon_IhHOmYU.width-500.jpg" width="100" />
-                    <p></p>
+                <div classNamename="text">
+                   
     
                 
     
                    
-                    <p><b>The Recommended Earthquake Protection Method</b></p>
+                    <h3 className='title-3'> The Recommended Earthquake Protection Method</h3>
+                    <div className='paragraph'>
                     <p>In recent years, an E-mail has been circulating that describes the “<b>triangle of life</b>,” an
                         alternative to the long-established “<b>Drop, Cover, and Hold</b>” advise. “Drop, Cover, Hold” is
                         still the official recommendation in the United States by many experts including State Emergency
@@ -33,11 +32,12 @@ export const Earthquakeinfo = () => {
                             href="http://www.earthquakecountry.info/dropcoverholdon/">www.earthquakecountry.info/dropcoverholdon/</a>.
                         Send this information to your loved-ones and anyone that sends you the “triangle of life” E-mail.
                     </p>
+                    </div>
     
     
     
                     
-                    <p><b>Why Is “Drop, Cover and Hold” Recommended?</b></p>
+                    <p className='title-3'><b>Why Is “Drop, Cover and Hold” Recommended?</b></p>
                     <ul>
                         <li>The “duck and cover” protection approach was developed to protect occupants from falling
                             hazards, the greatest danger to the U.S. population during an earthquake. Earthquake events
@@ -68,12 +68,12 @@ export const Earthquakeinfo = () => {
     
     
             
-            <h4 className="title is-4">Indoors</h4>
+            <h4 className="title-4">Indoors</h4>
     
             <div className="content">
                 <div className="rich-text">
                     <ul>
-                        <li>“<b>Drop, Cover, Hold</b>” under a sturdy table.</li>
+                        <ul>Drop, Cover, Hold” under a sturdy table.</ul>
                         <li>Stay away from windows, objects that could fall.</li>
                         <li><b>Kitchen:</b> Move away from refrigerator, stove, and overhead cabinets.</li>
                     </ul>
@@ -97,7 +97,7 @@ export const Earthquakeinfo = () => {
     
     
            
-            <h4 className="title is-4">Downtown:</h4>
+            <h4 className="title-4">Downtown:</h4>
             <div className="content">
                 <div className="rich-text">
                     <ul>
@@ -111,7 +111,7 @@ export const Earthquakeinfo = () => {
     
     
             
-            <h4 className="title is-4">Crowded Store</h4>
+            <h4 className="title-4">Crowded Store</h4>
             <div className="content">
                 <div className="rich-text">
                     <ul>
@@ -126,7 +126,7 @@ export const Earthquakeinfo = () => {
     
     
             
-            <h4 className="title is-4">Driving</h4>
+            <h4 className="title-4">Driving</h4>
             <div className="content">
                 <div className="rich-text">
                     <ul>
@@ -140,7 +140,7 @@ export const Earthquakeinfo = () => {
     
     
            
-            <h4 className="title is-4">Wheelchair</h4>
+            <h4 className="title-4">Wheelchair</h4>
             <div clasNAclassNames="content">
                 <div className="rich-text">
                     <ul>
@@ -156,7 +156,7 @@ export const Earthquakeinfo = () => {
     
             
             <div className="content">
-            <h4 className="title is-4">Theater or stadium:</h4>
+            <h4 className="title-4">Theater or stadium:</h4>
                 <div classNmae="rich-text">
                     <ul>
                         <li>If possible, get under the seat. If not, stay in your seat.</li>
@@ -189,7 +189,7 @@ export const Earthquakeinfo = () => {
     
     
                  
-            <h4 className="title is-4">What Rescuers and Experts “DO NOT” Recommend You Do During An Earthquake</h4>
+            <h4 className="title-4">What Rescuers and Experts “DO NOT” Recommend You Do During An Earthquake</h4>
             <div className="content">
                 <div className="rich-text">
                     <ul>

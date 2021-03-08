@@ -77,7 +77,7 @@ function Signup () {
             </div>
           <br/>
           <span className='form-input-login'>
-        Already have an account? Login < a href='/Blog'>here</a>
+        Already have an account? Login < a href='/Login'>here</a>
         
       </span>
 

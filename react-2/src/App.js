@@ -14,6 +14,7 @@ import Earthquakeinfo from './components/Pages/Infopages/Earthquakeinfo';
 //import Flood from './components/Pages/Infopages/Floodinfo';
 import Herosection from './components/Herosection/Herosection';
 import Floodinfo from './components/Pages/Infopages/Floodinfo';
+import Login from './components/Pages/Authenticationpages/Loginpages/Login';
 
 function App(){
   
@@ -37,6 +38,9 @@ function App(){
     <Switch>
     <Route path='/Earthquakeinfo'  component={Earthquakeinfo}exact />
     <Route path='/Floodinfo'  component={Floodinfo}exact />
+    <Route path='/Login'  component={Login}exact />
+    
+
     
     
     </Switch>

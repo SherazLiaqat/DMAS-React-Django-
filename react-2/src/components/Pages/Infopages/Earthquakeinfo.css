@@ -1,4 +1,18 @@
 .container {
     background-color: #f7f7f7;
     margin-top: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri
+}
+.title-3{
+    margin-top: 2px;
+    font-size: 2rem;
+}
+.title-4{
+    margin-top: 4px;
+    font-size: 2rem;
+}
+.paragraph{
+    margin-left: 10%;
+    margin-right: 10%;
+   
 }
