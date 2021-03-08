@@ -9,7 +9,7 @@ function Home() {
       <>
        
         <Herosection/>
-        <Footer/>
+        
         
         </>
     );  

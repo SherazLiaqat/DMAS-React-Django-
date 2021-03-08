@@ -12,18 +12,11 @@ function Awareness() {
     <Router>
         
         
-        <Switch>
-        <Route path='/Eartquakeinfo' target='_blank' component={Earthquakeinfo}exact />
-        
-        <Route path='/Floodinfo' component={Flood} />
        
-       
-        </Switch>
         <Card/>
-      <Footer/>
+     
         </Router>
-      <Card/>
-      <Footer/>
+     
       </>
   );  
 }
