@@ -10,7 +10,7 @@ export const Earthquakeinfo = () => {
        < div className="container">
 
         <div  className="column right-side">
-            <h1 className="title-3">Earthquake Awareness / Preparedness</h1>
+            <h1 className="title-3">Earthquake Awareness <br/> Preparedness</h1>
             <div className="inc-exp-container">
         <div>
           <h4 className='h1'><i class='fas fa-virus'></i>PREPARING DURING THE PENDAMIC?</h4>
