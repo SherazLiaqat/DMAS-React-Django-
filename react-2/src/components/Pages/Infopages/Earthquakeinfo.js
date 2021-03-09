@@ -21,7 +21,9 @@ export const Earthquakeinfo = () => {
           <p  className="money minus">If you are in immediate need of help, please find an open shelter</p>
         </div>
       </div>
-            <h4 className="title-4">“Drop, Cover, Hold”</h4></div>
+            <h4 className="title-4">“Drop, Cover, Hold”</h4>
+            <img src='images/img-4.jpg'></img>
+            </div>
             <img className='image' src={downimage}/>
             <div className="content">
                 <div classNamename="text">
