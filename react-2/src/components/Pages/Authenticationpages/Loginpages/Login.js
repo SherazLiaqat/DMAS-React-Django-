@@ -57,7 +57,7 @@ function Login () {
             </div>
           <br/>
           <span className='span-login'>
-        Don't have an account? Signup < a href='/Blog'>here</a>
+        Don't have an account? Signup < a href='/sign-up'>here</a>
         <br/><br/>
         
       </span>
