@@ -12,7 +12,7 @@ function Cards() {
             <CardItem
               src='images/img-5.jpg'
               text='Explore the Earthquake Information...'
-              label='Eartquake'
+              label='Earthquake'
               
               path='/Earthquakeinfo'
             />
@@ -29,7 +29,7 @@ function Cards() {
               src='images\img-1.jpg'
               text='Explore the Tsaunami Information...'
               label='Tsaunami'
-              path='/'
+              path='/sign-up'
             />
             <CardItem
               src='images/img-4.jpg'
@@ -41,7 +41,7 @@ function Cards() {
               src='images/img-8.jpg'
               text='Explore the Sand-Storm Information...'
               label='Sand-Storm'
-              path='/Blog'
+              path='/Home'
             />
           </ul>
         </div>

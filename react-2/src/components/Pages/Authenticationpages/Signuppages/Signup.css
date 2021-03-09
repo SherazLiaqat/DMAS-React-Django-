@@ -1,15 +1,18 @@
 body{
-    background-color: #f7f7f7;
+    background-color:rgb(34, 70, 70) ;
+    
 }
+
 .form-container {
-    margin: 100px auto;
+    margin: 1000px auto ;
     width: 1000px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
-    height: 600px;
-    display: grid;
+    height: 60px;
+    display: flex;
     grid-template-columns: 1fr 1fr;
+    
   }
   
   .close-btn {
@@ -57,11 +60,14 @@ body{
     margin-top: 80px;
     color: #fff;
   }
-  
+  .hello{
+    margin-left: 20%;
+  }
   .form-content-right {
     border-radius: 0 10px 10px 0;
     position: relative;
-    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
+    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(133, 179, 223) 100%);
+    
   }
   
   .form {
@@ -71,7 +77,7 @@ body{
     transform: translate(-50%, -50%);
     width: 80%;
     height: 100%;
-    display:grid;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -85,9 +91,10 @@ body{
     color:black;
   }
   
+  
   .form-inputs {
     margin-bottom: 0.5rem;
-    width: 80%;
+    width: 50%;
   }
   
   .form-inputs p {
@@ -136,6 +143,7 @@ body{
   
   .form-input-btn:hover {
     cursor: pointer;
+    
     background: linear-gradient(
       90deg,
       rgb(39, 143, 255) 0%,
@@ -147,9 +155,11 @@ body{
   .form-input-login {
     font-size: 0.8rem;
     margin-top: 10px;
+    margin-left: 20%;
+    margin-bottom: 20px;
     color:black;
     width: 80%;
-    text-align: center;
+  
   }
   
   .form-input-login a {
@@ -157,3 +167,11 @@ body{
     color: #27cdff;
     font-weight: 600;
   }
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    
+  }
+  
