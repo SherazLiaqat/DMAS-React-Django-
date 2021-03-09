@@ -11,7 +11,7 @@ function Signup () {
      
  
   <h1 className='h1'>
-        Get started with us today!<br/> Create your account by filling out the
+        <br/>Get started with us today!<br/> Create your account by filling out the
         information below.
       </h1>
   <div className='hello'>
