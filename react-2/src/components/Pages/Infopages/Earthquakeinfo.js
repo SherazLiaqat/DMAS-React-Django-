@@ -1,16 +1,28 @@
 import React from 'react'
 import './Earthquakeinfo.css';
 import Footer from '../../../components/Footer/Footer';
-
+import Imageslider from '../../Slider/Imageslider';
+import downimage from '../../images/down.jpg';
 export const Earthquakeinfo = () => {
     return (
         <>
+     
        < div className="container">
 
         <div  className="column right-side">
             <h1 className="title-3">Earthquake Awareness / Preparedness</h1>
+            <div className="inc-exp-container">
+        <div>
+          <h4 className='h1'><i class='fas fa-virus'></i>PREPARING DURING THE PENDAMIC?</h4>
+          <p  className="money plus">Please review our guidance on preparing for an earthquake while still protecting yourself from COVID-19.</p>
+        </div>
+        <div>
+          <h4 className='h1'><i  class="fa fa-ambulance" ></i>NEED HELP NOW?</h4>
+          <p  className="money minus">If you are in immediate need of help, please find an open shelter</p>
+        </div>
+      </div>
             <h4 className="title-4">“Drop, Cover, Hold”</h4></div>
-    
+            <img className='image' src={downimage}/>
             <div className="content">
                 <div classNamename="text">
                    
