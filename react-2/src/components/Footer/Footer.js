@@ -11,7 +11,7 @@ function Footer() {
           Join the Disaster Volunteer Connecction and help people to Survive at the time of Disaster
         </p>
         <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
+          You can Search anything here.
         </p>
         <div className='input-areas'>
           <form>

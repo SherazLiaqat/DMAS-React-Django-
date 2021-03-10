@@ -9,9 +9,9 @@ function Login () {
    <div className='form-content-right'>
      
  
-  <h1 className='h1'>
-        Get started with us today!<br/> Create your account by filling out the
-        information below.
+  <h1 >
+         Welcome back!<br/> Help out the Pendamic suffering people.
+        
       </h1>
   <div className='hello'>
       <div className='form-inputs'>
