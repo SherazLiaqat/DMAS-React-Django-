@@ -1,6 +1,6 @@
 import React from 'react';
 import './Cards.css';
-import CardItem from '../../components/Card/CardItems';
+import CardItem from './CardItems'
 import Earthquakeinfo from '../Pages/Infopages/Earthquakeinfo';
 import Awareness from '../../components/Pages/Awareness';
 function Cards() {
@@ -11,18 +11,19 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
+            path='/Earthquakeinfo'
               src='images/img-5.jpg'
               text='Explore the Earthquake Information...'
               label='Earthquake'
               
-              path='/Eartquakeinfo'
+              
             />
             <CardItem
               src='images/img-2.jpg'
               text='Explore the Flood Information...'
               
               label='Flood'              
-              path='/ sign-up'
+              path='/Floodinfo'
             />
           </ul>
           <ul className='cards__items'>
@@ -43,7 +44,7 @@ function Cards() {
               src='images/img-8.jpg'
               text='Explore the Sand-Storm Information...'
               label='Sand-Storm'
-              path='/Home'
+              path= '/Home'
             />
           </ul>
         </div>

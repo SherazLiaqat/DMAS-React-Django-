@@ -15,7 +15,7 @@ import Earthquakeinfo from './components/Pages/Infopages/Earthquakeinfo';
 import Herosection from './components/Herosection/Herosection';
 import Floodinfo from './components/Pages/Infopages/Floodinfo';
 import Login from './components/Pages/Authenticationpages/Loginpages/Login';
-
+import Carditem from './components/Card/CardItems';
 function App(){
   
   return (
@@ -45,6 +45,7 @@ function App(){
     
     </Switch>
     <Footer/>
+    
     </Router>
 
   </>
