@@ -2,9 +2,12 @@ import React from 'react'
 import './Signup.css';
 import { Link } from 'react-router-dom';
 import {Button }from '../../../Button/Button';
+//import validate from './Validateinfo';
+//import Form from './Form';
 
 function Signup () {
-  
+ {/*  const { handleChange, handleSubmit, values, errors } = Form(
+    validate)*/}
   return (
     <>
    <div className='form-content-right'>
@@ -16,20 +19,20 @@ function Signup () {
       </h1>
   <div className='hello'>
       <div className='form-inputs'>
-        <label className='form-label'>Username</label>
+        <label className='form-label'><i class="fa fa-user icon"></i>Username</label>
         <input
           className='form-input'
           type='text'
           name='username'
           placeholder='Enter your username'
-        
+          
         />
-        
+       
       
       </div>
           <div
     className='form-inputs'>
-    <label className='form-label'>Email</label>
+    <label className='form-label'><i class="fa fa-envelope icon"></i>Email</label>
     <input
       className='form-input'
       type='email'
@@ -40,7 +43,7 @@ function Signup () {
           
       <div
        className='form-inputs'>
-       <label className='form-label'>Password</label>
+       <label className='form-label'> <i class="fa fa-key icon"></i>Password</label>
        <input
          className='form-input'
          type='password'
@@ -55,7 +58,7 @@ function Signup () {
 
       <div
        className='form-inputs'>
-       <label className='form-label'>Confirm Password</label>
+       <label className='form-label'> <i class="fa fa-key icon"></i>Confirm Password</label>
        <input
          className='form-input'
          type='password'

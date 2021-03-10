@@ -11,12 +11,20 @@
   .form-inputs {
     margin-bottom: 0.5rem;
     width: 50%;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+   
   }
   .form-label {
     display: inline-block;
     font-size: 0.8rem;
     margin-bottom: 6px;
     color:black;
+   
   }
   .span-login{
       margin-bottom: 10px;
@@ -27,4 +35,8 @@
     text-decoration: none;
     color:red;
     font-weight: 600;
+  }
+  .a{
+    color:black;
+    margin-left: 21rem;
   }

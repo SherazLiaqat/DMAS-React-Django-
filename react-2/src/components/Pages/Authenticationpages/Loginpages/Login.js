@@ -15,7 +15,7 @@ function Login () {
       </h1>
   <div className='hello'>
       <div className='form-inputs'>
-        <label className='form-label'>Username</label>
+        <label className='form-label'>  <i class="fa fa-user icon"></i>Username</label>
         <input
           className='form-input'
           type='text'
@@ -31,7 +31,7 @@ function Login () {
           
       <div
        className='form-inputs'>
-       <label className='form-label'>Password</label>
+       <label className='form-label'> <i class="fa fa-key icon"></i>Password</label>
        <input
          className='form-input'
          type='password'
@@ -43,8 +43,8 @@ function Login () {
       
 
       </div>
-
-     
+      
+      < a className='a' href='/'>Forgot Your Password?<br/></a>
 
       <Button
             className='btns'

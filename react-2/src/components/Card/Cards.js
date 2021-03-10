@@ -12,7 +12,8 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
             path='/Earthquakeinfo'
-              src='images/img-5.jpg'
+            
+              src='images/img-1.jpg'
               text='Explore the Earthquake Information...'
               label='Earthquake'
               
@@ -28,7 +29,7 @@ function Cards() {
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='images\img-1.jpg'
+              src='images\img-5.jpg'
               text='Explore the Tsaunami Information...'
               label='Tsaunami/HeavyRain'
               path='/Heavyrain'

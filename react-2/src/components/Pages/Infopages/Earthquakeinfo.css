@@ -1,5 +1,5 @@
 .container {
-    background-color: #f7f7f7;
+    background-color: #fff;
     margin-top: 10px  0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
 
@@ -53,6 +53,7 @@
     margin-top: 4px;
     font-size: 2rem;
     margin-left: 30px;
+    
 }
 .paragraph{
     margin-left: 10%;
