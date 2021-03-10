@@ -30,14 +30,14 @@ function Cards() {
             <CardItem
               src='images\img-1.jpg'
               text='Explore the Tsaunami Information...'
-              label='Tsaunami'
-              path='/sign-up'
+              label='Tsaunami/HeavyRain'
+              path='/Heavyrain'
             />
             <CardItem
               src='images/img-4.jpg'
               text='Explore the COVID-19 Information...'
               label='COVID-19'
-              path='/sign-up'
+              path='/Covid19'
               
             />
             <CardItem

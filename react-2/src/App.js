@@ -15,6 +15,8 @@ import Earthquakeinfo from './components/Pages/Infopages/Earthquakeinfo';
 import Herosection from './components/Herosection/Herosection';
 import Floodinfo from './components/Pages/Infopages/Floodinfo';
 import Login from './components/Pages/Authenticationpages/Loginpages/Login';
+import Covid19info from './components/Pages/Infopages/Covid19info';
+import Heavyraininfo from './components/Pages/Infopages/Heavyrain';
 import Carditem from './components/Card/CardItems';
 function App(){
   
@@ -38,6 +40,8 @@ function App(){
     <Switch>
     <Route path='/Earthquakeinfo'  component={Earthquakeinfo}exact />
     <Route path='/Floodinfo'  component={Floodinfo}exact />
+    <Route path='/Covid19'  component={Covid19info}exact />
+    <Route path='/Heavyrain'  component={Heavyraininfo}exact />
     <Route path='/Login'  component={Login}exact />
     
 

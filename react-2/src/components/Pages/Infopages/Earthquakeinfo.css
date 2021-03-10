@@ -57,9 +57,10 @@
 .paragraph{
     margin-left: 10%;
     margin-right: 10%;
-    font-family: 'Times New Roman';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
     font-size: 15px;
     font-style:inherit;
+   
 }
 .image {
   object-fit: cover;
