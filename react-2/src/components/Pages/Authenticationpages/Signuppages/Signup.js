@@ -2,12 +2,12 @@ import React from 'react'
 import './Signup.css';
 import { Link } from 'react-router-dom';
 import {Button }from '../../../Button/Button';
-//import validate from './Validateinfo';
-//import Form from './Form';
+import validate from './Validateinfo';
+import Form from './Form';
 
 function Signup () {
- {/*  const { handleChange, handleSubmit, values, errors } = Form(
-    validate)*/}
+   const { handleChange, handleSubmit, values, errors } = Form(
+    validate)
   return (
     <>
    <div className='form-content-right'>
@@ -25,9 +25,10 @@ function Signup () {
           type='text'
           name='username'
           placeholder='Enter your username'
-          
+          value={values.username}
+          onChange={handleChange}
         />
-       
+       {errors.username && <p>{errors.username}</p>}
       
       </div>
           <div
@@ -38,7 +39,10 @@ function Signup () {
       type='email'
       name='email'
       placeholder='Enter your email'
+      value={values.email}
+      onChange={handleChange}
     />
+    {errors.email && <p>{errors.email}</p>}
       </div>  
           
       <div

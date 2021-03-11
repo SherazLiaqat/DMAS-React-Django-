@@ -1,30 +1,42 @@
 
-import React, { useState } from 'react';
-//import './Form.css';
-import Signup from './Signup';
-//import FormSuccess from './FormSuccess';
+import { useState, useEffect } from 'react';
 
-const Form = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+const Form = (callback, validate) => {
+  const [values, setValues] = useState({
+    username: '',
+    email: '',
+    password: '',
+    password2: ''
+  });
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function submitForm() {
-    setIsSubmitted(true);
-  }
-  return (
-    <>
-      <div className='form-container'>
-        <span className='close-btn'>×</span>
-        <div className='form-content-left'>
-          <img className='form-img' src='img/img-2.svg' alt='spaceship' />
-        </div>
-        {!isSubmitted ? (
-          <Signup submitForm={submitForm} />
-        ) : (
-          <Signup/>
-        )}
-      </div>
-    </>
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    setErrors(validate(values));
+ setIsSubmitting(true);
+  };
+
+   useEffect(
+    () => {
+      if (Object.keys(errors).length === 0 && isSubmitting) {
+        callback();
+      }
+    },
+    [errors]
   );
+
+  return { handleChange, handleSubmit, values, errors };
+    
 };
 
 export default Form;
