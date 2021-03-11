@@ -1,24 +1,32 @@
 import React from 'react'
 import './Earthquakeinfo.css';
-const Covid19info = () => {
+const Covid19 = () => {
     return (
         <>
         <div className="container ">
  
      
  
-     <h1 className="title-3">Fire Safety : Fire Safety Awareness</h1>
-         <p className='paragraph'>There are general fire safety precautions you
+     <h1 className="title-3">Covid-19 : Covid-19 Safety Awareness</h1>
+         <p className='paragraph'>There are general Covid-19 safety precautions you
           should follow regardless of where you live. Taking time to review tip
-          s about the following fire safety issues can help you 
+          s about the following Covid-19 safety issues can help you 
          create a safer and more secure living environment for you, your friends, and family.. </p>
  
          
     
      <ul className='paragraph'>
-     <h2 className='title-4'>Escape Plans</h2>
-<p>Because fire is a risk in every building — whether you sleep, study, or work there — you should always have an escape plan. You may need to escape within a few minutes of a fire’s start, so your safe exit depends on immediate warning from smoke alarms and advance planning of escape routes.</p>
-<h3 className='title-4'>Escape Plan Basics</h3>
+     <h2 className='title-4'>Under what conditions does COVID-19 spread easily?</h2>
+<p>Any situation in which people are in close proximity to one another for long periods of time increases the risk of transmission. Indoor locations, especially settings where there is poor or no ventilation, are riskier than outdoor locations.
+
+Transmission can occur more easily in the “Three C’s”:
+
+• Crowded places with many people nearby;
+• Close-contact settings, especially where people have conversations very near each other;
+• Confined and enclosed spaces with poor ventilation.
+
+The risk of COVID-19 spreading is higher in places where these “3Cs” overlap.</p>
+<h3 className='title-4'>Can COVID-19 be transmitted through feces or urine?</h3>
      </ul>
      <ul className='paragraph'><li>Include two ways out of every room in all escape plans</li>
 <li>Designate a location to meet outside the building</li>
@@ -232,6 +240,6 @@ const Covid19info = () => {
      )
  }
  
- export default Covid19info
+ export default Covid19
  
    

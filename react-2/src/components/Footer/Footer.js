@@ -49,7 +49,7 @@ function Footer() {
             <Link to='/Earthquakeinfo'>Earthquake</Link>
             <Link to='/Floodinfo'>Flood</Link>
             <Link to='/Heavyrain'>Heavy Rain</Link>
-            <Link to='/Covid19'>COVID-19</Link>
+            <Link to='/Fireinfo'>Fire</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
