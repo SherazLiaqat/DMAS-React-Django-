@@ -20,6 +20,7 @@ function Footer() {
               name='Searh'
               type='text'
               placeholder='Search.'
+              
             />
             <Button buttonStyle='btn--outline'>Search <i class="fa fa-search"></i></Button>
           </form>
@@ -49,15 +50,15 @@ function Footer() {
             <Link to='/Earthquakeinfo'>Earthquake</Link>
             <Link to='/Floodinfo'>Flood</Link>
             <Link to='/Heavyrain'>Heavy Rain</Link>
-            <Link to='/Covid19'>COVID-19</Link>
+            <Link to='/Fireinfo'>Fire</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/https://www.instagram.com/'>Instagram</Link>
+            <Link to={{ pathname: "https://www.instagram.com/" }} target="_blank">Instagram</Link>
             
-            <Link  to='/'>facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <Link  to={{ pathname: "https://www.facebook.com/" }} target="_blank">Facebook</Link>
+            <Link to={{ pathname: "https://www.youtube.com/" }} target="_blank">Youtube</Link>
+            <Link  to={{ pathname: "https://twitter.com/" }} target="_blank">Twitter</Link>
           </div>
         </div>
       </div>
@@ -77,15 +78,15 @@ function Footer() {
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
-              to='/'
-              target='_blank'
+              to={{ pathname: "https://www.facebook.com/" }} 
+              target="_blank"
               aria-label='Facebook'
             >
               <i class='fab fa-facebook-f' />
             </Link>
             <Link
               class='social-icon-link instagram'
-              to='/'
+              to={{ pathname: "https://www.instagram.com/" }}
               target='_blank'
               aria-label='Instagram'
             >
@@ -93,7 +94,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link youtube'
-              to='/'
+              to={{ pathname: "https://www.youtube.com/" }}
               target='_blank'
               aria-label='Youtube'
             >
@@ -101,7 +102,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
+              to={{ pathname: "https://twitter.com/" }}
               target='_blank'
               aria-label='Twitter'
             >
@@ -109,7 +110,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
+              to={{ pathname:'https://www.linkedin.com/'}}
               target='_blank'
               aria-label='LinkedIn'
             >

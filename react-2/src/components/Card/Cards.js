@@ -45,7 +45,7 @@ function Cards() {
               src='images/sand.jpg'
               text='Explore the Sand-Storm Information...'
               label='Sand-Storm'
-              path= '/Home'
+              path='/Fireinfo'
             />
           </ul>
         </div>
