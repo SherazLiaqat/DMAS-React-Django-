@@ -2,7 +2,7 @@ import React from 'react'
 import '../../App.css';
 import './Herosection.css';
 import {Button }from '../../components/Button/Button';
-import homeimage from '../../components/images/img-11.jpg';
+import homeimage from '../../components/images/img-12.jpg';
 function Herosection() {
     return (
         <div className='hero-container'>

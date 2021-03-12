@@ -1,0 +1,26 @@
+.about {
+    width: 100%;
+    background: #23263a;
+    padding: 100px 0;
+  }
+  .about__img {
+    padding: 30px;
+  }
+  .about__img img {
+    width: 300px;
+    height: 400px;
+  }
+  .about__info {
+    color: #fff;
+  }
+  .about__info h1 {
+    margin-bottom: 30px;
+  }
+  .about__info-p1 {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .about__info-p2 {
+    font-size: 14px;
+  }
+  

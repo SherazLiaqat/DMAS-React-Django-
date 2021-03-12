@@ -3,8 +3,30 @@
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', sans-serif;
+ 
 }
+body{
+  background-color: #fff;
+}
+.main{
+background-color: rgb(31, 34, 53);
+margin: 2rem ;
 
+
+
+
+}
+.h4{
+  color: red;
+  text-align: center;
+  margin: 1rem;
+}
+.h1{
+  
+  font-weight: bold;
+  color:black;
+  
+}
 .home,
 .services,
 .products,
@@ -33,13 +55,3 @@
   color: #fff;
   font-size: 100px;
 }
-
-.Sign-up {
-  background-image: url('/src/components/images/img-5.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-

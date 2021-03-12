@@ -13,14 +13,14 @@ function Cards() {
             <CardItem
             path='/Earthquakeinfo'
             
-              src='images/img-1.jpg'
+              src='images/img-11.jpg'
               text='Explore the Earthquake Information...'
               label='Earthquake'
               
               
             />
             <CardItem
-              src='images/img-2.jpg'
+              src='images/flood.jpg'
               text='Explore the Flood Information...'
               
               label='Flood'              
@@ -29,20 +29,20 @@ function Cards() {
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='images\img-5.jpg'
+              src='images\fire.jpg'
               text='Explore the Tsaunami Information...'
-              label='Tsaunami/HeavyRain'
+              label='Fire'
               path='/Heavyrain'
             />
             <CardItem
-              src='images/img-4.jpg'
+              src='images/covid.jpg'
               text='Explore the COVID-19 Information...'
               label='COVID-19'
               path='/Covid19'
               
             />
             <CardItem
-              src='images/img-8.jpg'
+              src='images/sand.jpg'
               text='Explore the Sand-Storm Information...'
               label='Sand-Storm'
               path= '/Home'

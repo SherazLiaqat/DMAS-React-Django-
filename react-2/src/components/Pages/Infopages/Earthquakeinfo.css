@@ -22,7 +22,9 @@
    }
 .h1{
     font-size: 1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+    color: black;
+    
   }
   
   .inc-exp-container > div {
@@ -69,7 +71,4 @@
   height: 100%;
   position: fixed;
   z-index: -1;
-}
-.style{
-  
 }

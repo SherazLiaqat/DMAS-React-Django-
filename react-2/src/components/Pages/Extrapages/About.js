@@ -1,18 +1,22 @@
 import React from 'react';
-//import './App.css';
-import Footer from '../Footer/Footer'
-import '../../App.css';
+import './About.css';
+//import Footer from '../Footer/Footer'
+
 const About = () => {
   const [header] = React.useState({
-    subHeader: "About US",
+    subHeader: "About Us",
     text:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.",
   });
   const [state] = React.useState([
     { id: 1, title: "Name:", text: "Sheraz Liaqat" },
     { id: 2, title: "Email:", text: "example@domain.com" },
-    { id: 3, title: "Phone:", text: "+1 023 454 345" },
-    { id: 4, title: "Linkedin", text: "Sheraz_123" },
+    { id: 3, title: "Name:", text: "Rizwan Bashir" },
+    { id: 4, title: "Email", text: "example@domain.com" },
+    { id: 5, title: "Name:", text: "M akhlaq" },
+    { id: 6, title: "Email:", text: "example@domain.com" },
+    { id: 7, title: "Name:", text: "Mubashar Ateeq" },
+    { id: 8, title: "Email", text: "example@domain.com" }
   ]);
   return (
     <div className="about">
@@ -25,21 +29,26 @@ const About = () => {
         <div className="row  h-650 alignCenter">
           <div className="col-6">
             <div className="about__img">
-              <img src="/images/man-01.png" alt="man" />
+              <img src="/images/about.jpg" alt="disaster" />
             </div>
           </div>
+         
           <div className="col-6">
             <div className="about__info">
-              <h1>Hi There</h1>
+              <h1 className='mission'>OUR MISSION</h1>
+              
               <div className="about__info-p1">
-                In id nulla magna. Nullam posuere fermentum mattis. Nunc id dui
-                at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id
-                efficitur sagittis, urna est ultricies eros, ac porta sem turpis
+              The Disaster Assistance Team mission is to provide disaster 
+              survivors with information, support, services, and a means to access and apply for disaster assistance
+               through joint data-sharing efforts between federal, tribal, state, local, and private sector partners.
               </div>
+              
               <div className="about__info-p2">
-                nunc id efficitur sagittis, urna est ultricies eros, ac porta
-                sem turpis porta sem turpis quis leo. Nulla in feugiat elit
+              The DisasterAssistance is used to build relationships and help promote the addition of new assistance for our website. 
+              The policy defines the criteria we use to consider agreements to exchange data, links, or information with partners.
+              
               </div>
+              <div className="commonBorder"></div>
               <div className="info__contacts">
                 <div className="row">
                   {state.map((info) => (
@@ -47,7 +56,9 @@ const About = () => {
                       <strong>{info.title}</strong>
                       <p>{info.text}</p>
                     </div>
+                    
                   ))}
+                  
                 </div>
               </div>
             </div>

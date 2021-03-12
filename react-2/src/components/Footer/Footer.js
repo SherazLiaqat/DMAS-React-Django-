@@ -29,7 +29,7 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
+            <Link to='/About'> work</Link>
             
             <Link to='/'>Careers</Link>
             <Link to='/'>Investors</Link>
@@ -55,7 +55,7 @@ function Footer() {
             <h2>Social Media</h2>
             <Link to='/https://www.instagram.com/'>Instagram</Link>
             
-            <Link  to={{pathname: '/Blog'}}>NavigateNow</Link>
+            <Link  to='/'>facebook</Link>
             <Link to='/'>Youtube</Link>
             <Link to='/'>Twitter</Link>
           </div>
