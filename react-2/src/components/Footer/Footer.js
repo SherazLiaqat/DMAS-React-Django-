@@ -22,8 +22,9 @@ function Footer() {
               placeholder='Search.'
               to='/Blog'
             />
-            <button className='Button'></button>
-            
+            <Link to='/About'>
+            <button className='Button'>Search</button>
+            </Link>
           </form>
         </div>
       </section>
