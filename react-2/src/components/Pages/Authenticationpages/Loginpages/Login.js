@@ -46,7 +46,7 @@ function Login () {
       
       < a className='a' href='/'>Forgot Your Password?<br/></a>
       <Link to='/Estimation'>
-            <button className='Button'>Login</button>
+            <button className='LoginButton'>Login</button>
             </Link>
      
 

@@ -9,7 +9,7 @@
     margin-left: 20%;
   }
  
-  .Button{
+  .LoginButton{
     cursor: pointer;
     color: #242424;
     background-color: transparent;
@@ -21,7 +21,7 @@
     margin-left: 9rem;
     
   }
-  .Button:hover{
+  .LoginButton:hover{
     transition: all 0.3s ease-out;
     background: #fff;
     color: #242424;

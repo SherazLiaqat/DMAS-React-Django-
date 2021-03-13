@@ -78,7 +78,7 @@ function Signup () {
       </div>
 
       <Link to='/Estimation'>
-            <button className='Button'>Sign Up</button>
+            <button className='SignupButton'>Sign Up</button>
             </Link>
      
 

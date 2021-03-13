@@ -13,7 +13,25 @@
     grid-template-columns: 1fr 1fr;
     
   }
-  
+  .SignupButton{
+    cursor: pointer;
+    color: #242424;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+    padding: 8px 50px;
+    font-size: 20px;
+    margin-left: 9rem;
+    
+  }
+  .SignupButton:hover{
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+    
+  }
   .close-btn {
     position: absolute;
     top: 2%;
