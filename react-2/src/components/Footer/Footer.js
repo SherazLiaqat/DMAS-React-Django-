@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import {Button} from '../Button/Button';
+//import {Button} from '../Button/Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -17,12 +17,17 @@ function Footer() {
           <form>
             <input
               className='footer-input'
-              name='Searh'
+              name='Search'
               type='text'
               placeholder='Search.'
-              
+              to='/Blog'
             />
-            <Button buttonStyle='btn--outline'>Search <i class="fa fa-search"></i></Button>
+            <Link to='/Blog' >
+            <button
+            
+            
+            >Search</button>
+            </Link>
           </form>
         </div>
       </section>

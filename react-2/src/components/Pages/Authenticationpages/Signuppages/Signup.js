@@ -53,6 +53,7 @@ function Signup () {
          type='password'
          name='password'
          placeholder='Enter your password'
+         required="required"
          value={values.password}
          onChange={handleChange}
        />
@@ -84,13 +85,17 @@ function Signup () {
             Sign Up
           </Button>
 
-            </div>
+            
           <br/>
           <span className='form-input-login'>
+<<<<<<< Updated upstream
         Already have an account? Login < a href='#'>here</a>
+=======
+        Already have an account? Login < a href='/Login'>here</a>
+>>>>>>> Stashed changes
         
       </span>
-
+      </div>
 
       
 
