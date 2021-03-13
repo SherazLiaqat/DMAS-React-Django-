@@ -7,7 +7,22 @@
     align-items: center;
     
   }
-  
+  .Button{
+    cursor: pointer;
+    color: #242424;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+    padding: 8px 30px;
+    font-size: 20px;
+  }
+  .Button:hover{
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
   .footer-subscription {
     display: flex;
     flex-direction: column;

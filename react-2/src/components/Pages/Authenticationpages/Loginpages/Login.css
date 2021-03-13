@@ -9,7 +9,25 @@
     margin-left: 20%;
   }
  
- 
+  .Button{
+    cursor: pointer;
+    color: #242424;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+    padding: 8px 50px;
+    font-size: 20px;
+    margin-left: 9rem;
+    
+  }
+  .Button:hover{
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+    
+  }
   .form-inputs {
     margin-bottom: 0.5rem;
     

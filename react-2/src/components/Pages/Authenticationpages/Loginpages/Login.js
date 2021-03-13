@@ -1,6 +1,7 @@
 import React from 'react'
 import './Login.css';
 import {Button }from '../../../Button/Button';
+import { Link } from 'react-router-dom';
 
 function Login () {
   
@@ -44,20 +45,15 @@ function Login () {
       </div>
       
       < a className='a' href='/'>Forgot Your Password?<br/></a>
-      
-      <Button
+      <Link to='/Estimation'>
+            <button className='Button'>Login</button>
+            </Link>
      
-            className='button'
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-            >
-            LogIn
-          </Button>
 
             </div>
           <br/>
           <span className='span-login'>
-        Don't have an account? Signup < a href='/Estimation'>here</a>
+        Don't have an account? Signup < a href='/sign-up'>here</a>
         <br/><br/>
         
       </span>

@@ -77,13 +77,10 @@ function Signup () {
 
       </div>
 
-      <Button
-            className='btns'
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-            >
-            Sign Up
-          </Button>
+      <Link to='/Estimation'>
+            <button className='Button'>Sign Up</button>
+            </Link>
+     
 
             
           <br/>

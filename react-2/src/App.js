@@ -40,7 +40,7 @@ function App(){
         <Route path='/Blog' component={Blog} />
         <Route path='/News' component={News} />
         <Route path='/sign-up' component={Signup} />
-        <Route path='/Login' component={Signup} />
+        <Route path='/Login' component={Login} />
      
       </Switch>
      
@@ -53,7 +53,7 @@ function App(){
     <Route path='/Heavyrain'  component={Heavyraininfo}exact />
     <Route path='/Fireinfo'  component={Fireinfo} />
     <Route path='/About'  component={About}exact />
-    <Route path='/Login'  component={Login}exact />
+    
     <Route path='/Estimation'  component={Estimation}exact />
     
 
