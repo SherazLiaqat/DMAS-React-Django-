@@ -20,9 +20,10 @@ import Covid19 from './components/Pages/Infopages/Covid-19info';
 import Heavyraininfo from './components/Pages/Infopages/Heavyrain';
 import Carditem from './components/Card/CardItems';
 import Blog from './components/Pages/Blog';
-import Fireinfo from './components/Pages/Infopages/Fireinfo'
+//import Fireinfo from './components/Pages/Infopages/Fireinfo';
 import About from './components/Pages/Extrapages/About';
 import Contact from './components/Pages/Extrapages/Contact';
+import Estimation from './components/Pages/Extrapages/Estimation';
 function App(){
   
   return (
@@ -50,9 +51,10 @@ function App(){
     <Route path='/Fireinfo'  component={Fireinfo}exact />
     <Route path='/Covid19'  component={Covid19}exact />
     <Route path='/Heavyrain'  component={Heavyraininfo}exact />
-    <Route path='/Fireinfo'  component={Fireinfo}exact />
+    <Route path='/Fireinfo'  component={Fireinfo} />
     <Route path='/About'  component={About}exact />
     <Route path='/Login'  component={Login}exact />
+    <Route path='/Estimation'  component={Estimation}exact />
     
 
     

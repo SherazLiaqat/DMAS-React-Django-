@@ -16,12 +16,16 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-            path='/Earthquakeinfo'
+            path='/Earthquakeinfo'  
             
               src='images/img-11.jpg'
               text='Explore the Earthquake Information...'
               label='Earthquake'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+              target="_blank"
+>>>>>>> Stashed changes
               
               
 =======
@@ -36,9 +40,13 @@ function Cards() {
 <<<<<<< Updated upstream
               label='Flood'              
               path='/Floodinfo'
+<<<<<<< Updated upstream
 =======
               label='Flood'
               path='/Blog'
+>>>>>>> Stashed changes
+=======
+              target="_blank"
 >>>>>>> Stashed changes
             />
           </ul>
@@ -53,10 +61,14 @@ function Cards() {
               label='Tsaunami/HeavyRain'
 >>>>>>> e63c5648cc21a51177b196afa6ed9bf74465ed20
               path='/Heavyrain'
+<<<<<<< Updated upstream
 =======
               label='Tsaunami'
               path='/sign-up'
 
+>>>>>>> Stashed changes
+=======
+              target="_blank"
 >>>>>>> Stashed changes
             />
             <CardItem
@@ -64,6 +76,7 @@ function Cards() {
               text='Explore the COVID-19 Information...'
               label='COVID-19'
               path='/Covid19'
+              target="_blank"
               
             />
             <CardItem
@@ -71,6 +84,7 @@ function Cards() {
               text='Explore the Sand-Storm Information...'
               label='Sand-Storm'
               path='/Fireinfo'
+              target="_blank"
             />
           </ul>
         </div>

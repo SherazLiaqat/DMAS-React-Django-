@@ -26,9 +26,7 @@ function Login () {
         
       
       </div>
-         
-        
-          
+       
       <div
        className='form-inputs'>
        <label className='form-label'> <i class="fa fa-key icon"></i>Password</label>
@@ -46,19 +44,20 @@ function Login () {
       </div>
       
       < a className='a' href='/'>Forgot Your Password?<br/></a>
-
+      
       <Button
-            className='btns'
+     
+            className='button'
             buttonStyle='btn--outline'
             buttonSize='btn--large'
             >
-            Login
+            LogIn
           </Button>
 
             </div>
           <br/>
           <span className='span-login'>
-        Don't have an account? Signup < a href='/sign-up'>here</a>
+        Don't have an account? Signup < a href='/Estimation'>here</a>
         <br/><br/>
         
       </span>

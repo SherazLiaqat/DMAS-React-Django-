@@ -22,12 +22,17 @@ function Footer() {
               placeholder='Search.'
               to='/Blog'
             />
+<<<<<<< Updated upstream
             <Link to='/Blog' >
             <button
             
             
             >Search</button>
             </Link>
+=======
+            <button className='Button'></button>
+            <Button buttonStyle='btn--outline'>Search <i class="fa fa-search"></i></Button>
+>>>>>>> Stashed changes
           </form>
         </div>
       </section>
@@ -52,10 +57,10 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>News</h2>
-            <Link to='/Earthquakeinfo'>Earthquake</Link>
-            <Link to='/Floodinfo'>Flood</Link>
-            <Link to='/Heavyrain'>Heavy Rain</Link>
-            <Link to='/Fireinfo'>Fire</Link>
+            <Link to='/Earthquakeinfo' target="_blank">Earthquake</Link>
+            <Link to='/Floodinfo' target="_blank">Flood</Link>
+            <Link to='/Heavyrain' target="_blank">Heavy Rain</Link>
+            <Link to='/Fireinfo' target="_blank">Fire</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>

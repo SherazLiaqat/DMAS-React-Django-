@@ -8,8 +8,12 @@
   .hello{
     margin-left: 20%;
   }
+ 
+ 
   .form-inputs {
     margin-bottom: 0.5rem;
+    
+    margin-left: 9rem;
     width: 50%;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -28,7 +32,7 @@
   }
   .span-login{
       margin-bottom: 10px;
-      margin-left: 20%;
+      margin-left: 30%;
       
   }
   .span-login a {
@@ -38,5 +42,5 @@
   }
   .a{
     color:black;
-    margin-left: 21rem;
+    margin-left: 34rem;
   }
