@@ -53,6 +53,7 @@ function Signup () {
          type='password'
          name='password'
          placeholder='Enter your password'
+         required="required"
          value={values.password}
          onChange={handleChange}
        />
