@@ -22,17 +22,8 @@ function Footer() {
               placeholder='Search.'
               to='/Blog'
             />
-<<<<<<< Updated upstream
-            <Link to='/Blog' >
-            <button
-            
-            
-            >Search</button>
-            </Link>
-=======
             <button className='Button'></button>
-            <Button buttonStyle='btn--outline'>Search <i class="fa fa-search"></i></Button>
->>>>>>> Stashed changes
+            
           </form>
         </div>
       </section>
