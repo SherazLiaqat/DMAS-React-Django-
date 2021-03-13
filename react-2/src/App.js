@@ -34,6 +34,7 @@ function App(){
         <Route path='/Blog' component={Product} />
         <Route path='/News' component={News} />
         <Route path='/sign-up' component={Signup} />
+        <Route path='/Login' component={Signup} />
      
       </Switch>
      
