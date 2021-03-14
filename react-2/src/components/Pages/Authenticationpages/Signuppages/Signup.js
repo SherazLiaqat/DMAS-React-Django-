@@ -13,11 +13,23 @@ class Signup extends React.Component {
       username:" ",
       email:" ",
       password:" ",
-      password2:" "
+      password2:" ",
+      usernameerror:""
+
     }}
-    submit(){
-      alert("submit")
+    valid()
+    {
+      if (!this.username.trim());
+      {
+        {this.setstate({usernameerror:"Username Required"})}
+      }
     }
+   
+    submit(){
+      if(this.valid()){
+
+      alert("Form has beeb submited")
+    }}
     render(){
   return (
     <>
@@ -36,9 +48,9 @@ class Signup extends React.Component {
           type='text'
           name='username'
           placeholder='Enter your username'
-          onChange={(event)=>{this.setstate({name:event.target.value})}}/>
+          onChange={(event)=>{this.setstate({username:event.target.value})}}/>
          
-      <p></p>
+      <p>{this.state.usernameerror}</p>
       </div>
           <div
     className='form-inputs'>
