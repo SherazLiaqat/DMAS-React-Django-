@@ -48,7 +48,7 @@ class Signup extends React.Component {
           type='text'
           name='username'
           placeholder='Enter your username'
-          onChange={(event)=>{this.setstate({username:event.target.value})}}/>
+          onChange={(event)=>{this.setState({username:event.target.value})}}/>
          
       <p>{this.state.usernameerror}</p>
       </div>
