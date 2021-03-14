@@ -181,7 +181,7 @@
   
   .form-input-login a {
     text-decoration: none;
-    color: #27cdff;
+    color: red;
     font-weight: 600;
   }
   .image {
@@ -191,4 +191,16 @@
     position: fixed;
     
   }
+ 
   
+@media screen and (max-width: 852px)
+{
+  .form-input-login {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    margin-left: 7rem;
+    margin-bottom: 5rem;
+    color:black;
+    width: 80%;
+  
+  }}

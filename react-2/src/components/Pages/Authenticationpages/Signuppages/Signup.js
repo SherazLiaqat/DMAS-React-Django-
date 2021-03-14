@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './Signup.css';
 import { Link } from 'react-router-dom';
 import {Button }from '../../../Button/Button';
 import validate from './Validateinfo';
 import Form from './Form';
 
-function Signup () {
-   const { handleChange, handleSubmit, values, errors } = Form(
-    validate)
+class Signup extends React.Component {
+ constructor()
+ {
+  super();
+  this.state={
+      username:" ",
+      email:" ",
+      password:" ",
+      password2:" "
+    }}
+    submit(){
+      alert("submit")
+    }
+    render(){
   return (
     <>
    <div className='form-content-right'>
@@ -25,11 +36,9 @@ function Signup () {
           type='text'
           name='username'
           placeholder='Enter your username'
-          value={values.username}
-          onChange={handleChange}
-        />
-       {errors.username && <p>{errors.username}</p>}
-      
+          onChange={(event)=>{this.setstate({name:event.target.value})}}/>
+         
+      <p></p>
       </div>
           <div
     className='form-inputs'>
@@ -39,10 +48,11 @@ function Signup () {
       type='email'
       name='email'
       placeholder='Enter your email'
-      value={values.email}
-      onChange={handleChange}
-    />
-    {errors.email && <p>{errors.email}</p>}
+     
+     onChange={(event)=>{this.setstate({email:event.target.value})}}/>
+         
+         <p></p>
+    
       </div>  
           
       <div
@@ -53,12 +63,9 @@ function Signup () {
          type='password'
          name='password'
          placeholder='Enter your password'
-         required="required"
-         value={values.password}
-         onChange={handleChange}
-       />
-       {errors.password && <p>{errors.password}</p>}
-      
+         onChange={(event)=>{this.setstate({password:event.target.value})}}/>
+         
+         <p></p>
 
       </div>
 
@@ -70,16 +77,16 @@ function Signup () {
          type='password'
          name='password2'
          placeholder='Confirm your password'
-         value={values.password2}
-         onChange={handleChange}
-       />
-       {errors.password2 && <p>{errors.password2}</p>}
+         onChange={(event)=>{this.setstate({password2:event.target.value})}}/>
+         
+      <p></p>
 
       </div>
 
-      <Link to='/Estimation'>
-            <button className='SignupButton'>Sign Up</button>
-            </Link>
+      
+            <button className='SignupButton' onClick={()=>this.submit}>Sign Up</button>
+           {/*  <Link to='/Estimation'>
+            </Link>*/}
      
 
             
@@ -88,8 +95,9 @@ function Signup () {
         Already have an account? Login < a href='/Login'>here</a>
         
       </span>
+      <br/>
       </div>
-
+      
       
 
 
@@ -182,6 +190,6 @@ function Signup () {
   </div>*/}
   </>
   );
-}
+}}
 
 export default Signup
