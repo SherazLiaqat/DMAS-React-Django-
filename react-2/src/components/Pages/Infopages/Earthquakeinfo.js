@@ -3,7 +3,8 @@ import './Earthquakeinfo.css';
 import Footer from '../../../components/Footer/Footer';
 import Imageslider from '../../Slider/Imageslider';
 import downimage from '../../images/down.jpg';
-import earthnew from '../../images/earthnew.jpg';
+import eimage from '../../images/e.jpg';
+import pimage from '../../images/p.jpg';
 export const Earthquakeinfo = () => {
     return (
         <>
@@ -84,11 +85,11 @@ export const Earthquakeinfo = () => {
                 </div>
             </div>
     
-    
+            <img className='images'  src={eimage}></img>
     
             
-            <h4 className="title-4">Indoors</h4>
-    
+            <h4 className="title-4"  >Indoors</h4>
+        
             <div className="content">
                 <div >
                     <ul className='paragraph'>
@@ -189,7 +190,6 @@ export const Earthquakeinfo = () => {
     
             <div className="content">
                 <div >
-                
                     <p className='paragraph'>Data from three University-based studies performed after the Loma Prieta (September, 1989) and
                         Northridge (January, 1994) earthquakes in California indicated Loma Prieta (63 deaths, approximately
                         3,700 injured) and Northridge (57 deaths, 1500 serious injuries) benefited from “Drop, Cover and
@@ -213,7 +213,6 @@ export const Earthquakeinfo = () => {
             <div className="content">
                 <div >
                     <ul className='paragraph'>
-                    <img  src={earthnew} className='imgearthquake'></img>
                         <li><b>DO NOT</b> run outside or to other rooms during shaking. The area near the exterior walls of
                             a building is the most dangerous place to be. Windows, facades and architectural details are
                             often the first parts of the building to collapse. Stay away from the danger zone. Also, shaking
@@ -225,7 +224,7 @@ export const Earthquakeinfo = () => {
                             move and crush you, and other drivers may not see you on the ground.</li>
                     </ul>
     
-    
+                    <img className='images'  src={pimage}></img>
     
                            
                     <p className='paragraph'><b>For the best opportunity to reduce injury risk and improve your chances of survival in an
@@ -241,6 +240,7 @@ export const Earthquakeinfo = () => {
                     </ul>
                     <p className='paragraph'><b>Additional preparedness information is available at:</b><a
                             href="http://www.ready.gov">www.Ready.gov</a><br/><br/></p>
+                            
                     
                 </div>
             </div>

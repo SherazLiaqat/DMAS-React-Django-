@@ -34,7 +34,7 @@ function Cards() {
               label='Flood'              
               path='/Floodinfo'
               label='Flood'
-              path='/Floodinfo'
+              path='/Blog'
 
               target="_blank"
 
