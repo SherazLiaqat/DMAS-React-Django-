@@ -3,6 +3,8 @@ import './Earthquakeinfo.css';
 import Footer from '../../../components/Footer/Footer';
 import Imageslider from '../../Slider/Imageslider';
 import downimage from '../../images/down.jpg';
+import eimage from '../../images/e.jpg';
+import pimage from '../../images/p.jpg';
 export const Earthquakeinfo = () => {
     return (
         <>
@@ -83,11 +85,11 @@ export const Earthquakeinfo = () => {
                 </div>
             </div>
     
-    
+            <img className='images'  src={eimage}></img>
     
             
-            <h4 className="title-4">Indoors</h4>
-    
+            <h4 className="title-4"  >Indoors</h4>
+        
             <div className="content">
                 <div >
                     <ul className='paragraph'>
@@ -222,7 +224,7 @@ export const Earthquakeinfo = () => {
                             move and crush you, and other drivers may not see you on the ground.</li>
                     </ul>
     
-    
+                    <img className='images'  src={pimage}></img>
     
                            
                     <p className='paragraph'><b>For the best opportunity to reduce injury risk and improve your chances of survival in an
@@ -238,6 +240,7 @@ export const Earthquakeinfo = () => {
                     </ul>
                     <p className='paragraph'><b>Additional preparedness information is available at:</b><a
                             href="http://www.ready.gov">www.Ready.gov</a><br/><br/></p>
+                            
                     
                 </div>
             </div>
