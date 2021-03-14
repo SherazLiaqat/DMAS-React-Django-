@@ -15,32 +15,34 @@ class Signup extends React.Component {
       password:" ",
       password2:" ",
       usernameerror:"",
-      passworderror:"",
-      emailerror:""
-      
-
+      passworderror:''
     }}
    valid(){
-     if(!this.state.username.includes("@") && this.state.password.length<5){
-     
-       this.setState(
-         {usernameerror:"invalid username",passworderror:'password more than 5'})
-     }
-     else if(!this.state.email.includes("@"))
+     if(!this.state.username.includes("@") && this.state.password<5)
      {
-       this.setState({emailerror:'ENTER VALID EMAIL'})
-
+       this.setState({usernameerror:"invalid", passworderror:"in"  })
      }
-     else if(this.state.password.length<6)
+    else if(!this.state.username.includes("@") )
      {
-       this.setState({passworderror:'ENTER password lenghth'})
-
+       this.setState({usernameerror:"invalid"})
+     }
+    else if( this.state.password<5)
+     {
+       this.setState({ passworderror:"in"  })
+      
+     }
+     else{
+      return true
+    }
    }
-  }
+   
+   
     submit(){
+      this.setState({usernameerror:"", passworderror:""  })
+    
       
       if(this.valid()){
-      alert("Form has been submited")}
+      alert("Form has beeb submited")}
     }
     render(){
   return (
@@ -75,7 +77,7 @@ class Signup extends React.Component {
      
       onChange={(event)=>{this.setState({email:event.target.value})}}     />
          
-         <p>{this.state.emailerror}</p>
+         <p></p>
     
       </div>  
           
@@ -89,7 +91,7 @@ class Signup extends React.Component {
          placeholder='Enter your password'
          onChange={(event)=>{this.setState({password:event.target.value})}}    />
          
-         <p>{this.state.usernameerror}</p>
+         <p>{this.state.passworderror}</p>
 
       </div>
 
