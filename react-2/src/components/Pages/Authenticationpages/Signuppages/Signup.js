@@ -10,8 +10,8 @@ class Signup extends React.Component {
  {
   super();
   this.state={
-      username:" ",
-      email:" ",
+      username:"",
+      email:"",
       password:" ",
       password2:" ",
       usernameerror:""
@@ -48,7 +48,11 @@ class Signup extends React.Component {
           type='text'
           name='username'
           placeholder='Enter your username'
+<<<<<<< HEAD
+          onChange={(event)=>{this.setState({name:event.target.value})}}    />
+=======
           onChange={(event)=>{this.setState({username:event.target.value})}}/>
+>>>>>>> 4743f0373d9190dc7737f39d25faf37eb7eed910
          
       <p>{this.state.usernameerror}</p>
       </div>
@@ -61,7 +65,7 @@ class Signup extends React.Component {
       name='email'
       placeholder='Enter your email'
      
-     onChange={(event)=>{this.setstate({email:event.target.value})}}/>
+      onChange={(event)=>{this.setState({email:event.target.value})}}     />
          
          <p></p>
     
@@ -75,7 +79,7 @@ class Signup extends React.Component {
          type='password'
          name='password'
          placeholder='Enter your password'
-         onChange={(event)=>{this.setstate({password:event.target.value})}}/>
+         onChange={(event)=>{this.setState({password:event.target.value})}}    />
          
          <p></p>
 
@@ -89,7 +93,7 @@ class Signup extends React.Component {
          type='password'
          name='password2'
          placeholder='Confirm your password'
-         onChange={(event)=>{this.setstate({password2:event.target.value})}}/>
+         onChange={(event)=>{this.setState({password2:event.target.value})}}     />
          
       <p></p>
 
