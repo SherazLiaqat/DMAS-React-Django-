@@ -3,6 +3,7 @@ import './Earthquakeinfo.css';
 import Footer from '../../../components/Footer/Footer';
 import Imageslider from '../../Slider/Imageslider';
 import downimage from '../../images/down.jpg';
+import earthnew from '../../images/earthnew.jpg';
 export const Earthquakeinfo = () => {
     return (
         <>
@@ -188,6 +189,7 @@ export const Earthquakeinfo = () => {
     
             <div className="content">
                 <div >
+                
                     <p className='paragraph'>Data from three University-based studies performed after the Loma Prieta (September, 1989) and
                         Northridge (January, 1994) earthquakes in California indicated Loma Prieta (63 deaths, approximately
                         3,700 injured) and Northridge (57 deaths, 1500 serious injuries) benefited from “Drop, Cover and
@@ -211,6 +213,7 @@ export const Earthquakeinfo = () => {
             <div className="content">
                 <div >
                     <ul className='paragraph'>
+                    <img  src={earthnew} className='imgearthquake'></img>
                         <li><b>DO NOT</b> run outside or to other rooms during shaking. The area near the exterior walls of
                             a building is the most dangerous place to be. Windows, facades and architectural details are
                             often the first parts of the building to collapse. Stay away from the danger zone. Also, shaking
