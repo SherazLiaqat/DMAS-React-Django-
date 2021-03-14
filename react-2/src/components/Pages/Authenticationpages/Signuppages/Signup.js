@@ -14,17 +14,32 @@ class Signup extends React.Component {
       email:"",
       password:" ",
       password2:" ",
-      usernameerror:""
-
+      usernameerror:"",
+      passworderror:''
     }}
    valid(){
-     if(!this.state.username.includes("@"))
+     if(!this.state.username.includes("@") && this.state.password<5)
+     {
+       this.setState({usernameerror:"invalid", passworderror:"in"  })
+     }
+    else if(!this.state.username.includes("@") )
      {
        this.setState({usernameerror:"invalid"})
      }
+    else if( this.state.password<5)
+     {
+       this.setState({ passworderror:"in"  })
+      
+     }
+     else{
+      return true
+    }
    }
    
+   
     submit(){
+      this.setState({usernameerror:"", passworderror:""  })
+    
       
       if(this.valid()){
       alert("Form has beeb submited")}
@@ -76,7 +91,7 @@ class Signup extends React.Component {
          placeholder='Enter your password'
          onChange={(event)=>{this.setState({password:event.target.value})}}    />
          
-         <p></p>
+         <p>{this.state.passworderror}</p>
 
       </div>
 
