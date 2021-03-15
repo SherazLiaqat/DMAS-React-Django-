@@ -10,8 +10,8 @@ class Signup extends React.Component {
  {
   super();
   this.state={
-      username:" ",
-      email:" ",
+      username:"",
+      email:"",
       password:" ",
       password2:" "
     }}
@@ -36,7 +36,7 @@ class Signup extends React.Component {
           type='text'
           name='username'
           placeholder='Enter your username'
-          onChange={(event)=>{this.setstate({name:event.target.value})}}/>
+          onChange={(event)=>{this.setState({name:event.target.value})}}    />
          
       <p></p>
       </div>
@@ -49,7 +49,7 @@ class Signup extends React.Component {
       name='email'
       placeholder='Enter your email'
      
-     onChange={(event)=>{this.setstate({email:event.target.value})}}/>
+      onChange={(event)=>{this.setState({email:event.target.value})}}     />
          
          <p></p>
     
@@ -63,7 +63,7 @@ class Signup extends React.Component {
          type='password'
          name='password'
          placeholder='Enter your password'
-         onChange={(event)=>{this.setstate({password:event.target.value})}}/>
+         onChange={(event)=>{this.setState({password:event.target.value})}}    />
          
          <p></p>
 
@@ -77,7 +77,7 @@ class Signup extends React.Component {
          type='password'
          name='password2'
          placeholder='Confirm your password'
-         onChange={(event)=>{this.setstate({password2:event.target.value})}}/>
+         onChange={(event)=>{this.setState({password2:event.target.value})}}     />
          
       <p></p>
 
