@@ -26,10 +26,10 @@ class Signup extends React.Component {
     }
    
     submit(){
-      if(this.valid()){
+      
 
       alert("Form has beeb submited")
-    }}
+    }
     render(){
   return (
     <>
@@ -48,11 +48,7 @@ class Signup extends React.Component {
           type='text'
           name='username'
           placeholder='Enter your username'
-<<<<<<< HEAD
-          onChange={(event)=>{this.setState({name:event.target.value})}}    />
-=======
           onChange={(event)=>{this.setState({username:event.target.value})}}/>
->>>>>>> 4743f0373d9190dc7737f39d25faf37eb7eed910
          
       <p>{this.state.usernameerror}</p>
       </div>
@@ -100,7 +96,7 @@ class Signup extends React.Component {
       </div>
 
       
-            <button className='SignupButton' onClick={()=>this.submit}>Sign Up</button>
+            <button className='SignupButton' onClick={()=>this.submit()}>Sign Up</button>
            {/*  <Link to='/Estimation'>
             </Link>*/}
      
