@@ -17,18 +17,17 @@ class Signup extends React.Component {
       usernameerror:""
 
     }}
-    valid()
-    {
-      if (!this.username.trim());
-      {
-        {this.setstate({usernameerror:"Username Required"})}
-      }
-    }
+   valid(){
+     if(!this.state.username.includes("@"))
+     {
+       this.setState({usernameerror:"invalid"})
+     }
+   }
    
     submit(){
       
-
-      alert("Form has beeb submited")
+      if(this.valid()){
+      alert("Form has beeb submited")}
     }
     render(){
   return (
