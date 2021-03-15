@@ -1,10 +1,47 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './Login.css';
 import {Button }from '../../../Button/Button';
 import { Link } from 'react-router-dom';
 
-function Login () {
-  
+class Login extends React.Component  {
+  constructor()
+  {
+   super();
+   this.state={
+       username:"",     
+       password:" ",
+       usernameerror:"",
+       passworderror:""
+     
+     }}
+     valid(){
+      if(!this.state.username.trim("") && !this.state.password.trim(""))
+      {
+        this.setState({usernameerror:" *username must be Required", passworderror:"*password  must be Required" })
+      }
+     else if(!this.state.username.trim("") )
+      {
+        this.setState({usernameerror:" username must be Required"})
+      }
+     else if( this.state.password.trim(""))
+      {
+        this.setState({ passworderror:"password  must be Required"  })
+       
+      }
+      else{
+        return true
+      }
+     }
+     
+     
+      submit(){
+        this.setState({usernameerror:"", passworderror:"" })
+      
+        
+        if(this.valid()){
+        alert("Form has been submited")}
+      }
+     render(){
   return (
     <>
    <div className='form-content-right'>
@@ -22,8 +59,10 @@ function Login () {
           type='text'
           name='username'
           placeholder='Enter your username'
+          onChange={(event)=>{this.setState({username:event.target.value})}}/>
+         
+          <p>{this.state.usernameerror}</p>
         
-        />
         
       
       </div>
@@ -36,9 +75,10 @@ function Login () {
          type='password'
          name='password'
          placeholder='Enter your password'
-         required="required"
-        
-       />
+         
+         onChange={(event)=>{this.setState({username:event.target.value})}}/>
+         
+         <p>{this.state.passworderror}</p>
       
       
 
@@ -46,7 +86,7 @@ function Login () {
       
       < a className='a' href='/'>Forgot Your Password?<br/></a>
       
-            <button className='LoginButton'>Login</button>
+            <button className='LoginButton' onClick={()=>this.submit()}>Login</button>
            {/* <Link to=''>
             </Link>*/} 
      
@@ -66,5 +106,5 @@ function Login () {
   </>
   );
 }
-
+}
 export default Login
