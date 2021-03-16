@@ -20,7 +20,7 @@ class Signup extends React.Component {
    valid(){
      if(!this.state.username.includes("@") && this.state.password<5)
      {
-       this.setState({usernameerror:"invalid", passworderror:"Enter number greater then 5 "  })
+       this.setState({usernameerror:"invalid", passworderror:"in"  })
      }
     else if(!this.state.username.includes("@") )
      {
@@ -28,7 +28,7 @@ class Signup extends React.Component {
      }
     else if( this.state.password<5)
      {
-       this.setState({ passworderror:"Enter number greater then 5"  })
+       this.setState({ passworderror:"in"  })
       
      }
      else{
