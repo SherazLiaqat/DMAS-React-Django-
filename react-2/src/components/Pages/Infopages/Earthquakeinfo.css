@@ -55,6 +55,7 @@
     margin-top: 4px;
     font-size: 2rem;
     margin-left: 30px;
+  
     
 }
 .paragraph{
@@ -71,4 +72,91 @@
   height: 100%;
   position: fixed;
   z-index: -1;
+}
+.img{
+  width: 20rem;
+  margin-left: 30px;
+  margin-top: 1rem;
+  }
+@media screen and (max-width: 860px){
+  .container {
+    background-color: #fff;
+    margin-top: 10px  0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+
+}
+.inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin-left: 20%;
+    justify-content: space-between;
+    margin: 20px 8px  ;
+    display: flex;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+  
+   }
+.h1{
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+    color: black;
+    
+  }
+  
+  .inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+    
+  }
+  
+  .inc-exp-container > div:first-of-type {
+    border-right: 2px solid #dedede;
+    
+  }
+  
+  .money.plus {
+    color: #2ecc71;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .money.minus {
+    color: #c0392b;
+    font-family: 'Times New Roman', Times, serif;
+  }
+.title-3{
+    margin-top: 2px;
+    font-size: 2rem;
+}
+.title-4{
+    margin-top: 4px;
+    font-size: 2rem;
+    margin-left: 30px;
+    
+}
+.paragraph{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family:  Tahoma, sans-serif;
+    
+    
+    
+   
+}
+.image {
+  object-fit:cover;
+  width: 20%;
+  height: 50%;
+  position: fixed;
+  z-index: -1;
+}
+.img{
+width: 20rem;
+margin-left: 30px;
+margin-top: 1rem;
+}
 }

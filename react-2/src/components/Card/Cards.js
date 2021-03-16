@@ -43,16 +43,14 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src='images\fire.jpg'
-              text='Explore the Tsaunami Information...'
+              text='Explore the Fire Information...'
 
               label='Fire'
 
-              label='Tsaunami/HeavyRain'
+              label='Fire'
 
-              path='/Heavyrain'
-              label='Tsaunami'
-              path='/sign-up'
-
+              path='/Fireinfo'
+             
 
               target="_blank"
 

@@ -26,10 +26,10 @@ export const Earthquakeinfo = () => {
           you will make the best decision to prevent injuries. Follow these recommendations during Eartquake.</p>
         </div>
       </div>
-            <h4 className="title-4" >“Drop, Cover, Hold”<br/><img  src={downimage}></img>
+            <h4 className="title-4" >“Drop, Cover, Hold”<br/>
             
             </h4>
-            
+            <img  src={downimage} className='img'></img>
             </div>
             
             <div className="content">

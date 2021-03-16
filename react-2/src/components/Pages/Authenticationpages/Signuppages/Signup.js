@@ -20,7 +20,7 @@ class Signup extends React.Component {
       emailerror:""
     }}
    valid(){
-     if(!this.state.username.trim("") && this.state.password<5 &&!this.state.email.includes("@") && !this.state.password2.trim(""))
+     if(!this.state.username.trim("") && this.state.password<5 &&!this.state.email.includes("@") && this.state.password2.trim(""))
      {
        this.setState({usernameerror:"invalid username", passworderror:"password chracter must be 5" ,emailerror:"Enter valid email adress",password2error:"Confirm password must be Required" })
      }
@@ -38,9 +38,9 @@ class Signup extends React.Component {
        this.setState({ emailerror:"Enter valid email adress"  })
       
      }
-     else if( !this.state.password2.trim(""))
+     else if( this.state.password2.trim(""))
      {
-       this.setState({ password2error:"Confirm password must be Required"  })
+       this.setState({ password2error:"Enter password"  })
       
      }
      else{
@@ -50,7 +50,7 @@ class Signup extends React.Component {
    
    
     submit(){
-      this.setState({usernameerror:"", passworderror:"",emailerror:"" ,password2error:"" })
+      this.setState({usernameerror:"", passworderror:"",emailerror:""  })
     
       
       if(this.valid()){
