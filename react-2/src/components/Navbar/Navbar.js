@@ -52,6 +52,21 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
+                to='/'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Eartquake Estimation
+                <select>
+  <option value="grapefruit">Grapefruit</option>
+  <option value="lime">Lime</option>
+  <option selected value="coconut">Coconut</option>
+  <option value="mango">Mango</option>
+</select>
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
                 to='/About'
                 className='nav-links'
                 onClick={closeMobileMenu}
