@@ -1,0 +1,14 @@
+.DeathButton{
+    cursor: pointer;
+    color: red;
+    background-color: transparent;
+    color:green;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+    padding: 8px 30px;
+    font-size: 20px;
+    margin-left: 27rem;
+  }
+  .DeathButton:hover{
+      color: seagreen;
+  }

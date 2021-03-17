@@ -10,7 +10,7 @@ const Contact = () => {
                 <h4 className='location'><i class="fa fa-map-marker"></i>Locate us</h4>
                 <p className='p'> University of sialkot </p>
             </div>
-            <div className='form-inputs'>
+            <div className='form-inputs1'>
         <label className='form-label'><i class="fa fa-user icon"></i>Your Name</label>
         <input
           className='form-input'
@@ -18,7 +18,7 @@ const Contact = () => {
           name='name'/>
                  
       </div>
-      <div className='form-inputs'>
+      <div className='form-inputs1'>
         <label className='form-label'><i class="fa fa-envelope icon"></i>Your E-mail</label>
         <input
           className='form-input'
