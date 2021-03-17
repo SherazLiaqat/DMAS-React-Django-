@@ -54,16 +54,17 @@
 .title-4{
     margin-top: 4px;
     font-size: 2rem;
-    margin-left: 30px;
+    margin-left: 18rem;
   
     
 }
 .paragraph{
-    margin-left: 10%;
+    margin-left: 18rem;
     margin-right: 10%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
     font-size: 15px;
     font-style:inherit;
+    width: 50%;
    
 }
 .image {
@@ -84,7 +85,7 @@
 .last-paragraph{
   background-image: url("/src/components/images/earthnew.jpg");
   background-color: #cccccc;
-  height: 300px;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

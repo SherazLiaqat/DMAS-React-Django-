@@ -39,7 +39,7 @@ COVID-19 affects different people in different ways. Some people do not have any
      </ul>
      <img  src={symptoms} className='img'></img>
      
-<h3 className='title-4'>Who is most at-risk from COVID-19?</h3>
+<h2 className='title-4'>Who is most at-risk from COVID-19?</h2>
 <ul className='paragraph'>
 <p >Anyone can get COVID-19 and become seriously ill. However, people over 60 years old and those with health conditions such as high blood pressure, heart or lung problems, diabetes or cancer are at a higher risk of developing serious illness.
 
