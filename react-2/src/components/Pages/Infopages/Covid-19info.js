@@ -2,6 +2,7 @@ import React from 'react'
 import './Earthquakeinfo.css';
 import hand from '../../images/hand.jpg';
 import symptoms from '../../images/symptoms.jpg';
+import covid from '../../images/covid.jpg';
 const Covid19 = () => {
     return (
         <>
@@ -59,6 +60,7 @@ Respiratory droplets from coughs and sneezes can also land on surfaces. The viru
 <li>Wearing a face mask when you are around others.</li>
 <li>There are two types of face masks, fabric masks (which you can make yourself and are suitable for most people) and medical masks.</li>
 <li>As medical masks are in short supply, they should only be worn by healthcare workers, people with COVID-19 symptoms and those caring for people with suspected or confirmed cases of COVID-19. When it’s not possible to maintain a distance of one meter from others, people over 60 and those with underlying health conditions should also wear medical masks.</li>
+<img  src={covid} className='img'></img>
 </ul>
 <h3 className='title-4'>What should I do if I think I have COVID-19?</h3>
 <ul className='paragraph'><li>You will need to stay at home and self-isolate if you have symptoms of COVID-19 – even if they are mild. Call your local health authority for advice. Don’t visit the clinic, as you could pass the virus onto others</li>
