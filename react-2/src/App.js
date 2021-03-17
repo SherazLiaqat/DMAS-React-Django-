@@ -24,6 +24,9 @@ import Blog from './components/Pages/Blog';
 import About from './components/Pages/Extrapages/About';
 import Contact from './components/Pages/Extrapages/Contact';
 import Estimation from './components/Pages/Extrapages/Estimation';
+import Death from './components/Pages/Estimationpages/Earthquake/Death';
+import Affected from './components/Pages/Estimationpages/Earthquake/Affected';
+import Injured from './components/Pages/Estimationpages/Earthquake/Injured';
 function App(){
   
   return (
@@ -39,6 +42,9 @@ function App(){
         <Route path='/Contact' component={Contact} />
         <Route path='/Blog' component={Blog} />
         <Route path='/News' component={News} />
+        <Route path='/Death' component={Death} />
+        <Route path='/Affected' component={Affected} />
+        <Route path='/Injured' component={Injured} />
         <Route path='/sign-up' component={Signup} />
         <Route path='/Login' component={Login} />
      

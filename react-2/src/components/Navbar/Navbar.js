@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {Button} from '../Button/Button';
 import { Link } from 'react-router-dom';
+import Dropdown from './Dropdown';
 import './Navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-
+  const [dropdown, setDropdown] = useState(false);
+  
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -23,6 +25,24 @@ function Navbar() {
   }, []);
 
   window.addEventListener('resize', showButton);
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
+
+
 
   return (
     <>
@@ -50,20 +70,35 @@ function Navbar() {
                 Awareness
               </Link>
             </li>
-            <li className='nav-item'>
+            
+            <li className='nav-item'
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            >
+            
               <Link
+             
+                
+                className='nav-links'
+                onClick={closeMobileMenu}>
+                Earthquake<i class='fas fa-caret-down' onClick/>
+              
+              </Link>
+
+              {dropdown && <Dropdown />}
+            </li>
+            <li>
+            
+              <Link
+              
                 to='/'
                 className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Eartquake Estimation
-                <select>
-  <option value="grapefruit">Grapefruit</option>
-  <option value="lime">Lime</option>
-  <option selected value="coconut">Coconut</option>
-  <option value="mango">Mango</option>
-</select>
+                onClick={closeMobileMenu}>
+                Flood <i class='fas fa-caret-down'/>
+                
               </Link>
+              
+             
             </li>
             <li className='nav-item'>
               <Link
@@ -92,16 +127,7 @@ function Navbar() {
                 News
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link
-                to='/Blog'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Blog
-              </Link>
-            
-            </li>
+           
           
            
 
