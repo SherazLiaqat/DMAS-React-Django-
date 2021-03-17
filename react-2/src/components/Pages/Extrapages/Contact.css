@@ -1,2 +1,15 @@
-
+.Header{
+    margin: 20px;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+.Header2{
+    font-size: 32px;
+}
+.intro{
+    margin-top: 20px;
+    text-align: center;
+    font-family:  Tahoma, sans-serif;
+}
 

@@ -42,7 +42,7 @@ const About = () => {
               survivors with information, support, services, and a means to access and apply for disaster assistance
                through joint data-sharing efforts between federal, tribal, state, local, and private sector partners.
               </div>
-              
+              <h1 > VISION</h1>
               <div className="about__info-p2">
               The DisasterAssistance is used to build relationships and help promote the addition of new assistance for our website. 
               The policy defines the criteria we use to consider agreements to exchange data, links, or information with partners.
