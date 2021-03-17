@@ -3,6 +3,7 @@ import './Earthquakeinfo.css';
 import hand from '../../images/hand.jpg';
 import symptoms from '../../images/symptoms.jpg';
 import covid from '../../images/covid.jpg';
+import symptomdetails from '../../images/symptomdetails.jpg';
 const Covid19 = () => {
     return (
         <>
@@ -62,13 +63,14 @@ Respiratory droplets from coughs and sneezes can also land on surfaces. The viru
 <li>As medical masks are in short supply, they should only be worn by healthcare workers, people with COVID-19 symptoms and those caring for people with suspected or confirmed cases of COVID-19. When it’s not possible to maintain a distance of one meter from others, people over 60 and those with underlying health conditions should also wear medical masks.</li>
 <img  src={covid} className='img'></img>
 </ul>
+
 <h3 className='title-4'>What should I do if I think I have COVID-19?</h3>
 <ul className='paragraph'><li>You will need to stay at home and self-isolate if you have symptoms of COVID-19 – even if they are mild. Call your local health authority for advice. Don’t visit the clinic, as you could pass the virus onto others</li>
 <li>Do not leave your home for any reason during this time, including to go to work or school. Ask friends or neighbours to bring you any supplies you need. They should leave these outside and not enter your home. The people you live with should also stay home for at least 14 days from when you first noticed symptoms to prevent the virus from being passed on.</li>
 <li>If you have difficulty breathing and/or persistent pain in your chest, call your health provider immediately.
 
 Most people with COVID-19 recover from the virus without the need for hospital treatment.</li>
-
+<img  src={symptomdetails} className='img'></img>
 </ul>
 <h3 className='title-4'>Is there a vaccine for COVID-19?</h3>
 <ul className='paragraph'><li>The first COVID-19 vaccines are beginning to be offered to people in some countries. COVID-19 vaccines work by helping our bodies develop immunity to coronavirus, the virus that causes COVID-19. This means that if you are exposed to the virus, your body will be ready to respond to it and you will be less likely to get seriously ill.</li>

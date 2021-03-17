@@ -74,9 +74,12 @@
   z-index: -1;
 }
 .img{
-  width: 20rem;
-  margin-left: 30px;
+  
+  width: 50%;
+  margin: 20px;
   margin-top: 1rem;
+  align-content: center;
+  margin-left: 18rem;
   }
 .last-paragraph{
   background-image: url("/src/components/images/earthnew.jpg");
