@@ -6,10 +6,21 @@ const Contact = () => {
             <h4 className="Header"> HAVE ANY QUERY?</h4>
             <h1 className="Header2"> Contact Us</h1>
             <p className='intro'>Please complete the form below to contact us. We will do our best to get back to you as soon as possible!</p>
-            <div className='location div'>
-                <h4 className='location'><i class="fa fa-map-marker"></i>Locate us</h4>
-                <p className='p'> University of sialkot </p>
-            </div>
+            <div className='divlocation'>
+        <h className='form-label'><i class="fa fa-map-marker"></i>Locate Us</h>
+      <p> UNIVERSITY OF GUJRAT SIALKOT CAMPUS</p>
+                 
+      </div>
+      <div className='divlocation'>
+        <h className='form-label'><i class="fa fa-phone"></i>Give us a Call</h>
+        <p> OFFICE: 052-1454678</p>
+                 
+      </div>
+      <div className='divlocation'>
+        <label className='form-label'><i class="fa fa-envelope icon"></i>Get in  Online</label>
+        <p> example@gmail.com</p>
+                 
+      </div><br/>
             <div className='form-inputs1'>
         <label className='form-label'><i class="fa fa-user icon"></i>Your Name</label>
         <input
@@ -26,7 +37,7 @@ const Contact = () => {
           name='name'/>
                  
       </div>
-      <div className='form-inputs'>
+      <div className='form-inputs2'>
         <label className='form-label'><i class='fas fa-book-reader'></i>Your Subject</label>
         <input
           className='form-input'
@@ -34,14 +45,15 @@ const Contact = () => {
           name='name'/>
                  
       </div>
-      <div className='form-inputs'>
+      <div className='form-inputs2'>
         <label className='form-label'><i class="fa fa-envelope icon"></i>Your Message</label>
         <input
           className='form-input'
           type='text'
           name='name'/>
-                 
+                
       </div>
+      <button className='contactButton'> Estimate</button> 
         </div>
     )
 }
