@@ -20,27 +20,37 @@ class Signup extends React.Component {
       emailerror:""
     }}
    valid(){
-     if(!this.state.username.trim("") && this.state.password<5 &&!this.state.email.includes("@") && this.state.password2.trim(""))
+     if(!this.state.username.trim("")&&!this.state.email.includes("@")&& !this.state.password.trim("") && !this.state.password2.trim(""))
      {
-       this.setState({usernameerror:"invalid username", passworderror:"password chracter must be 5" ,emailerror:"Enter valid email adress",password2error:"Confirm password must be Required" })
+       this.setState({usernameerror:"Invalid username",passworderror:"Enter password" ,emailerror:"Enter valid email adress",password2error:"Confirm password must be Required" })
      }
     else if(!this.state.username.trim("") )
      {
-       this.setState({usernameerror:"invalid username"})
+       this.setState({usernameerror:"Invalid username"})
      }
-    else if( this.state.password<5)
-     {
-       this.setState({ passworderror:"password chracter must be 5"  })
-      
-     }
-     else if( this.state.email.includes("@"))
+     else if(!this.state.email.includes("@"))
      {
        this.setState({ emailerror:"Enter valid email adress"  })
       
      }
-     else if( this.state.password2.trim(""))
+     else if(!this.state.password.trim(""))
+     {
+       this.setState({ passworderror:"Enter password"  })
+      
+     }
+     else if(this.state.password.length < 6){
+        this.setState({passworderror: "Please add at least 6 charachter."})
+      }
+      
+     
+     else if( !this.state.password2.trim(""))
      {
        this.setState({ password2error:"Enter password"  })
+      
+     }
+     else if(this.state.password != this.state.password2)
+     {
+       this.setState({ password2error:"Please Confirmed your password" })
       
      }
      else{
