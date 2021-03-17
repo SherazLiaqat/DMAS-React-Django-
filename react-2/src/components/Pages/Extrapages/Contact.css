@@ -1,3 +1,5 @@
+
+
 .Header{
     margin: 20px;
     color: red;
@@ -14,9 +16,17 @@
     width: 33.33333333333333%;
     margin-left: 30rem;
 }
+.form-label{
+    margin: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid red;
+}
+.div-paragraph{
+    margin: 10px;
+}
 .form-inputs1{
     margin: 20px;
-   
+   margin-left: 20px;
    display:inline-table;
    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -24,13 +34,14 @@
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
-    width: 41rem;
+    width: 40.4rem;
     
   
    
 }
 .divlocation{
     display:inline-table;
+    
     margin: 20px;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -57,16 +68,17 @@
     color: white;
     background-color: black;
     color:white;
-    border: 1px solid black;
+    border-radius: 1px solid black;
     transition: all 0.3s ease-out;
     padding: 8px 50px;
     font-size: 20px;
     border-radius: 5px solid black;
     margin-left: 1.2rem;
+    margin-bottom: 20px;
   }
   .contactButton:hover{
     transition: all 0.3s ease-out;
-    background:black;
+    background:white;
     color: lightgreen;
     transition: 250ms;
   }

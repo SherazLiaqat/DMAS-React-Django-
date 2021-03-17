@@ -1,25 +1,32 @@
 .dropdown-menu {
     background:black;
-    width: 130px;
+    width: 166px;
     position:absolute;
-    top: 60px;
+    top: 80px;
     list-style: none;
-    text-align: start;
+    text-align:start;
+    
+    
    
   }
   
   .dropdown-menu li {
-    background: #fff;
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);;
     cursor: pointer;
-    color: black;
+    color: #fff;
+    
+    
+   
   }
   
   .dropdown-menu li:hover {
-    background: #5cabff;
+    background:seagreen;
+    color: red;
   }
   
   .dropdown-menu.clicked {
     display: none;
+   
   }
   
   .dropdown-link {
@@ -27,8 +34,8 @@
     height: 100%;
     width: 100%;
     text-decoration: none;
-    color:black;
-    padding: 16px;
+    color:#fff;
+    padding: 9px;
   }
   
   @media screen and (max-width: 960px) {

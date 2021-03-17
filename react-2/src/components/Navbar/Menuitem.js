@@ -1,6 +1,6 @@
 export const MenuItem = [
     {
-      title: 'Death Estumation',
+      title: 'Death Estemation',
       path: '/Death',
       cName: 'dropdown-link'
     },
