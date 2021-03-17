@@ -23,7 +23,7 @@ class Login extends React.Component  {
       {
         this.setState({usernameerror:" username must be Required"})
       }
-     else if( this.state.password.trim(""))
+     else if(!this.state.password.trim(""))
       {
         this.setState({ passworderror:"password  must be Required"  })
        
