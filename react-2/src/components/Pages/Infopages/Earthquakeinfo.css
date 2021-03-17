@@ -78,6 +78,15 @@
   margin-left: 30px;
   margin-top: 1rem;
   }
+.last-paragraph{
+  background-image: url("/src/components/images/earthnew.jpg");
+  background-color: #cccccc;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 @media screen and (max-width: 860px){
   .container {
     background-color: #fff;

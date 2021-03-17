@@ -9,7 +9,7 @@ class Login extends React.Component  {
    super();
    this.state={
        username:"",     
-       password:" ",
+       password:"",
        usernameerror:"",
        passworderror:""
      
@@ -23,7 +23,7 @@ class Login extends React.Component  {
       {
         this.setState({usernameerror:" username must be Required"})
       }
-     else if(!this.state.password.trim(""))
+     else if(this.state.password.trim(""))
       {
         this.setState({ passworderror:"password  must be Required"  })
        
@@ -39,8 +39,8 @@ class Login extends React.Component  {
       
         
         if(this.valid()){
-        alert("Form has been submited")}
-      }
+          alert("Form has been submited")}
+        }
      render(){
   return (
     <>
@@ -78,7 +78,7 @@ class Login extends React.Component  {
          
          onChange={(event)=>{this.setState({username:event.target.value})}}/>
          
-         <p>{this.state.passworderror}</p>
+         <p>{this.state.password}</p>
       
       
 

@@ -211,10 +211,10 @@ export const Earthquakeinfo = () => {
                  
             <h4 className="title-4">What Rescuers and Experts “DO NOT” Recommend You Do During An Earthquake</h4>
             <div className="content">
-                <div >
+                <div className='last-paragraph' >
                     <ul className='paragraph'>
-                    <img  src={earthnew} className='imgearthquake'></img>
-                        <li><b>DO NOT</b> run outside or to other rooms during shaking. The area near the exterior walls of
+                    
+                        <li ><b>DO NOT</b> run outside or to other rooms during shaking. The area near the exterior walls of
                             a building is the most dangerous place to be. Windows, facades and architectural details are
                             often the first parts of the building to collapse. Stay away from the danger zone. Also, shaking
                             can be so strong that you will not be able to move far without falling down.</li>
