@@ -15,17 +15,17 @@ class Login extends React.Component  {
      
      }}
      valid(){
-      if(!this.state.username.trim("") && !this.state.password.trim(""))
+      if(!this.state.username.trim("") &&!this.state.password.trim(""))
       {
-        this.setState({usernameerror:" *username must be Required", passworderror:"*password  must be Required" })
+        this.setState({usernameerror:" *username must be Required", passworderror:"*password  must be Required"})
       }
-     else if(!this.state.username.trim("") )
+     else if(!this.state.username.trim(""))
       {
         this.setState({usernameerror:" username must be Required"})
       }
-     else if(this.state.password.trim(""))
+     else if(!this.state.password.trim(""))
       {
-        this.setState({ passworderror:"password  must be Required"  })
+        this.setState({ passworderror:"password  must be Required"})
        
       }
       else{
@@ -37,9 +37,9 @@ class Login extends React.Component  {
       submit(){
         this.setState({usernameerror:"", passworderror:"" })
       
-        
         if(this.valid()){
-          alert("Form has been submited")}
+         alert('submitted')
+        }
         }
      render(){
   return (
@@ -78,7 +78,7 @@ class Login extends React.Component  {
          
          onChange={(event)=>{this.setState({username:event.target.value})}}/>
          
-         <p>{this.state.password}</p>
+         <p>{this.state.passworderror}</p>
       
       
 

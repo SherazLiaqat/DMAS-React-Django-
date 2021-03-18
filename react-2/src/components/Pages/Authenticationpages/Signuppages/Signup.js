@@ -60,7 +60,7 @@ class Signup extends React.Component {
    
    
     submit(){
-      this.setState({usernameerror:"", passworderror:"",emailerror:""  })
+      this.setState({usernameerror:"", passworderror:"",emailerror:"",password2error:""  })
     
       
       if(this.valid()){
