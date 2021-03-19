@@ -9,10 +9,22 @@
     font-size: 20px;
     border-radius: 5px solid black;
     margin-left: 27rem;
+    margin-bottom: 10px;
   }
   .DeathButton:hover{
     transition: all 0.3s ease-out;
     background:black;
     color: lightgreen;
     transition: 250ms;
+  }
+  .Change{
+    display: flex;
+    padding: 20px;
+  }
+  .Changing{
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    background-color: aquamarine;
   }

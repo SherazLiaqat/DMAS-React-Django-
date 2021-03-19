@@ -8,30 +8,25 @@ class Login extends React.Component  {
   {
    super();
    this.state={
-       username:"",     
+       email:"",     
        password:"",
        usernameerror:"",
        passworderror:""
      
      }}
-     valid(){
-      if(!this.state.username.trim("") &&!this.state.password.trim(""))
-      {
-        this.setState({usernameerror:" *username must be Required", passworderror:"*password  must be Required"})
+    valid(){
+      if(!this.state.email.trim("") ){
+        this.setState({usernameerror:"UserName is required"})
       }
-     else if(!this.state.username.trim(""))
+     
+      else if(!this.state.password.trim(""))
       {
-        this.setState({usernameerror:" username must be Required"})
-      }
-     else if(!this.state.password.trim(""))
-      {
-        this.setState({ passworderror:"password  must be Required"})
-       
+       this.setState({passworderror:"Password Required"})
       }
       else{
-        return true
+        return true;
       }
-     }
+    }
      
      
       submit(){
@@ -105,6 +100,5 @@ class Login extends React.Component  {
   
   </>
   );
-}
-}
+}}
 export default Login

@@ -87,7 +87,10 @@ function Navbar() {
 
               {dropdown && <Dropdown />}
             </li>
-            <li>
+            <li className='nav-item'
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            >
             
               <Link
               

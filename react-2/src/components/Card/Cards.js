@@ -65,9 +65,9 @@ function Cards() {
             />
             <CardItem
               src='images/sand.jpg'
-              text='Explore the Sand-Storm Information...'
-              label='Sand-Storm'
-              path='/Fireinfo'
+              text='Explore the Locusts Information...'
+              label='Locusts'
+              path='/Locust'
               target="_blank"
             />
           </ul>

@@ -27,6 +27,7 @@ import Estimation from './components/Pages/Extrapages/Estimation';
 import Death from './components/Pages/Estimationpages/Earthquake/Death';
 import Affected from './components/Pages/Estimationpages/Earthquake/Affected';
 import Injured from './components/Pages/Estimationpages/Earthquake/Injured';
+import Locust from './components/Pages/Infopages/Locusts';
 function App(){
   
   return (
@@ -59,7 +60,7 @@ function App(){
     <Route path='/Heavyrain'  component={Heavyraininfo}exact />
     <Route path='/Fireinfo'  component={Fireinfo} />
     <Route path='/About'  component={About}exact />
-    
+    <Route path='/Locust'  component={Locust}exact />
     <Route path='/Estimation'  component={Estimation}exact />
     
 
