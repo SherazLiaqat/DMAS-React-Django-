@@ -20,8 +20,10 @@
   }
   
   .dropdown-menu li:hover {
-    background:seagreen;
-    color: red;
+    transition: all 0.3s ease-out;
+    background:red;
+    color: #242424;
+    transition: 250ms;
   }
   
   .dropdown-menu.clicked {

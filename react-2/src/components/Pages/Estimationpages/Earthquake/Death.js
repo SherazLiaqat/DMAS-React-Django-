@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Death.css';
+
 const Death = () => {
     return (
-        <div>
+        <div className='main'>
             <h1> This is Death Estimtion page</h1>
             <label className='Change'>Earthquake Type:</label>
             <select className='Changing'>
@@ -28,6 +29,7 @@ const Death = () => {
           name='name'/>
                  
       </div>
+     
       <div className='form-inputs'>
         <label className='form-label'>Latitude</label>
         <input
