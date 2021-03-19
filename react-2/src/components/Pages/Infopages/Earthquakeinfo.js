@@ -4,6 +4,8 @@ import Footer from '../../../components/Footer/Footer';
 import Imageslider from '../../Slider/Imageslider';
 import downimage from '../../images/down.jpg';
 import earthnew from '../../images/earthnew.jpg';
+import chair from '../../images/chair.jpg';
+import outdoor from '../../images/outside.jpg';
 export const Earthquakeinfo = () => {
     return (
         <>
@@ -104,6 +106,7 @@ export const Earthquakeinfo = () => {
             
         
             <h4 className="title-4">Outdoors</h4>
+            <img  src={outdoor} className='img'></img>
             <div className="content">
                 <div className="rich-text">
                     <ul className='paragraph'>
@@ -160,6 +163,7 @@ export const Earthquakeinfo = () => {
     
            
             <h4 className="title-4"> <i class="fa fa-wheelchair"></i>Wheelchair</h4>
+            <img  src={chair} className='img'></img>
             <div clasNAclassNames="content">
                 <div >
                     <ul className='paragraph'>
