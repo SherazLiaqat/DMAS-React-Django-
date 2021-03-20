@@ -1,6 +1,7 @@
 
 .main{
   background-color: #f7f7f7;
+  margin: 3px;
 }
 .DeathButton{
     cursor: pointer;
@@ -21,6 +22,30 @@
     color: lightgreen;
     transition: 250ms;
   }
+  .box{
+    margin-left: 0.5rem;
+    width: 30rem;
+    height: 2rem;
+  }
+  .box2{
+    margin-left: 1.3rem;
+    width: 30rem;
+    height: 2rem;
+  }
+  .box3{
+    margin-left: 0.7rem;
+    width: 30rem;
+    height: 2rem;
+  }
+  .form-inputs-Death{
+    margin: 20px;
+    margin-left: 4.3rem;
+    
+    
+    
+
+
+  }
   .Change{
     display: flex;
     padding: 20px;
@@ -30,5 +55,5 @@
     padding: 5px;
     margin-left: 70px;
     margin-bottom: 10px;
-    background-color: aquamarine;
+    
   }

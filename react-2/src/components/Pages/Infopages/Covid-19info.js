@@ -13,18 +13,29 @@ const Covid19 = () => {
  
      <h1 className="title-3">ABOUT CORONAVIRUS (COVID-19)</h1>
      <img  src={hand} className='img'></img>
+     <div>
+         <h1 className='title-4'>Fast Fact</h1>
+         <ul  className='paragraph'>
+         COVID-19 is a new infectious disease caused by the SARS-CoV-2 virus.
+The key symptoms of COVID-19 are a fever, dry cough, tiredness and loss of taste or smell.
+COVID-19 affects different people in different ways. Some people do not have any symptoms and may not even know they have the virus, while others get seriously ill and need hospital care.
+Physical distancing, wearing a face mask around other people and frequent handwashing are some of the best ways to prevent COVID-19.
+If you think you have symptoms of COVID-19, stay at home and call your local health authority. They will tell you what to do next. c
+         </ul>
+     </div>
          <p className='paragraph'>There are general Covid-19 safety precautions you
           should follow regardless of where you live. Taking time to review tip
           s about the following Covid-19 safety issues can help you 
          create a safer and more secure living environment for you, your friends, and family.. </p>
  
          
-    
-     <ul className='paragraph'>
-     <h2 className='title-4'>What is COVID-19?</h2>
-<p>COVID-19, otherwise known as coronavirus disease 2019, is a new infectious disease caused by a previously unknown virus called SARS-CoV-2.</p>
+         <h2 className='title-4'>What is COVID-19?</h2>
+     <ul >
+     
+<p className='paragraph'>COVID-19, otherwise known as coronavirus disease 2019, is a new infectious disease caused by a previously unknown virus called SARS-CoV-2.</p>
+
 <h3 className='title-4'>What are the symptoms of COVID-19?</h3>
-<p>The most common symptoms of COVID-19 are:
+<p className='paragraph'>The most common symptoms of COVID-19 are:
 
 fever,
 dry cough,
@@ -61,8 +72,8 @@ Respiratory droplets from coughs and sneezes can also land on surfaces. The viru
 <li>Wearing a face mask when you are around others.</li>
 <li>There are two types of face masks, fabric masks (which you can make yourself and are suitable for most people) and medical masks.</li>
 <li>As medical masks are in short supply, they should only be worn by healthcare workers, people with COVID-19 symptoms and those caring for people with suspected or confirmed cases of COVID-19. When it’s not possible to maintain a distance of one meter from others, people over 60 and those with underlying health conditions should also wear medical masks.</li>
-<img  src={covid} className='img'></img>
 </ul>
+<img  src={covid} className='img'></img>
 
 <h3 className='title-4'>What should I do if I think I have COVID-19?</h3>
 <ul className='paragraph'><li>You will need to stay at home and self-isolate if you have symptoms of COVID-19 – even if they are mild. Call your local health authority for advice. Don’t visit the clinic, as you could pass the virus onto others</li>
@@ -70,15 +81,16 @@ Respiratory droplets from coughs and sneezes can also land on surfaces. The viru
 <li>If you have difficulty breathing and/or persistent pain in your chest, call your health provider immediately.
 
 Most people with COVID-19 recover from the virus without the need for hospital treatment.</li>
-<img  src={symptomdetails} className='img'></img>
+
 </ul>
+<img  src={symptomdetails} className='img'></img>
 <h3 className='title-4'>Is there a vaccine for COVID-19?</h3>
 <ul className='paragraph'><li>The first COVID-19 vaccines are beginning to be offered to people in some countries. COVID-19 vaccines work by helping our bodies develop immunity to coronavirus, the virus that causes COVID-19. This means that if you are exposed to the virus, your body will be ready to respond to it and you will be less likely to get seriously ill.</li>
 <li>The first COVID-19 vaccines are beginning to be offered to people in some countries. COVID-19 vaccines work by helping our bodies develop immunity to coronavirus, the virus that causes COVID-19. This means that if you are exposed to the virus, your body will be ready to respond to it and you will be less likely to get seriously ill.</li>
 <li>Even after having the vaccine, it’s important to follow prevention measures such as social distancing and wearing a mask until the number of people with COVID-19 falls to a safe level in your area.</li>
 <li>Follow the official advice in your area to find out when the vaccine will be available to you.</li>
 </ul>
-
+<br/><br/>
   </div>
  
 

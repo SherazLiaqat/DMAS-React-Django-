@@ -1,10 +1,13 @@
 import React,{useState} from 'react'
+
 import './Death.css';
 
 const Death = () => {
+  const[amount,setamount]=useState(0);
     return (
+      <>
         <div className='main'>
-            <h1> This is Death Estimtion page</h1>
+            <h1 >  This is Death Estimtion page</h1>
             <label className='Change'>Earthquake Type:</label>
             <select className='Changing'>
   <option value="grapefruit">Ground Movement</option>
@@ -21,33 +24,26 @@ const Death = () => {
   
  
 </select>
-            <div className='form-inputs'>
-        <label className='form-label'>Magnitude</label>
-        <input
-          className='form-input'
-          type='text'
-          name='name'/>
-                 
+            <div className='form-inputs-Death'>
+        <label className='form-label'>Magnitude:</label>
+        <input className='box' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
+        
       </div>
      
-      <div className='form-inputs'>
-        <label className='form-label'>Latitude</label>
-        <input
-          className='form-input'
-          type='text'
-          name='name'/>
+      <div className='form-inputs-Death'>
+        <label className='form-label'>Latitude:</label>
+        <input className='box2' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Latitude..." />
+      
                  
       </div>
-      <div className='form-inputs'>
-        <label className='form-label'>Longitude</label>
-        <input
-          className='form-input'
-          type='text'
-          name='name'/>
-                 
+      <div className='form-inputs-Death'>
+        <label className='form-label'>Longitude:</label>
+        <input className='box3' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Longitude..." />
+       
       </div>
      <button className='DeathButton'> Estimate</button>
         </div>
+        </>
     )
 }
 

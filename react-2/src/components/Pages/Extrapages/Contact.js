@@ -22,7 +22,7 @@ const Contact = () => {
                  
       </div><br/>
             <div className='form-inputs1'>
-        <label className='form-label'><i class="fa fa-user icon"></i>Your Name</label>
+        <label className='form-label1'><i class="fa fa-user icon"></i>Your Name</label>
         <input
           className='form-input'
           type='text'
