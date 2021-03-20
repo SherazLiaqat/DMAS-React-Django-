@@ -1,12 +1,19 @@
 .cards {
-    padding: 4rem;
+    padding: 2rem;
     background: #fff;
   }
   
   h1 {
+    
     text-align: center;
   }
- 
+ .diasaster-prepared{
+  margin-top: 20px;
+ margin-left: 28rem;
+  width: 33.33333333333333%;
+  text-align: center;
+  
+ }
   .cards__container {
     display: flex;
     flex-flow: column;
@@ -103,16 +110,26 @@
     .content__blog__container {
       width: 84%;
     }
+    
   }
   
   @media only screen and (min-width: 1024px) {
     .cards__items {
       display: flex;
     }
+   
   }
   
   @media only screen and (max-width: 1024px) {
     .cards__item {
       margin-bottom: 2rem;
+   
     }
+    .diasaster-prepared{
+      margin-top: 20px;
+     margin-left: 12rem;
+      width: 46.33333333333333%;
+      text-align: center;
+      
+     }
   }

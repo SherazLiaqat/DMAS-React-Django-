@@ -7,6 +7,9 @@ function Cards() {
   return (
     <div className='cards'>
       <h1>Check out these  DIsaster Awareness!</h1>
+      <p className='diasaster-prepared'>During Disaster it is important to have an proper Awareness about Disaster .Disaster preparedness has the potential save the maximum number of lives and 
+        property during a disaster, and it aims to return the affected populations
+         to normalcy as quickly as possible.Visit the pages and gather Awareness.</p>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -64,7 +67,7 @@ function Cards() {
               
             />
             <CardItem
-              src='images/sand.jpg'
+              src='images/locust.jpg'
               text='Explore the Locusts Information...'
               label='Locusts'
               path='/Locust'

@@ -7,7 +7,9 @@ const Death = () => {
     return (
       <>
         <div className='main'>
+         
             <h1 >  This is Death Estimtion page</h1>
+           
             <label className='Change'>Earthquake Type:</label>
             <select className='Changing'>
   <option value="grapefruit">Ground Movement</option>
@@ -24,6 +26,7 @@ const Death = () => {
   
  
 </select>
+
             <div className='form-inputs-Death'>
         <label className='form-label'>Magnitude:</label>
         <input className='box' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
@@ -43,6 +46,9 @@ const Death = () => {
       </div>
      <button className='DeathButton'> Estimate</button>
         </div>
+        <div className='side-div'>
+            <h> this is side div</h>
+          </div>
         </>
     )
 }

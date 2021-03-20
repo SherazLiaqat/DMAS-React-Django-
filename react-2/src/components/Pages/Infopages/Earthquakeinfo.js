@@ -32,6 +32,7 @@ export const Earthquakeinfo = () => {
             
             </h4>
             <img  src={downimage} className='img'></img>
+            
             </div>
             
             <div className="content">
