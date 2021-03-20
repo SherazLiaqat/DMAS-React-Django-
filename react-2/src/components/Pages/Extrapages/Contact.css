@@ -82,3 +82,90 @@
     color: lightgreen;
     transition: 250ms;
   }
+  @media screen and (max-width: 852px)
+  {
+    .Header{
+        margin: 20px;
+        color: red;
+        font-size: 20px;
+        text-align: center;
+    }
+    .Header2{
+        font-size: 32px;
+    }
+    .intro{
+        margin-top: 20px;
+        text-align: center;
+        font-family:  Tahoma, sans-serif;
+        width: 33.33333333333333%;
+        margin-left: 30rem;
+    }
+    .contactform-label{
+        
+        margin: 20px;
+        font-size: 18px;
+        border-bottom: 1px solid red;
+    }
+    .div-paragraph{
+        margin: 10px;
+        margin-left: 2rem;
+    }
+    .form-inputs1{
+        margin: 20px;
+       margin-left: 20px;
+       display:inline-table;
+       box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+        -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+        filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        width: 40.4rem;
+        
+      
+       
+    }
+    .divlocation{
+        display:inline-table;
+        
+        margin: 20px;
+        box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+        -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+        filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        align-items: center;
+        width: 26rem;
+        height: 8rem;
+    }
+    .form-inputs2{
+        margin: 20px;
+        box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+        -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+        filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        align-items: center;
+    }
+    .contactButton{
+        cursor: pointer;
+        color: white;
+        background-color: black;
+        color:white;
+        border-radius: 1px solid black;
+        transition: all 0.3s ease-out;
+        padding: 8px 50px;
+        font-size: 20px;
+        border-radius: 5px solid black;
+        margin-left: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .contactButton:hover{
+        transition: all 0.3s ease-out;
+        background:white;
+        color: lightgreen;
+        transition: 250ms;
+      }
+  }

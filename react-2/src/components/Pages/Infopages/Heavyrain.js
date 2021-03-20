@@ -1,9 +1,10 @@
 import React from 'react'
+import BarChart from '../Chart/chart'
 
 const Heavyrain = () => {
     return (
         <div>
-            <h1>THIS IS HEAVY RAIN INFO PAGE</h1>
+            <BarChart/>
         </div>
     )
 }

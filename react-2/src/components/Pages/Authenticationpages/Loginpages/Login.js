@@ -15,10 +15,13 @@ class Login extends React.Component  {
      
      }}
     valid(){
-      if(!this.state.email.trim("") ){
-        this.setState({usernameerror:"UserName is required"})
+      if(!this.state.email.trim("") && !this.state.password.trim("")){
+        this.setState({usernameerror:"UserName is required",passworderror:"Password is required"})
       }
-     
+      else if(!this.state.email.trim(""))
+      {
+       this.setState({usernameerror:"username Required"})
+      }
       else if(!this.state.password.trim(""))
       {
        this.setState({passworderror:"Password Required"})
@@ -52,9 +55,9 @@ class Login extends React.Component  {
         <input
           className='form-input'
           type='text'
-          name='username'
+          name='email'
           placeholder='Enter your username'
-          onChange={(event)=>{this.setState({username:event.target.value})}}/>
+          onChange={(event)=>{this.setState({email:event.target.value})}}/>
          
           <p>{this.state.usernameerror}</p>
         
@@ -71,7 +74,7 @@ class Login extends React.Component  {
          name='password'
          placeholder='Enter your password'
          
-         onChange={(event)=>{this.setState({username:event.target.value})}}/>
+         onChange={(event)=>{this.setState({password:event.target.value})}}/>
          
          <p>{this.state.passworderror}</p>
       

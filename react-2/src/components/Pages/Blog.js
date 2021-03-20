@@ -1,16 +1,105 @@
-import React from 'react'
-import Card from '../Card/Cards'
-import '../../App.css';
-const Blog = () => {
-  return (
-  
-    <div className='main'>
-    <h4 className='h4'>LATEST POST</h4>
-    <h1 className='h1'>Latest Blog</h1>
-      <Card/>
+ import React from 'react';
+ import ReactDOM from 'react-dom';
+ import Chart from 'chart.js';
+
+class Blog extends React.Component {
+  chart = null;
+
+  componentDidMount() {
+    this.configureChart();
+  }
+
+  configureChart = () => {
+    const chartCanvas = ReactDOM.findDOMNode(this.chart);
+
+    const mixedChart = new Chart(chartCanvas, {
+      type: "bar",
+      data: {
+        datasets: [
+          {
+            label: "Bar Dataset",
+            data: [7, 3, 0, 10, 0, 0, 0, 10, 0, 15, 0, 0],
+            type: "bar",
+            backgroundColor: "#DE924B"
+          },
+         
+          {
+            label: "Line Dataset 2",
+            data: [75, 53, 75, 65, 100, 60, 80, 50, 75, 55, 80, 65, 80],
+            pointHoverRadius: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            type: "line",
+            backgroundColor:'black',
+            fill: "empty",
+            // pointRadius: 0,
+            pointStyle: "circle",
+           
+          }
+        ],
+        labels: [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ]
+      },
+      options: {
+        elements: {
+          line: {
+            tension: 0.000001
+          }
+        },
+        tooltips: {
+          displayColors: false
+        },
+        legend: {
+          display: true,
+          position: "bottom"
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              // stacked: true,
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ],
+          xAxes: [
+            {
+              display: true,
+              stacked: true,
+              barThickness: 25,
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        }
+      }
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <canvas
+          ref={chart => {
+            this.chart = chart;
+          }}
+        />
       </div>
-    
-  )
+    );
+  }
 }
 
-export default Blog
+
+export default Blog;  
