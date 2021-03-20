@@ -4,14 +4,14 @@ const Death = () => {
     return (
         <div>
             <h1> This is Death Estimtion page</h1>
-            <label>Earthquake Type:</label>
-            <select>
+            <label className='Change'>Earthquake Type:</label>
+            <select className='Changing'>
   <option value="grapefruit">Ground Movement</option>
   <option value="lime">Tsaunami</option>
  
 </select>
-<label>Choose a Continent:</label>
-            <select>
+<label className='Change'>Choose a Continent:</label>
+            <select className='Changing'>
   <option value="grapefruit">Asia</option>
   <option value="lime">Europe</option>
   <option value="grapefruit">America</option>
