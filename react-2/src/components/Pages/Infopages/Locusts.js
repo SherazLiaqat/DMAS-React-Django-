@@ -1,14 +1,16 @@
 import React from 'react'
 import './Earthquakeinfo.css';
-import Locustimage from '../../images/img-13.jpg';
+import downimage from '../../images/locust2.jpg';
+import grasshoper from '../../images/grashopper.jpg';
+import getrid from '../../images/getrid.jpg';
+import threat from '../../images/threat.jpg';
 const Locust = () => {
     return (
         <>
         <div className="container ">
  
-     
- 
      <h1 className="title-3">About Locusts</h1>
+     <img  src={downimage} className='img'></img>
      <ul className='paragraph'>
          <p >Locusts are large herbivorous insects that can be serious pests of 
          agriculture due to their ability to form dense and highly mobile swarms. They are species of
@@ -23,8 +25,11 @@ const Locust = () => {
            </ul>
          
     
-     <ul className='paragraph'>
+     
      <h2 className='title-4'>What is the difference between Locust and grasshoppers</h2>
+     <img  src={grasshoper} className='img'></img>
+     <ul className='paragraph'>
+     
 <p>Locusts and grasshoppers are the same in appearance, but locusts can exist in two different 
     behavioural states (solitary and gregarious), whereas most grasshoppers do not. When the population
      density is low, locusts behave as individuals, much like grasshoppers. However, when locust population
@@ -40,14 +45,17 @@ const Locust = () => {
           <p>Some species that are called grasshoppers, such as Austroicetes cruciata, 
               Oedaleus australis and Peakesia spp. can form loose swarms at high densities,
                but do not generally migrate long distances as locusts do.</p>
-<h3 className='title-4'>How to protect kitchen gardens from locusts</h3>
+</ul>
+<h3 className='title-4'>How to protect kitchen gardens from locusts/Grasshoper</h3>
+
+<ul className='paragraph'>
             <li>You can make a garlic-chilli spray at home.</li>
             <li>Spray some neem oil on the plants.</li>
             <li>Create some smoke around the garden area by burning wood or lighting incense sticks to neutralise the swarm.</li>
             <li>Make noise to keep the insects away.</li>
      
      </ul>
-     
+     <img  src={getrid} className='img'></img>
      
 <h3 className='title-4'>Where is the current Locust outbreak? </h3>
 <ul className='paragraph'>
@@ -58,6 +66,7 @@ const Locust = () => {
        Tanzania. This is a single global outbreak, 
     and if it reaches plague levels, it could cover 20 percent of the earth’s land mass.</p>
 </ul>
+
 <h2 className='title-4'>Why is this outbreak so serious and could it get worse?</h2>
 <p className='paragraph'>In the wider East Africa region, the above average rainy season in March and April created favorable conditions for locusts to breed – increasing their number and the areas they could spread to. If left unchecked, the number of desert locusts could grow by 400 times by June, as each generation has a 20-fold increase in population on average.
 
@@ -69,6 +78,7 @@ Within the region, 24 million people are food insecure and 8 million are interna
  Ultimately, it cost over $450 million to end the 2003-2005 plague, which caused an estimated $2.5 billion 
  in crop damage.</p>
 <h3 className='title-4'>What countries are currently affected by this</h3>
+<img  src={threat} className='img'></img>
 <ul className='paragraph'><li>The outbreak is evolving quickly. As of mid-April 2020, 
     23 countries have been affected: 9 in the wider East Africa region, 11 in North Africa & the Middle East,
      and 3 in South Asia.</li>
@@ -80,7 +90,7 @@ Within the region, 24 million people are food insecure and 8 million are interna
 <li>As medical masks are in short supply, they should only be worn by healthcare workers, people with COVID-19 symptoms and those caring for people with suspected or confirmed cases of COVID-19. When it’s not possible to maintain a distance of one meter from others, people over 60 and those with underlying health conditions should also wear medical masks.</li>
 
 </ul>
-
+<br/>
 
 
   </div>

@@ -2,6 +2,17 @@
 .main{
   background-color: #f7f7f7;
   margin: 3px;
+  width: 75%;
+  flex: 1;
+}
+.side-div{
+  
+  width: 200px;
+  height: 150px;
+  overflow-y:auto;
+  background-color: brown;
+  margin-left: 72rem;
+  
 }
 .DeathButton{
     cursor: pointer;

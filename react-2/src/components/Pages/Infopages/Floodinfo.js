@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../../../components/Footer/Footer';
 import './Earthquakeinfo.css';
+import flood1 from '../../images/flood1.jpg';
 const Floodinfo = () => {
     return (
       <>
@@ -9,6 +10,7 @@ const Floodinfo = () => {
     
 
     <h1 className="title-3">Flood Awareness <br/> Preparedness</h1>
+    <img  src={flood1} className='img'></img>
         <p className='paragraph'>Flooding is a temporary overflow of water onto land that is normally dry.
          Floods are the most common natural
         disaster in the United States. Failing to 

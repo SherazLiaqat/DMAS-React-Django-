@@ -1,6 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const Affected = () => {
+  const[amount,setamount]=useState(0);
+
     return (
         <div>
         <h1> This is Affected Estimtion page</h1>
@@ -20,30 +22,23 @@ const Affected = () => {
 
 
 </select>
-        <div className='form-inputs'>
-    <label className='form-label'>Magnitude</label>
-    <input
-      className='form-input'
-      type='text'
-      name='name'/>
-             
-  </div>
-  <div className='form-inputs'>
-    <label className='form-label'>Latitude</label>
-    <input
-      className='form-input'
-      type='text'
-      name='name'/>
-             
-  </div>
-  <div className='form-inputs'>
-    <label className='form-label'>Longitude</label>
-    <input
-      className='form-input'
-      type='text'
-      name='name'/>
-             
-  </div>
+<div className='form-inputs-Death'>
+        <label className='form-label'>Magnitude:</label>
+        <input className='box' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
+        
+      </div>
+     
+      <div className='form-inputs-Death'>
+        <label className='form-label'>Latitude:</label>
+        <input className='box2' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Latitude..." />
+      
+                 
+      </div>
+      <div className='form-inputs-Death'>
+        <label className='form-label'>Longitude:</label>
+        <input className='box3' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Longitude..." />
+       
+      </div>
  <button className='DeathButton'> Estimate</button>
     </div>
     )

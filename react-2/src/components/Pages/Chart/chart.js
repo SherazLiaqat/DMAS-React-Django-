@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState,useEffect,row } from 'react'
 import { Pie, defaults } from 'react-chartjs-2'
-
+import {csv} from 'd3';
 defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
 
 const BarChart = () => {
+  const[data,setdata]=useState([]);
+  useEffect(() => {
+    csv('Eathquake.csv',row).then(data=>{
+      setdata(data);
+    });
+    
+      
+    },[]);
+  
   return (
     <div>
       <Pie
@@ -13,7 +22,7 @@ const BarChart = () => {
           datasets: [
             {
               label: '# of votes',
-              data: [12, 19, 3, 5, 2, 3],
+              data:[5999,909,967,78,67,67,56,4544,99,1222,6666],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
