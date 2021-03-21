@@ -1,7 +1,7 @@
  import React from 'react';
  import ReactDOM from 'react-dom';
  import Chart from 'chart.js';
-
+ import csv from 'd3';
 class Blog extends React.Component {
   chart = null;
 
@@ -18,7 +18,7 @@ class Blog extends React.Component {
         datasets: [
           {
             label: "Bar Dataset",
-            data: [7, 3, 0, 10, 0, 0, 0, 10, 0, 15, 0, 0],
+            data: 'Earthquake.csv',
             type: "bar",
             backgroundColor: "#DE924B"
           },
