@@ -67,7 +67,7 @@ function Cards() {
               
             />
             <CardItem
-              src='images/locust.jpg'
+              src='images/locust2.jpg'
               text='Explore the Locusts Information...'
               label='Locusts'
               path='/Locust'

@@ -76,6 +76,10 @@ class Signup extends React.Component {
         <br/>Get started with us today!<br/> Create your account by filling out the
         information below.
       </h1>
+      <span className='form-input-login'>
+        Already have an account? Login < a href='/Login'>here</a>
+        
+      </span>
   <div className='hello'>
       <div className='form-inputs'>
         <label className='form-label'><i class="fa fa-user icon"></i>Username</label>
@@ -139,10 +143,7 @@ class Signup extends React.Component {
 
             
           <br/>
-          <span className='form-input-login'>
-        Already have an account? Login < a href='/Login'>here</a>
-        
-      </span>
+         
       <br/>
       </div>
       

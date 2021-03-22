@@ -9,8 +9,8 @@
   display:inline-table;
   width: 200px;
   height: 150px;
-  background-color: #f7f7f7;
-  background-color: #f7f7f7;
+  background-color: #fff;
+ 
   margin-left: 5rem;
   
 }
@@ -24,7 +24,7 @@
     padding: 8px 50px;
     font-size: 20px;
     border-radius: 5px solid black;
-    margin-left: 27rem;
+    margin-left: 8.6rem;
     margin-bottom: 10px;
   }
   .DeathButton:hover{

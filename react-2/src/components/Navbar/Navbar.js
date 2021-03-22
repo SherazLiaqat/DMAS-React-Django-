@@ -123,7 +123,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/Api'
+                to='/NewsApi'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -131,7 +131,15 @@ function Navbar() {
               </Link>
             </li>
            
-          
+            <li className='nav-item'>
+              <Link
+                to='/Api'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Weather
+              </Link>
+            </li>
            
 
             <li>

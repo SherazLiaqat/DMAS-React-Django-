@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import  { useEffect} from 'react';
 import {ScaleLoader} from 'react-spinners';
-import {  getWeatherData} from './Fetchapi';
-import './Api.css';
+import {  getWeatherData} from './FetchNewsApi';
+//import './Api.css';
 
-const Api = () => {
+const NewsApi = () => {
     const [weatherdata, setWeatherData] = useState(null);
     const [city, setCity] = useState('');
     const [loading, setLoading] = useState(false);
@@ -74,4 +74,4 @@ const Api = () => {
     );
   }
 
-export default Api;
+export default NewsApi;

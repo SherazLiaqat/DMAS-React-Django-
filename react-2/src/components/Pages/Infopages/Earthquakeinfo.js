@@ -251,7 +251,28 @@ export const Earthquakeinfo = () => {
             </div>
     
         </div>
-    
+        <div className='side-div-earthquake'>
+            <h4 className='h4-earthquake'> Eartquake Safety Tips</h4>
+            <ul className='side-div-p'>
+                
+                <li className='earth'>Dont Run Outside</li>
+                <li>Stay Under Solid Objects </li>
+                <li>Turn Off Gas</li>
+                <li>Dont Stand under Trees</li>
+                <li>Dont Drive Vehicle</li>
+                <li>Dont Use Elevator</li>
+            </ul>
+            <h4 className='h4-earthquake'> Helpful Links</h4>
+            <ul className='side-div-p'>
+            < a href='http://cms.ndma.gov.pk/' target="_blank">NDMA</a> <br/> 
+            < a href="https://www.fema.gov/" target="_blank">FEMA </a> <br/> 
+            < a href='https://www.ready.gov/' target="_blank">Ready.Gov</a> <br/> 
+            < a href='https://www.weather.gov/' target="_blank">National Weather Service</a>  <br/>
+            < a href='https://mil.wa.gov/' target="_blank"> WA State EMD</a> <br/>
+            < a href='https://waterdata.usgs.gov/wa/nwis/current?type=flow' target="_blank">USGS-Real Time Streamflow Data</a> <br/>
+           
+            </ul>
+          </div>
         
         </>
     );

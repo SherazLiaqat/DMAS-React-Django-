@@ -29,6 +29,7 @@ import Affected from './components/Pages/Estimationpages/Earthquake/Affected';
 import Injured from './components/Pages/Estimationpages/Earthquake/Injured';
 import Locust from './components/Pages/Infopages/Locusts';
 import Api from './components/Pages/Api/Api';
+import NewsApi from './components/Pages/Api/NewsApi/NewsApi';
 function App(){
   
   return (
@@ -64,6 +65,7 @@ function App(){
     <Route path='/Locust'  component={Locust}exact />
     <Route path='/Estimation'  component={Estimation}exact />
     <Route path='/Api'  component={Api}exact />
+    <Route path='/NewsApi'  component={NewsApi}exact />
     
 
     

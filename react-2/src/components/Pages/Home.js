@@ -12,7 +12,7 @@ function Home() {
       <>
        
         <Herosection/>
-        <Contact/>
+        
         <About/>
         
         

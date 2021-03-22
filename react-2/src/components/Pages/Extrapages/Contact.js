@@ -126,6 +126,7 @@ class Contact extends React.Component {
                 
       </div>
       <button className='contactButton' onClick={()=>this.submit()}> Contact Us</button> 
+      <p className ='last'>Thank You! For Reaching Out We Will get back to you as soon as Possible.</p><br/>
         </div>
     )
 }}

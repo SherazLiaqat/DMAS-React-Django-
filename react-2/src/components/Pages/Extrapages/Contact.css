@@ -29,6 +29,7 @@
     margin: 20px;
    margin-left: 20px;
    display:inline-table;
+   background-color: #f7f7f7;
    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -57,7 +58,7 @@
 }
 .form-inputs2{
     margin: 20px;
-    background-color: #fff;
+    background-color: #f7f7f7;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -86,6 +87,13 @@
     color: red;
     transition: 250ms;
   }
+  .last{
+    margin-top: 5px;
+    text-align: start;
+    font-family:  Tahoma, sans-serif;
+    width: 33.33333333333333%;
+    margin-left: 1.2rem;
+}
   @media screen and (max-width: 852px)
   {
     .Header{

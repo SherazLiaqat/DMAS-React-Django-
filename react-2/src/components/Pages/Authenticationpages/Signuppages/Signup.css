@@ -179,8 +179,9 @@
   
   .form-input-login {
     font-size: 0.8rem;
-    margin-top: 10px;
-    margin-left: 20%;
+    margin:2rem;
+    text-align: center;
+    margin-left: 38rem;
     margin-bottom: 20px;
     color:black;
     width: 80%;
