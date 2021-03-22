@@ -3,7 +3,7 @@
     margin-top: 10px  0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
     display:inline-table;
-    width: 80%;
+    width: 75%;
 
 }
 .earth{
@@ -11,9 +11,9 @@ background-color: saddlebrown;
 }
 .side-div-earthquake{
   display:inline-table;
-  width: 200px;
+  width: 250px;
   height: 250px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   
 background-color: #fff;
  position:relative;
@@ -115,7 +115,7 @@ background-color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
     font-size: 15px;
     font-style:inherit;
-    width: 55%;
+    width: 60%;
    
 }
 .image {

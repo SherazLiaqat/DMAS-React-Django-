@@ -255,12 +255,13 @@ export const Earthquakeinfo = () => {
             <h4 className='h4-earthquake'> Eartquake Safety Tips</h4>
             <ul className='side-div-p'>
                 
-                <li className='earth'>Dont Run Outside</li>
-                <li>Stay Under Solid Objects </li>
-                <li>Turn Off Gas</li>
-                <li>Dont Stand under Trees</li>
-                <li>Dont Drive Vehicle</li>
-                <li>Dont Use Elevator</li>
+                <li className='earth'>Step 1: Secure Your Space</li>
+                <li>Step 2: Plan to be Safe </li>
+                <li>Step 3: Organize Disaster Supplies</li>
+                <li>Step 4: Minimize Financial Hardship</li>
+                <li>Step 5: Drop, Cover, and Hold On</li>
+                <li>Step 6: Improve Safety</li>
+                <li>Step 7: Reconnect and Restore</li>
             </ul>
             <h4 className='h4-earthquake'> Helpful Links</h4>
             <ul className='side-div-p'>

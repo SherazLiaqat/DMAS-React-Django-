@@ -4,6 +4,9 @@ import './Death.css';
 
 const Death = () => {
   const[amount,setamount]=useState(0);
+  const[amount2,setamount2]=useState(0);
+  const[amount3,setamount3]=useState(0);
+
     return (
       <>
         <div className='main'>
@@ -35,13 +38,13 @@ const Death = () => {
      
       <div className='form-inputs-Death'>
         <label className='form-label'>Latitude:</label>
-        <input className='box2' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Latitude..." />
+        <input className='box2' type="number"  value={amount2} onChange={(event)=>setamount2(event.target.value)} placeholder="Enter Latitude..." />
       
                  
       </div>
       <div className='form-inputs-Death'>
         <label className='form-label'>Longitude:</label>
-        <input className='box3' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Longitude..." />
+        <input className='box3' type="number"  value={amount3} onChange={(event)=>setamount3(event.target.value)} placeholder="Enter Longitude..." />
        
       </div>
      <button className='DeathButton'> Estimate</button>

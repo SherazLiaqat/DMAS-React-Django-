@@ -1,4 +1,6 @@
-
+body{
+    background-color: #fff;
+}
 .Header{
     margin: 20px;
     color: red;
@@ -29,7 +31,7 @@
     margin: 20px;
    margin-left: 20px;
    display:inline-table;
-   background-color: #f7f7f7;
+   background-color: #fff;
    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -58,7 +60,7 @@
 }
 .form-inputs2{
     margin: 20px;
-    background-color: #f7f7f7;
+    background-color: #fff;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
