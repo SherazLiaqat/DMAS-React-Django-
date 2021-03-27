@@ -4,15 +4,11 @@ export const MenuItems = [
       path: '/Dead',
       cName: 'dropdown-link'
     },
+    
     {
-      title: 'Injured people',
-      path: '/Injures',
-      cName: 'dropdown-link'
-    },
-    {
-      title: 'Affected People',
+      title: 'Affected Displacement',
       path: '/Affectedpeopel',
       cName: 'dropdown-link'
-    },
+    }
    
   ];
