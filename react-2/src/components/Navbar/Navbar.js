@@ -104,8 +104,14 @@ function Navbar() {
               
             </li>
             <li className='nav-item'
+<<<<<<< Updated upstream
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onClick={closeMobileMenu}
+=======
             onMouseEnter={onMouseEnters}
             onMouseLeave={onMouseLeaves}
+>>>>>>> Stashed changes
             >
             
               <Link

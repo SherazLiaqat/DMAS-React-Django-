@@ -19,7 +19,12 @@ class Blog extends React.Component {
         datasets: [
           {
             label: "Bar Dataset",
+<<<<<<< Updated upstream
+            data: [75, 53, 75, 65, 80, 65, 80],
+            
+=======
             data: [75, 53, 75, 65, 90, 60, 80, 50, 75, 55, 80, 65, 80],
+>>>>>>> Stashed changes
             type: "bar",
             backgroundColor: "#DE924B"
           },
