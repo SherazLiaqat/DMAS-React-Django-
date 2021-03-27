@@ -1,8 +1,14 @@
 import React from 'react';
-
-import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+//import './App.css';
+import Footer from '../Footer/Footer'
+import '../../App.css';
 const News = () => {
-  return(
-  <h1>hello</h1>
-  )}
-export default News
+ 
+  return (
+   <div>
+     <h1>this is news page </h1>
+   </div>
+  );
+};
+
+export default News;

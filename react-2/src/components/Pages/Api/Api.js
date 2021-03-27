@@ -6,7 +6,7 @@ import './Api.css';
 
 const Api = () => {
     const [weatherdata, setWeatherData] = useState(null);
-    const [city, setCity] = useState('Daska');
+    const [city, setCity] = useState('');
     const [loading, setLoading] = useState(false);
   
     const getData = async () => {

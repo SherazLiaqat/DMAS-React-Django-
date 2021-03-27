@@ -3,7 +3,6 @@ import React,{useState} from 'react'
 import './Death.css';
 
 const Death = () => {
-  
   const[amount,setamount]=useState(0);
 
   const[amount2,setamount2]=useState(0);
@@ -34,7 +33,7 @@ const toFixed=0.0;
 
             <div className='form-inputs-Death'>
         <label className='form-label'>Magnitude:</label>
-        <input className='box' type="number" value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
+        <input className='box' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
         
       </div>
      

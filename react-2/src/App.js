@@ -31,9 +31,6 @@ import Locust from './components/Pages/Infopages/Locusts';
 import Event from './components/Pages/Extrapages/Event';
 import Api from './components/Pages/Api/Api';
 import NewsApi from './components/Pages/Api/NewsApi/NewsApi';
-import Dead from './components/Pages/Estimationpages/Flood/Dead';
-import Injures from './components/Pages/Estimationpages/Flood/Injures';
-import Affectedpeopel from './components/Pages/Estimationpages/Flood/Affectedpeopel';
 function App(){
   
   return (
@@ -50,9 +47,6 @@ function App(){
         <Route path='/Blog' component={Blog} />
         <Route path='/News' component={News} />
         <Route path='/Death' component={Death} />
-        <Route path='/Dead' component={Dead} />
-        <Route path='/Injures' component={Injures} />
-        <Route path='/Affectedpeopel' component={Affectedpeopel} />
         <Route path='/Affected' component={Affected} />
         <Route path='/Injured' component={Injured} />
         <Route path='/sign-up' component={Signup} />
