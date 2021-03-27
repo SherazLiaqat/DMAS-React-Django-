@@ -17,18 +17,18 @@
     cursor: pointer;
     color: #242424;
     background-color: transparent;
-    color: #fff;
-    border: 1px solid var(--primary);
+    color:black;
+    border: 1px solid black;
     transition: all 0.3s ease-out;
-    padding: 8px 50px;
+    padding: 8px ;
     font-size: 20px;
     margin-left: 9rem;
     
   }
   .SignupButton:hover{
     transition: all 0.3s ease-out;
-    background: #fff;
-    color: #242424;
+    background:black;
+    color: white;
     transition: 250ms;
     
   }

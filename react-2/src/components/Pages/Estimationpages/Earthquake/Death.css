@@ -7,11 +7,20 @@
 }
 .side-div{
   display:inline-table;
-  width: 200px;
+  width: 250px;
   height: 150px;
-  background-color: #fff;
+  background-color: #f7f7f7;
  
-  margin-left: 5rem;
+  margin-left: 3rem;
+  
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.div-1{
+ align-content: center;
+ margin: 2.5rem;
+ border: 1px solid black;
   
 }
 .DeathButton{
@@ -29,8 +38,8 @@
   }
   .DeathButton:hover{
     transition: all 0.3s ease-out;
-    background:black;
-    color: lightgreen;
+    background:white;
+    color: black;
     transition: 250ms;
   }
   .box{

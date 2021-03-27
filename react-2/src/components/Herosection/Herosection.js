@@ -15,6 +15,7 @@ function Herosection() {
             className='btns'
             buttonStyle='btn--outline'
             buttonSize='btn--large'
+            
           >
             GET STARTED
           </Button>

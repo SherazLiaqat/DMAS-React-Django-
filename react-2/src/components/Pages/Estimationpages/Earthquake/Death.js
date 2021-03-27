@@ -4,9 +4,10 @@ import './Death.css';
 
 const Death = () => {
   const[amount,setamount]=useState(0);
+
   const[amount2,setamount2]=useState(0);
   const[amount3,setamount3]=useState(0);
-
+const toFixed=0.0;
     return (
       <>
         <div className='main'>
@@ -50,7 +51,10 @@ const Death = () => {
      <button className='DeathButton'> Estimate</button>
         </div>
         <div className='side-div'>
-            <h> this is side div</h>
+            <h className='div-1'> Earthquake Awareness</h>
+            <h1> Magnitude</h1>
+            <h1> Longitude</h1>
+            <h1> Latitude</h1>
           </div>
         </>
     )

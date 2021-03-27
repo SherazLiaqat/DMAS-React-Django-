@@ -85,11 +85,13 @@ function Navbar() {
               
               </Link>
 
-              {dropdown && <Dropdown />}
+              {dropdown  && < Dropdown />}
+              
             </li>
             <li className='nav-item'
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            onClick={closeMobileMenu}
             >
             
               <Link
@@ -128,6 +130,15 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 News
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/Event'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Event
               </Link>
             </li>
            

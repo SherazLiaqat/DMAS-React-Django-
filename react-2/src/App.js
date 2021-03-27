@@ -28,6 +28,7 @@ import Death from './components/Pages/Estimationpages/Earthquake/Death';
 import Affected from './components/Pages/Estimationpages/Earthquake/Affected';
 import Injured from './components/Pages/Estimationpages/Earthquake/Injured';
 import Locust from './components/Pages/Infopages/Locusts';
+import Event from './components/Pages/Extrapages/Event';
 import Api from './components/Pages/Api/Api';
 import NewsApi from './components/Pages/Api/NewsApi/NewsApi';
 function App(){
@@ -50,6 +51,7 @@ function App(){
         <Route path='/Injured' component={Injured} />
         <Route path='/sign-up' component={Signup} />
         <Route path='/Login' component={Login} />
+        <Route path='/Event' component={Event} />
      
       </Switch>
      

@@ -18,7 +18,7 @@ const BarChart = () => {
     <div>
       <Pie
         data={{
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: ['Red', 'Black', 'brown', 'Green', 'Purple', 'Orange'],
           datasets: [
             {
               label: '# of votes',
@@ -26,16 +26,16 @@ const BarChart = () => {
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
+                'rgba(295, 27, 86, 0.2)',
+                'rgba(95, 192, 192, 0.9)',
+                'rgba(193, 18, 255, 0.2)',
+                'rgba(255, 159, 64, 0.9)',
               ],
               borderColor: [
-                'rgba(255, 99, 132, 1)',
+                'rgba(265, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
+                'rgba(255, 26, 86, 1)',
+                'rgba(75, 1982, 12, 1)',
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)',
               ],
@@ -49,8 +49,8 @@ const BarChart = () => {
             // },
           ],
         }}
-        height={400}
-        width={600}
+        height={500}
+        width={450}
         options={{
           maintainAspectRatio: false,
           scales: {

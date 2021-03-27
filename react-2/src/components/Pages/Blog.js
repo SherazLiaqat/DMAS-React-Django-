@@ -18,7 +18,8 @@ class Blog extends React.Component {
         datasets: [
           {
             label: "Bar Dataset",
-            data: 'Earthquake.csv',
+            data: [75, 53, 75, 65, 80, 65, 80],
+            
             type: "bar",
             backgroundColor: "#DE924B"
           },
@@ -87,11 +88,14 @@ class Blog extends React.Component {
       }
     });
   };
-
+ 
   render() {
     return (
       <div>
+         
         <canvas
+        height={300}
+        width={600}
           ref={chart => {
             this.chart = chart;
           }}
