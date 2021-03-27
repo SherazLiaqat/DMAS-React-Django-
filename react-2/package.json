@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.17",
-    "@amcharts/amcharts4-fonts": "^4.0.1",
     "@amcharts/amcharts4-geodata": "^4.1.19",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",

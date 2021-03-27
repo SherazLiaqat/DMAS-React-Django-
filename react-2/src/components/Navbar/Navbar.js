@@ -3,12 +3,13 @@ import {Button} from '../Button/Button';
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
 import './Navbar.css';
+import Dropdowns from './Dropdowns';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [dropdown, setDropdown] = useState(false);
-  
+  const [dropdowns, setDropdowns] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -41,7 +42,21 @@ function Navbar() {
       setDropdown(false);
     }
   };
+  const onMouseEnters = () => {
+    if (window.innerWidth < 960) {
+      setDropdowns(false);
+    } else {
+      setDropdowns(true);
+    }
+  };
 
+  const onMouseLeaves = () => {
+    if (window.innerWidth < 960) {
+      setDropdowns(false);
+    } else {
+      setDropdowns(false);
+    }
+  };
 
 
   return (
@@ -89,20 +104,25 @@ function Navbar() {
               
             </li>
             <li className='nav-item'
+<<<<<<< Updated upstream
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             onClick={closeMobileMenu}
+=======
+            onMouseEnter={onMouseEnters}
+            onMouseLeave={onMouseLeaves}
+>>>>>>> Stashed changes
             >
             
               <Link
               
-                to='/'
+                
                 className='nav-links'
                 onClick={closeMobileMenu}>
-                Flood <i class='fas fa-caret-down'/>
+                Flood <i class='fas fa-caret-down' onClick/>
                 
               </Link>
-              
+              {dropdowns && <Dropdowns />}
              
             </li>
             <li className='nav-item'>
@@ -125,7 +145,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/NewsApi'
+                to='/News'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
