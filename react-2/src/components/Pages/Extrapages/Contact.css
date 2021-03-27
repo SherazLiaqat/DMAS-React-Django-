@@ -27,7 +27,8 @@
 }
 .div-paragraph{
     margin: 10px;
-    margin-left: 2rem;
+    
+    text-align: center;
 }
 .form-inputs1{
     margin: 20px;

@@ -139,11 +139,11 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/'
+                to='/Live'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                News
+                Live
               </Link>
             </li>
             <li className='nav-item'>

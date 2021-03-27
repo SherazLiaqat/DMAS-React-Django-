@@ -32,6 +32,10 @@ import Event from './components/Pages/Extrapages/Event';
 import Api from './components/Pages/Api/Api';
 //import NewsApi from './components/Pages/Api/NewsApi/NewsApi';
 import am4core from './components/Pages/Api/NewsApi/NewsApi';
+import Live from './components/Pages/Extrapages/Live';
+import CovidLive from './components/Pages/Extrapages/LiveEvents/CovidlLive/CovidLive';
+import FloodLive from './components/Pages/Extrapages/FloodLive';
+import EarthquakeLive from './components/Pages/Extrapages/EarthquakeLive';
 function App(){
   
   return (
@@ -53,6 +57,7 @@ function App(){
         <Route path='/sign-up' component={Signup} />
         <Route path='/Login' component={Login} />
         <Route path='/Event' component={Event} />
+        <Route path='/Live' component={Live} />
      
       </Switch>
      
@@ -68,6 +73,9 @@ function App(){
     <Route path='/Locust'  component={Locust}exact />
     <Route path='/Estimation'  component={Estimation}exact />
     <Route path='/Api'  component={Api}exact />
+    <Route path='/CovidLive'  component={CovidLive}exact />
+    <Route path='/FloodLive'  component={FloodLive}exact />
+    <Route path='/EarthquakeLive'  component={EarthquakeLive}exact />
     <Route path='/am4core'  component={am4core}exact />
     
 
