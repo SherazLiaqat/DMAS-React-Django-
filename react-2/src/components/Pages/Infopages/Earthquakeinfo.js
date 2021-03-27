@@ -3,7 +3,7 @@ import './Earthquakeinfo.css';
 import Footer from '../../../components/Footer/Footer';
 import Imageslider from '../../Slider/Imageslider';
 import downimage from '../../images/down.jpg';
-import earthnew from '../../images/earthnew.jpg';
+import safty from '../../images/drop1.jpg';
 import chair from '../../images/chair.jpg';
 import outdoor from '../../images/outside.jpg';
 export const Earthquakeinfo = () => {
@@ -12,7 +12,7 @@ export const Earthquakeinfo = () => {
      
        < div className="container">
 
-        <div  className="column right-side">
+        <div  className="column-right-side">
             <h1 className="title-3">Earthquake Awareness <br/> Preparedness</h1>
             <div className="inc-exp-container">
         <div>
@@ -56,8 +56,9 @@ export const Earthquakeinfo = () => {
                             href="http://www.earthquakecountry.info/dropcoverholdon/">www.earthquakecountry.info/dropcoverholdon/</a>.
                         Send this information to your loved-ones and anyone that sends you the “triangle of life” E-mail.
                     </p>
+                    
                     </div>
-    
+                    <img  src={safty} className='img'></img>
     
     
                     

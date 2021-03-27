@@ -1,9 +1,9 @@
 import React from 'react'
 import './Earthquakeinfo.css';
 import hand from '../../images/hand.jpg';
-import symptoms from '../../images/symptoms.jpg';
-import covid from '../../images/covid.jpg';
-import symptomdetails from '../../images/symptomdetails.jpg';
+import symptoms from '../../images/symptoms1.jpg';
+import covid from '../../images/covid1.jpg';
+import symptomdetails from '../../images/symptomdetails1.jpg';
 const Covid19 = () => {
     return (
         <>
@@ -14,7 +14,7 @@ const Covid19 = () => {
      <h1 className="title-3">ABOUT CORONAVIRUS (COVID-19)</h1>
      <img  src={hand} className='img'></img>
      <div>
-         <h1 className='title-4'>Fast Fact</h1>
+         <h2 className='title-4'>Fast Fact</h2>
          <ul  className='paragraph'>
          COVID-19 is a new infectious disease caused by the SARS-CoV-2 virus.
 The key symptoms of COVID-19 are a fever, dry cough, tiredness and loss of taste or smell.

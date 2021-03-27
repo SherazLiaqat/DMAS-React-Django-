@@ -1,7 +1,9 @@
 import React from 'react'
 import Footer from '../../../components/Footer/Footer';
 import './Earthquakeinfo.css';
-import flood1 from '../../images/flood1.jpg';
+import safty from '../../images/flood11.jpg';
+import safty1 from '../../images/floodsafty1.jpg';
+import flood1 from '../../images/prepare1.jpg';
 const Floodinfo = () => {
     return (
       <>
@@ -64,6 +66,7 @@ const Floodinfo = () => {
     
    
     <h2 className ='title-4'>Prepare Now</h2>
+    <img  src={safty} className='img'></img>
     <ul className='paragraph'>
         <li><a href="https://www.ready.gov/plan">Make a plan</a> for your household, including your pets, so that
             you and your family know what to do, where to go, and what you will need to protect yourselves from
@@ -125,6 +128,7 @@ const Floodinfo = () => {
 
     
     <h2 className='title-4'>Survive During</h2>
+    <img  src={safty1} className='img'></img>
     <ul className='paragraph'>
         <li>Depending on where you are, the potential impact, and the warning time given for flooding, go to the
             safe location that you have identified. If you are not able to shelter in place or with family or

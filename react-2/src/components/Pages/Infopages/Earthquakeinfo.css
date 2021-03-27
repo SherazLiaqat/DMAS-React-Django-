@@ -6,6 +6,7 @@
     width: 75%;
 
 }
+
 .earth{
 background-color: saddlebrown;
 }
@@ -29,9 +30,10 @@ background-color: #fff;
     background-color: #fff;
     box-shadow: var(--box-shadow);
     padding: 20px;
-    margin-left: 20%;
+    
+    
     justify-content: space-between;
-    margin: 20px 250px  ;
+    margin: 40px   ;
     display: flex;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -98,19 +100,20 @@ background-color: #fff;
     font-family: 'Times New Roman', Times, serif;
   }
 .title-3{
-    margin-top: 2px;
+    margin: 8px;
     font-size: 2rem;
-    margin-left: -6rem;
+    text-align: center;
+    margin-left: 6rem;
 }
 .title-4{
     margin-top: 4px;
     font-size: 2rem;
-    margin-left: 18rem;
+    margin-left: 14rem;
   
     
 }
 .paragraph{
-    margin-left: 18rem;
+    margin-left: 14rem;
     margin-right: 10%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
     font-size: 15px;
@@ -127,11 +130,11 @@ background-color: #fff;
 }
 .img{
   
-  width: 50%;
+  width: 60%;
   margin: 20px;
   margin-top: 1rem;
   align-content: center;
-  margin-left: 18rem;
+  margin-left: 14rem;
   }
 
 @media screen and (max-width: 860px){

@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import fire from '../../images/firesafty11.jpg';
+import smokefire from '../../images/firepull.jpg';
+import firesigns from '../../images/firesign1.jpg';
 import './Earthquakeinfo.css';
 const Fireinfo = () => {
     return (
@@ -8,15 +11,17 @@ const Fireinfo = () => {
      
  
      <h1 className="title-3">Fire : Fire Safety Awareness</h1>
+     
          <p className='paragraph'>There are general Fire safety precautions you
           should follow regardless of where you live. Taking time to review tip
           s about the following Covid-19 safety issues can help you 
          create a safer and more secure living environment for you, your friends, and family.. </p>
- 
+         <img  src={fire} className='img'></img>
          
     
-     <ul className='paragraph'>
+     
      <h2 className='title-4'>Under what conditions does Fire spread easily?</h2>
+     <ul className='paragraph'>
 <p>Any situation in which people are in close proximity to one another for long periods of time increases the risk of transmission. Indoor locations, especially settings where there is poor or no ventilation, are riskier than outdoor locations.
 
 Transmission can occur more easily in the “Three C’s”:
@@ -25,9 +30,9 @@ Transmission can occur more easily in the “Three C’s”:
 • Close-contact settings, especially where people have conversations very near each other;
 • Confined and enclosed spaces with poor ventilation.
 
-The risk of Fire spreading is higher in places where these “3Cs” overlap.</p>
-<h3 className='title-4'>Can COVID-19 be transmitted through feces or urine?</h3>
-     </ul>
+The risk of Fire spreading is higher in places where these “3Cs” overlap.</p></ul>
+<h3 className='title-4'>Can Fire be transmitted through feces or urine?</h3>
+     
      <ul className='paragraph'><li>Include two ways out of every room in all escape plans</li>
 <li>Designate a location to meet outside the building</li>
 <li>Verify that smoke alarms are installed to provide early detection and warning so you’ll have enough time to execute your escape plan</li>
@@ -38,7 +43,8 @@ The risk of Fire spreading is higher in places where these “3Cs” overlap.</p
 <li>Remain outside until notified by the fire department that it is safe to re-enter the building</li>
 <li>Practice, practice, practice your plan!</li>
 </ul>
-<h3 className='title-4'>If your secondary escape route is a window…</h3>
+<h3 className='title-4'>Fire Safety Signs…</h3>
+<img  src={firesigns} className='img'></img>
 <ul className='paragraph'><li>Make sure the window can be opened from the inside</li>
 <li>Assure the window is large enough for you to pass through the opening</li>
 <li>Verify the windowsill is low enough to allow you to crawl through the opening</li>
@@ -48,6 +54,7 @@ The risk of Fire spreading is higher in places where these “3Cs” overlap.</p
 </ul>
 <h2 className='title-4'>Smoke Alarms</h2>
 <p className='paragraph'>There are thousands of home fires in the U.S. every year, which result in roughly 3,000 deaths annually. Almost half of these deaths resulted from fires that were reported between the hours of 11:00 p.m. and 7:00 a.m., the time period in which most people sleep. For this reason, providing smoke alarms in bedrooms may be the single most important step toward preventing fire-related casualties in residential buildings.</p>
+
 <h3 className='title-4'>Smoke Alarm Basics</h3>
 <ul className='paragraph'><li>Install at least one smoke alarm in every bedroom</li>
 <li>Install additional smoke alarms in hallways and common areas in the vicinity of bedrooms</li>
@@ -142,6 +149,7 @@ The risk of Fire spreading is higher in places where these “3Cs” overlap.</p
 <li>Multi USB charger are not allowed on campus and should generally be avoided. They are prone to overheating and a multitide of these devices have been recalled by the Consumer Product Safety Commission over safety concerns.  </li>
 </ul>
 <h2 className='title-4'>Extension Cords and Surge Suppressers</h2>
+<img  src={smokefire} className='img'></img>
 <ul className='paragraph'><li><strong>Never</strong> use an extension cord as a replacement for permanent wiring</li>
 <li>Avoid running extension cords across doorways or under carpets</li>
 <li>Make sure power strips and surge suppressors are designed to handle the loads you will be using them for</li>
