@@ -1,8 +1,10 @@
-body{
+.main-body{
     background-color: #fff;
+    margin: 0px;
 }
 .Header{
-    margin: 20px;
+    
+   
     color: red;
     font-size: 20px;
     text-align: center;

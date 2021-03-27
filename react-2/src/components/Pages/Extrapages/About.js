@@ -47,7 +47,7 @@ const About = () => {
               The DisasterAssistance is used to build relationships and help promote the addition of new assistance for our website. 
               The policy defines the criteria we use to consider agreements to exchange data, links, or information with partners.
               
-              </div>
+              </div><br/>
               <div className="commonBorder"></div>
               <div className="info__contacts">
                 <div className="row">
@@ -65,6 +65,9 @@ const About = () => {
           </div>
         </div>
       </div>
+      <br/><br/><br/>
+      <br/><br/><br/>
+      <br/><br/><br/>
     </div>
   );
 };

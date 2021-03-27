@@ -13,6 +13,8 @@ function Home() {
       
         <Herosection/>
         
+        <About/>
+        <Contact/>
        
         
         

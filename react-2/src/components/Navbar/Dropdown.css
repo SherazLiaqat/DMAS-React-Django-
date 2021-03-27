@@ -22,7 +22,8 @@
   .dropdown-menu li:hover {
     transition: all 0.3s ease-out;
     background:red;
-    color: #242424;
+    color: black;
+    
     transition: 250ms;
   }
   
@@ -36,8 +37,14 @@
     height: 100%;
     width: 100%;
     text-decoration: none;
-    color:#fff;
+    color:white;
     padding: 9px;
+  }
+  .dropdown-link:hover{
+    color: black;
+    background-color: #fff;
+    transition: all 0.3s ease-out;
+    transition: 250ms;
   }
   
   @media screen and (max-width: 960px) {

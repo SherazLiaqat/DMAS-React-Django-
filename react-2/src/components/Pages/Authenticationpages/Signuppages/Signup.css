@@ -213,3 +213,40 @@
     width: 80%;
   
   }}
+  @media screen and (max-width: 660px) {
+    .SignupButton{
+      cursor: pointer;
+      color: #242424;
+      background-color: transparent;
+      color:black;
+      border: 1px solid black;
+      transition: all 0.3s ease-out;
+      padding: 8px ;
+      font-size: 20px;
+      margin-left: -1rem;
+      
+    }
+    .SignupButton:hover{
+      transition: all 0.3s ease-out;
+      background:black;
+      color: white;
+      transition: 250ms;
+      
+    }
+    .form-input-login {
+    font-size: 0.8rem;
+    margin:2rem;
+    text-align: center;
+    margin-left: 2.5rem;
+    margin-bottom: 20px;
+    color:black;
+    width: 80%;
+  
+  }
+  
+  .form-input-login a {
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+  }
+  }
