@@ -35,7 +35,7 @@ import am4core from './components/Pages/Api/NewsApi/NewsApi';
 import Live from './components/Pages/Extrapages/Live';
 import CovidLive from './components/Pages/Extrapages/LiveEvents/CovidlLive/CovidLive';
 import FloodLive from './components/Pages/Extrapages/FloodLive';
-import EarthquakeLive from './components/Pages/Extrapages/EarthquakeLive';
+import EarthquakeLive from './components/Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive';
 function App(){
   
   return (

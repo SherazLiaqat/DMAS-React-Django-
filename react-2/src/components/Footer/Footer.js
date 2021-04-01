@@ -34,7 +34,7 @@ function Footer() {
             <h2>About Us</h2>
             <Link to='/About'> work</Link>
             
-            <Link to='/'>Careers</Link>
+            <Link to='/EarthquakeLive'>Careers</Link>
             <Link to='/'>Investors</Link>
             <Link to='/'>Terms of Service</Link>
           </div>

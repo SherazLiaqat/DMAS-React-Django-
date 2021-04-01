@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './Earthquakeinfo.css';
 import Footer from '../../../components/Footer/Footer';
 import Imageslider from '../../Slider/Imageslider';
 import downimage from '../../images/down.jpg';
 import safty from '../../images/drop1.jpg';
+import stair from '../../images/stair.jpg';
+import building from '../../images/building.jpg';
 import chair from '../../images/chair.jpg';
-import outdoor from '../../images/outside.jpg';
-export const Earthquakeinfo = () => {
+import indoor from '../../images/indoor.jpg';
+import outdoor from '../../images/out.jpg';
+import car from '../../images/car.jpg';
+import help from '../../images/help.jpg';
+import wheelchair from '../../images/wheelchair.png';
+ class Earthquakeinfo extends Component {
+    state={
+        istogleOn:false
+      }
+      toglepersonhandler=()=>{
+        const doesshow=this.state.showopersons;
+        this.setState({showopersons: !doesshow})
+        this.setState(state=>({
+          istogleOn:!state.istogleOn
+        }));
+      }
+        render(){
+          
     return (
         <>
      
@@ -58,7 +76,7 @@ export const Earthquakeinfo = () => {
                     </p>
                     
                     </div>
-                    <img  src={safty} className='img'></img>
+                    
     
     
                     
@@ -92,7 +110,7 @@ export const Earthquakeinfo = () => {
     
             
             <h4 className="title-4">Indoors</h4>
-    
+            <img  src={indoor} className='img'></img>
             <div className="content">
                 <div >
                     <ul className='paragraph'>
@@ -116,16 +134,30 @@ export const Earthquakeinfo = () => {
                     </ul>
                     
                 </div>
+                <h4 className="title-4">Driving</h4>
+                <img  src={car} className='img'></img>
+            <div className="content">
+                <div >
+                    <ul className='paragraph'>
+                        <li>Slowly pull over to the side of the road and stop</li>
+                        <li>Avoid overpasses, power lines. Stay in the car until the shaking stops</li>
+                    </ul>
+                    
+                </div>
             </div>
     
     
     
            
             <h4 className="title-4">Downtown:</h4>
+            <img  src={stair} className='img'></img>
             <div >
                 <div >
                     <ul className='paragraph'>
                         <li>Move away from building fronts</li>
+                        </ul>
+                        <img  src={building} className='img'></img>
+                        <ul className='paragraph'>
                         <li>Protect yourself against falling bricks, glass and other debris</li>
                     </ul>
                     
@@ -150,22 +182,14 @@ export const Earthquakeinfo = () => {
     
     
             
-            <h4 className="title-4">Driving</h4>
-            <div className="content">
-                <div >
-                    <ul className='paragraph'>
-                        <li>Slowly pull over to the side of the road and stop</li>
-                        <li>Avoid overpasses, power lines. Stay in the car until the shaking stops</li>
-                    </ul>
-                    
-                </div>
+          
             </div>
     
     
     
            
             <h4 className="title-4"> <i class="fa fa-wheelchair"></i>Wheelchair</h4>
-            <img  src={chair} className='img'></img>
+            <img  src={wheelchair} className='img'></img>
             <div clasNAclassNames="content">
                 <div >
                     <ul className='paragraph'>
@@ -216,6 +240,7 @@ export const Earthquakeinfo = () => {
     
                  
             <h4 className="title-4">What Rescuers and Experts “DO NOT” Recommend You Do During An Earthquake</h4>
+            <img  src={help} className='img'></img>
             <div className="content">
                 <div className='last-paragraph' >
                     <ul className='paragraph'>
@@ -236,6 +261,7 @@ export const Earthquakeinfo = () => {
                            
                     <p className='paragraph'><b>For the best opportunity to reduce injury risk and improve your chances of survival in an
                             earthquake, practice the following:</b></p>
+                            
                     <ul className='paragraph'>
                         <li><b>DROP</b> down onto your hands and knees (before the earthquake knocks you down). This
                             position protects you from falling, but allows you to still move if necessary.</li>
@@ -253,30 +279,35 @@ export const Earthquakeinfo = () => {
     
         </div>
         <div className='side-div-earthquake'>
-            <h4 className='h4-earthquake'> Eartquake Safety Tips</h4>
+            <h2 className='h4-earthquake'> Eartquake Safety Tips</h2>
+           
             <ul className='side-div-p'>
-                
-                <li className='earth'>Step 1: Secure Your Space</li>
-                <li>Step 2: Plan to be Safe </li>
-                <li>Step 3: Organize Disaster Supplies</li>
-                <li>Step 4: Minimize Financial Hardship</li>
-                <li>Step 5: Drop, Cover, and Hold On</li>
-                <li>Step 6: Improve Safety</li>
-                <li>Step 7: Reconnect and Restore</li>
+           
+                <div className='earth'> <button 
+ 
+               onClick={this.toglepersonhandler}className="button-size">
+              {this.state.istogleOn ?"-" :"+"}</button>Secure Your Space</div>
+             
+                <div className='earth'>Step 2: Plan to be Safe </div>
+                <div className='earth'>Step 3: Organize Disaster Supplies</div>
+                <div className='earth'>Step 4: Minimize Financial Hardship</div>
+                <div className='earth'>Step 5: Drop, Cover, and Hold On</div>
+                <div className='earth'>Step 6: Improve Safety</div>
+                <div className='earth'>Step 7: Reconnect and Restore</div>
             </ul>
-            <h4 className='h4-earthquake'> Helpful Links</h4>
+            <h2 className='h4-earthquake'> Helpful Links</h2>
             <ul className='side-div-p'>
-            < a href='http://cms.ndma.gov.pk/' target="_blank">NDMA</a> <br/> 
+            < a href='http://cms.ndma.gov.pk/' target="_blank">NDMA </a> <br/> 
             < a href="https://www.fema.gov/" target="_blank">FEMA </a> <br/> 
             < a href='https://www.ready.gov/' target="_blank">Ready.Gov</a> <br/> 
             < a href='https://www.weather.gov/' target="_blank">National Weather Service</a>  <br/>
             < a href='https://mil.wa.gov/' target="_blank"> WA State EMD</a> <br/>
-            < a href='https://waterdata.usgs.gov/wa/nwis/current?type=flow' target="_blank">USGS-Real Time Streamflow Data</a> <br/>
+            < a href='https://waterdata.usgs.gov/wa/nwis/current?type=flow' target="_blank">USGS-Real Time Streamflow Data</a> <br/><br/>
            
             </ul>
           </div>
         
         </>
     );
-}
+}}
 export default Earthquakeinfo;

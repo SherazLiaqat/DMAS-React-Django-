@@ -23,7 +23,7 @@ const Live = () => {
 
             />
             <CardItem
-              src='images/covidlive.jpg'
+              src='images/corona.jpg'
               text='Explore the COVID-19 Information...'
               label='COVID-19'
               path='/CovidLive'

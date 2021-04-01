@@ -8,7 +8,24 @@
 }
 
 .earth{
-background-color: saddlebrown;
+background-color: #f7f7f7;
+border: 1px solid rgb(180, 171, 171);
+margin: 10px;
+
+}
+.earth:hover{
+  
+  background-color: black;
+  color: white;
+}
+.button-size{
+  font-size: 22px;
+  margin: 1rem;
+  cursor: pointer;
+}
+.button-size:hover{
+  background-color: black;
+  color: white;
 }
 .side-div-earthquake{
   display:inline-table;
@@ -56,27 +73,31 @@ background-color: #fff;
     
     color: black;
     margin: 4px;
-    border-bottom: 2px solid red ;
+    border-bottom: 2px solid #c0392b ;
     
    
   }
   .side-div-p{
     text-align:start;
-    margin: 2rem;
+    margin: 10px;
+    
     
     
    
   }
-
- .side-div-p:hover{
-  
-   color: green;
- }
+  .side-div-p>a{
+   
+    margin: 20px;
+    color:#2ecc71;
+   
+    
+  }
+ 
   .side-div-p>a:hover{
     background-color: #f7f7f7;
-    color:pink;
+    color:black;
     transition: all 0.2s ease-out;
-    
+  
   }
   
   .inc-exp-container > div {
