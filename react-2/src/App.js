@@ -36,6 +36,7 @@ import Live from './components/Pages/Extrapages/Live';
 import CovidLive from './components/Pages/Extrapages/LiveEvents/CovidlLive/CovidLive';
 import FloodLive from './components/Pages/Extrapages/FloodLive';
 import EarthquakeLive from './components/Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive';
+import MyBlog from './components/Pages/Extrapages/Blog';
 function App(){
   
   return (
@@ -76,7 +77,8 @@ function App(){
     <Route path='/CovidLive'  component={CovidLive}exact />
     <Route path='/FloodLive'  component={FloodLive}exact />
     <Route path='/EarthquakeLive'  component={EarthquakeLive}exact />
-    <Route path='/am4core'  component={am4core}exact />
+    <Route path='/MyBlog'  component={MyBlog}exact />
+    
     
 
     

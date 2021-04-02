@@ -31,12 +31,12 @@ function Footer() {
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/About'> work</Link>
+            <h2>Quick Links</h2>
+            <Link to='/About' target="_blank"> About Us</Link>
             
-            <Link to='/EarthquakeLive'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/Contact' target="_blank">Contact Us</Link>
+            <Link to='/MyBlog'>Blog</Link>
+            <Link to='/'>News</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
@@ -48,11 +48,12 @@ function Footer() {
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>News</h2>
+            <h2>Awareness</h2>
             <Link to='/Earthquakeinfo' target="_blank">Earthquake</Link>
             <Link to='/Floodinfo' target="_blank">Flood</Link>
-            <Link to='/Heavyrain' target="_blank">Heavy Rain</Link>
+            <Link to='/Covid-19info' target="_blank">Covid-19</Link>
             <Link to='/Fireinfo' target="_blank">Fire</Link>
+            <Link to='/Locust' target="_blank">Locust</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
