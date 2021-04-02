@@ -3,7 +3,8 @@ import Footer from '../../../components/Footer/Footer';
 import './Earthquakeinfo.css';
 import safty from '../../images/flood11.jpg';
 import safty1 from '../../images/floodsafty1.jpg';
-import flood1 from '../../images/prepare1.jpg';
+import symbol from '../../images/symbol.png';
+import symbol1 from '../../images/relief.png';
 const Floodinfo = () => {
     return (
       <>
@@ -12,7 +13,7 @@ const Floodinfo = () => {
     
 
     <h1 className="title-3">Flood Awareness <br/> Preparedness</h1>
-    <img  src={flood1} className='img'></img>
+    <img  src={symbol} className='img'></img>
         <p className='paragraph'>Flooding is a temporary overflow of water onto land that is normally dry.
          Floods are the most common natural
         disaster in the United States. Failing to 
@@ -159,7 +160,9 @@ const Floodinfo = () => {
 
    
     <h2 className ='title-4'>Be Safe After</h2>
+    <img  src={symbol1} className='img'></img>
     <div className='paragraph'>
+    
         <li>Listen to authorities for information and instructions. Return home only when authorities say it is
             safe.</li>
         <li>Avoid driving except in emergencies.</li>
