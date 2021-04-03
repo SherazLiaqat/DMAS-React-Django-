@@ -14,6 +14,11 @@ import help from '../../images/help.jpg';
 import wheelchair from '../../images/wheelchair.png';
 import step1 from '../../images/Step1.jpg';
 import step2 from '../../images/Step2.jpg';
+import step3 from '../../images/Step3.jpg';
+import step4 from '../../images/Step4.jpg';
+import step5 from '../../images/Step5.jpg';
+import step6 from '../../images/Step6.jpg';
+import step7 from '../../images/Step7.jpg';
  class Earthquakeinfo extends Component {
     state={
         istogleOn:false
@@ -313,7 +318,7 @@ import step2 from '../../images/Step2.jpg';
  onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Organize Disaster Supplies</div>
                 <div>
                 {
-                    this.state.show? <div><img  src={step2} ></img><p>Step 3: Organize disaster supplies in convenient locations.</p></div> : null
+                    this.state.show? <div><img  src={step3} ></img><p>Step 3: Organize disaster supplies in convenient locations.</p></div> : null
                 }
                 
             </div>
@@ -322,7 +327,7 @@ import step2 from '../../images/Step2.jpg';
  onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Minimize Financial Hardship</div>
   <div>
                 {
-                    this.state.show? <div><img  src={step2} ></img><p>Step 4: Minimize financial hardship by organizing
+                    this.state.show? <div><img  src={step4} ></img><p>Step 4: Minimize financial hardship by organizing
                          important documents, strengthening your property, and considering insurance.</p></div> : null
                 }
                 
@@ -332,7 +337,7 @@ import step2 from '../../images/Step2.jpg';
  onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Drop, Cover, and Hold On</div>
   <div>
                 {
-                    this.state.show? <div><img  src={step2} ></img><p>Step 5: Drop, cover, and hold on when the earth shakes..</p></div> : null
+                    this.state.show? <div><img  src={step5} ></img><p>Step 5: Drop, cover, and hold on when the earth shakes..</p></div> : null
                 }
                 
             </div>
@@ -341,7 +346,7 @@ import step2 from '../../images/Step2.jpg';
  onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Improve Safety</div>
   <div>
                 {
-                    this.state.show? <div><img  src={step2} ></img><p>Step 6: Improve safety after earthquakes by evacuating if necessary, helping the 
+                    this.state.show? <div><img  src={step6} ></img><p>Step 6: Improve safety after earthquakes by evacuating if necessary, helping the 
                         injured, and preventing further damage.</p></div> : null
                 }
                 
@@ -351,7 +356,7 @@ import step2 from '../../images/Step2.jpg';
  onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button> Reconnect and Restore</div>
   <div>
                 {
-                    this.state.show? <div><img  src={step2} ></img><p>Step 7: Restore daily life by reconnecting with others, 
+                    this.state.show? <div><img  src={step7} ></img><p>Step 7: Restore daily life by reconnecting with others, 
                         repairing damage, and rebuilding community.</p></div> : null
                 }
                 
