@@ -37,12 +37,13 @@ import CovidLive from './components/Pages/Extrapages/LiveEvents/CovidlLive/Covid
 import FloodLive from './components/Pages/Extrapages/FloodLive';
 import EarthquakeLive from './components/Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive';
 import MyBlog from './components/Pages/Extrapages/Blog';
+import ScrollToTop from './components/ScrollToTop';
 function App(){
   
   return (
     <>
     <Router>
-      
+    <ScrollToTop/>
       <Navbar />
 
       <Switch>
