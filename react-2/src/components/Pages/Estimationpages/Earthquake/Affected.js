@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 const Affected = () => {
-  const[amount,setamount]=useState(0);
+  const[amount,setamount]=useState();
 
     return (
         <div>

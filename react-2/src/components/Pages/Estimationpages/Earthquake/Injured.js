@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 const Injured = () => {
-  const[amount,setamount]=useState(0);
+  const[amount,setamount]=useState();
     return (
         <div>
         <h1> This is Injured Estimtion page</h1>

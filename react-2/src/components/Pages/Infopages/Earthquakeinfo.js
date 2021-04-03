@@ -296,67 +296,67 @@ import step7 from '../../images/Step7.jpg';
                     
                      <button className='button-size'
  
- onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Secure Your Space</div>
+ onClick={()=>{this.setState({shows:!this.state.shows})}}>{ this.state.shows ?"-" :"+"}</button>Secure Your Space</div>
              
              <div>
                 {
-                    this.state.show? <div><img  src={step1} ></img><p>Step 1: Secure your space by identifying hazards and securing moveable items.</p></div> : null
+                    this.state.shows? <div><img  src={step1} ></img><p>Step 1: Secure your space by identifying hazards and securing moveable items.</p></div> : null
                 }
                 
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button> Plan to be Safe </div>
+ onClick={()=>{this.setState({show2:!this.state.show2})}}>{ this.state.show2 ?"-" :"+"}</button> Plan to be Safe </div>
                  <div>
                 {
-                    this.state.show? <div><img  src={step2} ></img><p>Step 2: Plan to be safe by creating a disaster plan and deciding how you will communicate in an emergency.</p></div> : null
+                    this.state.show2? <div><img  src={step2} ></img><p>Step 2: Plan to be safe by creating a disaster plan and deciding how you will communicate in an emergency.</p></div> : null
                 }
                 
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Organize Disaster Supplies</div>
+ onClick={()=>{this.setState({show3:!this.state.show3})}}>{ this.state.show3 ?"-" :"+"}</button>Organize Disaster Supplies</div>
                 <div>
                 {
-                    this.state.show? <div><img  src={step3} ></img><p>Step 3: Organize disaster supplies in convenient locations.</p></div> : null
+                    this.state.show3? <div><img  src={step3} ></img><p>Step 3: Organize disaster supplies in convenient locations.</p></div> : null
                 }
                 
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Minimize Financial Hardship</div>
+ onClick={()=>{this.setState({show4:!this.state.show4})}}>{ this.state.show4 ?"-" :"+"}</button>Minimize Financial Hardship</div>
   <div>
                 {
-                    this.state.show? <div><img  src={step4} ></img><p>Step 4: Minimize financial hardship by organizing
+                    this.state.show4? <div><img  src={step4} ></img><p>Step 4: Minimize financial hardship by organizing
                          important documents, strengthening your property, and considering insurance.</p></div> : null
                 }
                 
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Drop, Cover, and Hold On</div>
+ onClick={()=>{this.setState({show5:!this.state.show5})}}>{ this.state.show5 ?"-" :"+"}</button>Drop, Cover, and Hold On</div>
   <div>
                 {
-                    this.state.show? <div><img  src={step5} ></img><p>Step 5: Drop, cover, and hold on when the earth shakes..</p></div> : null
+                    this.state.show5? <div><img  src={step5} ></img><p>Step 5: Drop, cover, and hold on when the earth shakes..</p></div> : null
                 }
                 
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Improve Safety</div>
+ onClick={()=>{this.setState({show6:!this.state.show6})}}>{ this.state.show6 ?"-" :"+"}</button>Improve Safety</div>
   <div>
                 {
-                    this.state.show? <div><img  src={step6} ></img><p>Step 6: Improve safety after earthquakes by evacuating if necessary, helping the 
+                    this.state.show6? <div><img  src={step6} ></img><p>Step 6: Improve safety after earthquakes by evacuating if necessary, helping the 
                         injured, and preventing further damage.</p></div> : null
                 }
                 
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button> Reconnect and Restore</div>
+ onClick={()=>{this.setState({show7:!this.state.show7})}}>{ this.state.show7 ?"-" :"+"}</button> Reconnect and Restore</div>
   <div>
                 {
-                    this.state.show? <div><img  src={step7} ></img><p>Step 7: Restore daily life by reconnecting with others, 
+                    this.state.show7? <div><img  src={step7} ></img><p>Step 7: Restore daily life by reconnecting with others, 
                         repairing damage, and rebuilding community.</p></div> : null
                 }
                 

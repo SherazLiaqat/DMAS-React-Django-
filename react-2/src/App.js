@@ -38,6 +38,8 @@ import FloodLive from './components/Pages/Extrapages/FloodLive';
 import EarthquakeLive from './components/Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive';
 import MyBlog from './components/Pages/Extrapages/Blog';
 import ScrollToTop from './components/ScrollToTop';
+import Dead from './components/Pages/Estimationpages/Flood/Dead';
+import Affectedpeopel from './components/Pages/Estimationpages/Flood/Affectedpeopel';
 function App(){
   
   return (
@@ -54,7 +56,9 @@ function App(){
         <Route path='/Blog' component={Blog} />
         <Route path='/News' component={News} />
         <Route path='/Death' component={Death} />
+        <Route path='/Dead' component={Dead} />
         <Route path='/Affected' component={Affected} />
+        <Route path='/Affectedpeopel' component={Affectedpeopel} />
         <Route path='/Injured' component={Injured} />
         <Route path='/sign-up' component={Signup} />
         <Route path='/Login' component={Login} />

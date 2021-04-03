@@ -3,10 +3,10 @@ import React,{useState} from 'react'
 import './Death.css';
 
 const Death = () => {
-  const[amount,setamount]=useState(0);
+  const[amount,setamount]=useState();
 
-  const[amount2,setamount2]=useState(0);
-  const[amount3,setamount3]=useState(0);
+  const[amount2,setamount2]=useState();
+  const[amount3,setamount3]=useState();
 const toFixed=0.0;
     return (
       <>
