@@ -12,6 +12,8 @@ import outdoor from '../../images/out.jpg';
 import car from '../../images/car.jpg';
 import help from '../../images/help.jpg';
 import wheelchair from '../../images/wheelchair.png';
+import step1 from '../../images/Step1.jpg';
+import step2 from '../../images/Step2.jpg';
  class Earthquakeinfo extends Component {
     state={
         istogleOn:false
@@ -283,17 +285,77 @@ import wheelchair from '../../images/wheelchair.png';
            
             <ul className='side-div-p'>
            
-                <div className='earth'> <button 
+                <div className='earth'>
+                    
+                
+                    
+                     <button className='button-size'
  
-               onClick={this.toglepersonhandler}className="button-size">
-              {this.state.istogleOn ?"-" :"+"}</button>Secure Your Space</div>
+ onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Secure Your Space</div>
              
-                <div className='earth'>Step 2: Plan to be Safe </div>
-                <div className='earth'>Step 3: Organize Disaster Supplies</div>
-                <div className='earth'>Step 4: Minimize Financial Hardship</div>
-                <div className='earth'>Step 5: Drop, Cover, and Hold On</div>
-                <div className='earth'>Step 6: Improve Safety</div>
-                <div className='earth'>Step 7: Reconnect and Restore</div>
+             <div>
+                {
+                    this.state.show? <div><img  src={step1} ></img><p>Step 1: Secure your space by identifying hazards and securing moveable items.</p></div> : null
+                }
+                
+            </div>
+                <div className='earth'> <button className='button-size'
+ 
+ onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button> Plan to be Safe </div>
+                 <div>
+                {
+                    this.state.show? <div><img  src={step2} ></img><p>Step 2: Plan to be safe by creating a disaster plan and deciding how you will communicate in an emergency.</p></div> : null
+                }
+                
+            </div>
+                <div className='earth'> <button className='button-size'
+ 
+ onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Organize Disaster Supplies</div>
+                <div>
+                {
+                    this.state.show? <div><img  src={step2} ></img><p>Step 3: Organize disaster supplies in convenient locations.</p></div> : null
+                }
+                
+            </div>
+                <div className='earth'> <button className='button-size'
+ 
+ onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Minimize Financial Hardship</div>
+  <div>
+                {
+                    this.state.show? <div><img  src={step2} ></img><p>Step 4: Minimize financial hardship by organizing
+                         important documents, strengthening your property, and considering insurance.</p></div> : null
+                }
+                
+            </div>
+                <div className='earth'> <button className='button-size'
+ 
+ onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Drop, Cover, and Hold On</div>
+  <div>
+                {
+                    this.state.show? <div><img  src={step2} ></img><p>Step 5: Drop, cover, and hold on when the earth shakes..</p></div> : null
+                }
+                
+            </div>
+                <div className='earth'> <button className='button-size'
+ 
+ onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button>Improve Safety</div>
+  <div>
+                {
+                    this.state.show? <div><img  src={step2} ></img><p>Step 6: Improve safety after earthquakes by evacuating if necessary, helping the 
+                        injured, and preventing further damage.</p></div> : null
+                }
+                
+            </div>
+                <div className='earth'> <button className='button-size'
+ 
+ onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show ?"-" :"+"}</button> Reconnect and Restore</div>
+  <div>
+                {
+                    this.state.show? <div><img  src={step2} ></img><p>Step 7: Restore daily life by reconnecting with others, 
+                        repairing damage, and rebuilding community.</p></div> : null
+                }
+                
+            </div>
             </ul>
             <h2 className='h4-earthquake'> Helpful Links</h2>
             <ul className='side-div-p'>

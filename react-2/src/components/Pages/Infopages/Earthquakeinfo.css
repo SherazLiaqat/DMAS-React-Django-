@@ -9,7 +9,7 @@
 
 .earth{
 background-color: #f7f7f7;
-border: 1px solid rgb(180, 171, 171);
+
 margin: 10px;
 
 }
@@ -19,13 +19,13 @@ margin: 10px;
   color: white;
 }
 .button-size{
-  font-size: 22px;
-  margin: 1rem;
+  font-size: 32px;
+
   cursor: pointer;
 }
 .button-size:hover{
-  background-color: black;
-  color: white;
+  background-color: #fff;
+  color: black;
 }
 .side-div-earthquake{
   display:inline-table;
@@ -39,7 +39,7 @@ background-color: #fff;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  border-radius: 10px;
+ 
   overflow: hidden;
   text-decoration: none;
 }

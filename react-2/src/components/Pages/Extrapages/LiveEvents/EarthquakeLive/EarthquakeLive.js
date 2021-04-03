@@ -5,16 +5,26 @@ import image from '../../../../images/image.jpg';
 //import {fetchData} from './CovidApi/Index';
 
 class EarthquakeLive extends React.Component {
-  
+    constructor(){
+        super();
+        this.state={
+            show:true
+        }
+    }
     render(){
-        
-    return (
-        <div className={styles.container}>
-            <img className={styles.image}src={image} alt='Earthquake-Live-info'/>
-            <h3>Check-Out These Covid-19 Live Information!</h3>
-          
+      return (
+        <div className="App">
+          <header className="App-header">
+            <div>
+                {
+                    this.state.show? <div><h1>Hide and Show</h1></div> : null
+                }
+                <button onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Hide' : 'Show'} Div</button>
+            </div>
+          </header>
         </div>
-    )
-}}
+      );
+    }
+  }
 
 export default EarthquakeLive
