@@ -211,8 +211,8 @@
         text-align: center;
     }
     .form-inputs1{
-        margin: 15px;
-       margin-left: 20px;
+        
+       
        display:inline-table;
        box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
         -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -220,7 +220,8 @@
         border-radius: 10px;
         overflow: hidden;
         text-decoration: none;
-        width: 20rem;
+        
+        width: 80%;
         
       
        
@@ -229,16 +230,11 @@
         display:inline-table;
         
         margin: 15px;
-        box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-        -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-        filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-        border-radius: 10px;
-        overflow: hidden;
-        text-decoration: none;
+       
         align-items: center;
-        width: 18rem;
+        width: 80%;
         height: 8rem;
-        margin-left: 2.5rem;
+       
     }
     .form-inputs2{
         margin: 15px;
@@ -249,7 +245,7 @@
         overflow: hidden;
         text-decoration: none;
         align-items: center;
-        width: 20rem;
+        width: 80%;
     }
     .contactButton{
         cursor: pointer;
