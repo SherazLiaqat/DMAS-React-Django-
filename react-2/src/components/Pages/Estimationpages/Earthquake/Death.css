@@ -12,16 +12,25 @@
   background-color: #f7f7f7;
  
   margin-left: 3rem;
-  
+  text-align: start;
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
+  
 }
 .div-1{
- align-content: center;
+
  margin: 2.5rem;
  border: 1px solid black;
+
   
+}
+.Death-Div{
+  text-align:start;
+  margin: 20px;
+  
+ 
+ 
 }
 .DeathButton{
     cursor: pointer;

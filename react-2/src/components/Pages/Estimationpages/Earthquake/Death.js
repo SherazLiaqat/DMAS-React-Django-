@@ -3,30 +3,34 @@ import React,{useState} from 'react'
 import './Death.css';
 
 const Death = () => {
+  
+ 
   const[amount,setamount]=useState();
 
   const[amount2,setamount2]=useState();
   const[amount3,setamount3]=useState();
-const toFixed=0.0;
+  const toFixed=0.0;
     return (
+      
       <>
+      
         <div className='main'>
          
             <h1 >  This is Death Estimtion page</h1>
            
             <label className='Change'>Earthquake Type:</label>
             <select className='Changing'>
-  <option value="grapefruit">Ground Movement</option>
-  <option value="lime">Tsaunami</option>
+  <option >Ground Movement</option>
+  <option >Tsaunami</option>
  
 </select>
 <label className='Change'>Choose a Continent:</label>
             <select className='Changing'>
-  <option value="grapefruit">Asia</option>
-  <option value="lime">Europe</option>
-  <option value="grapefruit">America</option>
-  <option value="lime">Africa</option>
-  <option value="grapefruit">Ocenia</option>
+  <option >Asia</option>
+  <option >Europe</option>
+  <option >America</option>
+  <option >Africa</option>
+  <option >Ocenia</option>
   
  
 </select>
@@ -51,10 +55,13 @@ const toFixed=0.0;
      <button className='DeathButton'> Estimate</button>
         </div>
         <div className='side-div'>
-            <h className='div-1'> Earthquake Awareness</h>
-            <h1> Magnitude</h1>
+            <h1 className='div-1'> Earthquake Awareness</h1>
+            <ul className='Death-Div'>
+            
+            
             <h1> Longitude</h1>
             <h1> Latitude</h1>
+            </ul>
           </div>
         </>
     )
