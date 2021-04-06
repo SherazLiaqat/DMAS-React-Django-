@@ -2,9 +2,10 @@ import React from 'react'
 import Footer from '../../../components/Footer/Footer';
 import './Earthquakeinfo.css';
 import safty from '../../images/flood11.jpg';
-import safty1 from '../../images/floodsafty1.jpg';
+import safty1 from '../../images/survived.png';
 import symbol from '../../images/symbol.png';
 import symbol1 from '../../images/relief.png';
+import car from '../../images/car.png';
 const Floodinfo = () => {
     return (
       <>
@@ -150,11 +151,24 @@ const Floodinfo = () => {
             instructions regarding flooding and COVID-19.</li>
         <li>Do not walk, swim or drive through flood waters. Turn Around. Don’t Drown!</li>
         <li>Stay off bridges over fast-moving water. Fast-moving water can wash bridges away without warning.</li>
+       
+        </ul>
+        
+        <h2 className ='title-4'>Vehicle</h2>
+        <ul className='paragraph'>
         <li>If your car is trapped in rapidly moving water stay inside. If water is rising inside the car get on the
-            roof.</li>
+        roof.</li>
+        </ul>
+       
+        
+        <img  src={car} className='img'></img>
+        
+           <ul className='paragraph'> 
         <li>If trapped in a building go to its highest level. Do not climb into a closed attic. You may become
-            trapped by rising floodwater. Only get on the roof if necessary and once there signal for help.</li>
-    </ul>
+            trapped by rising floodwater. Only get on the roof if necessary and once there signal for help.</li></ul>
+    
+    
+    
 
 
 

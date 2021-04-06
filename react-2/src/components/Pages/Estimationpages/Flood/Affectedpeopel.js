@@ -46,7 +46,8 @@ const Affectedpeopel = () => {
           <input className='box3' type="number"  value={amount3} onChange={(event)=>setamount3(event.target.value)} placeholder="Enter Longitude..." />
          
         </div>
-       <button className='DeathButton'> Estimate</button>
+        <a className='DeathButton' href='/DisplacedResult'  > Estimate</a><br/><br/><br/>
+   
           </div>
           <div className='side-div'>
               <h className='div-1'> Earthquake Awareness</h>

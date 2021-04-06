@@ -36,10 +36,15 @@ import Live from './components/Pages/Extrapages/Live';
 import CovidLive from './components/Pages/Extrapages/LiveEvents/CovidlLive/CovidLive';
 import FloodLive from './components/Pages/Extrapages/FloodLive';
 import EarthquakeLive from './components/Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive';
-import MyBlog from './components/Pages/Extrapages/Blog';
+import MyBlog from './components/My-Blog/Blog';
 import ScrollToTop from './components/ScrollToTop';
 import Dead from './components/Pages/Estimationpages/Flood/Dead';
 import Affectedpeopel from './components/Pages/Estimationpages/Flood/Affectedpeopel';
+import DeathResult from './components/ResultPages/Earthqauke/DeathResult';
+import DeadResult from './components/ResultPages/Flood/DeadResult';
+import AffectedResult from './components/ResultPages/Earthqauke/AffectedResult';
+import InjuredResult from './components/ResultPages/Earthqauke/InjuredResult';
+import DisplacedResult from './components/ResultPages/Flood/DisplacedResult';
 function App(){
   
   return (
@@ -83,7 +88,11 @@ function App(){
     <Route path='/FloodLive'  component={FloodLive}exact />
     <Route path='/EarthquakeLive'  component={EarthquakeLive}exact />
     <Route path='/MyBlog'  component={MyBlog}exact />
-    
+    <Route path='/AffectedResult'  component={AffectedResult}exact />
+    <Route path='/DeathResult'  component={DeathResult}exact />
+    <Route path='/InjuredResult'  component={InjuredResult}exact />
+    <Route path='/DeadResult'  component={DeadResult}exact />
+    <Route path='/DisplacedResult'  component={DisplacedResult}exact />
     
 
     

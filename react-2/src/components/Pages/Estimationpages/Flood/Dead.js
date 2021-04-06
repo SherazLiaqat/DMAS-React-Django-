@@ -14,9 +14,9 @@ const Dead = () => {
              
               <label className='Change'>Severity:</label>
               <select className='Changing'>
-    <option value="grapefruit">1</option>
-    <option value="lime">1.5</option>
-    <option value="lime">2</option>
+    <option >1</option>
+    <option >1.5</option>
+    <option >2</option>
    
   </select>
   
@@ -48,7 +48,8 @@ const Dead = () => {
           <input className='box3' type="number"  value={amount3} onChange={(event)=>setamount3(event.target.value)} placeholder="Enter Centroid Y..." />
          
         </div>
-       <button className='DeathButton'> Estimate</button>
+        <a className='DeathButton' href='/DeadResult'  > Estimate</a><br/><br/><br/>
+       
           </div>
           <div className='side-div'>
               <h className='div-1'> Earthquake Awareness</h>

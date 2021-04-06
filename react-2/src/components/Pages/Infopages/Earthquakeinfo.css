@@ -21,9 +21,9 @@ margin: 10px;
 }
 .button-size{
   font-size: 20px;
-  border: transparent;
+  border: none;
   cursor: pointer;
-
+outline: none;
   background-color: #fff;
 }
 .button-size:hover{

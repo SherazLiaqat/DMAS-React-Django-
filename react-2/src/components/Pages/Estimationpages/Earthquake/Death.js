@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import { Link } from 'react-router-dom';
 import './Death.css';
 
 const Death = () => {
@@ -52,7 +52,7 @@ const Death = () => {
         <input className='box3' type="number"  value={amount3} onChange={(event)=>setamount3(event.target.value)} placeholder="Enter Longitude..." />
        
       </div>
-     <button className='DeathButton'> Estimate</button>
+     <a className='DeathButton' href='/DeathResult'  > Estimate</a><br/><br/><br/>
         </div>
         <div className='side-div'>
             <h1 className='div-1'> Earthquake Awareness</h1>

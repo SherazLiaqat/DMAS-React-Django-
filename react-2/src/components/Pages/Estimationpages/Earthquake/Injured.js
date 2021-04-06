@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import { Link } from 'react-router-dom';
 const Injured = () => {
   const[amount,setamount]=useState();
     return (
@@ -38,7 +38,11 @@ const Injured = () => {
         <input className='box3' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Longitude..." />
        
       </div>
- <button className='DeathButton'> Estimate</button>
+     
+      <a className='DeathButton' href='/InjuredResult'  > Estimate</a><br/><br/><br/>
+                
+              
+ 
     </div>
     )
 }

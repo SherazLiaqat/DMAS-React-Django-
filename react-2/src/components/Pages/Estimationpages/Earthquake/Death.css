@@ -43,8 +43,10 @@
     font-size: 20px;
     border-radius: 5px solid black;
     margin-left: 8.6rem;
-    margin-bottom: 10px;
+    margin-bottom: 5rem;
+    text-decoration: none; 
   }
+  
   .DeathButton:hover{
     transition: all 0.3s ease-out;
     background:white;
