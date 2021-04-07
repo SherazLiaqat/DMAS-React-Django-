@@ -1,0 +1,23 @@
+.main-container{
+    display: inline-table;
+    background-color: green;
+    width: 70%;
+    margin: 2rem;
+}
+.footer{
+    text-align:center ;
+    margin: 2rem;
+}
+.deathresult1{
+  
+    width: 50%;
+    display: inline-table;
+    
+    background-color: red;
+}
+.deathresult2{
+    
+    width: 50%;
+    display: inline-table;
+    background-color: green;
+}

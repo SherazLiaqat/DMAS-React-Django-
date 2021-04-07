@@ -252,21 +252,21 @@ import step7 from '../../images/Step7.jpg';
                 <div className='last-paragraph' >
                     <ul className='paragraph'>
                     
-                        <li ><b>DO NOT</b> run outside or to other rooms during shaking. The area near the exterior walls of
+                        <li ><h2>DO NOT</h2> run outside or to other rooms during shaking. The area near the exterior walls of
                             a building is the most dangerous place to be. Windows, facades and architectural details are
                             often the first parts of the building to collapse. Stay away from the danger zone. Also, shaking
                             can be so strong that you will not be able to move far without falling down.</li>
-                        <li><b>DO NOT</b> stand in a doorway. In modern houses, doorways are no stronger than any other part
+                        <li><h2>DO NOT</h2> stand in a doorway. In modern houses, doorways are no stronger than any other part
                             of the house. The doorway does not protect you from the most likely source of injury, falling or
                             flying objects. And, doorways usually only accommodate one person.</li>
-                        <li><b>DO NOT</b> get out of your car and lay next to it. This is very dangerous because the car can
+                        <li><h2>DO NOT</h2> get out of your car and lay next to it. This is very dangerous because the car can
                             move and crush you, and other drivers may not see you on the ground.</li>
                     </ul>
     
     
     
                            
-                    <p className='paragraph'><b>For the best opportunity to reduce injury risk and improve your chances of survival in an
+                    <p className="title-4"><b>For the best opportunity to reduce injury risk and improve your chances of survival in an
                             earthquake, practice the following:</b></p>
                             
                     <ul className='paragraph'>
@@ -278,7 +278,7 @@ import step7 from '../../images/Step7.jpg';
                         <li><b>HOLD ON</b> to your shelter (or to your head and neck) until the shaking stops. Be prepared
                             to move with your shelter if the shaking shifts.</li>
                     </ul>
-                    <p className='paragraph'><b>Additional preparedness information is available at:</b><a
+                    <p className='paragraph'><h2>Additional preparedness information is available at:</h2><a
                             href="http://www.ready.gov">www.Ready.gov</a><br/><br/></p>
                     
                 </div>
@@ -369,7 +369,7 @@ import step7 from '../../images/Step7.jpg';
             < a href='https://www.ready.gov/' target="_blank">Ready.Gov</a> <br/> 
             < a href='https://www.weather.gov/' target="_blank">National Weather Service</a>  <br/>
             < a href='https://mil.wa.gov/' target="_blank"> WA State EMD</a> <br/>
-            < a href='https://waterdata.usgs.gov/wa/nwis/current?type=flow' target="_blank">USGS-Real Time Streamflow Data</a> <br/><br/>
+            < a href='https://waterdata.usgs.gov/wa/nwis/current?type=flow' target="_blank">USGS-Real Time  Data</a> <br/><br/>
            
             </ul>
           </div>

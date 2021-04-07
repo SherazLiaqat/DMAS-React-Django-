@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../../../components/Footer/Footer';
 import './Earthquakeinfo.css';
 import safty from '../../images/flood11.jpg';
-import safty1 from '../../images/survived.png';
+import safty1 from '../../images/survived1.png';
 import symbol from '../../images/symbol.png';
 import symbol1 from '../../images/relief.png';
 import car from '../../images/car.png';

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './DeathResult.css'
 const AffectedResult = () => {
     return (
         <div>

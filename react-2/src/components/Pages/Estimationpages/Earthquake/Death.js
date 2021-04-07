@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Death.css';
 
 const Death = () => {
-  
  
   const[amount,setamount]=useState();
 

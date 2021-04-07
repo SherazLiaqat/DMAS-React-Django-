@@ -119,24 +119,7 @@ function Navbar() {
               {dropdowns && <Dropdowns />}
              
             </li>
-            <li className='nav-item'>
-              <Link
-                to='/About'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                About Us
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/Contact'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Contact Us
-              </Link>
-            </li>
+           
             <li className='nav-item'>
               <Link
                 to='/Live'
