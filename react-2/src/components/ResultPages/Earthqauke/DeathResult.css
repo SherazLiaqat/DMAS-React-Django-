@@ -1,6 +1,6 @@
 .main-container{
     display: inline-table;
-    background-color: green;
+    color: black;
     width: 70%;
     margin: 2rem;
 }
@@ -8,6 +8,11 @@
     text-align:center ;
     margin: 2rem;
 }
+.result{
+    text-align: start;
+    margin-left: 2rem;
+}
+
 .deathresult1{
   
     width: 50%;

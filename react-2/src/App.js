@@ -45,6 +45,8 @@ import DeadResult from './components/ResultPages/Flood/DeadResult';
 import AffectedResult from './components/ResultPages/Earthqauke/AffectedResult';
 import InjuredResult from './components/ResultPages/Earthqauke/InjuredResult';
 import DisplacedResult from './components/ResultPages/Flood/DisplacedResult';
+import chart from './components/Pages/Chart/Result';
+import Result from './components/Pages/Chart/Result';
 function App(){
   
   return (
@@ -69,6 +71,7 @@ function App(){
         <Route path='/Login' component={Login} />
         <Route path='/Event' component={Event} />
         <Route path='/Live' component={Live} />
+        
      
       </Switch>
      

@@ -1,12 +1,10 @@
 import React,{Component} from 'react'
 import './DeathResult.css';
+import Blog from '../../Pages/Blog';
 import step1 from '../../images/Step1.jpg';
 import step2 from '../../images/Step2.jpg';
 import step3 from '../../images/Step3.jpg';
-import step4 from '../../images/Step4.jpg';
-import step5 from '../../images/Step5.jpg';
-import step6 from '../../images/Step6.jpg';
-import step7 from '../../images/Step7.jpg';
+
 class DeathResult extends React.Component {
     state={
         istogleOn:false
@@ -23,10 +21,16 @@ class DeathResult extends React.Component {
         
         <>
          <div >
-            <h1> THIS IS page</h1>
+            <h1> Death's Due to Earthquake</h1>
         </div>
         <div className='main-container'>
-            <h1> THIS IS FIRST DIV</h1>
+            <h1 className='result'>Result </h1>
+            <p> System Estimate That 0 of 25 People Get Injured Due to Earthquake.</p>
+         
+
+           <Blog/>
+            
+                
         </div>
         <div className='side-div-earthquake'>
             <h2 className='h4-earthquake'> Eartquake Death</h2>
