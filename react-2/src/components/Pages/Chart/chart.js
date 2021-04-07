@@ -1,5 +1,6 @@
 import React, { useState,useEffect,row } from 'react'
-import { Pie, defaults } from 'react-chartjs-2'
+import { Pie, defaults } from 'react-chartjs-2';
+import "./Chart.css"
 import {csv} from 'd3';
 defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
@@ -16,13 +17,13 @@ const BarChart = () => {
   
   return (
     <div>
-      <Pie
+      <Pie className="pie"
         data={{
           labels: ['Red', 'Black', 'brown', 'Green', 'Purple', 'Orange'],
           datasets: [
             {
               label: '# of votes',
-              data:[5999,909,967,78,67,67,56,4544,99,1222,6666],
+              data:[909,967,78,67,67,56],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -31,6 +32,7 @@ const BarChart = () => {
                 'rgba(193, 18, 255, 0.2)',
                 'rgba(255, 159, 64, 0.9)',
               ],
+              
               borderColor: [
                 'rgba(265, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -50,6 +52,7 @@ const BarChart = () => {
           ],
         }}
         height={500}
+        
         width={450}
         options={{
           maintainAspectRatio: false,

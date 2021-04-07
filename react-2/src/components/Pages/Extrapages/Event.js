@@ -12,6 +12,18 @@ export const Event = () => {
             <div className='event-container-HeavyRain'>
             <Heavyrain/>
             </div>
+            <div  className='event-container-Blog'>
+            < Blog/>
+            </div>
+            <div className='event-container-HeavyRain'>
+            <Heavyrain/>
+            </div>
+            <div  className='event-container-Blog'>
+            < Blog/>
+            </div>
+            <div className='event-container-HeavyRain'>
+            <Heavyrain/>
+            </div>
         </div>
     )
 }

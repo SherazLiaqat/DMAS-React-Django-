@@ -94,8 +94,8 @@ class Blog extends React.Component {
       <div>
          
         <canvas
-        height={300}
-        width={600}
+        height={500}
+        width={500}
           ref={chart => {
             this.chart = chart;
           }}
