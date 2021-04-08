@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import './Death.css';
 const Affected = () => {
   const[amount,setamount]=useState();
 

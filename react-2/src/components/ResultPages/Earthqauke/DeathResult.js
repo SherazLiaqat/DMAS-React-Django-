@@ -4,6 +4,10 @@ import Blog from '../../Pages/Blog';
 import step1 from '../../images/Step1.jpg';
 import step2 from '../../images/Step2.jpg';
 import step3 from '../../images/Step3.jpg';
+import Result from '../../Pages/Chart/Result';
+import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
+import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons/fa';
+import { VscTwitter} from 'react-icons/vsc';
 
 class DeathResult extends React.Component {
     state={
@@ -28,9 +32,8 @@ class DeathResult extends React.Component {
             <p> System Estimate That 0 of 25 People Get Injured Due to Earthquake.</p>
          
 
-           <Blog/>
-            
-                
+           <Result/>
+           
         </div>
         <div className='side-div-earthquake'>
             <h2 className='h4-earthquake'> Eartquake Death</h2>
@@ -43,7 +46,7 @@ class DeathResult extends React.Component {
                     
                      <button className='button-size'
  
- onClick={()=>{this.setState({shows:!this.state.shows})}}>{ this.state.shows ?<i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button>Stay safe.</div>
+ onClick={()=>{this.setState({shows:!this.state.shows})}}>{ this.state.shows ?<FaAngleDown/>:<FaAngleRight/>}</button>Stay safe.</div>
              
              <div>
                 {
@@ -53,7 +56,7 @@ class DeathResult extends React.Component {
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show2:!this.state.show2})}}>{ this.state.show2 ? <i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}
+ onClick={()=>{this.setState({show2:!this.state.show2})}}>{ this.state.show2 ? <FaAngleDown/>:<FaAngleRight/>}
  </button> Help Others</div>
                  <div>
                 {
@@ -63,7 +66,7 @@ class DeathResult extends React.Component {
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show3:!this.state.show3})}}>{ this.state.show3 ?<i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button>Don't Panic.</div>
+ onClick={()=>{this.setState({show3:!this.state.show3})}}>{ this.state.show3 ?<FaAngleDown/>:<FaAngleRight/>}</button>Don't Panic.</div>
                 <div>
                 {
                     this.state.show3? <div><img  src={step3} ></img><p>Don't Panic.</p></div> : null
@@ -74,7 +77,29 @@ class DeathResult extends React.Component {
                 
             </div>
             </ul>
-         
+            </div>
+        <div className='side-div-Result'>
+            <h2 className='h4-earthquake'> Share With</h2>
+           
+            <ul className='side-div-p'>
+           
+                <div className='social-media'>
+                    <FaFacebookF/>
+                    <FaInstagram/>
+                    <VscTwitter/>
+                    <FaYoutube/>
+                    <FaLinkedin/>
+                
+                    
+                    
+               
+                
+              
+           
+               
+                
+            </div>
+            </ul>
           </div>
           <footer> <p className='footer'> This Information is not Authenticated by any Official Source</p></footer>
         </>

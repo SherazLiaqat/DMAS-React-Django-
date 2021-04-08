@@ -19,6 +19,7 @@ import step4 from '../../images/Step4.jpg';
 import step5 from '../../images/Step5.jpg';
 import step6 from '../../images/Step6.jpg';
 import step7 from '../../images/Step7.jpg';
+import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
  class Earthquakeinfo extends Component {
     state={
         istogleOn:false
@@ -296,7 +297,8 @@ import step7 from '../../images/Step7.jpg';
                     
                      <button className='button-size'
  
- onClick={()=>{this.setState({shows:!this.state.shows})}}>{ this.state.shows ?<i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button>Secure Your Space</div>
+ onClick={()=>{this.setState({shows:!this.state.shows})}}>
+     { this.state.shows ?<FaAngleDown/>:<FaAngleRight/>}</button>Secure Your Space</div>
              
              <div>
                 {
@@ -306,7 +308,8 @@ import step7 from '../../images/Step7.jpg';
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show2:!this.state.show2})}}>{ this.state.show2 ? <i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button> Plan to be Safe </div>
+ onClick={()=>{this.setState({show2:!this.state.show2})}}>{ this.state.show2 ? 
+    <FaAngleDown/>:<FaAngleRight/>}</button> Plan to be Safe </div>
                  <div>
                 {
                     this.state.show2? <div><img  src={step2} ></img><p>Step 2: Plan to be safe by creating a disaster plan and deciding how you will communicate in an emergency.</p></div> : null
@@ -315,7 +318,7 @@ import step7 from '../../images/Step7.jpg';
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show3:!this.state.show3})}}>{ this.state.show3 ?<i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button>Organize Disaster Supplies</div>
+ onClick={()=>{this.setState({show3:!this.state.show3})}}>{ this.state.show3 ?<FaAngleDown/>:<FaAngleRight/>}</button>Organize Disaster Supplies</div>
                 <div>
                 {
                     this.state.show3? <div><img  src={step3} ></img><p>Step 3: Organize disaster supplies in convenient locations.</p></div> : null
@@ -324,7 +327,7 @@ import step7 from '../../images/Step7.jpg';
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show4:!this.state.show4})}}>{ this.state.show4 ?<i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button>Minimize Financial Hardship</div>
+ onClick={()=>{this.setState({show4:!this.state.show4})}}>{ this.state.show4 ?<FaAngleDown/>:<FaAngleRight/>}</button>Minimize Financial Hardship</div>
   <div>
                 {
                     this.state.show4? <div><img  src={step4} ></img><p>Step 4: Minimize financial hardship by organizing
@@ -334,7 +337,7 @@ import step7 from '../../images/Step7.jpg';
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show5:!this.state.show5})}}>{ this.state.show5 ?<i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button>Drop, Cover, and Hold On</div>
+ onClick={()=>{this.setState({show5:!this.state.show5})}}>{ this.state.show5 ?<FaAngleDown/>:<FaAngleRight/>}</button>Drop, Cover, and Hold On</div>
   <div>
                 {
                     this.state.show5? <div><img  src={step5} ></img><p>Step 5: Drop, cover, and hold on when the earth shakes..</p></div> : null
@@ -343,7 +346,7 @@ import step7 from '../../images/Step7.jpg';
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show6:!this.state.show6})}}>{ this.state.show6 ?<i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button>Improve Safety</div>
+ onClick={()=>{this.setState({show6:!this.state.show6})}}>{ this.state.show6 ?<FaAngleDown/>:<FaAngleRight/>}</button>Improve Safety</div>
   <div>
                 {
                     this.state.show6? <div><img  src={step6} ></img><p>Step 6: Improve safety after earthquakes by evacuating if necessary, helping the 
@@ -353,7 +356,7 @@ import step7 from '../../images/Step7.jpg';
             </div>
                 <div className='earth'> <button className='button-size'
  
- onClick={()=>{this.setState({show7:!this.state.show7})}}>{ this.state.show7 ?<i class="fa fa-angle-down"></i>:<i class="fa fa-angle-right"></i>}</button> Reconnect and Restore</div>
+ onClick={()=>{this.setState({show7:!this.state.show7})}}>{ this.state.show7 ?<FaAngleDown/>:<FaAngleRight/>}</button> Reconnect and Restore</div>
   <div>
                 {
                     this.state.show7? <div><img  src={step7} ></img><p>Step 7: Restore daily life by reconnecting with others, 

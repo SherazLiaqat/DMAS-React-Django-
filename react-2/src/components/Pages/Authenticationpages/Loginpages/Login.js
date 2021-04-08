@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Login.css';
 import {Button }from '../../../Button/Button';
 import { Link } from 'react-router-dom';
+import {  FaUserAlt,FaKey} from 'react-icons/fa';
 
 class Login extends React.Component  {
   constructor()
@@ -51,7 +52,7 @@ class Login extends React.Component  {
       </h1>
   <div className='hello'>
       <div className='form-inputs'>
-        <label className='form-label'>  <i class="fa fa-user icon"></i>Username</label>
+        <label className='form-label'>  <FaUserAlt/>Username</label>
         <input
           className='form-input'
           type='text'
@@ -67,7 +68,7 @@ class Login extends React.Component  {
        
       <div
        className='form-inputs'>
-       <label className='form-label'> <i class="fa fa-key icon"></i>Password</label>
+       <label className='form-label'> <FaKey/>Password</label>
        <input
          className='form-input'
          type='password'

@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import {Button }from '../../../Button/Button';
 import validate from './Validateinfo';
 import Form from './Form';
-
+import {  FaUserAlt,FaKey} from 'react-icons/fa';
+import {  MdEmail} from 'react-icons/md';
 class Signup extends React.Component {
  constructor()
  {
@@ -82,7 +83,7 @@ class Signup extends React.Component {
       </span>
   <div className='hello'>
       <div className='form-inputs'>
-        <label className='form-label'><i class="fa fa-user icon"></i>Username</label>
+        <label className='form-label'><FaUserAlt/>Username</label>
         <input
           className='form-input'
           type='text'
@@ -94,7 +95,7 @@ class Signup extends React.Component {
       </div>
           <div
     className='form-inputs'>
-    <label className='form-label'><i class="fa fa-envelope icon"></i>Email</label>
+    <label className='form-label'><MdEmail/>Email</label>
     <input
       className='form-input'
       type='email'
@@ -109,7 +110,7 @@ class Signup extends React.Component {
           
       <div
        className='form-inputs'>
-       <label className='form-label'> <i class="fa fa-key icon"></i>Password</label>
+       <label className='form-label'> <FaKey/>Password</label>
        <input
          className='form-input'
          type='password'
@@ -123,7 +124,7 @@ class Signup extends React.Component {
 
       <div
        className='form-inputs'>
-       <label className='form-label'> <i class="fa fa-key icon"></i>Confirm Password</label>
+       <label className='form-label'> <FaKey/>Confirm Password</label>
        <input
          className='form-input'
          type='password'

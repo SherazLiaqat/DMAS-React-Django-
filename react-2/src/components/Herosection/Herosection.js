@@ -1,7 +1,7 @@
 import React from 'react'
 //import '../../App.css';
 import './Herosection.css';
-
+import {  IoMdBulb} from 'react-icons/io';
 import homeimage from '../../components/images/img-12.jpg';
 function Herosection() {
     return (
@@ -13,7 +13,7 @@ function Herosection() {
         <div className='hero-btns'>
         <button className='Button-home'> GET STARTED</button>
          
-          <button className='Button-home2'>ESTIMATION <i class="fas fa-lightbulb"/> </button>
+          <button className='Button-home2'>ESTIMATION<IoMdBulb/> </button>
          
         </div>
       </div>

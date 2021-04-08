@@ -1,6 +1,9 @@
 import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
+import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons/fa';
+import { VscTwitter} from 'react-icons/vsc';
+
 
 function Footer() {
   return (
@@ -68,8 +71,8 @@ function Footer() {
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              DAS
-              <i class='fab fa-typo3' />
+            DAS<FaMedrt/>
+              
             </Link>
           </div>
           <small className="website-rights">
@@ -84,7 +87,7 @@ function Footer() {
               target="_blank"
               aria-label='Facebook'
             >
-              <i class='fab fa-facebook-f' />
+              <FaFacebookF/>
             </Link>
             <Link
               class='social-icon-link instagram'
@@ -92,7 +95,7 @@ function Footer() {
               target='_blank'
               aria-label='Instagram'
             >
-              <i class='fab fa-instagram' />
+              <FaInstagram/>
             </Link>
             <Link
               class='social-icon-link youtube'
@@ -100,7 +103,7 @@ function Footer() {
               target='_blank'
               aria-label='Youtube'
             >
-              <i class='fab fa-youtube' />
+              <FaYoutube/>
             </Link>
             <Link
               class='social-icon-link twitter'
@@ -108,7 +111,7 @@ function Footer() {
               target='_blank'
               aria-label='Twitter'
             >
-              <i class='fab fa-twitter' />
+              <VscTwitter/>
             </Link>
             <Link
               class='social-icon-link twitter'
@@ -116,7 +119,7 @@ function Footer() {
               target='_blank'
               aria-label='LinkedIn'
             >
-              <i class='fab fa-linkedin' />
+              <FaLinkedin/>
             </Link>
           </div>
         </div>

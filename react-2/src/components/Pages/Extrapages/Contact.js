@@ -1,5 +1,11 @@
 import React from 'react'
 import './Contact.css';
+import {  MdEmail,MdLocationOn} from 'react-icons/md';
+import { FiPhoneCall } from 'react-icons/fi';
+import { BiMessageRounded } from 'react-icons/bi';
+import { FaUserAlt } from 'react-icons/fa';
+import { HiOutlineMailOpen} from 'react-icons/hi';
+
 class Contact extends React.Component {
   constructor()
   {
@@ -62,22 +68,22 @@ class Contact extends React.Component {
             <h1 className="Header2"> Contact Us</h1>
             <p className='intro'>Please complete the form below to contact us. We will do our best to get back to you as soon as possible!</p>
             <div className='divlocation'>
-        <h1 className='contactform-label'><i class="fa fa-map-marker"></i>Locate Us</h1>
+        <h1 className='contactform-label'><MdLocationOn />Locate Us</h1>
       <p className='div-paragraph'> UNIVERSITY OF GUJRAT SIALKOT CAMPUS</p>
                  
       </div>
       <div className='divlocation'>
-        <h1 className='contactform-label'><i class="fa fa-phone"></i>Give us a Call</h1>
+        <h1 className='contactform-label'><FiPhoneCall/>Give us a Call</h1>
         <p className='div-paragraph'> OFFICE: 052-1454678</p>
                  
       </div>
       <div className='divlocation'>
-        <h1 className='contactform-label'><i class="fa fa-envelope icon"></i>Get in  Online</h1>
+        <h1 className='contactform-label'><MdEmail/>Get in  Online</h1>
         <p className='div-paragraph'> example@gmail.com</p>
                  
       </div><br/>
             <div className='form-inputs1'>
-        <label className='form-label1'><i class="fa fa-user icon"></i>Your Name*</label>
+        <label className='form-label1'><FaUserAlt />Your Name*</label>
         <input
           className='form-input'
           placeholder=" Enter User Name..."
@@ -89,7 +95,7 @@ class Contact extends React.Component {
            </div>      
       </div>
       <div className='form-inputs1'>
-        <label className='form-label1'><i class="fa fa-envelope icon"></i>Your E-mail</label>
+        <label className='form-label1'><MdEmail/>Your E-mail</label>
         <input
           className='form-input'
           placeholder=" Enter Your Valid Email..."
@@ -101,7 +107,7 @@ class Contact extends React.Component {
                  
       </div>
       <div className='form-inputs2'>
-        <label className='form-label1'><i class='fas fa-book-reader'></i>Your Subject</label>
+        <label className='form-label1'><MdEmail/>Your Subject</label>
         <input
           className='form-input'
           type='text'
@@ -114,7 +120,7 @@ class Contact extends React.Component {
                  
       </div>
       <div className='form-inputs2'>
-        <label className='form-label1'><i class="fa fa-envelope icon"></i>Your Message</label>
+        <label className='form-label1'><BiMessageRounded/>Your Message</label>
         <input
           className='form-input'
           placeholder=" Enter Your Message..."

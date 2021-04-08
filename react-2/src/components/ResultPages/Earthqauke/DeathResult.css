@@ -12,7 +12,34 @@
     text-align: start;
     margin-left: 2rem;
 }
-
+.side-div-Result{
+   display: inline-table;
+   display: flex;
+   flex-direction: column;
+  width: 256px;
+  height: 150px;
+  margin-top: -8rem;
+  
+background-color: #fff;
+ 
+ 
+  margin-left: 68.33rem;
+  margin-bottom: 3rem;
+}
+.social-media{
+  
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 28px;
+}
+.social-media:hover{
+    transition: all 0.3s ease-out;
+    
+}
 .deathresult1{
   
     width: 50%;

@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
 import './Navbar.css';
 import Dropdowns from './Dropdowns';
+import { FaHome } from 'react-icons/fa';
+import { FaMedrt } from 'react-icons/fa';
+import { FaBars,FaTimes } from 'react-icons/fa';
+import { IoMdArrowDropdown } from 'react-icons/io';
+
+//import {fatimes} from 'react-icons/fa';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -65,15 +71,16 @@ function Navbar() {
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             Disaster Assistance
-            <i class='fab fa-typo3' />
+            < FaMedrt/>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+         {click? <FaTimes className='fa-bars'/>:<FaBars className='fa-bars'/>}
+            
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/'  className='nav-links' onClick={closeMobileMenu}>
-                <i class="fa fa-home"/>Home
+              <FaHome />Home
               </Link>
             </li>
             <li className='nav-item'>
@@ -96,7 +103,7 @@ function Navbar() {
                 
                 className='nav-links'
                 onClick={closeMobileMenu}>
-                Earthquake<i class='fas fa-caret-down' onClick/>
+                Earthquake<IoMdArrowDropdown onClick/>
               
               </Link>
 
@@ -113,7 +120,7 @@ function Navbar() {
                 
                 className='nav-links'
                 onClick={closeMobileMenu}>
-                Flood <i class='fas fa-caret-down' onClick/>
+                Flood <IoMdArrowDropdown onClick/>
                 
               </Link>
               {dropdowns && <Dropdowns />}

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import './Dead.css';
 const Affectedpeopel = () => {
     const[amount,setamount]=useState();
 
@@ -10,7 +10,7 @@ const Affectedpeopel = () => {
         <>
           <div className='main'>
            
-              <h1 >  This is Death Estimtion page</h1>
+              <h1 >  This is Affected People Estimtion page</h1>
              
               <label className='Change'>Earthquake Type:</label>
               <select className='Changing'>
