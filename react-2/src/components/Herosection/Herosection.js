@@ -1,28 +1,28 @@
 import React,{useState} from 'react'
-//import '../../App.css';
+import '../../App.css';
 import './Herosection.css';
 import { IoMdArrowDropdown} from 'react-icons/io';
 import homeimage from '../../components/images/img-12.jpg';
 import { Link } from 'react-router-dom';
-import Dropdowns from '../Navbar/Dropdown';
+import Downs from '../Navbar/Downs';
 
 
 function Herosection() {
   
-  const [dropdowns, setDropdowns] = useState(false);
+  const [downs, setDowns] = useState(false);
   const onMouseEnters = () => {
     if (window.innerWidth < 960) {
-      setDropdowns(false);
+      setDowns(false);
     } else {
-      setDropdowns(true);
+      setDowns(true);
     }
   };
 
   const onMouseLeaves = () => {
     if (window.innerWidth < 960) {
-      setDropdowns(false);
+      setDowns(false);
     } else {
-      setDropdowns(false);
+      setDowns(false);
     }
   };
     return (
@@ -37,7 +37,7 @@ function Herosection() {
         <button className='Button-home'> GET STARTED</button>
         
         </Link>
-        <li 
+        <div className='hero-div'
             onMouseEnter={onMouseEnters}
             onMouseLeave={onMouseLeaves}
             >
@@ -45,8 +45,8 @@ function Herosection() {
           <button className='Button-home2'>ESTIMATION< IoMdArrowDropdown /> 
           
           </button>
-          {dropdowns && <Dropdowns />}
-          </li>
+          {downs && <Downs/>}
+          </div>
         </div>
       </div>
     );

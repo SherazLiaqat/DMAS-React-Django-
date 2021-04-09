@@ -48,6 +48,10 @@
     
     
   }
+  .hero-div{
+display: inline-block;
+
+  }
   .Button-home:hover{
     transition: all 0.3s ease-out;
     background: #fff;
@@ -59,7 +63,7 @@
     cursor: pointer;
     color: #242424;
     background-color: white;
-    color:#242424;
+    
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
     padding: 11px 24.75px;
