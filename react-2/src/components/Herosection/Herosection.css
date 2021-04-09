@@ -53,6 +53,7 @@
     background: #fff;
     color: #242424;
     transition: 250ms;
+    outline: none;
   }
   .Button-home2{
     cursor: pointer;
@@ -64,6 +65,7 @@
     padding: 11px 24.75px;
     font-size: 20px;
     margin-left: 1rem;
+    outline: none;
     
     
   }
