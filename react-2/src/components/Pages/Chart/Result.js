@@ -32,6 +32,7 @@ class Result extends React.Component {
         ],
         labels: [
           "Jan"
+          
         ]
       },
       options: {
@@ -78,7 +79,7 @@ class Result extends React.Component {
          
         <canvas
         height={100}
-        width={300}
+        width={800}
           ref={chart => {
             this.chart = chart;
           }}
