@@ -14,14 +14,14 @@ class Result extends React.Component {
     const chartCanvas = ReactDOM.findDOMNode(this.chart);
 
     const mixedChart = new Chart(chartCanvas, {
-        type: "line",
+        type: "horizontalBar",
       data: {
         datasets: [
         
           {
             label: "Deaths",
-            data: [15, 53, 75, 65, 100, 20, 80, 50, 75, 55, 80, 65, 80],
-            pointHoverRadius: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            data: [15],
+            pointHoverRadius: [5],
             
             backgroundColor:'brown',
             fill: "empty",
@@ -31,18 +31,7 @@ class Result extends React.Component {
           }
         ],
         labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec"
+          "Jan"
         ]
       },
       options: {
