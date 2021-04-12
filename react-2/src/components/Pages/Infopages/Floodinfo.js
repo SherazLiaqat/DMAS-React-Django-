@@ -14,13 +14,13 @@ const Floodinfo = () => {
     
 
     <h1 className="title-3">Flood Awareness <br/> Preparedness</h1>
-    <img  src={symbol} className='img'></img>
+    
         <p className='paragraph'>Flooding is a temporary overflow of water onto land that is normally dry.
          Floods are the most common natural
         disaster in the United States. Failing to 
         evacuate flooded areas or entering flood waters can lead to injury
         or death. </p>
-
+        <img  src={symbol} className='img'></img>
         
     <p className='title-4'>Floods may:</p>
     <ul className='paragraph'>

@@ -23,23 +23,23 @@ const Injured = () => {
 </select>
 <div className='form-inputs-Death'>
         <label className='form-label'>Magnitude:</label>
-        <input className='box' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
+        <input className='Box' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
         
       </div>
      
       <div className='form-inputs-Death'>
         <label className='form-label'>Latitude:</label>
-        <input className='box2' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Latitude..." />
+        <input className='Box2' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Latitude..." />
       
                  
       </div>
       <div className='form-inputs-Death'>
         <label className='form-label'>Longitude:</label>
-        <input className='box3' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Longitude..." />
+        <input className='Box3' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Longitude..." />
        
       </div>
      
-      <a className='DeathButton' href='/InjuredResult'  > Estimate</a><br/><br/><br/>
+      <a className='DeathButton-Earthquake' href='/InjuredResult'  > Estimate</a><br/><br/><br/>
                 
               
  

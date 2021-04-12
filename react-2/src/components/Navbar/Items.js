@@ -1,14 +1,14 @@
 export const Items = [
     {
       title: 'Earhquake',
-      path: '/Dead',
-      cName: 'dropdown-link'
+      path: '/Death',
+      cName: 'Dropdown-link'
     },
     
     {
       title: 'Flood',
-      path: '/Affectedpeopel',
-      cName: 'dropdown-link'
+      path: '/Dead',
+      cName: 'Dropdown-link'
     }
    
   ];

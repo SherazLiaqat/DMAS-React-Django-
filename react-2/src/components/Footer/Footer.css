@@ -1,4 +1,7 @@
-.footer-container {
+
+body{
+  font-family: 'PT',sans-serif;
+}.footer-container {
     background-color: #242424;
     padding: 4rem 0 2rem 0;
     display:flex;
@@ -157,8 +160,7 @@
     color: #fff;
     margin-bottom: 16px;
     text-align: center;
-     font-family:  'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif,Impact
+     font-size: 16px;
   }
   
   @media screen and (max-width: 820px) {

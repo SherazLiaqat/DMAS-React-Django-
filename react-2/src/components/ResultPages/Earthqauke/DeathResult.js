@@ -90,13 +90,6 @@ class DeathResult extends React.Component {
                     <FaYoutube/>
                     <FaLinkedin/>
                 
-                    
-                    
-               
-                
-              
-           
-               
                 
             </div>
             </ul>

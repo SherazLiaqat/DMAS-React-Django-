@@ -75,10 +75,10 @@ function Footer() {
               
             </Link>
           </div>
-          <small className="website-rights">
+          <ul className="website-rights">
             &copy;{new Date().getFullYear()} Disaster Assistance | All rights reserved |
             Terms Of Service | Privacy Policy
-          </small>
+          </ul>
         
           <div class='social-icons'>
             <Link

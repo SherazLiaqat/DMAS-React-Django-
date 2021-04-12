@@ -287,7 +287,7 @@ import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
     
         </div>
         <div className='side-div-earthquake'>
-            <h2 className='h4-earthquake'> Eartquake Safety Tips</h2>
+            <h3 className='h4-earthquake'> Eartquake Safety Tips</h3>
            
             <ul className='side-div-p'>
            
@@ -365,7 +365,7 @@ import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
                 
             </div>
             </ul>
-            <h2 className='h4-earthquake'> Helpful Links</h2>
+            <h3 className='h4-earthquake'> Helpful Links</h3>
             <ul className='side-div-p'>
             < a href='http://cms.ndma.gov.pk/' target="_blank">NDMA </a> <br/> 
             < a href="https://www.fema.gov/" target="_blank">FEMA </a> <br/> 

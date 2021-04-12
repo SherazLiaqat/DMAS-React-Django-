@@ -49,11 +49,11 @@ background-color: #fff;
 .inc-exp-container {
     background-color: #fff;
     box-shadow: var(--box-shadow);
-    padding: 20px;
+    padding: 30px;
     
     
     justify-content: space-between;
-    margin: 40px   ;
+    margin: 45px   ;
     display: flex;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import './Dead.css';
+
 const Affectedpeopel = () => {
     const[amount,setamount]=useState();
 
@@ -14,14 +14,14 @@ const Affectedpeopel = () => {
              
               <label className='Change'>Earthquake Type:</label>
               <select className='Changing'>
-    <option value="grapefruit">Ground Movement</option>
-    <option value="lime">Tsaunami</option>
+    <option >Ground Movement</option>
+    <option >Tsaunami</option>
    
   </select>
   <label className='Change'>Choose a Continent:</label>
               <select className='Changing'>
-    <option value="grapefruit">Asia</option>
-    <option value="lime">Europe</option>
+    <option >Asia</option>
+    <option >Europe</option>
     <option value="grapefruit">America</option>
     <option value="lime">Africa</option>
     <option value="grapefruit">Ocenia</option>
@@ -31,22 +31,22 @@ const Affectedpeopel = () => {
   
               <div className='form-inputs-Death'>
           <label className='form-label'>Magnitude:</label>
-          <input className='box' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
+          <input className='Box' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Magnitude..." />
           
         </div>
        
         <div className='form-inputs-Death'>
           <label className='form-label'>Latitude:</label>
-          <input className='box2' type="number"  value={amount2} onChange={(event)=>setamount2(event.target.value)} placeholder="Enter Latitude..." />
+          <input className='Box2' type="number"  value={amount2} onChange={(event)=>setamount2(event.target.value)} placeholder="Enter Latitude..." />
         
                    
         </div>
         <div className='form-inputs-Death'>
           <label className='form-label'>Longitude:</label>
-          <input className='box3' type="number"  value={amount3} onChange={(event)=>setamount3(event.target.value)} placeholder="Enter Longitude..." />
+          <input className='Box3' type="number"  value={amount3} onChange={(event)=>setamount3(event.target.value)} placeholder="Enter Longitude..." />
          
         </div>
-        <a className='DeathButton' href='/DisplacedResult'  > Estimate</a><br/><br/><br/>
+        <a className='DeathButton-Earthquake' href='/DisplacedResult'  > Estimate</a><br/><br/><br/>
    
           </div>
           <div className='side-div'>
