@@ -77,11 +77,7 @@ import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
                     <p>Earthquakes seldom cause complete building collapse in the United States. The greatest danger is from
                         falling or flying objects. The “Drop, Cover, and Hold” technique is designed to provide the greatest
                         protection from this type of situation.</p>
-                    <p>The “triangle of life” and some of the other actions recommended in the E-mail may not be the best
-                        action to take. Additional information discussing the “triangle of life” is available at: <a
-                            href="http://www.earthquakecountry.info/dropcoverholdon/">www.earthquakecountry.info/dropcoverholdon/</a>.
-                        Send this information to your loved-ones and anyone that sends you the “triangle of life” E-mail.
-                    </p>
+                   
                     
                     </div>
                     

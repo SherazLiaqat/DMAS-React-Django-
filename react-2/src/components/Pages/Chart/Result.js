@@ -2,6 +2,7 @@
  import React from 'react';
  import ReactDOM from 'react-dom';
  import Chart from 'chart.js';
+ 
  import csv from 'd3';
 class Result extends React.Component {
   chart = null;

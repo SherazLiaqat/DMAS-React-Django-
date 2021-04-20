@@ -111,10 +111,11 @@ background-color: #fff;
     flex: 1;
     text-align: center;
     
+    
   }
   
   .inc-exp-container > div:first-of-type {
-    border-right: 2px solid #dedede;
+    border-right: 1px solid #dedede;
     
   }
   
@@ -196,11 +197,8 @@ background-color: #fff;
   }
   .side-div-earthquake{
     display:inline-table;
-    width: 200px;
-    height: 150px;
-    background-color: #f7f7f7;
-    background-color: #f7f7f7;
-    margin-left: 5rem;
+    width: 92%;
+   
   }
   .inc-exp-container > div {
     flex: 1;
@@ -252,5 +250,45 @@ background-color: #fff;
 width: 20rem;
 margin-left: 30px;
 margin-top: 1rem;
+}
+}
+
+
+@media screen and (max-width: 660px){
+  .inc-exp-container{
+  width: 95%;
+ 
+
+}
+.img{
+  width: 80%;
+  
+
+}
+.title-4 {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  
+  margin-left: 5px;
+}
+.title-3 {
+  margin-top: 2px;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.paragraph{
+  margin-left:6px;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+  font-size: 15px;
+  font-style:inherit;
+  width: 95%;
+ 
+}
+.side-div-earthquake{
+  width: 99%;
+  margin-left: 0.2rem;
+ 
+ 
 }
 }

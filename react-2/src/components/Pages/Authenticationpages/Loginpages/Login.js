@@ -46,7 +46,7 @@ class Login extends React.Component  {
    <div className='form-content-right'>
      
  
-  <h1 >
+  <h1 className='heading-h1' >
          Welcome back!<br/> Help out the Pendamic suffering people.
         
       </h1>
@@ -56,7 +56,7 @@ class Login extends React.Component  {
         <input
           className='form-input'
           type='text'
-          name='email'
+          name='text'
           placeholder='Enter your username'
           onChange={(event)=>{this.setState({email:event.target.value})}}/>
          
@@ -83,7 +83,7 @@ class Login extends React.Component  {
 
       </div>
       
-      < a className='a' href='/'>Forgot Your Password?<br/></a>
+      < a className='password-forget' href='/'>Forgot Your Password?<br/></a>
       
             <button className='LoginButton' onClick={()=>this.submit()}>Login</button>
            {/* <Link to=''>

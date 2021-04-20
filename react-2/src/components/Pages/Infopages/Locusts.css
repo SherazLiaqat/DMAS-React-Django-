@@ -1,0 +1,14 @@
+.side-div-Result-info{
+    display: inline-table;
+    display: flex;
+    flex-direction: column;
+   width: 256px;
+   height: 150px;
+   margin-top: -200rem;
+   position:absolute;
+ background-color: #fff;
+  
+  
+   margin-left: 68.33rem;
+   margin-bottom: 3rem;
+ }

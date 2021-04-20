@@ -118,6 +118,8 @@
         font-family:  Tahoma, sans-serif;
         width: 33.33333333333333%;
         margin-left: 15rem;
+        
+       
     }
     .contactform-label{
         
@@ -127,7 +129,7 @@
     }
     .div-paragraph{
         margin: 10px;
-        margin-left: 8rem;
+        
         
     }
     .form-inputs1{
@@ -202,14 +204,16 @@
         margin-top: 20px;
         text-align: center;
         font-family:  Tahoma, sans-serif;
-        width: 63.33333333333333%;
-        margin-left: 4.5rem;
+        width: 73.33333333333333%;
+        margin-left: 2.5rem;
+        margin-bottom: 2rem;
     }
    
     .div-paragraph{
-        margin: 10px;
+        margin: 25px;
         text-align: center;
     }
+    
     .form-inputs1{
         
        
@@ -228,16 +232,16 @@
     }
     .divlocation{
         display:inline-table;
-        
-        margin: 15px;
+        margin-top: 2rem;
+        margin: 5px;
        
         align-items: center;
-        width: 80%;
-        height: 8rem;
+        width: 95%;
+        height: 4rem;
        
     }
     .form-inputs2{
-        margin: 15px;
+        
         box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
         -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
         filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));

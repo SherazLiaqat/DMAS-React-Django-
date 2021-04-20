@@ -8,7 +8,7 @@
   .hello{
     margin-left: 20%;
   }
- 
+  
   .LoginButton{
     cursor: pointer;
     color: white;
@@ -58,7 +58,7 @@
     color:red;
     font-weight: 600;
   }
-  .a{
+  .password-forget{
     color:black;
     margin-left: 34rem;
   }
@@ -173,34 +173,27 @@
      
     }
     .LoginButton{
-      cursor: pointer;
-      color: white;
-      background-color: transparent;
-      color:black;
-      border: 1px solid  black;
-      transition: all 0.3s ease-out;
-      padding: 8px ;
+     
+      padding: 10px ;
       font-size: 20px;
       margin-left: -1rem;
-      
+      margin-top: 1.5rem;
     }
-    .LoginButton:hover{
-      transition: all 0.3s ease-out;
-      background: black;
-      color: white;
-      transition: 250ms;
-      
-    }
-    .a{
-      color:black;
-      margin-left: -1rem;
-      
-    }
+   
+    
+    
     .span-login{
       margin-bottom: 10px;
       margin-left: 13.5%;
       
   }
-  
+  .heading-h1{
+    font-size: 18px;
+  }
+  .password-forget{
+    
+    margin-left: 1.6rem;
+    
+  }
  
   }
