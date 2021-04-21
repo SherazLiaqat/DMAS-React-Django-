@@ -20,13 +20,14 @@ import step5 from '../../images/Step5.jpg';
 import step6 from '../../images/Step6.jpg';
 import step7 from '../../images/Step7.jpg';
 import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
+import Scroller from '../../Scroller';
  class Earthquakeinfo extends Component {
     state={
         istogleOn:false
       }
       toglepersonhandler=()=>{
-        const doesshow=this.state.showopersons;
-        this.setState({showopersons: !doesshow})
+        const doesshow=this.state.persons;
+        this.setState({persons: !doesshow})
         this.setState(state=>({
           istogleOn:!state.istogleOn
         }));
@@ -35,6 +36,7 @@ import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
            
     return (
         <>
+        <Scroller showBelow={250} />
      
        < div className="container">
 

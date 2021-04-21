@@ -47,12 +47,17 @@ import InjuredResult from './components/ResultPages/Earthqauke/InjuredResult';
 import DisplacedResult from './components/ResultPages/Flood/DisplacedResult';
 import chart from './components/Pages/Chart/Result';
 import Result from './components/Pages/Chart/Result';
+import Scroller from './components/Scroller';
+
 function App(){
   
   return (
     <>
+    
     <Router>
+    <Scroller showBelow={250} />
     <ScrollToTop/>
+    
       <Navbar />
 
       <Switch>
