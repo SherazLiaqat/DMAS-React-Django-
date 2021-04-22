@@ -10,7 +10,7 @@ const Affectedpeopel = () => {
         <>
           <div className='main'>
            
-              <h1 >  This is Affected People Estimtion page</h1>
+              <h1 >   Estimate The Result of Affected Displacement Due to Flood<br/> And help them to Provide Food Shelter Etc</h1>
              
               <label className='Change'>Earthquake Type:</label>
               <select className='Changing'>
@@ -49,12 +49,12 @@ const Affectedpeopel = () => {
         <a className='DeathButton-Earthquake' href='/DisplacedResult'  > Estimate</a><br/><br/><br/>
    
           </div>
-          <div className='side-div'>
+       {/*  <div className='side-div'>
               <h className='div-1'> Earthquake Awareness</h>
               <h1> Magnitude</h1>
               <h1> Longitude</h1>
               <h1> Latitude</h1>
-            </div>
+            </div>*/}  
           </>
       )
   }

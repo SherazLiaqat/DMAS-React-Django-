@@ -36,7 +36,7 @@ import Scroller from '../../Scroller';
            
     return (
         <>
-        <Scroller showBelow={250} />
+        
      
        < div className="container">
 

@@ -1,7 +1,8 @@
 .main {
   background-color: #f7f7f7;
-  margin: 3px;
-  width: 75%;
+  margin: 8px;
+  width: 98%;
+  /*width: 75%;*/
   display: inline-table;
 }
 .side-div {

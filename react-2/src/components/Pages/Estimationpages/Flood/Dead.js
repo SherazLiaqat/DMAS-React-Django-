@@ -11,7 +11,7 @@ const Dead = () => {
         <>
           <div className='main'>
            
-              <h1 >  This is Death Estimtion page</h1>
+              <h2 >  Estimate Death's Due to Flood Instantly</h2>
              
               <label className='Change'>Severity:</label>
               <select className='Changing'>
@@ -52,12 +52,12 @@ const Dead = () => {
         <a className='DeathButton' href='/DeadResult'  > Estimate</a><br/><br/><br/>
        
           </div>
-          <div className='side-div'>
+      {/*   <div className='side-div'>
               <h className='div-1'> Earthquake Awareness</h>
               <h1> Magnitude</h1>
               <h1> Longitude</h1>
               <h1> Latitude</h1>
-            </div>
+            </div>*/} 
           </>
       )
   }

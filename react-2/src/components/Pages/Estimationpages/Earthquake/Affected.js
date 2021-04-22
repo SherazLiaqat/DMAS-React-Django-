@@ -4,8 +4,8 @@ const Affected = () => {
   const[amount,setamount]=useState();
 
     return (
-        <div>
-        <h1> This is Affected Estimtion page</h1>
+        <div className='main'>
+        <h1> Estimate The Result of Affected People Due to Earthqauke<br/> And help them to Provide Food Shelter Etc</h1>
         <label className='Change'>Earthquake Type:</label>
         <select className='Changing'>
 <option value="grapefruit">Ground Movement</option>
@@ -39,7 +39,7 @@ const Affected = () => {
         <input className='Box3' type="number"  value={amount} onChange={(event)=>setamount(event.target.value)} placeholder="Enter Longitude..." />
        
       </div>
-      <a className='DeathButton-Earthquake' href='/AffectedResult'  > Estimate</a><br/><br/><br/>
+      <a className='DeathButton-Earthquake' href='/DeathResult'  > Estimate</a><br/><br/><br/>
  
     </div>
     )

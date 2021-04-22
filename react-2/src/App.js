@@ -55,7 +55,7 @@ function App(){
     <>
     
     <Router>
-    <Scroller showBelow={250} />
+    
     <ScrollToTop/>
     
       <Navbar />

@@ -10,3 +10,16 @@
     display: inline-table;
     
 }
+@media screen and (max-width: 660px){
+    .event-container-Blog{
+        display: inline-table;
+        margin-right: 50%;
+      
+    }
+    
+    .event-container-HeavyRain{
+      
+        display: inline-table;
+        margin-left: -10rem;
+    }
+}

@@ -5,7 +5,7 @@ import CardItem from '../../Card/CardItems';
 const Live = () => {
     return (
         <div className='live'>
-            <h1 >Explore The Live Information About Disaster</h1><br/><br/>
+            <h1 className='live-heading'>Explore The Live Information About Disaster</h1><br/><br/>
             
             <ul className='cards__items'>
             <CardItem

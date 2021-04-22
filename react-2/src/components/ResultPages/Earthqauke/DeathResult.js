@@ -14,8 +14,7 @@ class DeathResult extends React.Component {
         istogleOn:false
       }
       toglepersonhandler=()=>{
-        const doesshow=this.state.showopersons;
-        this.setState({showopersons: !doesshow})
+       
         this.setState(state=>({
           istogleOn:!state.istogleOn
         }));
@@ -32,7 +31,7 @@ class DeathResult extends React.Component {
             <p> System Estimate That 0 of 25 People Get Injured Due to Earthquake.</p>
          
 
-           <Result/>
+           <Result />
            
         </div>
         <div className='side-div-earthquake'>

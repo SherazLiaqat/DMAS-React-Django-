@@ -4,7 +4,7 @@ import './About.css';
 
 const About = () => {
   const [header] = React.useState({
-    subHeader: "About Us",
+    subHeader: "Vision",
     text:
       "Our aim to reach our audience in a multitude of formats, create more opportunities to work more closely with our stakeholders, and overall continually improve our content and design to make disaster Assistance a better resource and experience for our guests and help for disaster suffering people",
   });
@@ -42,7 +42,7 @@ const About = () => {
               survivors with information, support, services, and a means to access and apply for disaster assistance
                through joint data-sharing efforts between federal, tribal, state, local, and private sector partners.
               </div>
-              <h1 > VISION</h1>
+              <h1 > About Us</h1>
               <div className="about__info-p2">
               The DisasterAssistance is used to build relationships and help promote the addition of new assistance for our website. 
               The policy defines the criteria we use to consider agreements to exchange data, links, or information with partners.

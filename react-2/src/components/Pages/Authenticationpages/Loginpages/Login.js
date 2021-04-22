@@ -46,7 +46,7 @@ class Login extends React.Component  {
    <div className='form-content-right'>
      
  
-  <h1 className='heading-h1' >
+  <h1 className= 'heading-h1'>
          Welcome back!<br/> Help out the Pendamic suffering people.
         
       </h1>

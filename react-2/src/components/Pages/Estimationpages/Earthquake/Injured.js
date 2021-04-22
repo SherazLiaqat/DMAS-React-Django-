@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 const Injured = () => {
   const[amount,setamount]=useState();
     return (
-        <div>
-        <h1> This is Injured Estimtion page</h1>
+        <div className='main'>
+        <h1> Estimate  Result of Injured People  Instantly <br/>And help out Disaster Suffering people</h1>
         <label className='Change'>Earthquake Type:</label>
         <select className='Changing'>
 <option value="grapefruit">Ground Movement</option>
