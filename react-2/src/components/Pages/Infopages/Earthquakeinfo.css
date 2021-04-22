@@ -1,5 +1,8 @@
+.main-div-earthquake{
+  background-color: #f7f7f7;
+}
 .container {
-    background-color: #fff;
+    
     margin-top: 10px  0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
     display:inline-table;
@@ -46,6 +49,21 @@ background-color: #fff;
   margin-bottom: 3rem;
  
 }
+/*
+.side-div-Result1{
+  display: inline-table;
+  
+ width: 256px;
+ height: 150px;
+ margin-top: -85rem;
+ position: absolute;
+background-color: #fff;
+
+
+ margin-left: 68.33rem;
+ margin-bottom: 3rem;
+}*/
+
 .inc-exp-container {
     background-color: #fff;
     box-shadow: var(--box-shadow);

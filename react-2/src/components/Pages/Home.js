@@ -11,7 +11,7 @@ function Home() {
     return (
       <>
       
-        <Herosection/>
+        <Herosection />
         
         <About/>
         <Contact/>

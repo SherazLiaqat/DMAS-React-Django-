@@ -1,5 +1,21 @@
+import './Scroller.css';
 
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from "react";
+import { useWindowScroll } from "react-use";
+const Scroller = () => {
+    const{y:pageYOffset}=useWindowScroll();
+    return (
+        <div className='Scroll-to-top '>
+            <i className='icon fas fa-chevron-up'/>
+            
+        </div>
+    );
+};
+
+export default Scroller
+
+
+{/* import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import {ExpandLessIcon} from '@material-ui/icons/ExpandLess';
 import IconButton from '@material-ui/core/IconButton';
@@ -64,4 +80,4 @@ const handleClick = () => {
         </div>
     )
 }
-export default Scroller
+export default Scroller*/}

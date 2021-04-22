@@ -20,7 +20,9 @@ import step5 from '../../images/Step5.jpg';
 import step6 from '../../images/Step6.jpg';
 import step7 from '../../images/Step7.jpg';
 import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
-import Scroller from '../../Scroller';
+import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons/fa';
+import { VscTwitter} from 'react-icons/vsc';
+
  class Earthquakeinfo extends Component {
     state={
         istogleOn:false
@@ -36,7 +38,7 @@ import Scroller from '../../Scroller';
            
     return (
         <>
-        
+        <div className='main-div-earthquake'>
      
        < div className="container">
 
@@ -374,7 +376,23 @@ import Scroller from '../../Scroller';
            
             </ul>
           </div>
-        
+       {/*   <div className='side-div-Result1'>
+            <h2 className='h4-earthquake'> Share With</h2>
+           
+            <ul className='side-div-p'>
+           
+                <div className='social-media'>
+                    <FaFacebookF/>
+                    <FaInstagram/>
+                    <VscTwitter/>
+                    <FaYoutube/>
+                    <FaLinkedin/>
+                
+                
+            </div>
+            </ul>
+          </div>*/} 
+          </div>
         </>
     );
 }}
