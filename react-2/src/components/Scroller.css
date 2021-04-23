@@ -1,12 +1,12 @@
 .Scroll-to-top{
     position: fixed;
     bottom: 12px;
-    left: 85%;
+    left: 95%;
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background-color: red;
-    color: white;
+    background-color:rgb(87, 27, 27);
+    color: #fff;
     cursor: pointer;
     text-align: center;
     

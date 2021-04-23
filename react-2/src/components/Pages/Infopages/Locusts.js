@@ -20,6 +20,8 @@ import { VscTwitter} from 'react-icons/vsc';
 const Locust = () => {
   const affected=useRef(null);
   const gotoaffected=()=>window.scrollTo({top: affected.current.offsetTop,behavior:'smooth'})
+  const garden=useRef(null);
+  const gotogarden=()=>window.scrollTo({top: garden.current.offsetTop,behavior:'smooth'})
   return (
     <>
       <div className="container ">
@@ -81,7 +83,7 @@ const Locust = () => {
             locusts do.
           </p>
         </ul>
-        <h3 className="title-4">
+        <h3 ref={garden} className="title-4" >
           How to protect kitchen gardens from locusts/Grasshoper
         </h3>
 
@@ -174,15 +176,12 @@ const Locust = () => {
                     
                 
                     
-                     <button className='button-size' onClick={gotoaffected}>Affected Countries
- 
- 
-     </button></div>
+                     <button className='button-size' onClick={gotoaffected}>Affected Countries </button></div>
              
              
-                <div className='earth'> <button className='button-size'>
+                <div className='earth'> <button className='button-size' onClick={gotogarden}>Protect Garden 
  
- </button> Plan to be Safe </div>
+ </button > </div>
                 </ul>
                </div>
       <div className='side-div-Result-info'>
