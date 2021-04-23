@@ -1,18 +1,40 @@
-import './Scroller.css';
+import React,{useState,useEffect} from 'react'
+import {useWindowScroll} from 'react-use';
+import "./Scroller.css"
 
-import React, { useEffect, useState } from "react";
-import { useWindowScroll } from "react-use";
-const Scroller = () => {
-    const{y:pageYOffset}=useWindowScroll();
+export const Scroller = () => {
+    const{y: pageYOffset} = useWindowScroll();
+    const [visible, setVisiblitiy]= useState(false);
+    useEffect(() => {
+        if(pageYOffset>400){
+            setVisiblitiy(true)
+        }
+        else{
+            setVisiblitiy(false)
+
+        }
+
+
+    },[pageYOffset])
+
+    const Scrollertop = () => window.scrollTo({ top:0,behavior:'smooth'})
+
+    
+    
+    if(!visible){
+        return false;
+
+    }
+
+
+
     return (
-        <div className='Scroll-to-top '>
-            <i className='icon fas fa-chevron-up'/>
+        <div className='Scroll-to-top ' onClick={Scrollertop} >
+            <i className='icon fas fa-chevron-up'></i>
             
         </div>
-    );
-};
-
-export default Scroller
+    )
+}
 
 
 {/* import React, { useState, useEffect } from 'react'

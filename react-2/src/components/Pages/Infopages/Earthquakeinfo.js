@@ -22,6 +22,7 @@ import step7 from '../../images/Step7.jpg';
 import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
 import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons/fa';
 import { VscTwitter} from 'react-icons/vsc';
+import { Scroller } from '../../Scroller';
 
  class Earthquakeinfo extends Component {
     state={
@@ -38,6 +39,7 @@ import { VscTwitter} from 'react-icons/vsc';
            
     return (
         <>
+        <Scroller/>
         <div className='main-div-earthquake'>
      
        < div className="container">

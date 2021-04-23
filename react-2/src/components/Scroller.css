@@ -1,12 +1,15 @@
 .Scroll-to-top{
     position: fixed;
     bottom: 12px;
-    left: 75%;
+    left: 85%;
     width: 40px;
     height: 40px;
     border-radius: 100%;
     background-color: red;
     color: white;
+    cursor: pointer;
+    text-align: center;
+    
 }
 .Scroll-to-top.icon{
     margin-top: 10px;
