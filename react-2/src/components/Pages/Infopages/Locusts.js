@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React,{Component,useRef} from "react";
 import "./Earthquakeinfo.css";
 import "./Locusts.css";
 
@@ -16,18 +16,10 @@ import step7 from '../../images/Step7.jpg';
 import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
 import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons/fa';
 import { VscTwitter} from 'react-icons/vsc';
-class Locust extends Component {
-  state={
-    istogleOn:false
-  }
-  toglepersonhandler=()=>{
-    const doesshow=this.state.persons;
-    this.setState({persons: !doesshow})
-    this.setState(state=>({
-      istogleOn:!state.istogleOn
-    }));
-  }
-  render(){
+
+const Locust = () => {
+  const affected=useRef(null);
+  const gotoaffected=()=>window.scrollTo({top: affected.current.offsetTop,behavior:'smooth'})
   return (
     <>
       <div className="container ">
@@ -139,7 +131,7 @@ class Locust extends Component {
           2003-2005 plague, which caused an estimated $2.5 billion in crop
           damage.
         </p>
-        <h3 className="title-4">
+        <h3 className="title-4"ref={affected}>
           What countries are currently affected by this
         </h3>
         <img src={threat} className="img"></img>
@@ -182,61 +174,17 @@ class Locust extends Component {
                     
                 
                     
-                     <button className='button-size'
+                     <button className='button-size' onClick={gotoaffected}>Affected Countries
  
- onClick={()=>{this.setState({shows:!this.state.shows})}}>
-     { this.state.shows ?<FaAngleDown/>:<FaAngleRight/>}</button>Protect Your Crops</div>
+ 
+     </button></div>
              
-             <div>
-                {
-                    this.state.shows? <div><img  src={step1} ></img><p>Step 1: Secure your space by identifying hazards and securing moveable items.</p></div> : null
-                }
-                
-            </div>
-                <div className='earth'> <button className='button-size'
+             
+                <div className='earth'> <button className='button-size'>
  
- onClick={()=>{this.setState({show2:!this.state.show2})}}>{ this.state.show2 ? 
-    <FaAngleDown/>:<FaAngleRight/>}</button> Plan to be Safe </div>
-                 <div>
-                {
-                    this.state.show2? <div><img  src={step2} ></img><p>Step 2: Plan to be safe by creating a disaster plan and deciding how you will communicate in an emergency.</p></div> : null
-                }
-                
-            </div>
-                <div className='earth'> <button className='button-size'
- 
- onClick={()=>{this.setState({show3:!this.state.show3})}}>{ this.state.show3 ?<FaAngleDown/>:<FaAngleRight/>}</button>Make Noice</div>
-                <div>
-                {
-                    this.state.show3? <div><img  src={step3} ></img><p>Step 3: Organize disaster supplies in convenient locations.</p></div> : null
-                }
-                
-            </div>
-                <div className='earth'> <button className='button-size'
- 
- onClick={()=>{this.setState({show4:!this.state.show4})}}>{ this.state.show4 ?<FaAngleDown/>:<FaAngleRight/>}</button>Use Spray</div>
-  <div>
-                {
-                    this.state.show4? <div><img  src={step4} ></img><p>Step 4: Minimize financial hardship by organizing
-                         important documents, strengthening your property, and considering insurance.</p></div> : null
-                }
-                
-            </div>
-                
-                <div className='earth'> <button className='button-size'
- 
- onClick={()=>{this.setState({show6:!this.state.show6})}}>{ this.state.show6 ?<FaAngleDown/>:<FaAngleRight/>}</button>Improve Safety</div>
-  <div>
-                {
-                    this.state.show6? <div><img  src={step6} ></img><p>Step 6: Improve safety after earthquakes by evacuating if necessary, helping the 
-                        injured, and preventing further damage.</p></div> : null
-                }
-                
-            </div>
-              
-            </ul>
-            
-          </div>
+ </button> Plan to be Safe </div>
+                </ul>
+               </div>
       <div className='side-div-Result-info'>
             <h2 className='h4-earthquake'> Share With</h2>
            
@@ -257,6 +205,6 @@ class Locust extends Component {
           
     </>
   );
-}};
+};
 
 export default Locust;
