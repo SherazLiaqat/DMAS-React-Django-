@@ -14,7 +14,12 @@ export default class News extends React.Component {
     
     
 
+<<<<<<< HEAD
     this.setState(  {  person: data.data[1], loading: false });
+=======
+  this.setState(  {  person: data.data, loading: false });
+
+>>>>>>> b4f8a734785871a258d03b16f9a84ecba4b3bf9a
     
   }
 
@@ -26,20 +31,32 @@ export default class News extends React.Component {
     if (!this.state.person) {
       return <div>didn't get a person</div>;
     }
+    const elements = [0,1,2,3,4,5,6,7,8,9];
 
     return (
-      <div>
-        <div><h2>ID</h2>{this.state.person.id}</div>
-        <div><h2>SCORE</h2>{this.state.person.score}</div>
-        <div><h2>STATUS</h2>{this.state.person.fields.status}</div>
-        <div><h2>DATE</h2>{this.state.person.fields.date.created}</div>
-        <div><h2>TYPE</h2>{this.state.person.fields.primary_type.name}</div>
-        <div><h2>HEADLINE</h2>{this.state.person.fields.name}</div>
+      
         
-        <div><h2>NAME</h2>{this.state.person.fields.country[0].name}</div>
-        <div><h2>LOCATION</h2>{this.state.person.fields.country[0].location.lat}</div>
-        <div><h2>DESCRIPTION</h2>{this.state.person.fields.description}</div>
-      </div>
+          <div>
+          
+        {elements.map((i, index) => {
+        return (<div>
+        <h2>SCORE</h2>{this.state.person[i].score}
+      <h2>ID</h2>{this.state.person[i].id}
+        <h2>STATUS</h2>{this.state.person[i].fields.status}
+        <h2>DATE</h2>{this.state.person[i].fields.date.created}
+        <h2>TYPE</h2>{this.state.person[i].fields.primary_type.name}
+        <h2>HEADLINE</h2>{this.state.person[i].fields.name}
+        
+        <h2>NAME</h2>{this.state.person[i].fields.country[0].name}
+        <h2>LOCATION</h2>{this.state.person[i].fields.country[0].location.lat}
+        <h2>DESCRIPTION</h2>{this.state.person[i].fields.description}
+        </div>
+      )
+      })}
+          
+          </div>
+      
+      
     );
   }
 }
