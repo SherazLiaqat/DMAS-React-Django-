@@ -38,7 +38,7 @@ function Footer() {
             
             <Link to='/Contact' target="_blank">Contact Us</Link>
             <Link to='/MyBlog'>Blog</Link>
-            <Link to='/'>News</Link>
+            <Link to='/MyNews'>News</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>

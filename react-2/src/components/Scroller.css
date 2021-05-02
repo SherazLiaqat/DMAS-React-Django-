@@ -9,6 +9,7 @@
     color: #fff;
     cursor: pointer;
     text-align: center;
+  
     
 }
 .Scroll-to-top.icon{
@@ -21,5 +22,12 @@
     }
     to{
         transform: translateY(-1px);
+    }
+}
+@media screen and (max-width: 660px){
+    .Scroll-to-top{
+        left: 85%;
+        width: 30px;
+    height: 30px;
     }
 }

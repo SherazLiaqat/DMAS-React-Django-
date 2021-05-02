@@ -1,28 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { FcApproval } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
-
-const Blog = () => {
-    const [users, setUsers] = useState([]);
-    const [loading, setLoading] = useState(true);
-    
-
-    const getUsers = async () => {
-       
-            const response = await fetch('https://api.reliefweb.int/v1/disasters?appname=rwint-user-0&profile=full&preset=latest&slim=1&limit=100');
-             
-            setUsers(await response.json());
-       //console.log(data);
-    }
-
-    useEffect(() => {
-        getUsers();
-    }, []);
-
-   
-
+const githubUsers = ({users}) => {
     return (
-        <>
-            <div>
+        <div>
             <h2>List of GitHub Users</h2>
             <div className="container-fluid mt-5">
                 <div className="row text-center">
@@ -36,9 +18,9 @@ const Blog = () => {
                               <div className="col-10 col-md-4 mt-5" key={id}>
                       <div className="card p-2">
                                 <div className="d-flex align-items-center">
-                                        <div className="image"> <img src="" className="rounded" width="155" /> </div>
+                                        <div className="image"> <img src={ avatar_url } className="rounded" width="155" /> </div>
                                     <div className="ml-3 w-100">
-                                            <h4 className="mb-0 mt-0 textLeft">{curElem.fields}  </h4>
+                                            <h4 className="mb-0 mt-0 textLeft">{login} <FcApproval/> </h4>
                                             {/* <span className="text-left">{type }</span> */}
                                         <div className="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
                                                 <div className="d-flex flex-column">
@@ -62,9 +44,6 @@ const Blog = () => {
             </div>
         </div>
     )
-
-        </>
-    )
 }
 
-export default Blog
+export default githubUsers

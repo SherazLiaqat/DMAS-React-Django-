@@ -47,6 +47,7 @@ import InjuredResult from './components/ResultPages/Earthqauke/InjuredResult';
 import DisplacedResult from './components/ResultPages/Flood/DisplacedResult';
 import chart from './components/Pages/Chart/Result';
 import Result from './components/Pages/Chart/Result';
+import MyNews from './components/News/News'
 import { Scroller } from './components/Scroller';
 
 
@@ -78,6 +79,7 @@ function App(){
         <Route path='/Event' component={Event} />
         <Route path='/Live' component={Live} />
         
+        
      
       </Switch>
      
@@ -102,7 +104,7 @@ function App(){
     <Route path='/InjuredResult'  component={InjuredResult}exact />
     <Route path='/DeadResult'  component={DeadResult}exact />
     <Route path='/DisplacedResult'  component={DisplacedResult}exact />
-    
+    <Route path='/MyNews' component={MyNews} />
 
     
     

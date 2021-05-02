@@ -4,8 +4,8 @@
     flex-direction: column;
    width: 256px;
    height: 150px;
-   margin-top: -160rem;
-   position:absolute;
+   margin-top: -163rem;
+   position:fixed;
  background-color: #fff;
   
   
@@ -17,11 +17,11 @@
   
   width: 256px;
   height: 250px;
-  margin-top: -180rem;
+  margin-top: -182rem;
   
   
 background-color: #fff;
- position:absolute;
+ position:fixed;
  margin-left: 68.33rem;
   
   margin-bottom: 3rem;

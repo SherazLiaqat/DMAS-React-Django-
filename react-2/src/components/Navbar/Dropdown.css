@@ -49,6 +49,12 @@
     .fa-caret-down {
       display: none;
     }
+    .dropdown-menu{
+      margin-left: 22rem;
+      position:relative;
+      top: 3px;
+     
+    }
   }
   @media screen and (max-width: 660px){
     .dropdown-menu {
