@@ -38,7 +38,7 @@ function Navbar() {
      
       setDropdown(true);
     } else {
-      setDropdown(true);
+      setDropdown(false);
     }
   };
 

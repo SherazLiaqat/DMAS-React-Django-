@@ -14,7 +14,7 @@ export default class News extends React.Component {
     
     
 
-    this.setState(  {  person: data.data[7], loading: false });
+    this.setState(  {  person: data.data[1], loading: false });
     
   }
 
