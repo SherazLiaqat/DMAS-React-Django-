@@ -51,7 +51,7 @@ const Blog = () => {
           </div>
         </div>
         <div className="post-title">
-          <a href="#">Why should boys have all the fun? it's the women who are making india an
+          <a href="">Why should boys have all the fun? it's the women who are making india an
             alcohol-loving contry</a>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas deserunt beatae
             adipisci iusto totam placeat corrupti ipsum, tempora magnam incidunt aperiam tenetur a
@@ -60,58 +60,7 @@ const Blog = () => {
           </p>
           <button className="btn post-btn">Read More &nbsp; <i className="fas fa-arrow-right" /></button>
         </div>
-      </div>
-      <hr />
-      <div className="post-content" data-aos="zoom-in" data-aos-delay={200}>
-        <div className="post-image">
-          <div>
-            <img src={img2} className="imgg" alt="blog1" />
-          </div>
-          <div className="post-info flex-row">
-            <span><i className="fas fa-user text-gray" />&nbsp;&nbsp;Admin</span>
-            <span><i className="fas fa-calendar-alt text-gray" />&nbsp;&nbsp;January 19, 2019</span>
-            <span>5 Commets</span>
-          </div>
         </div>
-        <div className="post-title">
-          <a href="#">New data recording system to better analyse road accidents</a>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas deserunt beatae
-            adipisci iusto totam placeat corrupti ipsum, tempora magnam incidunt aperiam tenetur a
-            nobis, voluptate, numquam architecto fugit. Eligendi quidem ipsam ducimus minus magni
-            illum similique veniam tempore unde?
-          </p>
-          <button className="btn post-btn">Read More &nbsp; <i className="fas fa-arrow-right" /></button>
-        </div>
-      </div>
-      <hr />
-      <div className="post-content" data-aos="zoom-in" data-aos-delay={200}>
-        <div className="post-image">
-          <div>
-            <img src={img4} className="imgg" alt="blog1" />
-          </div>
-          <div className="post-info flex-row">
-            <span><i className="fas fa-user text-gray" />&nbsp;&nbsp;Admin</span>
-            <span><i className="fas fa-calendar-alt text-gray" />&nbsp;&nbsp;January 21, 2019</span>
-            <span>12 Commets</span>
-          </div>
-        </div>
-        <div className="post-title">
-          <a href="#">New data recording system to better analyse road accidents</a>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas deserunt beatae
-            adipisci iusto totam placeat corrupti ipsum, tempora magnam incidunt aperiam tenetur a
-            nobis, voluptate, numquam architecto fugit. Eligendi quidem ipsam ducimus minus magni
-            illum similique veniam tempore unde?
-          </p>
-          <button className="btn post-btn">Read More &nbsp; <i className="fas fa-arrow-right" /></button>
-        </div>
-      </div>
-      <div className="pagination flex-row">
-        <a href="#"><i className="fas fa-chevron-left" /></a>
-        <a href="#" className="pages">1</a>
-        <a href="#" className="pages">2</a>
-        <a href="#" className="pages">3</a>
-        <a href="#"><i className="fas fa-chevron-right" /></a>
-      </div>
     </div>
     <aside className="sidebar">
       <div className="category">
@@ -139,6 +88,7 @@ const Blog = () => {
           </li>
         </ul>
       </div>
+      
       <div className="popular-post">
         <h2>Recent Post</h2>
         <div className="post-content" data-aos="flip-up" data-aos-delay={200}>
@@ -152,7 +102,7 @@ const Blog = () => {
               <span>2 Commets</span>
             </div>
           </div>
-          <div className="post-title">
+          <div className="posts-title">
             <a href="#">New data recording system to better analyse road accidents</a>
           </div>
         </div>
@@ -217,31 +167,36 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      <div className="newsletter" data-aos="fade-up" data-aos-delay={300}>
-        <h2>Newsletter</h2>
-        <div className="form-element">
-          <input type="text" className="input-element" placeholder="Email" />
-          <button className="btn form-btn">Subscribe</button>
-        </div>
-      </div>
+     
+      
       <div className="popular-tags">
         <h2>Popular Tags</h2>
+        <br/>
         <div className="tags flex-row">
           <span className="tag" data-aos="flip-up" data-aos-delay={100}>Software</span>
           <span className="tag" data-aos="flip-up" data-aos-delay={200}>technology</span>
           <span className="tag" data-aos="flip-up" data-aos-delay={300}>travel</span>
-         <br/>
+         <br/><br/>
           <span className="tag" data-aos="flip-up" data-aos-delay={400}>illustration</span>
           <span className="tag" data-aos="flip-up" data-aos-delay={500}>design</span>
          
          <span className="tag" data-aos="flip-up" data-aos-delay={600}>lifestyle</span>
-         <br/>
+         <br/><br/>
           <span className="tag" data-aos="flip-up" data-aos-delay={700}>love</span>
           <span className="tag" data-aos="flip-up" data-aos-delay={800}>project</span>
         </div>
       </div>
+    
     </aside>
+    <div className="pagination flex-row">
+        <a href="#"><i className="fas fa-chevron-left" /></a>
+        <a href="#" className="pages">1</a>
+        <a href="#" className="pages">2</a>
+        <a href="#" className="pages">3</a>
+        <a href="#"><i className="fas fa-chevron-right" /></a>
+      </div>
   </div>
+ 
 </section>
 
 </>

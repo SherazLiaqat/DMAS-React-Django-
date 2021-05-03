@@ -5,7 +5,7 @@
 }
 .post-content{
     width: 100%;
-    margin-bottom: 5rem;;
+    margin-bottom: 1rem;
 }
 .site-content .post-content > .post-image, .post-title{
     padding: 1rem 2rem;
@@ -41,6 +41,9 @@
     text-decoration: none;
     color: black;
 }
+.post-content .post-title p{
+    color: rgb(128, 118, 118);
+}
 .site-content .post-content .post-title .post-btn{
     border-radius: 0;
     padding: .7rem 1.5rem;
@@ -71,6 +74,11 @@
     color:var(--text-gray);
 }
 /* Side bar*/
+.sidebar{
+    margin-left: 12rem;
+    
+
+}
 .site-content > .sidebar .category-list{
     font-family: var(--Livvic);  
     
@@ -81,7 +89,7 @@
     padding: .4rem 1rem;
     margin: .8rem 0;
     border-radius: 3rem;
-    width: 80%;
+    width: 200%;
     display: flex;
     justify-content: space-between;
 }
@@ -94,36 +102,39 @@
 
 .site-content .sidebar .popular-post .post-content{
     padding: 1rem 0;
+    
 }
 
 .site-content .sidebar .popular-post h2{
     padding-top: 2rem;
+    border-bottom: 2px solid black;
+    width: 200%;
 }
 
 .site-content .sidebar .popular-post .post-info{
     padding: .4rem .1rem !important;
-    
-    left: 3.5rem ;
-    
+    text-align: center;
+    left: 0.5rem ;
+    width: 200%;
     background:white !important;
     
-    padding: 1rem;
     bottom: 0%;
     
     border-radius: 3rem;
 }
 
-.site-content .sidebar .popular-post .post-title a{
+.site-content .sidebar .popular-post .posts-title a{
     font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    
+    text-decoration: none;
+    color: black;
+    
 }
 
-.site-content .sidebar .newsletter{
-    padding-top: 10rem;
-}
 
-.site-content .sidebar .newsletter .form-element{
-    padding: .5rem 2rem;
-}
+
 
 .site-content .sidebar .newsletter .input-element{
     width: 80%;
