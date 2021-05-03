@@ -1,6 +1,6 @@
 import { map } from "d3-array";
 import React from "react";
-
+import './News.css';
 export default class News extends React.Component {
   state = {
     loading: true,
@@ -14,12 +14,8 @@ export default class News extends React.Component {
     
     
 
-<<<<<<< HEAD
-    this.setState(  {  person: data.data[1], loading: false });
-=======
   this.setState(  {  person: data.data, loading: false });
 
->>>>>>> b4f8a734785871a258d03b16f9a84ecba4b3bf9a
     
   }
 
@@ -36,10 +32,10 @@ export default class News extends React.Component {
     return (
       
         
-          <div>
+          <div >
           
         {elements.map((i, index) => {
-        return (<div>
+        return (<div className='News'>
         <h2>SCORE</h2>{this.state.person[i].score}
       <h2>ID</h2>{this.state.person[i].id}
         <h2>STATUS</h2>{this.state.person[i].fields.status}
@@ -53,7 +49,7 @@ export default class News extends React.Component {
         </div>
       )
       })}
-          
+          <button> NEXT</button>
           </div>
       
       
