@@ -79,6 +79,10 @@
     
 
 }
+.site-content > .sidebar .category h2{
+    border-bottom: 2px solid black;
+    width: 200%;
+}
 .site-content > .sidebar .category-list{
     font-family: var(--Livvic);  
     
@@ -99,7 +103,12 @@
     text-decoration: none;
     cursor: pointer;
 }
-
+.site-content .sidebar .post-content {
+    
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 200%;
+}
 .site-content .sidebar .popular-post .post-content{
     padding: 1rem 0;
     
@@ -125,9 +134,7 @@
 
 .site-content .sidebar .popular-post .posts-title a{
     font-size: 1rem;
-    display: flex;
-    flex-direction: row;
-    
+   margin-top: 2rem;
     text-decoration: none;
     color: black;
     
@@ -150,7 +157,10 @@
     margin: 1rem 0;
     background-color: skyblue;
 }
-
+.site-content .sidebar .popular-tags h2{
+    border-bottom: 2px solid black;
+    width: 200%;
+}
 .site-content .sidebar .popular-tags{
     padding: 5rem 0;
     

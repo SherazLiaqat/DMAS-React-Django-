@@ -117,7 +117,7 @@ const Blog = () => {
               <span>2 Commets</span>
             </div>
           </div>
-          <div className="post-title">
+          <div className="posts-title">
             <a href="#">New data recording system to better analyse road accidents</a>
           </div>
         </div>
@@ -132,7 +132,7 @@ const Blog = () => {
               <span>2 Commets</span>
             </div>
           </div>
-          <div className="post-title">
+          <div className="posts-title">
             <a href="#">New data recording system to better analyse road accidents</a>
           </div>
         </div>
@@ -147,28 +147,11 @@ const Blog = () => {
               <span>2 Commets</span>
             </div>
           </div>
-          <div className="post-title">
+          <div className="posts-title">
             <a href="#">New data recording system to better analyse road accidents</a>
           </div>
         </div>
-        <div className="post-content" data-aos="flip-up" data-aos-delay={600}>
-          <div className="post-image">
-            <div>
-              <img src={img9} className="imgg" alt="blog1" />
-            </div>
-            <div className="post-info flex-row">
-              <span><i className="fas fa-calendar-alt text-gray" />&nbsp;&nbsp;January 14,
-                2019</span>
-              <span>2 Commets</span>
-            </div>
-          </div>
-          <div className="post-title">
-            <a href="#">New data recording system to better analyse road accidents</a>
-          </div>
         </div>
-      </div>
-     
-      
       <div className="popular-tags">
         <h2>Popular Tags</h2>
         <br/>
