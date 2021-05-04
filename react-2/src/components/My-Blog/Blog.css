@@ -49,16 +49,17 @@
 }
 
 .site-content .pagination {
-  justify-content: center;
+  text-align: center;
   color: gray;
   margin: 4rem 0;
+  
 }
 
 .site-content .pagination a {
   padding: 0.6rem 0.9rem;
   border-radius: 2rem;
   margin: 0 0.3rem;
-  font-family: var(--Lexend);
+  color: black;
 }
 
 .site-content .pagination .pages {
@@ -66,6 +67,7 @@
   color: white;
   text-decoration: none;
 }
+
 .text-gray {
   color: var(--text-gray);
 }
@@ -179,17 +181,17 @@
     width: 60%;
   }
   .site-content > .sidebar .category h2 {
-    width: 60%;
+    width: 100%;
   }
   .site-content .sidebar .popular-post h2 {
-    width: 60%;
+    width: 90%;
   }
 
   .site-content .sidebar .popular-post .post-info {
-    width: 60%;
+    width: 100%;
   }
   .site-content .sidebar .popular-tags h2 {
-    width: 60%;
+    width: 100%;
   }
   .site-content .sidebar .post-content1 {
     grid-template-columns: 40% 60%;

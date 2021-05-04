@@ -82,6 +82,7 @@ class Contact extends React.Component {
         <p className='div-paragraph'> example@gmail.com</p>
                  
       </div><br/>
+      <div className='contact-detail'>
             <div className='form-inputs1'>
         <label className='form-label1'><FaUserAlt />Your Name*</label>
         <input
@@ -129,7 +130,7 @@ class Contact extends React.Component {
           onChange={(event)=>{this.setState({username:event.target.value})}}/>
          
           <p>{this.state.messageerror}</p>
-                
+          </div>      
       </div>
       <button className='contactButton' onClick={()=>this.submit()}> Contact Us</button> 
       <p className ='last'>Thank You! For Reaching Out We Will get back to you as soon as Possible.</p><br/>
