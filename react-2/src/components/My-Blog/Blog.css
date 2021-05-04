@@ -1,222 +1,206 @@
-.site-content{
-    display: grid;
-    grid-template-columns: 65% 35%;
-    
+.site-content {
+  display: grid;
+  grid-template-columns: 65% 35%;
 }
-.post-content{
-    width: 100%;
-    margin-bottom: 1rem;
+.post-content {
+  width: 100%;
+  margin-bottom: 1rem;
 }
-.site-content .post-content > .post-image, .post-title{
-    padding: 1rem 2rem;
-    position: relative;
+.site-content .post-content > .post-image,
+.post-title {
+  padding: 1rem 2rem;
+  position: relative;
 }
-.site-content .post-content > .post-image .post-info{
-  
-   background-color:rgb(160, 213, 235);
-   position: absolute;
-    padding: 1rem;
-    bottom: 0%;
-    left: 12vw;
-    border-radius: 3rem;
-   
+.site-content .post-content > .post-image .post-info {
+  background-color: rgb(160, 213, 235);
+  position: absolute;
+  padding: 1rem;
+  bottom: 0%;
+  left: 12vw;
+  border-radius: 3rem;
 }
-.site-content .post-content > .post-image > div{
-    overflow: hidden;
+.site-content .post-content > .post-image > div {
+  overflow: hidden;
 }
-.site-content .post-content > .post-image .imgg{
-    width: 100%;
-    
-    transition: all 1s ease;
+.site-content .post-content > .post-image .imgg {
+  width: 100%;
+
+  transition: all 1s ease;
 }
-.site-content .post-content > .post-image .imgg:hover{
-    transform: scale(1.3);
+.site-content .post-content > .post-image .imgg:hover {
+  transform: scale(1.3);
 }
-.site-content .post-content > .post-image .post-info span{
-    margin: 0 .5rem;
+.site-content .post-content > .post-image .post-info span {
+  margin: 0 0.5rem;
 }
-.post-content .post-title a{
-    font-family: var(--Anton);
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: black;
+.post-content .post-title a {
+  font-family: var(--Anton);
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
 }
-.post-content .post-title p{
-    color: rgb(128, 118, 118);
+.post-content .post-title p {
+  color: rgb(128, 118, 118);
 }
-.site-content .post-content .post-title .post-btn{
-    border-radius: 0;
-    padding: .7rem 1.5rem;
-    background-color: skyblue;
+.site-content .post-content .post-title .post-btn {
+  border-radius: 0;
+  padding: 0.7rem 1.5rem;
+  background-color: skyblue;
 }
 
-.site-content .pagination{
-    justify-content: center;
-    color: gray;
-    margin: 4rem 0;
+.site-content .pagination {
+  justify-content: center;
+  color: gray;
+  margin: 4rem 0;
 }
 
-.site-content .pagination a{
-    padding: .6rem .9rem;
-    border-radius: 2rem;
-    margin: 0 .3rem;
-    font-family: var(--Lexend);
-    
+.site-content .pagination a {
+  padding: 0.6rem 0.9rem;
+  border-radius: 2rem;
+  margin: 0 0.3rem;
+  font-family: var(--Lexend);
 }
 
-.site-content .pagination .pages{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    
+.site-content .pagination .pages {
+  background-color: black;
+  color: white;
+  text-decoration: none;
 }
-.text-gray{
-    color:var(--text-gray);
+.text-gray {
+  color: var(--text-gray);
 }
 /* Side bar*/
-.sidebar{
-    margin-left: 12rem;
-    
-
+.sidebar {
+  margin-left: 12rem;
 }
-.site-content > .sidebar .category h2{
-    border-bottom: 2px solid black;
-    width: 200%;
+.site-content > .sidebar .category h2 {
+  border-bottom: 2px solid black;
+  width: 200%;
 }
-.site-content > .sidebar .category-list{
-    font-family: var(--Livvic);  
-    
+.site-content > .sidebar .category-list {
+  font-family: var(--Livvic);
 }
 
-.site-content > .sidebar .category-list .list-items{
-    background-color: skyblue;
-    padding: .4rem 1rem;
-    margin: .8rem 0;
-    border-radius: 3rem;
-    width: 200%;
-    display: flex;
-    justify-content: space-between;
+.site-content > .sidebar .category-list .list-items {
+  background-color: skyblue;
+  padding: 0.4rem 1rem;
+  margin: 0.8rem 0;
+  border-radius: 3rem;
+  width: 200%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.site-content > .sidebar .category-list .list-items a{
-    color:  black;
-    text-decoration: none;
-    cursor: pointer;
+.site-content > .sidebar .category-list .list-items a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
-.site-content .sidebar .post-content {
-    
+.site-content .sidebar .post-content1 {
   display: grid;
   grid-template-columns: 40% 60%;
   width: 200%;
-}
-.site-content .sidebar .popular-post .post-content{
-    padding: 1rem 0;
-    
+  margin-top: 2rem;
 }
 
-.site-content .sidebar .popular-post h2{
-    padding-top: 2rem;
-    border-bottom: 2px solid black;
-    width: 200%;
+.site-content .sidebar .popular-post h2 {
+  padding-top: 2rem;
+  border-bottom: 2px solid black;
+  width: 200%;
 }
 
-.site-content .sidebar .popular-post .post-info{
-    padding: .4rem .1rem !important;
-    text-align: center;
-    left: 0.5rem ;
-    width: 200%;
-    background:white !important;
-    
-    bottom: 0%;
-    
-    border-radius: 3rem;
+.site-content .sidebar .popular-post .post-info {
+  padding: 0.4rem 0.1rem !important;
+  text-align: center;
+  left: 1rem;
+  width: 120%;
+
+  bottom: 0%;
+
+  border-radius: 3rem;
 }
 
-.site-content .sidebar .popular-post .posts-title a{
-    font-size: 1rem;
-   margin-top: 2rem;
-    text-decoration: none;
-    color: black;
-    
+.site-content .sidebar .popular-post .posts-title a {
+  font-size: 1rem;
+
+  text-decoration: none;
+  color: black;
 }
 
-
-
-
-.site-content .sidebar .newsletter .input-element{
-    width: 80%;
-    height: 1.9rem;
-    padding: .3rem .5rem;
-    font-family: var(--Lexend);
-    font-size: 1rem;
+.site-content .sidebar .popular-tags h2 {
+  border-bottom: 2px solid black;
+  width: 200%;
+}
+.site-content .sidebar .popular-tags {
+  padding: 5rem 0;
 }
 
-.site-content .sidebar .newsletter .form-btn{
-    border-radius: 0;
-    padding: .8rem 32%;
-    margin: 1rem 0;
-    background-color: skyblue;
+.site-content .sidebar .popular-tags .tags .tag {
+  background-color: skyblue;
+  padding: 0.4rem;
+  border-radius: 3rem;
+  margin: 0.6rem 0.6rem;
 }
-.site-content .sidebar .popular-tags h2{
-    border-bottom: 2px solid black;
-    width: 200%;
-}
-.site-content .sidebar .popular-tags{
-    padding: 5rem 0;
-    
+.site-content .post-content1 > .post-image1 {
+  padding: 3px;
+  position: relative;
+
+  margin-right: 1rem;
 }
 
-.site-content .sidebar .popular-tags .tags .tag{
-   
-    background-color:skyblue;
-    padding: .4rem ;
-    border-radius: 3rem;
-    margin: .6rem .6rem;
-    
+.site-content .post-content1 > .post-image1 .post-info {
+  position: absolute;
+  padding: 1rem;
+  bottom: 0%;
+  bottom: 5px;
+  border-radius: 3rem;
+  left: 8rem;
 }
+.site-content .post-content1 > .post-image1 > div {
+  overflow: hidden;
+}
+.site-content .post-content1 > .post-image1 .imgg {
+  width: 100%;
+  border-radius: 1rem;
 
+  transition: all 1s ease;
+}
+.site-content .post-content1 > .post-image1 .imgg:hover {
+  transform: scale(1.3);
+}
+.site-content .post-content1 > .post-image1 .post-info span {
+  margin: 0 0.5rem;
+}
+@media screen and (max-width: 960px) {
+  .sidebar {
+    margin-left: 1px;
+  }
+  .site-content > .sidebar .category-list .list-items {
+    width: 60%;
+  }
+  .site-content > .sidebar .category h2 {
+    width: 60%;
+  }
+  .site-content .sidebar .popular-post h2 {
+    width: 60%;
+  }
 
-.container1{
-display: inline-table;
-display: table-column;
-}
-.container2{
-    display: inline-table;
-    display: table-column;
-}
-
-.one-div{
-background-color: indianred;
-width: 100%;
-height: 100%;
-margin: 5px;
-text-align: center;
-}
-.two-div{
-    background-color: rgb(124, 96, 96);
+  .site-content .sidebar .popular-post .post-info {
+    width: 60%;
+  }
+  .site-content .sidebar .popular-tags h2 {
+    width: 60%;
+  }
+  .site-content .sidebar .post-content1 {
+    grid-template-columns: 40% 60%;
     width: 100%;
-    height: 100%;
-    margin: 5px;
-    text-align: center;
-    }
-.three-div{
-        background-color: rgb(14, 150, 98);
-        width: 100%;
-        height: 100%;
+  }
+  .site-content .sidebar .popular-post .post-info {
+    padding: 0.4rem 0.1rem !important;
+    display: flex;
+    left: 8rem;
+    width: 120%;
+
+    bottom: 5%;
+  }
 }
-.fifth-div{
-            background-color: rgb(34, 39, 26);
-            width: 100%;
-        height: 100%;
-           
-            }   
- .sixth-div{
-         background-color: rgb(150, 14, 120);
-         width: 100%;
-         height: 100%;
-                }
- .four-div{
-      background-color: rgb(150, 187, 153);
-      width: 100%;
-        height: 100%;
-              }
