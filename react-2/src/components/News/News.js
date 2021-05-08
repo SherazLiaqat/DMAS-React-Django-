@@ -1,5 +1,8 @@
 import { map } from "d3-array";
 import React from "react";
+import blog1 from "../images/blog1.png";
+import img2 from "../images/img-2.jpg";
+import blog4 from "../images/blog4.png";
 import "./News.css";
 export default class News extends React.Component {
   state = {
@@ -18,7 +21,7 @@ export default class News extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <div>loading...</div>;
+      return <div className="loading"> Loading...</div>;
     }
 
     if (!this.state.person) {
@@ -27,8 +30,89 @@ export default class News extends React.Component {
     const elements = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     return (
-      <div>
+      <>
+        <h1>Explore!Latest Disaster News</h1>
+        <p className="news-paragraph">
+          Here You can read about latest disasters occured aroung the world
+        </p>
         {elements.map((i, index) => {
+          return (
+            <section className="container-news">
+       
+          <div className="site-content-news">
+            <div className="posts">
+            <div
+                className="post-content-news"
+                data-aos="zoom-in"
+                data-aos-delay={200}
+              >
+                <div className="post-image-news">
+                  <div></div>
+                  <div className="post-info flex-row">
+                    <span>
+                      <i className="fas fa-map-marker-alt text-gray" />
+                      &nbsp;&nbsp;{this.state.person[i].fields.country[0].name}
+                    </span>
+                    <span>
+                      <i className="fas fa-calendar-alt text-gray" />
+                      &nbsp;&nbsp; {this.state.person[i].fields.date.created}
+                    </span>
+                    <span>
+                      Type: {this.state.person[i].fields.primary_type.name}
+                    </span>
+                    <span>Status: {this.state.person[i].fields.status}</span>
+                  </div>
+                </div>
+                <div className="post-title-news">
+                  <a href="">
+                    Headline:&nbsp;&nbsp;{this.state.person[i].fields.name}
+                  </a>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque voluptas deserunt beatae adipisci iusto totam placeat
+                    corrupti ipsum, tempora magnam incidunt aperiam tenetur a
+                    nobis, voluptate, numquam architecto fugit. Eligendi quidem
+                    ipsam ducimus minus magni illum similique veniam tempore
+                    unde?
+                  </p>
+                  
+                  <button className="btn post-btn-news">
+                  Read More
+                     &nbsp; <i className="fas fa-arrow-right" />
+                  </button>
+                </div>
+              </div>
+              </div>
+              </div>
+        </section>
+          );
+        })}
+        
+        <section className="container-news">
+       
+          <div className="site-content-news">
+           
+        
+            <div className="pagination-news flex-row">
+              <a href="#">
+                <i className="fas fa-chevron-left" />
+              </a>
+              <a href="#" className="pages">
+                1
+              </a>
+              <a href="#" className="pages">
+                2
+              </a>
+              <a href="#" className="pages">
+                3
+              </a>
+              <a href="#">
+                <i className="fas fa-chevron-right" />
+              </a>
+            </div>
+          </div>
+        </section>
+        {/*  {elements.map((i, index) => {
           return (
             <div className="News">
               <h2>SCORE</h2>
@@ -53,8 +137,8 @@ export default class News extends React.Component {
             </div>
           );
         })}
-        <button> NEXT</button>
-      </div>
+        <button> NEXT</button>*/}
+      </>
     );
   }
 }

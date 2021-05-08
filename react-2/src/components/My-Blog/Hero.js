@@ -1,25 +1,11 @@
-import React from 'react';
-import './Hero.css';
-import Card from '../My-Blog/BlogCard';
+import React from 'react'
 
-
-/**
-* @author
-* @function Hero
-**/
-
-const Hero = (props) => {
-  return(
+const Hero = () => {
+  return (
     <div>
-        <Card>
-            <div style={{ padding: '50px 0'  }}>
-            
-            </div>
-           
-        </Card>
+      h1
     </div>
-   )
-
- }
+  )
+}
 
 export default Hero

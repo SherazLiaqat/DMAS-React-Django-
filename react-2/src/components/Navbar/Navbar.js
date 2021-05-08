@@ -36,9 +36,9 @@ function Navbar() {
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
      
-      setDropdown(true);
-    } else {
       setDropdown(false);
+    } else {
+      setDropdown(true);
     }
   };
 
