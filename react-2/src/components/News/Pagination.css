@@ -1,0 +1,30 @@
+.pagination2{
+    display: flex;
+    justify-content: center;
+
+}
+.pagination {
+    text-align: center;
+    
+    margin: 4rem 0;
+    
+  }
+  
+  .pagination a {
+    padding: 0.6rem 0.9rem;
+    border-radius: 2rem;
+    margin: 0 0.3rem;
+    color: black;
+  }
+  .arrow-btn{
+    padding: 0.6rem 0.9rem;
+    background-color: #FAFAFA;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    border: none;
+  }
+   .pagination .pages {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+  }
