@@ -4,6 +4,9 @@ from DAS_Rest_Api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('Earthquake_Deaths/', views.Earthquake_Deaths),
+    path('Earthquake_Injured/', views.Earthquake_Injured),
+    path('Earthquake_Affected/', views.Earthquake_Affected),
     path('bloghome/<int:page>', views.blog),
     path('blogpost/<str:slug>', views.blogpost),
     path('news/<int:page>', views.news),
@@ -11,4 +14,6 @@ urlpatterns = [
     path('earthquakeLive/<int:page>', views.earthquakeLive),
     path('weather/<str:location>', views.weather),
     path('contact/', views.contact),
+    path('Flood_Events/', views.Flood_Events),
+    path('Earthquake_Events/', views.Earthquake_Events),
 ]

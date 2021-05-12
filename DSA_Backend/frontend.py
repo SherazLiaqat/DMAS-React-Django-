@@ -21,6 +21,17 @@ def single_blog(slug):
     print(data)
 #single_blog('ML')
 
+
+def search_blog(slug):
+    URL = "http://127.0.0.1:8000/bloghome/1"
+    headers = {'Content-Type': 'application/json'}
+    data = {"search":slug}
+    json_data = json.dumps(data)
+    r = requests.post(url = URL, headers = headers, data = json_data)
+    data = r.json()
+    print(data)
+search_blog("ML")
+
 #to get news
 def news(page):
     URL = "http://127.0.0.1:8000/news/"+str(page)+""
@@ -76,5 +87,4 @@ def contact():
     #response msg
     data = r.json()
     print(data)
-contact()
-#{"name":"Akhlaq","email":"akhlaq@gmail.com","phone":"03333333333","desc":"hello world"}
+#contact()

@@ -1,8 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 # Create your models here.
 
 class Blog(models.Model):
@@ -12,6 +10,7 @@ class Blog(models.Model):
     short_desc = models.CharField(max_length=300, default="")
     slug = models.SlugField(max_length=25)
     time = models.DateTimeField(auto_now_add=True)
+    photo = models.ImageField(upload_to='media/Blogs', default='media/avatar.png')
     author = models.CharField(max_length=20, default="")
 
     def __str__(self):
@@ -37,4 +36,3 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
-    

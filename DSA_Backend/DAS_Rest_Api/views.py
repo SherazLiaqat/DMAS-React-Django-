@@ -4,8 +4,9 @@ from .serializers import BlogModelSerializer, ContactModelSerializer
 import requests
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+
 # Create your views here.
-@api_view(['GET'])
+@api_view(['GET','POST'])
 def blog(request, page):
     if request.method == 'GET':
         if page is not None:
@@ -17,6 +18,21 @@ def blog(request, page):
             return Response(serializer.data)
         data = {'msg':'No more blogs!'}
         return Response(data)
+    
+    if request.method == 'POST':
+        query=request.data.get('search')
+        blogtitle=Blog.objects.filter(title__icontains=query)
+        blogintro=Blog.objects.filter(short_desc__icontains=query)
+        blogs=blogtitle.union(blogintro)
+        if page is not None:
+            print(page)
+            no_of_posts = 5
+            blogs=blogs[(page-1)*no_of_posts:page*no_of_posts]
+            serializer = BlogModelSerializer(blogs, many = True)
+            return Response(serializer.data)
+        data = {'msg':'No more blogs!'}
+        return Response(data)
+
 
 @api_view(['GET'])
 def blogpost(request, slug):
@@ -147,3 +163,277 @@ def contact(request):
             res = {'msg':'Data Saved!'}
             return Response(res)
         return Response(serrializer.errors)
+
+
+
+import pandas as pd
+@api_view(['GET','POST'])
+def Flood_Events(request):
+    Flood_no = []
+    year_lebel = []
+    positions = []
+    Flood = pd.read_csv("static/Flood.csv",encoding="latin-1")
+    if request.method=='POST':
+        country_filter = request.data.get('country')
+        print(country_filter)
+        if country_filter!='all':
+            Flood = Flood[Flood['Country']==str(country_filter)]
+    index = Flood.index
+    country = Flood['Country']
+    longi = Flood['Centroid X']
+    lat = Flood['Centroid Y']
+    for i in index:
+        a=[country[i],float(lat[i]),float(longi[i])]
+        positions.append(a)
+    count = Flood['Year'].value_counts()
+    count = count.sort_index()
+    country = Flood['Country'].unique()
+    country.sort()
+    for i in count:
+        Flood_no.append(i)
+    for j in count.index:
+        year_lebel.append(j)
+    deaths,deaths_years,dead_count,dead_label = deathgraph(Flood['Dead'],Flood['Year'],Flood['Death'])
+    print(dead_count)
+    print(dead_label)
+    Displaced,Displaced_years,Displaced_count,Displaced_label = Injuredgraph(Flood['Displaced'],Flood['Year'],Flood['Displace'])
+    context = {'positions':positions,'Country':country,'data':Flood_no,'lebel':year_lebel,'deaths':deaths,'deaths_years':deaths_years,'dead_count':dead_count,'dead_label':dead_label,
+        'Displaced':Displaced,'Displaced_years':Displaced_years,'Displaced_label':Displaced_label,'Displaced_count':Displaced_count}
+    return Response(context)
+
+
+@api_view(['GET','POST'])
+def Earthquake_Events(request):
+    earthquake_no = []
+    year_lebel = []
+    earthquake = pd.read_excel("static/Earthquake.xlsx")
+    positions = []
+    if request.method=='POST':
+        country_filter = request.data.get('country')
+        print(country_filter)
+        if country_filter!='all':
+            earthquake = earthquake[earthquake['Country']==str(country_filter)]
+    index = earthquake.index
+    print(len(earthquake))
+    country = earthquake['Country']
+    lat = earthquake['Latitude']
+    longi = earthquake['Longitude']
+    for i in index:
+        a=[country[i],float(lat[i]),float(longi[i])]
+        positions.append(a)
+    count = earthquake['Year'].value_counts()
+    country = earthquake['Country'].unique()
+    country.sort()
+    count = count.sort_index()
+    for i in count:
+        earthquake_no.append(i)
+    for j in count.index:
+        year_lebel.append(j)
+    deaths,deaths_years,dead_count,dead_label = deathgraph(earthquake['Total Deaths'],earthquake['Year'],earthquake['Dead'])
+    Injured,Injured_years,Injured_count,Injured_label = Injuredgraph(earthquake['No Injured'],earthquake['Year'],earthquake['Injured'])
+    Affected,Affected_years,Affected_count,Affected_label = Affectedgraph(earthquake['Total Affected'],earthquake['Year'],earthquake['Affected'])
+    context = {'positions':positions,'Country':country,'data':earthquake_no,'lebel':year_lebel,'deaths':deaths,'deaths_years':deaths_years,'dead_count':dead_count,'dead_label':dead_label,
+        'Injured':Injured,'Injured_years':Injured_years,'Injured_label':Injured_label,'Injured_count':Injured_count,'Affected':Affected,'Affected_years':Affected_years,
+        'Affected_count':Affected_count,'Affected_label':Affected_label}
+    return Response(context)
+
+
+
+
+def deathgraph(dead,year,dead_label):
+    deaths = []
+    years = []
+    label = []
+    label_count = []
+    dead_label = dead_label.value_counts()
+    for i in dead_label:
+        label_count.append(i)
+    for i in dead_label.index:
+        label.append(i)
+    index = dead[dead>100000].index
+    year = year.drop(index,axis=0)
+    dead = dead[dead<100000]
+    for j in dead:
+        deaths.append(j)
+    for j in year:
+        years.append(j)
+    return deaths,years,label_count,label
+def Injuredgraph(injureds,year,Injured_label):
+    injured = []
+    years = []
+    label = []
+    label_count = []
+    Injured_label = Injured_label.value_counts()
+    for i in Injured_label:
+        label_count.append(i)
+    for i in Injured_label.index:
+        label.append(i)
+    index = injureds[injureds>100000].index
+    year = year.drop(index,axis=0)
+    injureds = injureds[injureds<100000]
+    for j in injureds:
+        injured.append(j)
+    for j in year:
+        years.append(j)
+    return injured,years,label_count,label
+def Affectedgraph(Affecteds,year,Affected_label):
+    Affected = []
+    years = []
+    label = []
+    label_count = []
+    Affected_label = Affected_label.value_counts()
+    for i in Affected_label:
+        label_count.append(i)
+    for i in Affected_label.index:
+        label.append(i)
+    index = Affecteds[Affecteds>100000].index
+    year = year.drop(index,axis=0)
+    Affecteds = Affecteds[Affecteds<100000]
+    for j in Affecteds:
+        Affected.append(j)
+    for j in year:
+        years.append(j)
+    return Affected,years,label_count,label
+
+
+@api_view(['GET','POST'])
+def Earthquake_Deaths(request):
+    Type,Asia,Africa,Americas,Europe,Oceania=0
+    if request.method=='POST':
+        Earthquake_Type= request.data.get('Earthquake_Type')
+        Continent= request.data.get('Continent')
+        Magnitude= request.data.get('Magnitude')
+        Latitude= request.data.get('Latitude')
+        Longitude= request.data.get('Longitude')
+        if Earthquake_Type=='Ground_Movement':
+            Type=1
+        if Continent=='Africa':
+            Africa=1
+        elif Continent=='Asia':
+            Asia=1
+        elif Continent=='Americas':
+            Americas=1
+        elif Continent=='Europe':
+            Europe=1
+        else:
+            Oceania=1
+        print(Continent)
+        Dead = Earthquake_Dead_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude)
+        result = {"Estimation":Dead[0],"Lat":Latitude,"Long":Longitude}
+        return Response(result)
+    res = {"msg":"Something is wrong!"}
+    return Response(res)
+
+
+@api_view(['GET','POST'])
+def Earthquake_Injured(request):
+    Type,Asia,Africa,Americas,Europe,Oceania=0
+    if request.method=='POST':
+        print('This is post')
+        Earthquake_Type= request.POST['Earthquake_Type']
+        Continent= request.POST['Continent']
+        Magnitude= request.POST['Magnitude']
+        Latitude= request.POST['Latitude']
+        Longitude= request.POST['Longitude']
+        if Earthquake_Type=='Ground_Movement':
+            Type=1
+        if Continent=='Africa':
+            Africa=1
+        elif Continent=='Asia':
+            Asia=1
+        elif Continent=='Americas':
+            Americas=1
+        elif Continent=='Europe':
+            Europe=1
+        else:
+            Oceania=1
+        print(Continent)
+        Injured = Earthquake_Injured_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude)
+        result = {"Estimation":Injured[0],"Lat":Latitude,"Long":Longitude}
+        return Response(result)
+    res = {"msg":"Something is wrong!"}
+    return Response(res)
+
+
+@api_view(['GET','POST'])
+def Earthquake_Affected(request):
+    if request.method=='POST':
+        print('This is post')
+        #Earthquake_Type= request.POST['Earthquake_Type']
+        #Continent= request.POST['Continent']
+        Magnitude= request.POST['Magnitude']
+        Latitude= request.POST['Latitude']
+        Longitude= request.POST['Longitude']
+        Affected = Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude)
+        result = {"Estimation":Affected[0],"Lat":Latitude,"Long":Longitude}
+        return Response(result)
+    res = {"msg":"Something is wrong!"}
+    return Response(res)
+
+
+import pickle
+def Earthquake_Dead_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude):
+    model = pickle.load(open('Earthquake_Dead_RF.sav', 'rb'))
+
+    prediction = model.predict([
+        [Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude]
+    ])
+    return prediction
+def Earthquake_Injured_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude):
+    model = pickle.load(open('Earthquake_Injured_SVM.sav', 'rb'))
+
+    prediction = model.predict([
+        [Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude]
+    ])
+    return prediction
+def Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude):
+    model = pickle.load(open('Earthquake_Affected_RF.sav', 'rb'))
+
+    prediction = model.predict([
+        [Magnitude, Latitude, Longitude]
+    ])
+    return prediction
+
+
+def Flood_Deaths(request):
+    if request.method=='POST':
+        print('This is post')
+        severity= request.data.get('Severity')
+        affected= request.data.get('Affected Area')
+        magnitude= request.data.get('Magnitude')
+        c_x= request.data.get('Centroid X')
+        c_y= request.data.get('Centroid Y')
+        Dead = Flood_Dead_Predictions(severity,affected,magnitude,c_x,c_y)
+        result = {"Estimation":Dead[0],"Lat":Latitude,"Long":Longitude}
+        return Response(result)
+    res = {"msg":"Something is wrong!"}
+    return Response(res)
+
+def Flood_Displaced(request):
+    if request.method=='POST':
+        print('This is post')
+        severity= request.data.get('Severity')
+        affected= request.data.get('Affected Area')
+        magnitude= request.data.get('Magnitude')
+        c_x= request.data.get('Centroid X')
+        c_y= request.data.get('Centroid Y')
+        Displaced = Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y)
+        result = {"Estimation":Displaced[0],"Lat":Latitude,"Long":Longitude}
+        return Response(result)
+    res = {"msg":"Something is wrong!"}
+    return Response(res)
+
+def Flood_Dead_Predictions(severity,affected,magnitude,c_x,c_y):
+    model = pickle.load(open('Flood_Dead_RF.sav', 'rb'))
+
+    prediction = model.predict([
+        [severity,affected,magnitude,c_x,c_y]
+    ])
+    return prediction
+def Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y):
+    model = pickle.load(open('Flood_Displaced_RF.sav', 'rb'))
+
+    prediction = model.predict([
+        [severity,affected,magnitude,c_x,c_y]
+    ])
+    return prediction
