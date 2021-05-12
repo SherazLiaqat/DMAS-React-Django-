@@ -298,7 +298,7 @@ def Affectedgraph(Affecteds,year,Affected_label):
 
 @api_view(['GET','POST'])
 def Earthquake_Deaths(request):
-    Type,Asia,Africa,Americas,Europe,Oceania=0
+    Type,Asia,Africa,Americas,Europe,Oceania=0,0,0,0,0,0
     if request.method=='POST':
         Earthquake_Type= request.data.get('Earthquake_Type')
         Continent= request.data.get('Continent')
@@ -319,7 +319,8 @@ def Earthquake_Deaths(request):
             Oceania=1
         print(Continent)
         Dead = Earthquake_Dead_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude)
-        result = {"Estimation":Dead[0],"Lat":Latitude,"Long":Longitude}
+        range,value = death_range(Dead[0])
+        result = {"Estimation":Dead[0],"Lat":Latitude,"Long":Longitude,"chart":{"range":range,"value":value}}
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
@@ -327,7 +328,7 @@ def Earthquake_Deaths(request):
 
 @api_view(['GET','POST'])
 def Earthquake_Injured(request):
-    Type,Asia,Africa,Americas,Europe,Oceania=0
+    Type,Asia,Africa,Americas,Europe,Oceania=0,0,0,0,0,0
     if request.method=='POST':
         print('This is post')
         Earthquake_Type= request.POST['Earthquake_Type']
@@ -349,7 +350,8 @@ def Earthquake_Injured(request):
             Oceania=1
         print(Continent)
         Injured = Earthquake_Injured_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude)
-        result = {"Estimation":Injured[0],"Lat":Latitude,"Long":Longitude}
+        range,value = Injured_range(Injured[0])
+        result = {"Estimation":Injured[0],"Lat":Latitude,"Long":Longitude,"chart":{"range":range,"value":value}}
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
@@ -365,7 +367,8 @@ def Earthquake_Affected(request):
         Latitude= request.POST['Latitude']
         Longitude= request.POST['Longitude']
         Affected = Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude)
-        result = {"Estimation":Affected[0],"Lat":Latitude,"Long":Longitude}
+        range,value = Affected_range(Affected[0])
+        result = {"Estimation":Affected[0],"Lat":Latitude,"Long":Longitude,"chart":{"range":range,"value":value}}
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
@@ -404,7 +407,8 @@ def Flood_Deaths(request):
         c_x= request.data.get('Centroid X')
         c_y= request.data.get('Centroid Y')
         Dead = Flood_Dead_Predictions(severity,affected,magnitude,c_x,c_y)
-        result = {"Estimation":Dead[0],"Lat":Latitude,"Long":Longitude}
+        range,value = death_range(Dead[0])
+        result = {"Estimation":Dead[0],"Lat":c_x,"Long":c_y,"chart":{"range":range,"value":value}}
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
@@ -418,7 +422,8 @@ def Flood_Displaced(request):
         c_x= request.data.get('Centroid X')
         c_y= request.data.get('Centroid Y')
         Displaced = Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y)
-        result = {"Estimation":Displaced[0],"Lat":Latitude,"Long":Longitude}
+        range,value = death_range(Affected_range[0])
+        result = {"Estimation":Displaced[0],"Lat":c_x,"Long":c_y,"chart":{"range":range,"value":value}}
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
@@ -437,3 +442,59 @@ def Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y):
         [severity,affected,magnitude,c_x,c_y]
     ])
     return prediction
+
+
+#get range by estmated result
+def death_range(result):
+    if result == "Low":
+        range = "0 to 10"
+        value = 10
+    elif result == "Medium":
+        range = "0 to 30"
+        value = 30
+    elif result == "High":
+        range = "0 to 50"
+        value = 50
+    elif result=="Very High":
+        range = "0 to 100"
+        value = 100
+    else:
+        range = "more than 100"
+        value = 200
+    return range,value
+
+def Injured_range(result):
+    if result == "Low":
+        range = "0 to 20"
+        value = 20
+    elif result == "Medium":
+        range = "0 to 50"
+        value = 50
+    elif result == "High":
+        range = "0 to 100"
+        value = 100
+    elif result=="Very High":
+        range = "0 to 200"
+        value = 200
+    else:
+        range = "more than 200"
+        value = 300
+    return range,value
+
+def Affected_range(result):
+    if result == "Low":
+        range = "0 to 50"
+        value = 50
+    elif result == "Medium":
+        range = "0 to 100"
+        value = 100
+    elif result == "High":
+        range = "0 to 200"
+        value = 200
+    elif result=="Very High":
+        range = "0 to 300"
+        value = 300
+    else:
+        range = "more than 300"
+        value = 400
+    return range,value

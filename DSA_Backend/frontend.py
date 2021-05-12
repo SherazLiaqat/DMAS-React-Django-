@@ -30,7 +30,7 @@ def search_blog(slug):
     r = requests.post(url = URL, headers = headers, data = json_data)
     data = r.json()
     print(data)
-search_blog("ML")
+#search_blog("ML")
 
 #to get news
 def news(page):
@@ -88,3 +88,16 @@ def contact():
     data = r.json()
     print(data)
 #contact()
+
+
+#Estimation
+def estimate():
+    URL = "http://127.0.0.1:8000/Earthquake_Deaths/"
+    data = {"Continent":"Asia","Earthquake_Type":"Ground_Movement","Magnitude":5.6,"Latitude":23,"Longitude":43}
+    json_data = json.dumps(data)
+    headers = {'Content-Type': 'application/json'}
+    r = requests.post(url = URL, headers=headers, data = json_data)
+    #response msg
+    data = r.json()
+    print(data)
+estimate()
