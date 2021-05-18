@@ -67,6 +67,7 @@ class Contact extends React.Component {
             <h4 className="Header"> HAVE ANY QUERY?</h4>
             <h1 className="Header2"> Contact Us</h1>
             <p className='intro'>Please complete the form below to contact us. We will do our best to get back to you as soon as possible!</p>
+            <div className='Contact-Div-Location'>
             <div className='divlocation'>
         <h1 className='contactform-label'><MdLocationOn />Locate Us</h1>
       <p className='div-paragraph'> UNIVERSITY OF GUJRAT SIALKOT CAMPUS</p>
@@ -82,6 +83,7 @@ class Contact extends React.Component {
         <p className='div-paragraph'> example@gmail.com</p>
                  
       </div><br/>
+      </div>
       <div className='contact-detail'>
             <div className='form-inputs1'>
         <label className='form-label1'><FaUserAlt />Your Name*</label>

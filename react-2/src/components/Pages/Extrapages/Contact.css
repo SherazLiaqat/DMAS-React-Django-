@@ -54,6 +54,10 @@
   align-items: center;
   width: 90%;
 }
+.Contact-Div-Location{
+  display: flex;
+  justify-content: center;
+}
 .divlocation {
   display: inline-table;
 
