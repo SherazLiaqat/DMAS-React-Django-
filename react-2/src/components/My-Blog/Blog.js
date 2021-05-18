@@ -8,13 +8,40 @@ import img11 from "../images/img-11.jpg";
 import img9 from "../images/img-9.Jpg";
 import img12 from "../images/img-12.jpg";
 import img6 from "../images/img-6.jpg";
-const Blog = () => {
+class Blog extends React.Component {
+  state = {
+    loading: true,
+    person: null,
+  };
+  async componentDidMount() {
+    const url =
+      "http://127.0.0.1:8000/bloghome/1";
+    const response = await fetch(url);
+    const data = await response.json();
+
+
+    this.setState({ person: data, loading: false });
+  }
+  render(){
+    if (this.state.loading) {
+      return <div className="loading"> Loading...</div>;
+    }
+
+    if (!this.state.person) {
+      return <div>didn't get a person</div>;
+    }
+    const elements = [0, 1,2,3,4];
   return (
     <>
+   
       <section className="container">
         <h1>BLOG</h1>
+        {elements.map((i, index) => {
+          return (
         <div className="site-content">
+       
           <div className="posts">
+
             <div
               className="post-content"
               data-aos="zoom-in"
@@ -54,46 +81,17 @@ const Blog = () => {
               </div>
             </div>
             <hr />
-            <div
-              className="post-content"
-              data-aos="zoom-in"
-              data-aos-delay={200}
-            >
-              <div className="post-image">
-                <div>
-                  <img src={blog4} className="imgg" alt="blog1" />
-                </div>
-                <div className="post-info flex-row">
-                  <span>
-                    <i className="fas fa-user text-gray" />
-                    &nbsp;&nbsp;Admin
-                  </span>
-                  <span>
-                    <i className="fas fa-calendar-alt text-gray" />
-                    &nbsp;&nbsp;January 16, 2019
-                  </span>
-                  <span>7 Commets</span>
-                </div>
-              </div>
-              <div className="post-title">
-                <a href="">
-                  Why should boys have all the fun? it's the women who are
-                  making india an alcohol-loving contry
-                </a>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                  voluptas deserunt beatae adipisci iusto totam placeat corrupti
-                  ipsum, tempora magnam incidunt aperiam tenetur a nobis,
-                  voluptate, numquam architecto fugit. Eligendi quidem ipsam
-                  ducimus minus magni illum similique veniam tempore unde?
-                </p>
-                <button className="btn post-btn">
-                  Read More &nbsp; <i className="fas fa-arrow-right" />
-                </button>
-              </div>
-            </div>
+           
           </div>
-          <aside className="sidebar">
+         
+          
+          </div>
+           );
+          })}
+          <section className="container">
+          <div className="site-content">
+            
+        <aside className="sidebar">
             <div className="category">
               <h2>Category</h2>
               <ul className="category-list">
@@ -201,7 +199,9 @@ const Blog = () => {
               </div>
             </div>
           </aside>
-          <div className="pagination flex-row">
+          </div>
+          </section>
+        <section className="pagination flex-row">
             <a href="#">
               <i className="fas fa-chevron-left" />
             </a>
@@ -217,11 +217,12 @@ const Blog = () => {
             <a href="#">
               <i className="fas fa-chevron-right" />
             </a>
-          </div>
-        </div>
+            
+          </section>
       </section>
+
     </>
   );
-};
+}};
 
 export default Blog;

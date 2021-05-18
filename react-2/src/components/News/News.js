@@ -5,7 +5,7 @@ import img2 from "../images/img-2.jpg";
 import blog4 from "../images/blog4.png";
 import Pagination from "./Pagination";
 import "./News.css";
-const showperpage=5;
+const showperpage=3;
 
 export default class News extends React.Component {
   state = {
@@ -20,7 +20,7 @@ export default class News extends React.Component {
 
   async componentDidMount() {
     const url =
-      "http://127.0.0.1:8000/news/2";
+      "http://127.0.0.1:8000/news/3";
     const response = await fetch(url);
     const data = await response.json();
 
@@ -36,7 +36,7 @@ export default class News extends React.Component {
     if (!this.state.person) {
       return <div>didn't get a person</div>;
     }
-    const elements = [0, 1, 2, 3, 4,5,6,7,8,9];
+    const elements = [0, 1, 2, 3,4];
   const onpaginationchange=(paginationstart,paginationend)=>{
     this.setState({paginationstart:paginationstart,paginationend:paginationend})
    
