@@ -4,45 +4,17 @@ import blog1 from "../images/blog1.png";
 import img2 from "../images/img-2.jpg";
 import img4 from "../images/img-4.jpg";
 import blog4 from "../images/blog4.png";
-
-class Blog extends React.Component {
-  state = {
-    loading: true,
-    person: null,
-  };
-  async componentDidMount() {
-    const url =
-      "http://127.0.0.1:8000/bloghome/1";
-    const response = await fetch(url);
-    const data = await response.json();
-
-
-    this.setState({ person: data, loading: false });
-  }
-  render()
-    {
-     
-      if (this.state.loading) {
-        return <div className="loading"> Loading...</div>;
-      }
-  
-      if (!this.state.person) {
-        return <div>didn't get a person</div>;
-      }
-      const elements = [0, 1, 2, 3, 4];
-    return(
-      <>
-     
-    
-    
+import img11 from "../images/img-11.jpg";
+import img9 from "../images/img-9.Jpg";
+import img12 from "../images/img-12.jpg";
+import img6 from "../images/img-6.jpg";
+const Blog = () => {
+  return (
+    <>
       <section className="container">
-        
         <h1>BLOG</h1>
         <div className="site-content">
-        {elements.map((i, index) => {
-  return (
           <div className="posts">
-            
             <div
               className="post-content"
               data-aos="zoom-in"
@@ -59,28 +31,68 @@ class Blog extends React.Component {
                   </span>
                   <span>
                     <i className="fas fa-calendar-alt text-gray" />
-                    &nbsp;&nbsp;{this.state.person[i].time}
+                    &nbsp;&nbsp;January 14, 2019
                   </span>
-                  
+                  <span>2 Commets</span>
                 </div>
               </div>
               <div className="post-title">
                 <a href="">
-                {this.state.person[i].title}
+                  Why should boys have all the fun? it's the women who are
+                  making india an alcohol-loving contry
                 </a>
                 <p>
-                {this.state.person[i].short_desc}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                  voluptas deserunt beatae adipisci iusto totam placeat corrupti
+                  ipsum, tempora magnam incidunt aperiam tenetur a nobis,
+                  voluptate, numquam architecto fugit. Eligendi quidem ipsam
+                  ducimus minus magni illum similique veniam tempore unde?
                 </p>
-    
                 <button className="btn post-btn">
                   Read More &nbsp; <i className="fas fa-arrow-right" />
                 </button>
               </div>
             </div>
             <hr />
-                      </div>
-                      );
-                    })}
+            <div
+              className="post-content"
+              data-aos="zoom-in"
+              data-aos-delay={200}
+            >
+              <div className="post-image">
+                <div>
+                  <img src={blog4} className="imgg" alt="blog1" />
+                </div>
+                <div className="post-info flex-row">
+                  <span>
+                    <i className="fas fa-user text-gray" />
+                    &nbsp;&nbsp;Admin
+                  </span>
+                  <span>
+                    <i className="fas fa-calendar-alt text-gray" />
+                    &nbsp;&nbsp;January 16, 2019
+                  </span>
+                  <span>7 Commets</span>
+                </div>
+              </div>
+              <div className="post-title">
+                <a href="">
+                  Why should boys have all the fun? it's the women who are
+                  making india an alcohol-loving contry
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                  voluptas deserunt beatae adipisci iusto totam placeat corrupti
+                  ipsum, tempora magnam incidunt aperiam tenetur a nobis,
+                  voluptate, numquam architecto fugit. Eligendi quidem ipsam
+                  ducimus minus magni illum similique veniam tempore unde?
+                </p>
+                <button className="btn post-btn">
+                  Read More &nbsp; <i className="fas fa-arrow-right" />
+                </button>
+              </div>
+            </div>
+          </div>
           <aside className="sidebar">
             <div className="category">
               <h2>Category</h2>
@@ -208,11 +220,8 @@ class Blog extends React.Component {
           </div>
         </div>
       </section>
-    
-    
-  
-
-  </>  );
-}} 
+    </>
+  );
+};
 
 export default Blog;
