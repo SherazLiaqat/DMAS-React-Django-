@@ -65,30 +65,26 @@ export default class News extends React.Component {
                           &nbsp;&nbsp;
                           {this.state.person.News[i].country}
                         </span>
-                        {/* <span>
+                        <span>
                           <i className="fas fa-calendar-alt text-gray" />
                           &nbsp;&nbsp;{" "}
-                          {this.state.person[i].date}
+                          {this.state.person.News[i].date}
                         </span>
                         <span>
-                        {this.state.person[i].country}
+                        Status: &nbsp;&nbsp;{this.state.person.News[i].status}
                         </span>
                         <span>
-                        {this.state.person[i].country}
-                        </span> */}
+                        Type: &nbsp;&nbsp;{this.state.person.News[i].types}
+                        </span> 
                       </div>
                     </div>
                     <div className="post-title-news">
-                      {/* <a href="">
-                      {this.state.person[i].country}
-                      </a> */}
+                      <a href="">
+                     HEADLINE: {this.state.person.News[i].headline}
+                      </a> 
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Neque voluptas deserunt beatae adipisci iusto totam
-                        placeat corrupti ipsum, tempora magnam incidunt aperiam
-                        tenetur a nobis, voluptate, numquam architecto fugit.
-                        Eligendi quidem ipsam ducimus minus magni illum
-                        similique veniam tempore unde?
+                      {this.state.person.News[i].description}
+                        
                       </p>
 
                       <button className="btn post-btn-news">
