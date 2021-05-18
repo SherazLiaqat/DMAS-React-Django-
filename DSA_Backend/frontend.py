@@ -42,6 +42,7 @@ def news(page):
     for i in range(len(data['News'])):
         print(data['News'][i]['headline'])
         print(data['News'][i]['date'])
+news(1)
 
 #to get flood live news
 def floodlive(page):
@@ -100,4 +101,4 @@ def estimate():
     #response msg
     data = r.json()
     print(data)
-estimate()
+#estimate()

@@ -5,7 +5,7 @@ import img2 from "../images/img-2.jpg";
 import blog4 from "../images/blog4.png";
 import Pagination from "./Pagination";
 import "./News.css";
-const showperpage=3;
+const showperpage=5;
 
 export default class News extends React.Component {
   state = {
@@ -20,11 +20,12 @@ export default class News extends React.Component {
 
   async componentDidMount() {
     const url =
-      "https://api.reliefweb.int/v1/disasters?appname=rwint-user-0&profile=full&preset=latest&slim=1";
+      "http://127.0.0.1:8000/news/2";
     const response = await fetch(url);
     const data = await response.json();
 
-    this.setState({ person: data.data, loading: false });
+
+    this.setState({ person: data, loading: false });
   }
 
   render() {
@@ -35,7 +36,7 @@ export default class News extends React.Component {
     if (!this.state.person) {
       return <div>didn't get a person</div>;
     }
-    const elements = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const elements = [0, 1, 2, 3, 4,5,6,7,8,9];
   const onpaginationchange=(paginationstart,paginationend)=>{
     this.setState({paginationstart:paginationstart,paginationend:paginationend})
    
@@ -62,25 +63,25 @@ export default class News extends React.Component {
                         <span>
                           <i className="fas fa-map-marker-alt text-gray" />
                           &nbsp;&nbsp;
-                          {this.state.person[i].fields.country[0].name}
+                          {this.state.person.News[i].country}
                         </span>
-                        <span>
+                        {/* <span>
                           <i className="fas fa-calendar-alt text-gray" />
                           &nbsp;&nbsp;{" "}
-                          {this.state.person[i].fields.date.created}
+                          {this.state.person[i].date}
                         </span>
                         <span>
-                          Type: {this.state.person[i].fields.primary_type.name}
+                        {this.state.person[i].country}
                         </span>
                         <span>
-                          Status: {this.state.person[i].fields.status}
-                        </span>
+                        {this.state.person[i].country}
+                        </span> */}
                       </div>
                     </div>
                     <div className="post-title-news">
-                      <a href="">
-                        Headline:&nbsp;&nbsp;{this.state.person[i].fields.name}
-                      </a>
+                      {/* <a href="">
+                      {this.state.person[i].country}
+                      </a> */}
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Neque voluptas deserunt beatae adipisci iusto totam
