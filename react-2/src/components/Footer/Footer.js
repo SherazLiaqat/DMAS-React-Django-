@@ -44,7 +44,7 @@ function Footer() {
             <h2>Contact Us</h2>
             <Link to='/Eartquakeinfo'>Contact</Link>
             <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
+            <Link to='/Demo'>Destinations</Link>
             <Link to='/'>Sponsorships</Link>
           </div>
         </div>

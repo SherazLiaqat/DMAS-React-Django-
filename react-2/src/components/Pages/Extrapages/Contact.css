@@ -27,6 +27,10 @@
 
   text-align: center;
 }
+.contact-detail{
+  justify-content: center;
+  display: flex
+}
 .form-inputs1 {
   margin: 20px;
   margin-left: 20px;
@@ -40,6 +44,11 @@
   overflow: hidden;
   text-decoration: none;
   width: 38rem;
+}
+.contact-detail-2{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 .form-inputs2 {
   margin: 20px;
@@ -203,18 +212,17 @@
     text-align: center;
   }
   .contact-detail {
-    margin-left: 1.5rem;
+    display: grid;
+    
   }
+  .Contact-Div-Location {
+    display: grid;
+    
+}
   .form-inputs1 {
-    display: inline-table;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
+  
 
-    width: 80%;
+    width: 100%;
   }
   .divlocation {
     display: inline-table;
@@ -226,14 +234,9 @@
     height: 4rem;
   }
   .form-inputs2 {
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
+    
     align-items: center;
-    width: 8%;
+    width: 100%;
   }
   .contactButton {
     cursor: pointer;

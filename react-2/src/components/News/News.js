@@ -5,7 +5,7 @@ import img2 from "../images/img-2.jpg";
 import blog4 from "../images/blog4.png";
 import Pagination from "./Pagination";
 import "./News.css";
-const showperpage=3;
+const showperpage=5;
 
 export default class News extends React.Component {
   state = {
@@ -20,7 +20,7 @@ export default class News extends React.Component {
 
   async componentDidMount() {
     const url =
-      "http://127.0.0.1:8000/news/3";
+      "http://127.0.0.1:8000/news/1";
     const response = await fetch(url);
     const data = await response.json();
 

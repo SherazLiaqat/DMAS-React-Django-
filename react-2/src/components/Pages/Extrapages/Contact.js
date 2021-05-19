@@ -107,8 +107,9 @@ class Contact extends React.Component {
           onChange={(event)=>{this.setState({username:event.target.value})}}/>
          
           <p>{this.state.emailerror}</p>
-                 
+          </div>      
       </div>
+      <div className='contact-detail-2'>
       <div className='form-inputs2'>
         <label className='form-label1'><MdEmail/>Your Subject</label>
         <input
@@ -120,8 +121,8 @@ class Contact extends React.Component {
           onChange={(event)=>{this.setState({username:event.target.value})}}/>
          
           <p>{this.state.subjecterror}</p>
-                 
-      </div>
+          </div>        
+     
       <div className='form-inputs2'>
         <label className='form-label1'><BiMessageRounded/>Your Message</label>
         <input
@@ -133,7 +134,7 @@ class Contact extends React.Component {
          
           <p>{this.state.messageerror}</p>
           </div>      
-      </div>
+          </div>
       <button className='contactButton' onClick={()=>this.submit()}> Contact Us</button> 
       <p className ='last'>Thank You! For Reaching Out We Will get back to you as soon as Possible.</p><br/>
         </div>

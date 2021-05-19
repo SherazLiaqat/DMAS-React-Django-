@@ -49,7 +49,7 @@ import MyNews from "./components/News/News";
 import { Scroller } from "./components/Scroller";
 import Hero from "./components/My-Blog/Hero";
 import Newsinfo from './components/News/Newsinfo';
-
+import Demo from './components/Demo';
 function App() {
   return (
     <>
@@ -99,7 +99,7 @@ function App() {
           <Route path="/InjuredResult" component={InjuredResult} exact />
           <Route path="/DeadResult" component={DeadResult} exact />
           <Route path="/DisplacedResult" component={DisplacedResult} exact />
-          
+          <Route path="/Demo" component={Demo} />
         </Switch>
         <Footer />
       </Router>
