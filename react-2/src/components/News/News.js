@@ -5,7 +5,7 @@ import img2 from "../images/img-2.jpg";
 import blog4 from "../images/blog4.png";
 import Pagination from "./Pagination";
 import "./News.css";
-const showperpage=5;
+const showperpage=2;
 
 export default class News extends React.Component {
   state = {

@@ -54,7 +54,7 @@ class Blog extends React.Component {
                 <div className="post-info flex-row">
                   <span>
                     <i className="fas fa-user text-gray" />
-                    &nbsp;&nbsp;Admin
+                    &nbsp;&nbsp;Adminn
                   </span>
                   <span>
                     <i className="fas fa-calendar-alt text-gray" />
