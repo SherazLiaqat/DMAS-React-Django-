@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from '../App.css';
-
+let p=0;
 class App extends Component {
 
 
@@ -18,22 +18,16 @@ class App extends Component {
 
 
   makeHttpRequestWithPage = async pageNumber => {
-    const response = await fetch(`https://reqres.in/api/users?page=${pageNumber}`, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        
-      },
-    });
+    const response = await fetch(`http://127.0.0.1:8000/bloghome/${p+pageNumber}`);
+    p=p+pageNumber;
 
     const data = await response.json();
 console.log(data);
     this.setState({
-      users: data.data,
-      total: data.total,
-      per_page: data.per_page,
-      current_page: data.page
+      users: data,
+      total: 2,
+      per_page: 5,
+      current_page: 1
     });
   }
 
@@ -43,10 +37,10 @@ console.log(data);
 
     if (this.state.users !== null) {
       users = this.state.users.map(user => (
-        <tr key={user.id}>
-          <td>{user.id}</td>
-          <td>{user.first_name}</td>
-          <td>{user.last_name}</td>
+        <tr>
+          <td>{user.title}</td>
+          <td>{user.short_desc}</td>
+          <td>{user.time}</td>
         </tr>
       ));
     }
@@ -87,8 +81,8 @@ console.log(data);
 
 
         <div className={styles.pagination}>
-          <span onClick={() => this.makeHttpRequestWithPage(1)}>&laquo;</span>
-          {renderPageNumbers}
+          <span onClick={() => this.makeHttpRequestWithPage(-1)}>&laquo;</span>
+          {p}
           <span onClick={() => this.makeHttpRequestWithPage(1)}>&raquo;</span>
         </div>
 
