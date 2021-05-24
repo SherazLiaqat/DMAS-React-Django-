@@ -2,7 +2,7 @@ import React from "react";
 import "./Blog.css";
 import blog1 from "../images/blog1.png";
 import img2 from "../images/img-2.jpg";
-;
+
 class Blog extends React.Component {
   state = {
     loading: true,

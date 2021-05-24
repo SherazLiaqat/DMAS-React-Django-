@@ -83,7 +83,7 @@ export default class News extends React.Component {
                      HEADLINE: {this.state.person.News[i].headline}
                       </a> 
                       <p>
-                      {this.state.person.News[i].description}
+                      {this.state.person.News[i].description.slice(0,258)}
                         
                       </p>
 

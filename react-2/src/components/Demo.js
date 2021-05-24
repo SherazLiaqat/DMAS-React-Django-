@@ -1,5 +1,8 @@
+import { Button } from '@material-ui/core';
 import React, { Component } from 'react';
 import styles from '../App.css';
+import blog1 from "../components/images/blog1.png";
+//import  Pagination from './News/Pagination';
 let p=0;
 class App extends Component {
 
@@ -37,11 +40,49 @@ console.log(data);
 
     if (this.state.users !== null) {
       users = this.state.users.map(user => (
-        <tr>
-          <td>{user.title}</td>
-          <td>{user.short_desc}</td>
-          <td>{user.time}</td>
-        </tr>
+        <div className="site-content">
+       
+        <div className="posts">
+
+          <div
+            className="post-content"
+            data-aos="zoom-in"
+            data-aos-delay={200}
+          >
+            <div className="post-image">
+              <div>
+                <img src={blog1} className="imgg" alt="blog1" />
+              </div>
+              <div className="post-info flex-row">
+                <span>
+                  <i className="fas fa-user text-gray" />
+                  &nbsp;&nbsp;Admin
+                </span>
+                <span>
+                  <i className="fas fa-calendar-alt text-gray" />
+                  &nbsp;&nbsp;{user.time}
+                </span>
+                <span>2 Commets</span>
+              </div>
+            </div>
+            <div className="post-title">
+              <a href="">
+              {user.title}
+              </a>
+              <p>
+              {user.short_desc}
+              </p>
+              <button className="btn post-btn">
+                Read More &nbsp; <i className="fas fa-arrow-right" />
+              </button>
+            </div>
+          </div>
+          <hr />
+         
+        </div>
+       
+        
+        </div>
       ));
     }
 
@@ -53,7 +94,7 @@ console.log(data);
 
 
       renderPageNumbers = pageNumbers.map(number => {
-        let classes = this.state.current_page === number ? styles.active : '';
+        let classes = this.state.current_page === number ? 'active' : '';
 
         return (
           <span key={number} className={classes} onClick={() => this.makeHttpRequestWithPage(number)}>{number}</span>
@@ -64,28 +105,35 @@ console.log(data);
     return (
 
 
-      <div className={styles.app}>
-
-        <table className={styles.table}>
-          <thead>
-            <tr>
-              <th>S/N</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-            </tr>
-          </thead>
-          <tbody>
+    <div>
             {users}
-          </tbody>
-        </table>
+         
+            
 
-
-        <div className={styles.pagination}>
-          <span onClick={() => this.makeHttpRequestWithPage(-1)}>&laquo;</span>
+        <div className="pagination2">
+          <button  className="arrow-btn" onClick={() => this.makeHttpRequestWithPage(-1)}> <i className="fas fa-chevron-left"/></button>
+          
           {p}
-          <span onClick={() => this.makeHttpRequestWithPage(1)}>&raquo;</span>
+          <button className="arrow-btn" onClick={() => this.makeHttpRequestWithPage(1)}><i className="fas fa-chevron-right"/></button> 
         </div>
-
+        <section className="pagination flex-row">
+            <a href="#">
+              <i className="fas fa-chevron-left" />
+            </a>
+            <a href="#" className="pages">
+              1
+            </a>
+            <a href="#" className="pages">
+              2
+            </a>
+            <a href="#" className="pages">
+              3
+            </a>
+            <a href="#">
+              <i className="fas fa-chevron-right" />
+            </a>
+            
+          </section>
       </div>
     );
   }
