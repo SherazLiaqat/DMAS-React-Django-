@@ -3,6 +3,7 @@
   margin: 0px;
 }
 .Header {
+  padding-top: 50px;
   color: red;
   font-size: 20px;
   text-align: center;
@@ -43,7 +44,7 @@
   border: #f7f7f7 2px solid;
   overflow: hidden;
   text-decoration: none;
-  width: 38rem;
+  width: 100%;
 }
 .contact-detail-2{
   justify-content: center;
@@ -61,7 +62,7 @@
   overflow: hidden;
   text-decoration: none;
   align-items: center;
-  width: 90%;
+  width: 100%;
 }
 .Contact-Div-Location{
   display: flex;
@@ -78,7 +79,7 @@
   overflow: hidden;
   text-decoration: none;
   align-items: center;
-  width: 25rem;
+  width:100%;
   height: 8rem;
 }
 
@@ -108,9 +109,14 @@
   width: 33.33333333333333%;
   margin-left: 1.2rem;
 }
+@media screen and (max-width: 1366px) {
+.intro{
+  margin-left: 22rem;
+}
+}
 @media screen and (max-width: 852px) {
   .Header {
-    margin: 20px;
+    
     color: red;
     font-size: 20px;
     text-align: center;
@@ -135,41 +141,22 @@
   }
   .form-inputs1 {
     margin: 20px;
-    margin-left: 20px;
-    display: inline-table;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    width: 30.4rem;
+   
+    width: 100%;
   }
   .form-inputs2 {
     margin: 20px;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    align-items: center;
-    width: 40.4rem;
+   
+    width: 100%;
   }
   .divlocation {
     display: inline-table;
 
     margin: 20px;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    align-items: center;
-    width: 30rem;
+   
+    width: 100%;
     height: 8rem;
-    margin-left: 9rem;
+   
   }
 
   .contactButton {
@@ -212,7 +199,8 @@
     text-align: center;
   }
   .contact-detail {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     
   }
   .Contact-Div-Location {
