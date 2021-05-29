@@ -15,10 +15,12 @@ class Contact extends React.Component {
        email:"",
        subject:"",
        message:"",
+      
        usernameerror:"",
        emailerror:"",
        subjecterror:"",
-       messagaerror:""
+       messagaerror:"",
+      
      }}
      valid(){
       if(!this.state.username.trim("")&&!this.state.email.includes("@")&& !this.state.subject.trim("") && !this.state.message.trim(""))
