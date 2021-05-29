@@ -20,8 +20,8 @@ class Contact(models.Model):
     sno = models.AutoField(primary_key=True)
     name = models.CharField(max_length=40)
     email = models.CharField(max_length=40)
-    phone = models.CharField(max_length=12)
-    desc = models.TextField()
+    subject = models.CharField(max_length=20)
+    massage = models.TextField()
     time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

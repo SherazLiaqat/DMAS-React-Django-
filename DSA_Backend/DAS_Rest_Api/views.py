@@ -51,7 +51,7 @@ def news(request, page):
     data = list()
     for i in range(len(news)):
         headline = str(news['data'][i]['fields']['name'])
-        discription = news['data'][i]['fields']['description-html']
+        discription = news['data'][i]['fields']['description']
         country = news['data'][i]['fields']['country'][0]['name']
         date = str(news['data'][i]['fields']['date']['created'])
         date = date.split("T")
