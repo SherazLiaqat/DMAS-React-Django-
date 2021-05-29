@@ -110,26 +110,20 @@ console.log(data);
          
             
 
-        <div className="pagination2">
-          <button  className="arrow-btn" onClick={() => this.makeHttpRequestWithPage(-1)}> <i className="fas fa-chevron-left"/></button>
-          
-          {p}
-          <button className="arrow-btn" onClick={() => this.makeHttpRequestWithPage(1)}><i className="fas fa-chevron-right"/></button> 
-        </div>
         <section className="pagination flex-row">
-            <a href="#">
+            <a href="#" onClick={() => this.makeHttpRequestWithPage(-1)}>
               <i className="fas fa-chevron-left" />
             </a>
-            <a href="#" className="pages">
-              1
+            <a href="#" onClick={() => this.makeHttpRequestWithPage(1)} className="pages">
+              {p+1}
             </a>
-            <a href="#" className="pages">
-              2
+            <a href="#" onClick={() => this.makeHttpRequestWithPage(2)} className="pages">
+            {p+2}
             </a>
-            <a href="#" className="pages">
-              3
+            <a href="#" onClick={() => this.makeHttpRequestWithPage(3)} className="pages">
+            {p+3}
             </a>
-            <a href="#">
+            <a href="#" onClick={() => this.makeHttpRequestWithPage(1)}>
               <i className="fas fa-chevron-right" />
             </a>
             

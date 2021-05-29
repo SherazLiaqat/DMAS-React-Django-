@@ -14,6 +14,11 @@ def blog(request, page):
             no_of_posts = 5
             blogs = Blog.objects.all()
             blogs = blogs[(page-1)*no_of_posts: page*no_of_posts]
+            for b in range(len(blogs)):
+                date = str(blogs[b].time)
+                date = date.split(" ")
+                blogs[b].time = date[0]
+            print(blogs[0].time)
             serializer = BlogModelSerializer(blogs, many = True)
             return Response(serializer.data)
         data = {'msg':'No more blogs!'}
