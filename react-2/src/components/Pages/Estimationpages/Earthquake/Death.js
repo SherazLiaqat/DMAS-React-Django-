@@ -4,39 +4,37 @@ import { Link } from "react-router-dom";
 import "./Death.css";
 
 const Death = () => {
-  {
+  
     /*  const [amount, setamount] = useState();
 
   const [amount2, setamount2] = useState();
   const [amount3, setamount3] = useState();
   const toFixed = 0.0;*/
-  }
+  
   const [Magnitude,setMagnitude]=useState("");
  const [Latitude,setLatitude]=useState("");
  const [Longitude,setLongitude]=useState("");
  const [Type,setType]=useState("");
  const [Continent,setContinent]=useState("");
- function saveData()
- {
-   console.warn(
-     {Magnitude,Latitude,Longitude,Type,Continent}
-   );
-   let data={Magnitude,Latitude,Longitude,Type,Continent}
- // console.warn(data);
-   fetch("http://127.0.0.1:8000/Earthquake_Deaths/", {
-     method: "POST",
-     headers: {
-       'Accept': 'application/json',
-       'Content-Type': 'application/json',
-     },
-     body:JSON.stringify(data)
-   }).then((resp)=>{
-     // console.warn("resp",resp);;
-     resp.json().then((result)=>{
-       console.warn("result",result)
-     })
-    })
- }
+ 
+ 
+ const contactinfo = async () => {
+  let formfield = new FormData();
+  formfield.append("Continent",Continent );
+  formfield.append("Earthquake_Type", Type);
+  formfield.append("Magnitude", Magnitude);
+  formfield.append("Latitude", Latitude);
+  formfield.append("Longitude", Longitude);
+
+ await axios({
+  method: "post",
+  url: "http://127.0.0.1:8000/Earthquake_Deaths/",
+  data: formfield,
+}).then((response) => {
+  console.log(response.data);
+  
+});
+}
   return (
     <>
       <div className="main">
@@ -45,19 +43,21 @@ const Death = () => {
         <label className="Change">Earthquake Type:</label>
         <select
           className="Changing"
-          onChange={(e) => setType(e.target.value)}
           id="Type"
+          name="Type"
           value={Type}
+          onChange={(e) => setType(e.target.value)}
         >
-          <option>Ground Movement</option>
+          <option>Ground_Movement</option>
           <option>Tsaunami</option>
         </select>
         <label className="Change">Choose a Continent:</label>
         <select
           className="Changing"
-          onChange={(e) => {setContinent(e.target.value)}}
           id="Continent"
+          name="Continent"
           value={Continent}
+          onChange={(e) => setContinent(e.target.value)}
         >
           <option>Asia</option>
           <option>Europe</option>
@@ -65,15 +65,16 @@ const Death = () => {
           <option>Africa</option>
           <option>Ocenia</option>
         </select>
-        <form >
+        
           <div className="form-inputs-Death">
             <label className="form-label">Magnitude:</label>
             <input
               className="Box"
               type="number"
-              onChange={(e) => {setMagnitude(e.target.value)}}
-              value={Magnitude}
               id="Magnitude"
+              name="Magnitude"
+              value={Magnitude}
+              onChange={(e) => setMagnitude(e.target.value)}
               /*   value={amount}
             onChange={(event) => setamount(event.target.value)}*/
               placeholder="Enter Magnitude..."
@@ -85,9 +86,10 @@ const Death = () => {
             <input
               className="Box2"
               type="number"
-              onChange={(e) => {setLatitude(e.target.value)}}
-              value={Latitude}
               id="Latitude"
+              name="Latitude"
+              value={Latitude}
+              onChange={(e) => setLatitude(e.target.value)}
               /*  value={amount2}
             onChange={(event) => setamount2(event.target.value)}*/
               placeholder="Enter Latitude..."
@@ -98,16 +100,18 @@ const Death = () => {
             <input
               className="Box3"
               type="number"
-              onChange={(e) => {setLongitude(e.target.value)}}
-              value={Longitude}
               id="Longitude"
+              name="Longitude"
+              value={Longitude}
+              onChange={(e) => setLongitude(e.target.value)}
+              
               /* value={amount3}
             onChange={(event) => setamount3(event.target.value)}*/
               placeholder="Enter Longitude..."
             />
           </div>
-          <button className="DeathButton-Earthquake" onClick={saveData}> Estimate</button>
-        </form>
+          <button className="DeathButton-Earthquake" onClick={contactinfo}> Estimate</button>
+        
        
       </div>
       {/*  <div className='side-div'>
@@ -121,6 +125,7 @@ const Death = () => {
           </div>*/}
     </>
   );
+        
 };
 
 export default Death;

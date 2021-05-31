@@ -3,9 +3,24 @@
  import Chart from 'chart.js';
  import csv from 'd3';
 class Blog extends React.Component {
+  
+  state = {
+    users: null,
+   
+  }
+
+ 
+  
   chart = null;
 
-  componentDidMount() {
+   async componentDidMount() {
+    const url =
+    "http://127.0.0.1:8000/Earthquake_Events/";
+  const response = await fetch(url);
+  const data = await response.json();
+
+
+  this.setState({ users: data });
     this.configureChart();
   }
 
@@ -18,7 +33,7 @@ class Blog extends React.Component {
         datasets: [
           {
             label: "Bar Dataset",
-            data: [75, 53, 75, 65, 80, 65, 80],
+            data: {data},
             
             type: "bar",
             backgroundColor: "#DE924B"
@@ -26,7 +41,7 @@ class Blog extends React.Component {
          
           {
             label: "Line Dataset 2",
-            data: [75, 53, 75, 65, 100, 60, 80, 50, 75, 55, 80, 65, 80],
+            data: {data},
             pointHoverRadius: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
             type: "line",
             backgroundColor:'black',
