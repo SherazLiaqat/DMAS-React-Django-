@@ -33,7 +33,7 @@ class Blog extends React.Component {
         datasets: [
           {
             label: "Bar Dataset",
-            data: {data},
+            data: this.state.users.data,
             
             type: "bar",
             backgroundColor: "#DE924B"
@@ -41,8 +41,7 @@ class Blog extends React.Component {
          
           {
             label: "Line Dataset 2",
-            data: {data},
-            pointHoverRadius: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            data: this.state.users.data,
             type: "line",
             backgroundColor:'black',
             fill: "empty",
@@ -51,20 +50,7 @@ class Blog extends React.Component {
            
           }
         ],
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec"
-        ]
+        labels:this.state.users.lebel
       },
       options: {
         elements: {

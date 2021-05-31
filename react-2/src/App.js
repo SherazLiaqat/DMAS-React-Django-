@@ -50,6 +50,7 @@ import { Scroller } from "./components/Scroller";
 import Hero from "./components/My-Blog/Hero";
 import Newsinfo from './components/News/Newsinfo';
 import Demo from './components/Demo';
+import Map from "./components/Map";
 function App() {
   return (
     <>
@@ -100,6 +101,7 @@ function App() {
           <Route path="/DeadResult" component={DeadResult} exact />
           <Route path="/DisplacedResult" component={DisplacedResult} exact />
           <Route path="/Demo" component={Demo} />
+          <Route path='/Map' component={Map} />
         </Switch>
         <Footer />
       </Router>

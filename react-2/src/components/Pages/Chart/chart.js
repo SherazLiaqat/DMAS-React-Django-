@@ -1,20 +1,32 @@
-import React, { useState,useEffect,row } from 'react'
+import React, { useState,useEffect,row,Component } from 'react'
 import { Pie, defaults } from 'react-chartjs-2';
 import "./Chart.css"
 import {csv} from 'd3';
 defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
 
-const BarChart = () => {
-  const[data,setdata]=useState([]);
-  useEffect(() => {
-    csv('Eathquake.csv',row).then(data=>{
-      setdata(data);
-    });
-    
-      
-    },[]);
+class BarChart  extends React.Component {
+  state = {
+    users: null,
+   
+  }
+
+ 
   
+  chart = null;
+
+   async componentDidMount() {
+    const url =
+    "http://127.0.0.1:8000/Earthquake_Events/";
+  const response = await fetch(url);
+  const data = await response.json();
+
+
+  this.setState({ users: data });
+  }
+
+  
+  render(){
   return (
     <div>
       <Pie className="pie"
@@ -74,6 +86,6 @@ const BarChart = () => {
       />
     </div>
   )
-}
+}}
 
 export default BarChart
