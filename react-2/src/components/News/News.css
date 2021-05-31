@@ -87,6 +87,10 @@
     color: white;
     text-decoration: none;
   }
+  .pagination-News{
+    justify-content: center;
+    display: flex;
+  }
   
  
   /* Side bar*/
