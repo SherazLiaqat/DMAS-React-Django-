@@ -7,6 +7,8 @@ urlpatterns = [
     path('Earthquake_Deaths/', views.Earthquake_Deaths),
     path('Earthquake_Injured/', views.Earthquake_Injured),
     path('Earthquake_Affected/', views.Earthquake_Affected),
+    path('Flood_Deaths/', views.Flood_Deaths),
+    path('Flood_Displaced/', views.Flood_Displaced),
     path('bloghome/<int:page>', views.blog),
     path('blogpost/<str:slug>', views.blogpost),
     path('news/<int:page>', views.news),

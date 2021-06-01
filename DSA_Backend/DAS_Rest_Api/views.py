@@ -402,7 +402,7 @@ def Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude):
     ])
     return prediction
 
-
+@api_view(['GET','POST'])
 def Flood_Deaths(request):
     if request.method=='POST':
         print('This is post')
@@ -418,6 +418,7 @@ def Flood_Deaths(request):
     res = {"msg":"Something is wrong!"}
     return Response(res)
 
+@api_view(['GET','POST'])
 def Flood_Displaced(request):
     if request.method=='POST':
         print('This is post')
