@@ -1,6 +1,6 @@
 import { map } from "d3-array";
 import React, { usestate } from "react";
-
+import {BeatLoader} from 'react-spinners';
 import Pagination from "./Pagination";
 import "./News.css";
 let p=0;
@@ -8,7 +8,7 @@ let p=0;
 export default class News extends React.Component {
   state = {
     users: null,
-   
+    loading: true,
   }
 
 
@@ -24,13 +24,18 @@ export default class News extends React.Component {
     const data = await response.json();
 console.log(data);
     this.setState({
-      users: data.News,
+      users: data.News,loading: false 
       
     });
   }
 
   render() {
-
+    if (!this.state.users) {
+      return <div className="loading">Loading
+     <BeatLoader/>
+     </div>;
+    }
+   
     let users, renderPageNumbers;
 
     if (this.state.users !== null) {
