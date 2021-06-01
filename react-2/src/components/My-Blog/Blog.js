@@ -11,9 +11,7 @@ class App extends Component {
 
   state = {
     users: null,
-    total: null,
-    per_page: null,
-    current_page: 1
+    
   }
 
 
@@ -30,9 +28,7 @@ class App extends Component {
 console.log(data);
     this.setState({
       users: data,
-      total: 2,
-      per_page: 5,
-      current_page: 1
+     
     });
   }
 
@@ -88,21 +84,7 @@ console.log(data);
       ));
     }
 
-    const pageNumbers = [];
-    if (this.state.total !== null) {
-      for (let i = 1; i <= Math.ceil(this.state.total / this.state.per_page); i++) {
-        pageNumbers.push(i);
-      }
-
-
-      renderPageNumbers = pageNumbers.map(number => {
-        let classes = this.state.current_page === number ? 'active' : '';
-
-        return (
-          <span key={number} className={classes} onClick={() => this.makeHttpRequestWithPage(number)}>{number}</span>
-        );
-      });
-    }
+   
 
     return (
 
@@ -111,25 +93,26 @@ console.log(data);
             {users}
          
             
-
+         <div className="pagination-News">
         <section className="pagination flex-row">
             <a href="#" onClick={() => this.makeHttpRequestWithPage(-1)}>
               <i className="fas fa-chevron-left" />
             </a>
+            <a href="#" onClick={() => this.makeHttpRequestWithPage(p)} className="pages">
+              {p}
+            </a>
             <a href="#" onClick={() => this.makeHttpRequestWithPage(1)} className="pages">
-              {p+1}
+            {p+1}
             </a>
             <a href="#" onClick={() => this.makeHttpRequestWithPage(2)} className="pages">
             {p+2}
-            </a>
-            <a href="#" onClick={() => this.makeHttpRequestWithPage(3)} className="pages">
-            {p+3}
             </a>
             <a href="#" onClick={() => this.makeHttpRequestWithPage(1)}>
               <i className="fas fa-chevron-right" />
             </a>
             
           </section>
+          </div>
       </div>
     );
   }
