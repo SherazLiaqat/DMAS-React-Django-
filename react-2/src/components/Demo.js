@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core';
 import React, { Component } from 'react';
 import styles from '../App.css';
+import "../components/News/News.css"
 import blog1 from "../components/images/blog1.png";
 //import  Pagination from './News/Pagination';
 let p=0;
@@ -9,9 +10,7 @@ class App extends Component {
 
   state = {
     users: null,
-    total: null,
-    per_page: null,
-    current_page: 1
+   
   }
 
 
@@ -21,16 +20,14 @@ class App extends Component {
 
 
   makeHttpRequestWithPage = async pageNumber => {
-    const response = await fetch(`http://127.0.0.1:8000/bloghome/${p+pageNumber}`);
+    const response = await fetch(`http://127.0.0.1:8000/news/${p+pageNumber}`);
     p=p+pageNumber;
 
     const data = await response.json();
 console.log(data);
     this.setState({
-      users: data,
-      total: 2,
-      per_page: 5,
-      current_page: 1
+      users: data.News,
+      
     });
   }
 
@@ -40,94 +37,85 @@ console.log(data);
 
     if (this.state.users !== null) {
       users = this.state.users.map(user => (
-        <div className="site-content">
-       
+        <div className="site-content-news">
         <div className="posts">
-
           <div
-            className="post-content"
+            className="post-content-news"
             data-aos="zoom-in"
             data-aos-delay={200}
           >
-            <div className="post-image">
-              <div>
-                <img src={blog1} className="imgg" alt="blog1" />
-              </div>
+            <div className="post-image-news">
+              <div></div>
               <div className="post-info flex-row">
                 <span>
-                  <i className="fas fa-user text-gray" />
-                  &nbsp;&nbsp;Admin
+                  <i className="fas fa-map-marker-alt text-gray" />
+                  &nbsp;&nbsp;
+                  {user.date}
                 </span>
                 <span>
                   <i className="fas fa-calendar-alt text-gray" />
-                  &nbsp;&nbsp;{user.time}
+                  &nbsp;&nbsp;{" "}
+                  {user.country}
+                
                 </span>
-                <span>2 Commets</span>
+                <span>
+                Status: &nbsp;&nbsp;{user.status}
+                </span>
+                <span>
+                Type: &nbsp;&nbsp;{user.types}
+                </span> 
               </div>
             </div>
-            <div className="post-title">
+            <div className="post-title-news">
               <a href="">
-              {user.title}
-              </a>
+             HEADLINE: {user.headline}
+              </a> 
               <p>
-              {user.short_desc}
+              {user.description.slice(0,258)}
+                
               </p>
-              <button className="btn post-btn">
+
+              <button className="btn post-btn-news">
                 Read More &nbsp; <i className="fas fa-arrow-right" />
               </button>
             </div>
           </div>
-          <hr />
-         
         </div>
-       
-        
-        </div>
+      </div>
       ));
     }
 
-    const pageNumbers = [];
-    if (this.state.total !== null) {
-      for (let i = 1; i <= Math.ceil(this.state.total / this.state.per_page); i++) {
-        pageNumbers.push(i);
-      }
-
-
-      renderPageNumbers = pageNumbers.map(number => {
-        let classes = this.state.current_page === number ? 'active' : '';
-
-        return (
-          <span key={number} className={classes} onClick={() => this.makeHttpRequestWithPage(number)}>{number}</span>
-        );
-      });
-    }
 
     return (
 
 
     <div>
+       <h1>Explore!Latest Disaster News</h1>
+        <p className="news-paragraph">
+          Here You can read about latest disasters occured aroung the world
+        </p>
             {users}
          
-            
+            <div className="pagination-News">
 
         <section className="pagination flex-row">
             <a href="#" onClick={() => this.makeHttpRequestWithPage(-1)}>
               <i className="fas fa-chevron-left" />
             </a>
+            <a href="#" onClick={() => this.makeHttpRequestWithPage(p)} className="pages">
+              {p}
+            </a>
             <a href="#" onClick={() => this.makeHttpRequestWithPage(1)} className="pages">
-              {p+1}
+            {p+1}
             </a>
             <a href="#" onClick={() => this.makeHttpRequestWithPage(2)} className="pages">
             {p+2}
-            </a>
-            <a href="#" onClick={() => this.makeHttpRequestWithPage(3)} className="pages">
-            {p+3}
             </a>
             <a href="#" onClick={() => this.makeHttpRequestWithPage(1)}>
               <i className="fas fa-chevron-right" />
             </a>
             
-          </section>
+          </section></div>
       </div>
     );
   }
