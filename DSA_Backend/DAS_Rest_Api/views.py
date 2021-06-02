@@ -428,7 +428,7 @@ def Flood_Displaced(request):
         c_x= request.data.get('Centroid X')
         c_y= request.data.get('Centroid Y')
         Displaced = Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y)
-        range,value = death_range(Affected_range[0])
+        range,value = death_range(Displaced[0])
         result = {"Estimation":Displaced[0],"Lat":c_x,"Long":c_y,"chart":{"range":range,"value":value}}
         return Response(result)
     res = {"msg":"Something is wrong!"}

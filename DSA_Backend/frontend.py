@@ -42,7 +42,7 @@ def news(page):
     for i in range(len(data['News'])):
         print(data['News'][i]['headline'])
         print(data['News'][i]['date'])
-news(1)
+#news(1)
 
 #to get flood live news
 def floodlive(page):
@@ -102,3 +102,13 @@ def estimate():
     data = r.json()
     print(data)
 #estimate()
+def estimateflood():
+    URL = "http://127.0.0.1:8000/Flood_Displaced/"
+    data = {"Severity":1,"Affected Area":6000,"Magnitude":5.6,"Centroid X":23,"Centroid Y":43}
+    json_data = json.dumps(data)
+    headers = {'Content-Type': 'application/json'}
+    r = requests.post(url = URL, headers=headers, data = json_data)
+    #response msg
+    data = r.json()
+    print(data)
+estimateflood()

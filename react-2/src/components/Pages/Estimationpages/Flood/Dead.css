@@ -18,6 +18,10 @@
     width: 30rem;
     height: 2rem;
   }
+  .heading-centre{
+    justify-content: center;
+    display: flex;
+  }
   .DeathButton{
     cursor: pointer;
     color: white;
