@@ -2,13 +2,18 @@ import { map } from "d3-array";
 import React, { usestate } from "react";
 import {BeatLoader} from 'react-spinners';
 import Pagination from "./Pagination";
+import {Modal} from '@material-ui/core'
 import "./News.css";
+import { Button } from "@material-ui/core";
 let p=0;
 
 export default class News extends React.Component {
   state = {
     users: null,
     loading: true,
+    visible:258,
+    
+    
   }
 
 
@@ -27,13 +32,19 @@ console.log(data);
       users: data.News,loading: false 
       
     });
+    //this.Readmore=this.Readmore.bind(this);
   }
-
+Readmore=()=>{
+  this.setState((old)=>{
+    return{visible: old.visible+ 5000}
+  })
+}
   render() {
+   
     if (!this.state.users) {
       return <div className="loading">Loading
      <BeatLoader/>
-     </div>;
+     </div>
     }
    
     let users, renderPageNumbers;
@@ -74,13 +85,14 @@ console.log(data);
              HEADLINE: {user.headline}
               </a> 
               <p>
-              {user.description.slice(0,258)}
+              {user.description.slice(0,this.state.visible)}
                 
               </p>
 
-              <button className="btn post-btn-news">
+              <button onClick={this.Readmore } className="btn post-btn-news" >
                 Read More &nbsp; <i className="fas fa-arrow-right" />
               </button>
+            
             </div>
           </div>
         </div>

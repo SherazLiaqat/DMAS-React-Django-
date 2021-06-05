@@ -1,8 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Result from "../../Chart/Result";
+
 import "./Death.css";
 
+
+ 
 const Death = () => {
   
     /*  const [amount, setamount] = useState();
@@ -16,6 +19,10 @@ const Death = () => {
  const [Longitude,setLongitude]=useState("");
  const [Type,setType]=useState("");
  const [Continent,setContinent]=useState("");
+ const [users,setusers]=useState("");
+ const [count,setcount]=useState("");
+ 
+ 
  
  
  const contactinfo = async () => {
@@ -32,6 +39,8 @@ const Death = () => {
   data: formfield,
 }).then((response) => {
   console.log(response.data);
+  setusers(response.data);
+  
   
 });
 }
@@ -114,6 +123,19 @@ const Death = () => {
         
        
       </div>
+      <div>
+    {
+    <div>
+        <p>{users.Estimation}</p>
+        <p>{users.Lat}</p>
+        <p>{users.Long}</p>
+        <Result />
+        </div>
+      }
+    
+      </div>
+     
+     
       {/*  <div className='side-div'>
             <h1 className='div-1'> Earthquake Awareness</h1>
             <ul className='Death-Div'>
