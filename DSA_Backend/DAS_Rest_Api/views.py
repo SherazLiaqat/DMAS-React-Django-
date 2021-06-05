@@ -1,9 +1,13 @@
+from rest_framework.authtoken.models import Token
 from .models import Blog, Contact, UserProfile
 import math
 from .serializers import BlogModelSerializer, ContactModelSerializer
 import requests
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.models import User
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 @api_view(['GET','POST'])
@@ -336,11 +340,11 @@ def Earthquake_Injured(request):
     Type,Asia,Africa,Americas,Europe,Oceania=0,0,0,0,0,0
     if request.method=='POST':
         print('This is post')
-        Earthquake_Type= request.POST['Earthquake_Type']
-        Continent= request.POST['Continent']
-        Magnitude= request.POST['Magnitude']
-        Latitude= request.POST['Latitude']
-        Longitude= request.POST['Longitude']
+        Earthquake_Type= request.data.get('Earthquake_Type')
+        Continent= request.data.get('Continent')
+        Magnitude= request.data.get('Magnitude')
+        Latitude= request.data.get('Latitude')
+        Longitude= request.data.get('Longitude')
         if Earthquake_Type=='Ground_Movement':
             Type=1
         if Continent=='Africa':
@@ -368,9 +372,9 @@ def Earthquake_Affected(request):
         print('This is post')
         #Earthquake_Type= request.POST['Earthquake_Type']
         #Continent= request.POST['Continent']
-        Magnitude= request.POST['Magnitude']
-        Latitude= request.POST['Latitude']
-        Longitude= request.POST['Longitude']
+        Magnitude= request.data.get('Magnitude')
+        Latitude= request.data.get('Latitude')
+        Longitude= request.data.get('Longitude')
         Affected = Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude)
         range,value = Affected_range(Affected[0])
         result = {"Estimation":Affected[0],"Lat":Latitude,"Long":Longitude,"chart":{"range":range,"value":value}}
@@ -504,3 +508,112 @@ def Affected_range(result):
         range = "more than 300"
         value = 400
     return range,value
+
+
+from .signals import create_auth_token
+@api_view(['GET','POST'])
+def signup(request):
+    if request.method=='POST':
+        username= request.data.get('username')
+        fname= request.data.get('fname')
+        lname= request.data.get('lname')
+        email= request.data.get('email')
+        pass1= request.data.get('pass1')
+        pass2= request.data.get('pass2')
+        #checks
+        if len(username) > 10 or len(username) < 5:
+            res = {"Username must be under 5 to 10 characters"}
+            return Response(res)
+        elif not username.isalnum():
+            res = {"Username should only contain letters and numbers"}
+            return Response(res)
+        elif pass1 != pass2:
+            res = {"Passwords do not match"}
+            return Response(res)
+        #create user
+        myuser=User.objects.create_user(username,email,pass1)
+        myuser.first_name=fname
+        myuser.last_name=lname
+        myuser.save()
+        create_auth_token(myuser)
+        res = {"Your Account is successfully created"}
+        return Response(res)
+    msg ={"Something is wrong!"}
+    return Response(msg)
+
+
+@api_view(['GET','POST'])
+def myprofile(request,username):
+    user = User.objects.get(username=username)
+    try:
+        profile = UserProfile.objects.get(user=user.id)
+    except:
+        profile = UserProfile.objects.create(user=request.user,bio="",files="avater.png")
+    if request.method=='POST':
+        user_name= request.data.get('username')
+        try:
+            photo = request.FILES['profile']
+        except:
+            profile = UserProfile.objects.get(user=user.id)
+            photo = profile.files
+        bio = request.data.get('bio')
+        fname= request.data.get('f_name')
+        lname= request.data.get('l_name')
+        email= request.data.get('email')
+        pass1= request.data.get('pass1')
+        pass2= request.data.get('pass2')
+        if len(username) > 10 or len(username) < 5:
+            res = {"Username must be under 5 to 10 characters"}
+            return Response(res)
+        elif not username.isalnum():
+            res = {"Username should only contain letters and numbers"}
+            return Response(res)
+        elif pass1 != pass2:
+            res = {"Passwords do not match"}
+            return Response(res)
+        else:
+            user = User.objects.get(username=username)
+            user.username = user_name
+            user.first_name = fname
+            user.last_name = lname
+            user.email = email
+            user.set_password(str(pass1))
+            login(request,user)
+            user.save()
+            fs = FileSystemStorage()
+            fs.save(photo.name, photo)
+            profile.files = photo.name
+            profile.bio = bio
+            profile.save()
+            res = {"Profile successfully Updated!"}
+            return Response(res)
+    msg ={"Something is wrong!"}
+    return Response(msg)
+
+
+@api_view(['GET','POST'])
+def Login(request):
+    if request.method=='POST':
+        username= request.data.get('username')
+        password= request.data.get('pass')
+        #authenticate
+        user=authenticate(username=username,password=password)
+        if user is not None:
+            login(request,user)
+            token = Token.objects.get(user_id=int(user.id))
+            msg ={"msg":"Successfully logged in",
+                "username": username,
+                "Token": token.key}
+            return Response(msg)
+        else:
+            msg ={"Invalid Credentials, Please try again"}
+            return Response(msg)
+    msg ={"Something is wrong!"}
+    return Response(msg)
+
+
+@api_view(['GET','POST'])
+def Logout(request):
+    logout(request)
+    msg ={"Successfully logged out"}
+    return Response(msg)

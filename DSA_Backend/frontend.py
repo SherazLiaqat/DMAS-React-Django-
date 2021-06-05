@@ -111,4 +111,24 @@ def estimateflood():
     #response msg
     data = r.json()
     print(data)
-estimateflood()
+#estimateflood()
+def signup():
+    URL = "http://127.0.0.1:8000/signup/"
+    data = {"fname":"Mubashar","lname":"Ateeq","username":"mubashar","email":"mubashar@gmail.com","pass1":"mubashar","pass2":"mubashar"}
+    json_data = json.dumps(data)
+    headers = {'Content-Type': 'application/json'}
+    r = requests.post(url = URL, headers=headers, data = json_data)
+    #response msg
+    data = r.json()
+    print(data)
+#signup()
+def login():
+    URL = "http://127.0.0.1:8000/login/"
+    data = {"username":"mubashar","pass":"mubashar"}
+    json_data = json.dumps(data)
+    headers = {'Content-Type': 'application/json'}
+    r = requests.post(url = URL, headers=headers, data = json_data)
+    #response msg
+    data = r.json()
+    print(data)
+login()
