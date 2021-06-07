@@ -1,6 +1,8 @@
 import React, { useState,useEffect,row,Component } from 'react'
 import { Pie, defaults } from 'react-chartjs-2';
-import "./Chart.css"
+import "./Chart.css";
+import ReactDOM from 'react-dom';
+import Chart from 'chart.js';
 import {csv} from 'd3';
 defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
@@ -23,69 +25,45 @@ class BarChart  extends React.Component {
 
 
   this.setState({ users: data });
+    this.configureChart();
   }
 
-  
-  render(){
-  return (
-    <div>
-      <Pie className="pie"
-        data={{
-          labels: ['Red', 'Black', 'brown', 'Green', 'Purple', 'Orange'],
-          datasets: [
-            {
-              label: '# of votes',
-              data:[909,967,78,67,67,56],
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(295, 27, 86, 0.2)',
-                'rgba(95, 192, 192, 0.9)',
-                'rgba(193, 18, 255, 0.2)',
-                'rgba(255, 159, 64, 0.9)',
-              ],
-              
-              borderColor: [
-                'rgba(265, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 26, 86, 1)',
-                'rgba(75, 1982, 12, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-              ],
-              borderWidth: 1,
-            },
-            // {
-            //   label: 'Quantity',
-            //   data: [47, 52, 67, 58, 9, 50],
-            //   backgroundColor: 'orange',
-            //   borderColor: 'red',
-            // },
-          ],
-        }}
-        height={500}
-        
-        width={450}
-        options={{
-          maintainAspectRatio: false,
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
-          legend: {
-            labels: {
-              fontSize: 25,
-            },
-          },
-        }}
-      />
-    </div>
-  )
-}}
+  configureChart = () => {
+    const chartCanvas = ReactDOM.findDOMNode(this.chart);
+
+    const mixedChart = new Chart(chartCanvas, {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: this.state.users.dead_count,
+            backgroundColor: [
+                      '#1a8604',
+                      '#0839f0',
+                      '#e9f308',
+                      '#fe7104',
+                      '#f61212',
+            ]}],
+       labels: ['Low', 'Medium', 'High', 'Very High', 'Extreme'],
+      },
+    });
+  };
+ 
+  render() {
+    return (
+      <div>
+         
+        <canvas
+        height={400}
+        width={400}
+          ref={chart => {
+            this.chart = chart;
+          }}
+        />
+      </div>
+    );
+  }
+}
+
 
 export default BarChart
