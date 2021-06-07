@@ -1,7 +1,8 @@
- import React from 'react';
- import ReactDOM from 'react-dom';
- import Chart from 'chart.js';
- import csv from 'd3';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Chart from 'chart.js';
+import csv from 'd3';
 class Blog extends React.Component {
   
   state = {
@@ -24,62 +25,49 @@ class Blog extends React.Component {
     this.configureChart();
   }
 
+
+
+
+
+
+
+
+
+
+
+  
+
+
   configureChart = () => {
     const chartCanvas = ReactDOM.findDOMNode(this.chart);
 
     const mixedChart = new Chart(chartCanvas, {
       type: "bar",
       data: {
-        datasets: [
-          {
-            label: "Bar Dataset",
+        datasets: [{
+            label: "No. of Earthquakes in Years",
             data: this.state.users.data,
             
-            type: "bar",
-            backgroundColor: "#DE924B"
-          },
-         
-          {
+            backgroundColor: "#DE924B",
+            borderColor: "#DE924B",
+            borderWidth: 1,
+          },{
             label: "Line Dataset 2",
             data: this.state.users.data,
             type: "line",
+            borderColor: 'rgba(54,162,235,1)',
+            fill: false,
+            borderWidth: 2,
             backgroundColor:'black',
-            fill: "empty",
             // pointRadius: 0,
-            pointStyle: "circle",
-           
-          }
-        ],
+            //pointStyle: "circle",
+          }],
         labels:this.state.users.lebel
       },
       options: {
-        elements: {
-          line: {
-            tension: 0.000001
-          }
-        },
-        tooltips: {
-          displayColors: false
-        },
-        legend: {
-          display: true,
-          position: "bottom"
-        },
         scales: {
           yAxes: [
             {
-              display: true,
-              // stacked: true,
-              ticks: {
-                beginAtZero: true
-              }
-            }
-          ],
-          xAxes: [
-            {
-              display: true,
-              stacked: true,
-              barThickness: 25,
               ticks: {
                 beginAtZero: true
               }
@@ -90,7 +78,17 @@ class Blog extends React.Component {
     });
   };
  
-  render() {
+
+
+    // in render 
+    
+    
+    render() {
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+      
+    
     return (
       <div>
          
