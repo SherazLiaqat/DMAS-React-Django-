@@ -3,7 +3,7 @@ import "./Blog.css";
 import { Button } from '@material-ui/core';
 import React, { Component } from 'react';
 
-import blog1 from "../images/blog1.png";
+//import blog1 from "../images/blog1.png";
 //import  Pagination from './News/Pagination';
 let p=0;
 class App extends Component {
@@ -49,7 +49,7 @@ console.log(data);
           >
             <div className="post-image">
               <div>
-                <img src={blog1} className="imgg" alt="blog1" />
+                <img src={user.photo} className="imgg" alt="blog1" />
               </div>
               <div className="post-info flex-row">
                 <span>
