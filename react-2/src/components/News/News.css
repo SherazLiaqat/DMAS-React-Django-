@@ -1,7 +1,8 @@
-
-.container-news{
-    justify-content: center;
-}.News{
+.Main-News-Container{
+  justify-content: center;
+  display: flex;
+}
+.News{
     border :1px solid black;
     
     margin: 2rem;
@@ -15,67 +16,55 @@
     text-align: center;
 }
 .site-content-news {
-    display: grid;
-    grid-template-columns: 90%;
-   margin-left: 4rem;
+   width: 80%;
+  
+   margin: 2rem;
   }
   .post-content-news {
-    width: 100%;
-    margin: 2rem;
+   
+   
    
     border: 1px solid black;
   }
-  .site-content-news .post-content-news > .post-image-news,
+   .post-content-news > .post-image-news,
   .post-title-news {
     padding: 1rem 2rem;
     position: relative;
   }
-  .site-content-news .post-content-news > .post-image-news .post-info {
+  .post-info {
     background-color:skyblue;
     
     position: relative;
     padding: 1rem;
-    bottom: 0%;
+   
     
     border-radius: 3rem;
   }
-  .site-content-news .post-content-news > .post-image-news > div {
-    overflow: hidden;
-  }
-  .site-content-news .post-content-news > .post-image-news .imgg {
-    width: 100%;
-  
-    transition: all 1s ease;
-  }
-  .site-content-news .post-content-news > .post-image-news .imgg:hover {
-    transform: scale(1.3);
-  }
-  .site-content-news .post-content-news > .post-image-news .post-info span {
-    margin: 0 0.5rem;
-  }
-  .post-content-news .post-title-news a {
-    font-family: var(--Anton);
+ 
+ 
+  .post-title-news a {
+    
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
   }
-  .post-content-news .post-title-news p {
+  .post-title-news p {
     color: rgb(128, 118, 118);
   }
-  .site-content-news .post-content-news .post-title-news .post-btn-news {
-    border-radius: 0;
+  .post-btn-news {
+    
     padding: 0.7rem 1.5rem;
     background-color: skyblue;
   }
   
-  .site-content-news .pagination-news {
+  .pagination-news {
     text-align: center;
     color: gray;
     margin: 4rem 0;
     
   }
   
-  .site-content-news .pagination-news a {
+ .pagination-news a {
     padding: 0.6rem 0.9rem;
     border-radius: 2rem;
     margin: 0 0.3rem;
@@ -92,6 +81,24 @@
     display: flex;
   }
   
+  @media screen and (max-width: 852px){
+.post-info{
+  width: 100%;
+}
+.post-content-news > .post-image-news,
+  .post-title-news {
+    padding: 0.5rem ;
+   
+  }
+  .post-title-news a{
+    font-size: 1.2rem;
+  }
+  .site-content-news{
+    width: 100%;
+    margin: 0.7rem;
+  }
+  }
+   
  
   /* Side bar*/
   

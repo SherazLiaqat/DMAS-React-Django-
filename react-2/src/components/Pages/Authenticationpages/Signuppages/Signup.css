@@ -84,7 +84,7 @@
   .form-content-right {
     border-radius: 0 10px 10px 0;
     position: relative;
-    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(133, 179, 223) 100%);
+    background: #f7f7f7;
     
   }
   

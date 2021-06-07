@@ -1,10 +1,10 @@
-import { map } from "d3-array";
+
 import React, { usestate } from "react";
 import {BeatLoader} from 'react-spinners';
 import Pagination from "./Pagination";
 import {Modal} from '@material-ui/core'
 import "./News.css";
-import { Button } from "@material-ui/core";
+
 let p=0;
 
 export default class News extends React.Component {
@@ -51,29 +51,30 @@ Readmore=()=>{
 
     if (this.state.users !== null) {
       users = this.state.users.map(user => (
+        <div className="Main-News-Container">
         <div className="site-content-news">
-        <div className="posts">
+        
           <div
             className="post-content-news"
-            data-aos="zoom-in"
-            data-aos-delay={200}
+           
           >
             <div className="post-image-news">
               <div></div>
-              <div className="post-info flex-row">
+              <div className="post-info ">
                 <span>
                   <i className="fas fa-map-marker-alt text-gray" />
                   &nbsp;&nbsp;
-                  {user.date}
+                  {user.country}
+                  &nbsp;&nbsp;
                 </span>
                 <span>
                   <i className="fas fa-calendar-alt text-gray" />
-                  &nbsp;&nbsp;{" "}
-                  {user.country}
-                
+                  &nbsp;&nbsp;
+                  {user.date}
+                  &nbsp;&nbsp;
                 </span>
                 <span>
-                Status: &nbsp;&nbsp;{user.status}
+                Status: &nbsp;&nbsp;{user.status}&nbsp;&nbsp;
                 </span>
                 <span>
                 Type: &nbsp;&nbsp;{user.types}
@@ -95,7 +96,8 @@ Readmore=()=>{
             
             </div>
           </div>
-        </div>
+        
+      </div>
       </div>
       ));
     }

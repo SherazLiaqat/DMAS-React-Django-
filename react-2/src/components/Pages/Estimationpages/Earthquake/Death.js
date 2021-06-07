@@ -126,10 +126,10 @@ const Death = () => {
       <div>
     {
     <div>
-        <p>{users.Estimation}</p>
-        <p>{users.Lat}</p>
-        <p>{users.Long}</p>
-        <p> System Estimate That {users.chart.range} People Get Injured Due to Earthquake.</p>
+        <p>Damage:{users.Estimation}</p>
+        <p>Latitude:{users.Lat}</p>
+        <p>longitude:{users.Long}</p>
+        <p> System Estimate That  People Get Injured Due to Earthquake.</p>
         <Result />
         </div>
       }

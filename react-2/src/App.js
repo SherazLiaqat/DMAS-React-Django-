@@ -48,7 +48,7 @@ import Result from "./components/Pages/Chart/Result";
 import MyNews from "./components/News/News";
 import { Scroller } from "./components/Scroller";
 import Hero from "./components/My-Blog/Hero";
-import Newsinfo from './components/News/Newsinfo';
+
 import Demo from './components/Demo';
 import Map from "./components/Map";
 function App() {
@@ -76,7 +76,7 @@ function App() {
           <Route path="/Event" component={Event} />
           <Route path="/Live" component={Live} />
           <Route path="/Hero" component={Hero} />
-          <Route path="/Newsinfo" component={Newsinfo} />
+          
           <Route path="/MyNews" component={MyNews} />
         </Switch>
 
