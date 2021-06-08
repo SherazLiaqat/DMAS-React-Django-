@@ -39,13 +39,8 @@ const Death = () => {
   data: formfield,
 }).then((response) => {
   console.log(response.data);
-<<<<<<< Updated upstream
   setusers(response.data);
   
-=======
- 
-  return(response.data)
->>>>>>> Stashed changes
   
 });
 }
@@ -128,14 +123,13 @@ const Death = () => {
         
        
       </div>
-<<<<<<< Updated upstream
       <div>
     {
     <div>
         <p>{users.Estimation}</p>
         <p>{users.Lat}</p>
         <p>{users.Long}</p>
-        <p> System Estimate That {users.chart.range} People Get Injured Due to Earthquake.</p>
+        <p> System Estimate That People Get Injured Due to Earthquake.</p>
         <Result />
         </div>
       }
@@ -143,9 +137,6 @@ const Death = () => {
       </div>
      
      
-=======
-    
->>>>>>> Stashed changes
       {/*  <div className='side-div'>
             <h1 className='div-1'> Earthquake Awareness</h1>
             <ul className='Death-Div'>

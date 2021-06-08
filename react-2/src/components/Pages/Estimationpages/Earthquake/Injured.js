@@ -1,7 +1,20 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState,Component } from "react";
 import { Link } from "react-router-dom";
 import "./Death.css";
+import {Bar} from 'react-chartjs-2';
+
+
+import {
+  withGoogleMap,
+  withScriptjs,
+  GoogleMap,
+  Marker,
+  InfoWindow
+} from "react-google-maps";
+
+
+
 
 const Injured= () => {
   
@@ -16,6 +29,7 @@ const Injured= () => {
  const [Longitude,setLongitude]=useState("");
  const [Type,setType]=useState("");
  const [Continent,setContinent]=useState("");
+ const [users,setusers]=useState("");
  
  
  const contactinfo = async () => {
@@ -32,11 +46,41 @@ const Injured= () => {
   data: formfield,
 }).then((response) => {
   console.log(response.data);
-  
+  setusers(response.data);
 });
 }
+function Map(){
+  return(
+    <GoogleMap 
+    defaultZoom={10}
+    defaultCenter={{lat: parseFloat(users.Lat,5) , lng: parseFloat(users.Long,5) }}>
+    <Marker
+    position={{lat: parseFloat(users.Lat,5) , lng: parseFloat(users.Long,5) }}
+    />
+    </GoogleMap>
+   
+  )
+}
+const MapWrapped = withScriptjs(withGoogleMap(Map));
+
+ 
   return (
+    
+    
     <>
+    
+
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <MapWrapped
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4`}
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `100%` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
+     
+    </div>
+  
+
       <div className="main">
         <h1> Estimate Result of Injured People Instantly<br/>
 And help out Disaster Suffering people</h1>
@@ -115,6 +159,18 @@ And help out Disaster Suffering people</h1>
         
        
       </div>
+      <div>
+        <p>{users.Estimation}</p>
+        <p>{users.Lat}</p>
+        <p>{users.Long}</p>
+        <p> System Estimate That People Get Injured Due to Earthquake.</p>
+        
+        </div>
+        
+        
+    
+      
+      
       {/*  <div className='side-div'>
             <h1 className='div-1'> Earthquake Awareness</h1>
             <ul className='Death-Div'>
