@@ -85,7 +85,7 @@ def floodLive(request, page):
         date = d[0]
         lat = float(news['data'][i]['fields']['country'][0]['location']['lat'])
         long = float(news['data'][i]['fields']['country'][0]['location']['lon'])
-        data.append({'headline':headline,'type':type,'date':date,'country':country[0],'lat':lat,'long':long})
+        data.append({'headline':headline,'type':type,'date':date,'country':country,'lat':lat,'long':long})
     news = {'News':data}
     return Response(news)
 
@@ -306,7 +306,7 @@ def Affectedgraph(Affecteds,year,Affected_label):
 
 
 @api_view(['GET','POST'])
-def Earthquake_Deaths(request):
+def Earthquake_Estimation(request):
     Type,Asia,Africa,Americas,Europe,Oceania=0,0,0,0,0,0
     if request.method=='POST':
         Earthquake_Type= request.data.get('Earthquake_Type')
@@ -329,58 +329,19 @@ def Earthquake_Deaths(request):
         print(Continent)
         Dead = Earthquake_Dead_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude)
         range,value = death_range(Dead[0])
-        result = {"Estimation":Dead[0],"Lat":Latitude,"Long":Longitude,"chart":{"range":range,"value":value}}
-        return Response(result)
-    res = {"msg":"Something is wrong!"}
-    return Response(res)
-
-
-@api_view(['GET','POST'])
-def Earthquake_Injured(request):
-    Type,Asia,Africa,Americas,Europe,Oceania=0,0,0,0,0,0
-    if request.method=='POST':
-        print('This is post')
-        Earthquake_Type= request.data.get('Earthquake_Type')
-        Continent= request.data.get('Continent')
-        Magnitude= request.data.get('Magnitude')
-        Latitude= request.data.get('Latitude')
-        Longitude= request.data.get('Longitude')
-        if Earthquake_Type=='Ground_Movement':
-            Type=1
-        if Continent=='Africa':
-            Africa=1
-        elif Continent=='Asia':
-            Asia=1
-        elif Continent=='Americas':
-            Americas=1
-        elif Continent=='Europe':
-            Europe=1
-        else:
-            Oceania=1
-        print(Continent)
+        location = {"Lat":Latitude,"Long":Longitude}
+        Deaths = {"Estimation":Dead[0],"range":range,"value":value}
         Injured = Earthquake_Injured_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude)
         range,value = Injured_range(Injured[0])
-        result = {"Estimation":Injured[0],"Lat":Latitude,"Long":Longitude,"chart":{"range":range,"value":value}}
-        return Response(result)
-    res = {"msg":"Something is wrong!"}
-    return Response(res)
-
-
-@api_view(['GET','POST'])
-def Earthquake_Affected(request):
-    if request.method=='POST':
-        print('This is post')
-        #Earthquake_Type= request.POST['Earthquake_Type']
-        #Continent= request.POST['Continent']
-        Magnitude= request.data.get('Magnitude')
-        Latitude= request.data.get('Latitude')
-        Longitude= request.data.get('Longitude')
+        Injureds = {"Estimation":Injured[0],"range":range,"value":value}
         Affected = Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude)
         range,value = Affected_range(Affected[0])
-        result = {"Estimation":Affected[0],"Lat":Latitude,"Long":Longitude,"chart":{"range":range,"value":value}}
+        Affecteds = {"Estimation":Affected[0],"range":range,"value":value}
+        result = {"location":location,"Deaths":Deaths,"Injureds":Injureds,"Affecteds":Affecteds}
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
+
 
 
 import pickle
@@ -407,7 +368,7 @@ def Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude):
     return prediction
 
 @api_view(['GET','POST'])
-def Flood_Deaths(request):
+def Flood_Estimation(request):
     if request.method=='POST':
         print('This is post')
         severity= request.data.get('Severity')
@@ -415,28 +376,18 @@ def Flood_Deaths(request):
         magnitude= request.data.get('Magnitude')
         c_x= request.data.get('Centroid X')
         c_y= request.data.get('Centroid Y')
+        location = {"Lat":c_x,"Long":c_y}
         Dead = Flood_Dead_Predictions(severity,affected,magnitude,c_x,c_y)
         range,value = death_range(Dead[0])
-        result = {"Estimation":Dead[0],"Lat":c_x,"Long":c_y,"chart":{"range":range,"value":value}}
+        Deaths = {"Estimation":Dead[0],"range":range,"value":value}
+        Displaced = Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y)
+        range,value = death_range(Displaced[0])
+        Displaceds = {"Estimation":Displaced[0],"Lat":c_x,"Long":c_y,"range":range,"value":value}
+        result = {"Location":location,"Deaths":Deaths,"Displaceds":Displaceds}
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
 
-@api_view(['GET','POST'])
-def Flood_Displaced(request):
-    if request.method=='POST':
-        print('This is post')
-        severity= request.data.get('Severity')
-        affected= request.data.get('Affected Area')
-        magnitude= request.data.get('Magnitude')
-        c_x= request.data.get('Centroid X')
-        c_y= request.data.get('Centroid Y')
-        Displaced = Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y)
-        range,value = death_range(Displaced[0])
-        result = {"Estimation":Displaced[0],"Lat":c_x,"Long":c_y,"chart":{"range":range,"value":value}}
-        return Response(result)
-    res = {"msg":"Something is wrong!"}
-    return Response(res)
 
 def Flood_Dead_Predictions(severity,affected,magnitude,c_x,c_y):
     model = pickle.load(open('Flood_Dead_RF.sav', 'rb'))
