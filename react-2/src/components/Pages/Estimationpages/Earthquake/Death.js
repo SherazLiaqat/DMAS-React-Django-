@@ -8,12 +8,13 @@ import "./Death.css";
  
 const Death = () => {
   
+  
     /*  const [amount, setamount] = useState();
 
   const [amount2, setamount2] = useState();
   const [amount3, setamount3] = useState();
   const toFixed = 0.0;*/
-  
+  const [val,setval]=useState("");
   const [Magnitude,setMagnitude]=useState("");
  const [Latitude,setLatitude]=useState("");
  const [Longitude,setLongitude]=useState("");
@@ -34,8 +35,8 @@ const Death = () => {
   formfield.append("Longitude", Longitude);
 
  await axios({
-  method: "post",
-  url: "http://127.0.0.1:8000/Earthquake_Deaths/",
+  method: "POST",
+  url: "http://127.0.0.1:8000/earthquakeEstimation/",
   data: formfield,
 }).then((response) => {
   console.log(response.data);
@@ -119,20 +120,21 @@ const Death = () => {
               placeholder="Enter Longitude..."
             />
           </div>
-          <button className="DeathButton-Earthquake" onClick={contactinfo}> Estimate</button>
+          <button className="DeathButton-Earthquake" onClick={contactinfo }> Estimate</button>
         
        
       </div>
       <div>
-    {
+    
     <div>
+      
         <p>Damage:{users.Estimation}</p>
         <p>Latitude:{users.Lat}</p>
         <p>longitude:{users.Long}</p>
         <p> System Estimate That  People Get Injured Due to Earthquake.</p>
         <Result />
         </div>
-      }
+      
     
       </div>
      

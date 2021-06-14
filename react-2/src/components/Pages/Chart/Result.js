@@ -7,7 +7,7 @@ class Result extends React.Component {
   chart = null;
 
   componentDidMount() {
-    this.configureChart();
+    this.configureChart(this.props);
   }
 
   configureChart = () => {
@@ -20,7 +20,7 @@ class Result extends React.Component {
         
           {
             label: "Deaths",
-            data: [15],
+            data: [this.props.Val],
             pointHoverRadius: [5],
             
             backgroundColor:'brown',

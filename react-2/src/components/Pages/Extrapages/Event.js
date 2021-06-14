@@ -6,7 +6,7 @@ import './Event.css';
 import { PostAddSharp } from '@material-ui/icons';
 
 export const Event = () => {
-
+    
     return (
         <div className="div-main">
           

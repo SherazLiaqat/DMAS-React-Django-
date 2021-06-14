@@ -32,7 +32,7 @@ import Api from "./components/Pages/Api/Api";
 import am4core from "./components/Pages/Api/NewsApi/NewsApi";
 import Live from "./components/Pages/Extrapages/Live";
 import CovidLive from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidLive";
-import FloodLive from "./components/Pages/Extrapages/FloodLive";
+import FloodLive from "./components/Pages/Extrapages/LiveEvents/FloodLive/FloodLive";
 import EarthquakeLive from "./components/Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive";
 import MyBlog from "./components/My-Blog/Blog";
 import ScrollToTop from "./components/ScrollToTop";
@@ -51,6 +51,7 @@ import Hero from "./components/My-Blog/Hero";
 
 import Demo from './components/Demo';
 import Map from "./components/Map";
+import BlogData from "./components/My-Blog/BlogData";
 function App() {
   return (
     <>
@@ -98,10 +99,11 @@ function App() {
           <Route path="/AffectedResult" component={AffectedResult} exact />
           <Route path="/DeathResult" component={DeathResult} exact />
           <Route path="/InjuredResult" component={InjuredResult} exact />
-          <Route path="/DeadResult" component={DeadResult} exact />
+          <Route path="/DeadResult/:data" component={DeadResult} exact />
           <Route path="/DisplacedResult" component={DisplacedResult} exact />
           <Route path="/Demo" component={Demo} />
           <Route path='/Map' component={Map} />
+          <Route path='/BlogData/:slug' component={BlogData} />
         </Switch>
         <Footer />
       </Router>

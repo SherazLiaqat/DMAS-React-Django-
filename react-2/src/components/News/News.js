@@ -1,17 +1,19 @@
 
 import React, { usestate } from "react";
 import {BeatLoader} from 'react-spinners';
+import Earthquakelive from '../Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive';
 import Pagination from "./Pagination";
 import {Modal} from '@material-ui/core'
 import "./News.css";
 
 let p=0;
 
+
 export default class News extends React.Component {
   state = {
     users: null,
     loading: true,
-    visible:288,
+    /*visible:288,*/
     
     
   }
@@ -34,11 +36,11 @@ console.log(data);
     });
     //this.Readmore=this.Readmore.bind(this);
   }
-Readmore=()=>{
+/*Readmore=()=>{
   this.setState((old)=>{
     return{visible: old.visible+ 5000}
   })
-}
+}*/
   render() {
    
     if (!this.state.users) {
@@ -85,14 +87,12 @@ Readmore=()=>{
               <a href="">
              HEADLINE: {user.headline}
               </a> 
-              <p>
-              {user.description.slice(0,this.state.visible)}
-                
-              </p>
+             
+<Earthquakelive
+val={user.description} >
 
-              <button onClick={this.Readmore } className="btn post-btn-news" >
-                Read More &nbsp; <i className="fas fa-arrow-right" />
-              </button>
+</Earthquakelive>
+             
             
             </div>
           </div>

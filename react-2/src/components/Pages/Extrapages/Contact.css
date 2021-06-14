@@ -1,5 +1,5 @@
 .main-body {
-  background-color: #fff;
+  background-color: #f7f7f7;
   margin: 0px;
 }
 .Header {
@@ -80,6 +80,7 @@
   text-decoration: none;
   align-items: center;
   width:100%;
+  background-color: white;
   height: 8rem;
 }
 

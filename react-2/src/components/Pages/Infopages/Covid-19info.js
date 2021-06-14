@@ -23,7 +23,7 @@ Physical distancing, wearing a face mask around other people and frequent handwa
 If you think you have symptoms of COVID-19, stay at home and call your local health authority. They will tell you what to do next. c
          </ul>
      </div>
-         <p className='paragraph'>There are general Covid-19 safety precautions you
+         <p className='paragraph1'><strong>Covid-19 safety precautions</strong> you
           should follow regardless of where you live. Taking time to review tip
           s about the following Covid-19 safety issues can help you 
          create a safer and more secure living environment for you, your friends, and family.. </p>

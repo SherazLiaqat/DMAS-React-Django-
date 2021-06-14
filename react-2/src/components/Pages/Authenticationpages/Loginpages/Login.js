@@ -191,6 +191,7 @@ class Login extends React.Component  {
      render(){
   return (
     <>
+    <div className='login-container'>
    <div className='form-content-right'>
      
  
@@ -239,14 +240,15 @@ class Login extends React.Component  {
 
             </div>
           <br/>
-          <span className='span-login'>
+          <div className='span-login'>
         Don't have an account? Signup < a href='/sign-up'>here</a>
         <br/><br/>
         
-      </span>
+      </div>
 
 
     
+  </div>
   </div>
   
   </>

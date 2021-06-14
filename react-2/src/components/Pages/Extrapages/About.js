@@ -10,13 +10,13 @@ const About = () => {
   });
   const [state] = React.useState([
     { id: 1, title: "Name:", text: "Sheraz Liaqat" },
-    { id: 2, title: "Email:", text: "example@domain.com" },
+    { id: 2, title: "Email:", text: "17241598-054@uogsialkot.ed.upk" },
     { id: 3, title: "Name:", text: "Rizwan Bashir" },
-    { id: 4, title: "Email", text: "example@domain.com" },
+    { id: 4, title: "Email", text: "17241598-109@uogsialkot.ed.upk" },
     { id: 5, title: "Name:", text: "M akhlaq" },
-    { id: 6, title: "Email:", text: "example@domain.com" },
+    { id: 6, title: "Email:", text: "17241598-187@uogsialkot.ed.upk" },
     { id: 7, title: "Name:", text: "Mubashar Ateeq" },
-    { id: 8, title: "Email", text: "example@domain.com" }
+    { id: 8, title: "Email", text: "17241598-074@uogsialkot.ed.upk" }
   ]);
   return (
     <div className="about">

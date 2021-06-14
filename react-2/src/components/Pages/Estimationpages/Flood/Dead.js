@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "./Dead.css";
 import axios from 'axios';
 const Dead = () => {
@@ -8,6 +9,7 @@ const Dead = () => {
   const [Magnitude, setMagnitude] = useState("");
   const [CentriodsX, setCentriodsX] = useState("");
   const [CentriodsY, setCentriodsY] = useState("");
+  const [user, setUser] = useState("");
   const Floodinfo = async () => {
     let formfield = new FormData();
     formfield.append("Severity", Severity);
@@ -16,11 +18,12 @@ const Dead = () => {
     formfield.append("Centroid X", CentriodsX);
     formfield.append("Centroid Y", CentriodsY);
     await axios({
-      method: "post",
-      url: "http://127.0.0.1:8000/Flood_Displaced/",
+      method: "POST",
+      url: "http://127.0.0.1:8000/floodEstimation/",
       data: formfield,
     }).then((response) => {
       console.log(response.data);
+      setUser(response.data)
     });
   };
 
@@ -116,10 +119,11 @@ const Dead = () => {
           />
         </div>
         <button className="DeathButton" onClick={Floodinfo}> Estimate</button>
-      
+        {/*<Link to={`/DeadResult/`} className="stretched-link"> &nbsp;Estimate </Link>*/}
         <br />
         <br />
         <br />
+        
       </div>
       {/*   <div className='side-div'>
               <h className='div-1'> Earthquake Awareness</h>

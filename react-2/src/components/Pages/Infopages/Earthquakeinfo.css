@@ -159,6 +159,18 @@ background-color: #fff;
   
     
 }
+.paragraph1{
+  margin: 5px;
+  padding: 10px;
+  background-color:#e5e8eb;
+  border-left: 5px solid green;
+  margin-left: 14rem;
+  margin-right: 10%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+  font-size: 15px;
+  font-style:inherit;
+  width: 60%;
+}
 .paragraph{
     margin-left: 14rem;
     margin-right: 10%;

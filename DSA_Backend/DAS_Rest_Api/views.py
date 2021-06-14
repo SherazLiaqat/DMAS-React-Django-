@@ -382,7 +382,7 @@ def Flood_Estimation(request):
         Deaths = {"Estimation":Dead[0],"range":range,"value":value}
         Displaced = Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y)
         range,value = death_range(Displaced[0])
-        Displaceds = {"Estimation":Displaced[0],"Lat":c_x,"Long":c_y,"range":range,"value":value}
+        Displaceds = {"Estimation":Displaced[0],"range":range,"value":value}
         result = {"Location":location,"Deaths":Deaths,"Displaceds":Displaceds}
         return Response(result)
     res = {"msg":"Something is wrong!"}

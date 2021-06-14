@@ -6,11 +6,8 @@ import React, { Component } from 'react';
 import blog1 from "../images/blog1.png";
 import BlogData from "./BlogData";
 
-import { Link } from 'react-router-dom';
-
 //import  Pagination from './News/Pagination';
 let p=0;
-
 
 
 class App extends Component {
@@ -20,6 +17,7 @@ class App extends Component {
     users: null,
     
   }
+  
 
 
   componentDidMount() {
@@ -29,7 +27,7 @@ class App extends Component {
 
   makeHttpRequestWithPage = async pageNumber => {
     
-    const response = await fetch(`http://127.0.0.1:8000/bloghome/${p+pageNumber}`);
+    const response = await fetch(`http://127.0.0.1:8000/blogpost/${this.props.match.params.slug}`);
     p=p+pageNumber;
 
     const data = await response.json();
@@ -40,14 +38,17 @@ console.log(data);
      
     });
   }
+  
 
   render() {
+   
     
     let users, renderPageNumbers;
     
 
     if (this.state.users !== null) {
       users = this.state.users.map(user => (
+          
         <div className="site-content">
        
         <div className="posts">
@@ -77,21 +78,18 @@ console.log(data);
               <a href="">
               {user.title}
               </a>
-              <p>
-              {user.short_desc}
+              <p >
+              {user.content}
               </p>
               
-             
-              <Link to={`/BlogData/${user.slug}`} className="stretched-link">Read More &nbsp; </Link>
-              
-                
-              
+              <button className="btn post-btn">
+                Read More &nbsp; <i className="fas fa-arrow-right" />
+              </button>
             </div>
           </div>
           <hr />
          
         </div>
-      
         
         </div>
       ));
@@ -100,32 +98,12 @@ console.log(data);
    
 
     return (
+        
 
 
     <div>
             {users}
          
-         
-         <div className="pagination-News">
-        <section className="pagination flex-row">
-            <a href="#" onClick={() => this.makeHttpRequestWithPage(-1)}>
-              <i className="fas fa-chevron-left" />
-            </a>
-            <a href="#" onClick={() => this.makeHttpRequestWithPage(p)} className="pages">
-              {p}
-            </a>
-            <a href="#" onClick={() => this.makeHttpRequestWithPage(1)} className="pages">
-            {p+1}
-            </a>
-            <a href="#" onClick={() => this.makeHttpRequestWithPage(2)} className="pages">
-            {p+2}
-            </a>
-            <a href="#" onClick={() => this.makeHttpRequestWithPage(1)}>
-              <i className="fas fa-chevron-right" />
-            </a>
-            
-          </section>
-          </div>
       </div>
     );
   }

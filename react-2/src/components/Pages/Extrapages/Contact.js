@@ -28,7 +28,7 @@ const Contact = () => {
     data: formfield,
   }).then((response) => {
     console.log(response.data);
-    
+    alert('Your response Has been Submitted! Thankyou')
   });
 }
 
