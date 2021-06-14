@@ -71,7 +71,7 @@ console.log(data);
                   <i className="fas fa-calendar-alt text-gray" />
                   &nbsp;&nbsp;{user.time}
                 </span>
-                <span>2 Commets</span>
+                
               </div>
             </div>
             <div className="post-title">
@@ -82,9 +82,9 @@ console.log(data);
               {user.content}
               </p>
               
-              <button className="btn post-btn">
+             {/* <button className="btn post-btn">
                 Read More &nbsp; <i className="fas fa-arrow-right" />
-              </button>
+              </button>*/}
             </div>
           </div>
           <hr />

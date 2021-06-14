@@ -101,7 +101,7 @@ def estimate():
     #response msg
     data = r.json()
     print(data)
-#estimate()
+#estimate() 
 def estimateflood():
     URL = "http://127.0.0.1:8000/Flood_Displaced/"
     data = {"Severity":1,"Affected Area":6000,"Magnitude":5.6,"Centroid X":23,"Centroid Y":43}
@@ -121,7 +121,7 @@ def signup():
     #response msg
     data = r.json()
     print(data)
-#signup()
+signup()
 def login():
     URL = "http://127.0.0.1:8000/login/"
     data = {"username":"mubashar","pass":"mubashar"}
@@ -131,4 +131,4 @@ def login():
     #response msg
     data = r.json()
     print(data)
-login()
+#login()

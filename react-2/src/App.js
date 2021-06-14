@@ -77,11 +77,13 @@ function App() {
           <Route path="/Event" component={Event} />
           <Route path="/Live" component={Live} />
           <Route path="/Hero" component={Hero} />
-          
+          <Route path='/BlogData/:slug' component={BlogData} />
           <Route path="/MyNews" component={MyNews} />
+          <Route path="/MyBlog" component={MyBlog} exact />
         </Switch>
 
         <Switch>
+        
           <Route path="/Earthquakeinfo" component={Earthquakeinfo} exact />
           <Route path="/Floodinfo" component={Floodinfo} exact />
           <Route path="/Fireinfo" component={Fireinfo} exact />
@@ -95,7 +97,7 @@ function App() {
           <Route path="/CovidLive" component={CovidLive} exact />
           <Route path="/FloodLive" component={FloodLive} exact />
           <Route path="/EarthquakeLive" component={EarthquakeLive} exact />
-          <Route path="/MyBlog" component={MyBlog} exact />
+          
           <Route path="/AffectedResult" component={AffectedResult} exact />
           <Route path="/DeathResult" component={DeathResult} exact />
           <Route path="/InjuredResult" component={InjuredResult} exact />
@@ -103,7 +105,7 @@ function App() {
           <Route path="/DisplacedResult" component={DisplacedResult} exact />
           <Route path="/Demo" component={Demo} />
           <Route path='/Map' component={Map} />
-          <Route path='/BlogData/:slug' component={BlogData} />
+          
         </Switch>
         <Footer />
       </Router>

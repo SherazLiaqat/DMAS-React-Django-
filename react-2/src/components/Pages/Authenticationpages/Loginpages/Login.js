@@ -1,4 +1,6 @@
-/*import React,{useState} from 'react';
+
+//MATERIAL UI LOGIN
+ import React,{useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -25,7 +27,7 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(4),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -48,6 +50,7 @@ export default function SignIn() {
   const [username,setUsername]=useState("");
   const [Password,setPassword]=useState("");
   const [users,setusers]=useState("");
+
   const Logininfo = async () => {
     let formfield = new FormData();
     formfield.append("username",username );
@@ -80,7 +83,7 @@ export default function SignIn() {
         
       
         </Typography>
-        <form className={classes.form} noValidate>
+      
           <TextField
             variant="outlined"
             margin="normal"
@@ -89,8 +92,9 @@ export default function SignIn() {
             id="name"
             label="User Name"
             name="name"
-            autoComplete="name"
-            autoFocus
+           // autoComplete="name"
+            //autoFocus
+            type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
@@ -103,46 +107,49 @@ export default function SignIn() {
             label="Password"
             type="password"
             id="password"
-            autoComplete="current-password"
+            //autoComplete="current-password"
             value={Password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <FormControlLabel
+          <FormControlLabel 
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
+          
+          
           <Button 
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
+            //className={classes.submit}
             onClick={Logininfo}
           >
             Sign In
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link href="" variant="body2">
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/sign-up" variant="body2">
+              <Link href="/Sign-up" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
           </Grid>
-        </form>
+        
       </div>
       <Box mt={8}>
-        <Copyright />
+        
       </Box>
     </Container>
   );
-}*/
+  }
+ 
 
-import React, { Component } from 'react'
+/*import React, { Component } from 'react'
 import './Login.css';
 import {Button }from '../../../Button/Button';
 import { Link } from 'react-router-dom';
@@ -254,4 +261,76 @@ class Login extends React.Component  {
   </>
   );
 }}
-export default Login
+export default Login*/
+//GOOD LOGIN AND SIGNUP PAGE THAT WORKING A BIT SLOW  
+/*import React, { Component} from 'react';
+
+class Login extends Component {
+
+  state = {
+    credentials: {username: '', password: ''}
+  }
+
+  login = event => {
+    fetch('http://127.0.0.1:8000/login/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(this.state.credentials)
+    })
+    .then( data => data.json())
+    .then(
+      data => {
+        console.log(data);
+        this.props.userLogin(data);
+      }
+    )
+    .catch( error => console.error(error))
+  }
+
+  register = event => {
+    fetch('http://127.0.0.1:8000/signup/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(this.state.credentials)
+    })
+    .then( data => data.json())
+    .then(
+      data => {
+        console.log(data);
+      }
+    )
+    .catch( error => console.error(error))
+  }
+  inputChanged = event => {
+    const cred = this.state.credentials;
+    cred[event.target.name] = event.target.value;
+    this.setState({credentials: cred});
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Login user form</h1>
+
+        <label>
+          Username:
+          <input type="text" name="username"
+           value={this.state.credentials.username}
+           onChange={this.inputChanged}/>
+        </label>
+        <br/>
+        <label>
+          Password:
+          <input type="password" name="password"
+           value={this.state.credentials.password}
+           onChange={this.inputChanged} />
+        </label>
+        <br/>
+        <button onClick={this.login}>Login</button>
+        <button onClick={this.register}>Register</button>
+      </div>
+    );
+  }
+}
+
+export default Login;*/

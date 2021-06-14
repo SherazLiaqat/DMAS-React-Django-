@@ -1,168 +1,202 @@
-import React, { Component } from 'react'
-import './Signup.css';
-import { Link } from 'react-router-dom';
-import {Button }from '../../../Button/Button';
-import validate from './Validateinfo';
-import Form from './Form';
-import {  FaUserAlt,FaKey} from 'react-icons/fa';
-import {  MdEmail} from 'react-icons/md';
-class Signup extends React.Component {
- constructor()
- {
-  super();
-  this.state={
-      username:"",
-      email:"",
-      password:" ",
-      password2:" ",
-      usernameerror:"",
-      passworderror:"",
-      password2error:"",
-      emailerror:""
-    }}
-   valid(){
-     if(!this.state.username.trim("")&&!this.state.email.includes("@")&& !this.state.password.trim("") && !this.state.password2.trim(""))
-     {
-       this.setState({usernameerror:"Invalid username",passworderror:"Enter password" ,emailerror:"Enter valid email adress",password2error:"Confirm password must be Required" })
-     }
-    else if(!this.state.username.trim("") )
-     {
-       this.setState({usernameerror:"Invalid username"})
-     }
-     else if(!this.state.email.includes("@"))
-     {
-       this.setState({ emailerror:"Enter valid email adress"  })
-      
-     }
-     else if(!this.state.password.trim(""))
-     {
-       this.setState({ passworderror:"Enter password"  })
-      
-     }
-     else if(this.state.password.length < 6){
-        this.setState({passworderror: "Please add at least 6 charachter."})
-      }
-      
-     
-     else if( !this.state.password2.trim(""))
-     {
-       this.setState({ password2error:"Enter password"  })
-      
-     }
-     else if(this.state.password != this.state.password2)
-     {
-       this.setState({ password2error:"Please Confirmed your password" })
-      
-     }
-     else{
-      return true
-    }
-   }
-   
-   
-    submit(){
-      this.setState({usernameerror:"", passworderror:"",emailerror:"",password2error:""  })
-    
-      
-      if(this.valid()){
-      alert("Form has been submited")}
-    }
-    render(){
-  return (
-    <>
-   <div className='form-content-right'>
-     
+
+
+
+import React,{useState} from 'react';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import axios from "axios";
+
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(2),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
  
-  <h1 className='h1'>
-        <br/>Get started with us today!<br/> Create your account by filling out the
-        information below.
-      </h1>
-      <span className='form-input-login'>
-        Already have an account? Login < a href='/Login'>here</a>
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
+
+export default function SignIn() {
+  const [username,setUsername]=useState("");
+  const [email,setemail]=useState("");
+  const [Password,setPassword]=useState("");
+  const [Password2,setPassword2]=useState("");
+  const [firstname,setfirstname]=useState("");
+  const [lastname,setlastname]=useState("");
+  const [users,setusers]=useState("");
+
+  const signupinfo = async () => {
+    let formfield = new FormData();
+    formfield.append("fname",firstname);
+    formfield.append("lname", lastname);
+    formfield.append("username",username );
+    formfield.append("email",email );
+    formfield.append("pass1", Password);
+    formfield.append("pass2", Password2);
+   
+  
+   await axios({
+    method: "post",
+    url: "http://127.0.0.1:8000/signup/",
+    data: formfield,
+  }).then((response) => {
+    console.log(response.data);
+    setusers(response.data);
+    
+    
+  });
+  }
+  const classes = useStyles();
+
+  return (
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <div className={classes.paper}>
+        <Avatar className={classes.avatar}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
         
-      </span>
-  <div className='hello'>
-      <div className='form-inputs'>
-        <label className='form-label'><FaUserAlt/>Username</label>
-        <input
-          className='form-input'
-          type='text'
-          name='username'
-          placeholder='Enter your username'
-          onChange={(event)=>{this.setState({username:event.target.value})}}/>
-         
-      <p>{this.state.usernameerror}</p>
-      </div>
-          <div
-    className='form-inputs'>
-    <label className='form-label'><MdEmail/>Email</label>
-    <input
-      className='form-input'
-      type='email'
-      name='email'
-      placeholder='Enter your email'
-     
-      onChange={(event)=>{this.setState({email:event.target.value})}}     />
-         
-         <p><p>{this.state.emailerror}</p></p>
-    
-      </div>  
+       Welcome back!<br/> Help out the Pendamic suffering people.
+        
+      
+        </Typography>
+        <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="firstname"
+            label="First Name"
+            name="firstname"
+           // autoComplete="name"
+            //autoFocus
+            type="text"
+            value={firstname}
+            onChange={(e) => setfirstname(e.target.value)}
+          />
+           <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="lastname"
+            label="Last Name"
+            name="lastname"
+           // autoComplete="name"
+            //autoFocus
+            type="text"
+            value={lastname}
+            onChange={(e) => setlastname(e.target.value)}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="username"
+            label="User Name"
+            name="username"
+           // autoComplete="name"
+            //autoFocus
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+           <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="Email "
+            name="email"
+           // autoComplete="name"
+            //autoFocus
+            type="Email"
+            value={email}
+            onChange={(e) => setemail(e.target.value)}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Password"
+            type="password"
+            id="password"
+            //autoComplete="current-password"
+            value={Password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+           <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password2"
+            label="Password"
+            type="password"
+            id="password2"
+            //autoComplete="current-password"
+            value={Password2}
+            onChange={(e) => setPassword2(e.target.value)}
+          />
+        
           
-      <div
-       className='form-inputs'>
-       <label className='form-label'> <FaKey/>Password</label>
-       <input
-         className='form-input'
-         type='password'
-         name='password'
-         placeholder='Enter your password'
-         onChange={(event)=>{this.setState({password:event.target.value})}}    />
-         
-         <p>{this.state.passworderror}</p>
-
-      </div>
-
-      <div
-       className='form-inputs'>
-       <label className='form-label'> <FaKey/>Confirm Password</label>
-       <input
-         className='form-input'
-         type='password'
-         name='password2'
-         placeholder='Confirm your password'
-         onChange={(event)=>{this.setState({password2:event.target.value})}}     />
-         
-      <p> {this.state.password2error}</p>
-
-      </div>
-
-      
-            <button className='SignupButton' onClick={()=>this.submit()}>Sign Up</button>
-           {/*  <Link to='/Estimation'>
-            </Link>*/}
-     
-
+          
+          <Button 
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            //className={classes.submit}
+            onClick={signupinfo}
             
-          <br/>
-         
-      <br/>
+          >
+            Sign Up
+          </Button>
+          <Grid container>
+          
+            <Grid item>
+              <Link href="/Login" variant="body2">
+                {"Already have an account? Log in"}
+              </Link>
+            </Grid>
+          </Grid>
+        
       </div>
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-    
-  </div>
+      <Box mt={8}>
+        
+      </Box>
+    </Container>
+  );
+  }
+  {/* Some Extraa work*/}
    {/*  <div className='form-content-right'>
     
     <form  className='form' >
@@ -237,9 +271,8 @@ class Signup extends React.Component {
          < a href='/Home'>here</a>
       </span>
     </form>
-  </div>*/}
-  </>
-  );
-}}
+  </div>
+//Signup woork
 
-export default Signup
+*/}
+ 
