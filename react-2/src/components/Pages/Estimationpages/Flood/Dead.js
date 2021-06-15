@@ -22,6 +22,7 @@ const Dead = () => {
       url: "http://127.0.0.1:8000/floodEstimation/",
       data: formfield,
     }).then((response) => {
+      console.log(response.data)
       setusers(response.data)
     });
     
@@ -133,16 +134,9 @@ const Dead = () => {
             placeholder="Enter Centroid Y..."
           />
         </div>
-        <Link
-  to={{
-    pathname: "/DeadResult",
-    state: {"users":users,
-  "msg":"hello"} // your data array of objects
-  }}
-
-> Lun</Link>
-<button onClick={DelayReturnToHomePage}>hello</button>
+        
         <button className="DeathButton" onClick={Floodinfo}> Estimate</button>
+<button className="DeathButton" onClick={DelayReturnToHomePage}>Result</button>
         {/*<Link to={`/DeadResult/`} className="stretched-link"> &nbsp;Estimate </Link>*/}
         <br />
         <br />

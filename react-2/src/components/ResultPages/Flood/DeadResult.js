@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Chart from 'chart.js';
-import csv from 'd3';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 class Blog extends React.Component {
   
   state = {
@@ -16,9 +16,9 @@ class Blog extends React.Component {
 
    async componentDidMount() {
 
-    this.configureChart();
-    console.log(this.props.location.state.data)
-    this.setState({users:this.props.location.state.data})
+     console.log(this.props.location.state.data)
+     this.setState({users:this.props.location.state.data})
+     this.configureChart(this.props.location.state.data);
   }
 
 
@@ -34,21 +34,21 @@ class Blog extends React.Component {
   
 
 
-  configureChart = () => {
+  configureChart = async data => {
     const chartCanvas = ReactDOM.findDOMNode(this.chart);
 
     const mixedChart = new Chart(chartCanvas, {
       type: "bar",
       data: {
         datasets: [{
-            label: "No. of Earthquakes in Years",
-            data: [14],
+            label: "Estimated Deaths and Displaced",
+            data: [data.Deaths.value,data.Displaceds.value],
             
             backgroundColor: "#DE924B",
             borderColor: "#DE924B",
             borderWidth: 1,
           },],
-        labels:["sunday"]
+        labels:["Deaths","Injureds"]
       },
       options: {
         scales: {
@@ -77,18 +77,37 @@ class Blog extends React.Component {
     
     return (
       <div>
-         {this.state.users.Deaths.Estimation}
+        <h3>Deaths = {this.props.location.state.data.Deaths.Estimation}</h3>
+         <h3>Displaced = {this.props.location.state.data.Displaceds.Estimation}</h3>
         <canvas
-        height={400}
-        width={400}
+        height={10}
+        width={10}
           ref={chart => {
             this.chart = chart;
           }}
         />
+        <div>
+        <section>
+        
+        <Map classNam="Map" google={this.props.google} zoom={1}>
+         
+         <Marker onClick={this.onMarkerClick}
+                 position= {{lat: this.props.location.state.data.Location.Lat , lng: this.props.location.state.data.Location.Long }} />
+        
+         <InfoWindow onClose={this.onInfoWindowClose}>
+             
+         </InfoWindow>
+        </Map>
+        
+                 </section>
+                 </div>
       </div>
     );
   }
 }
 
 
-export default Blog;  
+
+export default GoogleApiWrapper({
+  apiKey: ('AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4')
+})(Blog)
