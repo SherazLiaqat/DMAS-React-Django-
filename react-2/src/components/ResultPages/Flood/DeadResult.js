@@ -15,10 +15,10 @@ class Blog extends React.Component {
   chart = null;
 
    async componentDidMount() {
-const data = this.props.match.params.data;
 
-  this.setState({ users: data });
     this.configureChart();
+    console.log(this.props.location.state.data)
+    this.setState({users:this.props.location.state.data})
   }
 
 
@@ -42,13 +42,13 @@ const data = this.props.match.params.data;
       data: {
         datasets: [{
             label: "No. of Earthquakes in Years",
-            data: this.state.users.data,
+            data: [14],
             
             backgroundColor: "#DE924B",
             borderColor: "#DE924B",
             borderWidth: 1,
           },],
-        labels:this.state.users.lebel
+        labels:["sunday"]
       },
       options: {
         scales: {
@@ -77,7 +77,7 @@ const data = this.props.match.params.data;
     
     return (
       <div>
-         {this.users}
+         {this.state.users.Deaths.Estimation}
         <canvas
         height={400}
         width={400}

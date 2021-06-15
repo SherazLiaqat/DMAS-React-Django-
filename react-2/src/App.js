@@ -101,7 +101,7 @@ function App() {
           <Route path="/AffectedResult" component={AffectedResult} exact />
           <Route path="/DeathResult" component={DeathResult} exact />
           <Route path="/InjuredResult" component={InjuredResult} exact />
-          <Route path="/DeadResult/:data" component={DeadResult} exact />
+          <Route path="/DeadResult" component={DeadResult} exact />
           <Route path="/DisplacedResult" component={DisplacedResult} exact />
           <Route path="/Demo" component={Demo} />
           <Route path='/Map' component={Map} />

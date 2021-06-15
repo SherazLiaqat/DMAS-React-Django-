@@ -370,12 +370,19 @@ def Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude):
 @api_view(['GET','POST'])
 def Flood_Estimation(request):
     if request.method=='POST':
-        print('This is post')
+        print('This is')
         severity= request.data.get('Severity')
+        print("Severity")
+        print(severity)
         affected= request.data.get('Affected Area')
+        print(affected)
         magnitude= request.data.get('Magnitude')
+        print(magnitude)
         c_x= request.data.get('Centroid X')
+        print(c_x)
         c_y= request.data.get('Centroid Y')
+        print(c_y)
+        print("form end")
         location = {"Lat":c_x,"Long":c_y}
         Dead = Flood_Dead_Predictions(severity,affected,magnitude,c_x,c_y)
         range,value = death_range(Dead[0])
@@ -384,6 +391,7 @@ def Flood_Estimation(request):
         range,value = death_range(Displaced[0])
         Displaceds = {"Estimation":Displaced[0],"range":range,"value":value}
         result = {"Location":location,"Deaths":Deaths,"Displaceds":Displaceds}
+        print('end')
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)

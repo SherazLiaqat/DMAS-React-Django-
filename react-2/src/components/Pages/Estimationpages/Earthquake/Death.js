@@ -120,6 +120,7 @@ const Death = () => {
               placeholder="Enter Longitude..."
             />
           </div>
+          
           <button className="DeathButton-Earthquake" onClick={contactinfo }> Estimate</button>
         
        

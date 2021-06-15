@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import "./Dead.css";
 import axios from 'axios';
 const Dead = () => {
@@ -9,7 +9,7 @@ const Dead = () => {
   const [Magnitude, setMagnitude] = useState("");
   const [CentriodsX, setCentriodsX] = useState("");
   const [CentriodsY, setCentriodsY] = useState("");
-  const [user, setUser] = useState("");
+  const [users, setusers] = useState("");
   const Floodinfo = async () => {
     let formfield = new FormData();
     formfield.append("Severity", Severity);
@@ -22,10 +22,25 @@ const Dead = () => {
       url: "http://127.0.0.1:8000/floodEstimation/",
       data: formfield,
     }).then((response) => {
-      console.log(response.data);
-      setUser(response.data)
+      setusers(response.data)
     });
-  };
+    
+  }
+  const history = useHistory();
+ const DelayReturnToHomePage = (e) => {
+
+    setTimeout(() => {
+       var pageType = {
+           pathname: '/DeadResult',
+           state: {
+             data:users
+           }
+         }
+         history.push(pageType); 
+  
+  
+    }, 1700)
+  }
 
  /* const [amount, setamount] = useState();
   const [amount1, setamount1] = useState();
@@ -47,7 +62,7 @@ const Dead = () => {
           className="Changing"
           value={Severity}
           name="Severity"
-          onChange={(e) => setSeverity(e.target.value)}
+          onChange={(e) => setSeverity ((e.target.value))}
         >
           <option>1</option>
           <option>1.5</option>
@@ -118,6 +133,15 @@ const Dead = () => {
             placeholder="Enter Centroid Y..."
           />
         </div>
+        <Link
+  to={{
+    pathname: "/DeadResult",
+    state: {"users":users,
+  "msg":"hello"} // your data array of objects
+  }}
+
+> Lun</Link>
+<button onClick={DelayReturnToHomePage}>hello</button>
         <button className="DeathButton" onClick={Floodinfo}> Estimate</button>
         {/*<Link to={`/DeadResult/`} className="stretched-link"> &nbsp;Estimate </Link>*/}
         <br />

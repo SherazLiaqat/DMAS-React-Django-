@@ -103,7 +103,7 @@ def estimate():
     print(data)
 #estimate() 
 def estimateflood():
-    URL = "http://127.0.0.1:8000/Flood_Displaced/"
+    URL = "http://127.0.0.1:8000/floodEstimation/"
     data = {"Severity":1,"Affected Area":6000,"Magnitude":5.6,"Centroid X":23,"Centroid Y":43}
     json_data = json.dumps(data)
     headers = {'Content-Type': 'application/json'}
