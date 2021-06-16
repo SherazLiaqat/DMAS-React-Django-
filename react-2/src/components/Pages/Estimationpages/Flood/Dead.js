@@ -24,17 +24,17 @@ const Dead = () => {
     }).then((response) => {
       console.log(response.data)
       setusers(response.data)
+      DelayReturnToHomePage(response.data);
     });
-    
   }
   const history = useHistory();
  const DelayReturnToHomePage = (e) => {
-
+  
     setTimeout(() => {
        var pageType = {
            pathname: '/DeadResult',
            state: {
-             data:users
+             data:e
            }
          }
          history.push(pageType); 
@@ -65,6 +65,7 @@ const Dead = () => {
           name="Severity"
           onChange={(e) => setSeverity ((e.target.value))}
         >
+          <h1>Select Severity</h1>
           <option>1</option>
           <option>1.5</option>
           <option>2</option>
@@ -136,7 +137,6 @@ const Dead = () => {
         </div>
         
         <button className="DeathButton" onClick={Floodinfo}> Estimate</button>
-<button className="DeathButton" onClick={DelayReturnToHomePage}>Result</button>
         {/*<Link to={`/DeadResult/`} className="stretched-link"> &nbsp;Estimate </Link>*/}
         <br />
         <br />

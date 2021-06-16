@@ -1,5 +1,5 @@
 import React, { useState,useEffect,row,Component } from 'react'
-import { Pie, defaults } from 'react-chartjs-2';
+import { Pie, defaults,tooltips } from 'react-chartjs-2';
 import "./Chart.css";
 import ReactDOM from 'react-dom';
 import Chart from 'chart.js';
@@ -44,6 +44,7 @@ class BarChart  extends React.Component {
                       '#fe7104',
                       '#f61212',
             ]}],
+            
        labels: ['Low', 'Medium', 'High', 'Very High', 'Extreme'],
       },
     });
@@ -52,13 +53,14 @@ class BarChart  extends React.Component {
   render() {
     return (
       <div>
-         
+          <tooltips/>
         <canvas
         height={400}
         width={400}
           ref={chart => {
             this.chart = chart;
           }}
+         
         />
       </div>
     );
