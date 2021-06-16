@@ -1,5 +1,21 @@
 
-
+.map{
+    justify-content: center;
+    display: flex;
+    
+    position: absolute;
+    background-color: black;
+    width:50%
+}
+.Data{
+    background-color: cadetblue;
+    justify-content: center;
+    display: flex;
+}
+.Bar-graph{
+    background-color: chartreuse;
+    width: 50%;
+}
 .main-container{
     display: inline-table;
     color: black;

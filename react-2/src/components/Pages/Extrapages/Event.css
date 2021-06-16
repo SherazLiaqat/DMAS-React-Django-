@@ -1,25 +1,21 @@
+.event-container-Blog {
+  margin: 20px;
 
-.event-container-Blog{
-    display: inline-table;
-    margin-right: 10%;
-  
+  justify-content: center;
+  display: flex;
 }
 
-.event-container-HeavyRain{
-  
-    display: inline-table;
-    
+.event-container-HeavyRain {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
 }
-@media screen and (max-width: 660px){
-    .event-container-Blog{
-        display: inline-table;
-        margin-right: 50%;
-      
-    }
-    
-    .event-container-HeavyRain{
-      
-        display: inline-table;
-        margin-left: -10rem;
-    }
+@media screen and (max-width: 660px) {
+  .event-container-Blog {
+   width:50%
+  }
+
+  .event-container-HeavyRain {
+   width:100%
+  }
 }

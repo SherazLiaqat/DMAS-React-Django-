@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Chart from 'chart.js';
 import csv from 'd3';
-class Blog extends React.Component {
+class Floodbar extends React.Component {
   
   state = {
     users: null,
@@ -105,4 +105,4 @@ class Blog extends React.Component {
 }
 
 
-export default Blog;  
+export default Floodbar;  
