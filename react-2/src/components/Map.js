@@ -12,10 +12,13 @@ import {
 
 function Map(){
   return(
-    <GoogleMap 
+    <GoogleMap>
     defaultZoom={10}
     defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
-    />
+    <Marker
+   position={{ lat: 45.4211, lng: -75.6903 }}
+   />
+    </GoogleMap> 
   )
 }
 const MapWrapped = withScriptjs(withGoogleMap(Map));

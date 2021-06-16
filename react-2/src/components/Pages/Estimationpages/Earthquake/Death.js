@@ -150,7 +150,7 @@ const DelayReturnToHomePage = (e) => {
         <p>Damage:{users.Estimation}</p>
         <p>Latitude:{users.Lat}</p>
         <p>longitude:{users.Long}</p>
-        <p> System Estimate That {users.value} People Get Injured Due to Earthquake.</p>
+        <p> System Estimate That {users.range} People Get Injured Due to Earthquake.</p>
         <Result />
         </div>
       
