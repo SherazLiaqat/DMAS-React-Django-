@@ -1,103 +1,116 @@
-import React,{Component} from 'react'
-import './DeathResult.css';
-import Blog from '../../Pages/Blog';
-import step1 from '../../images/Step1.jpg';
-import step2 from '../../images/Step2.jpg';
-import step3 from '../../images/Step3.jpg';
-import Result from '../../Pages/Chart/Result';
-import {FaAngleDown,FaAngleRight} from 'react-icons/fa';
-import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons/fa';
-import { VscTwitter} from 'react-icons/vsc';
 
-class DeathResult extends React.Component {
-    state={
-        istogleOn:false
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Chart from 'chart.js';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+class Blog extends React.Component {
+  
+  state = {
+    users: null,
+   
+  }
+
+ 
+  
+  chart = null;
+
+   async componentDidMount() {
+
+     console.log(this.props.location.state.data)
+     this.setState({users:this.props.location.state.data})
+     this.configureChart(this.props.location.state.data);
+  }
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  configureChart = async data => {
+    const chartCanvas = ReactDOM.findDOMNode(this.chart);
+
+    const mixedChart = new Chart(chartCanvas, {
+      type: "bar",
+      data: {
+        datasets: [{
+            label: "Estimated Deaths and Displaced",
+            data: [data.Deaths.value,data.Affecteds.value,[data.Deaths.value,data.Deaths.value]],
+            
+            backgroundColor: ["#DE924B","red"],
+            borderColor: "#DE924B",
+            borderWidth: 1,
+          },],
+        labels:["Deaths","Injureds"]
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        }
       }
-      toglepersonhandler=()=>{
-       
-        this.setState(state=>({
-          istogleOn:!state.istogleOn
-        }));
-      }
-    render(){
+    });
+  };
+ 
+
+
+    // in render 
+    
+    
+    render() {
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+      
+    
     return (
+      <>
+      <div>
+        <section>
         
-        <>
-         <div >
-            <h1> Death's Due to Earthquake</h1>
-        </div>
-        <div className='main-container'>
-            <h1 className='result'>Result </h1>
-            <p> System Estimate That 0 of 25 People Get Injured Due to Earthquake.</p>
+        <Map classNam="Map" google={this.props.google} zoom={1} style={{height: '400px', width: '100rem' , margin:"fixed"}}>
          
-
-           <Result />
-           
-        </div>
-        <div className='side-div-earthquake'>
-            <h2 className='h4-earthquake'> Eartquake Death</h2>
-           
-            <ul className='side-div-p'>
-           
-                <div className='earth'>
-                    
-                
-                    
-                     <button className='button-size'
- 
- onClick={()=>{this.setState({shows:!this.state.shows})}}>{ this.state.shows ?<FaAngleDown/>:<FaAngleRight/>}</button>Stay safe.</div>
-             
-             <div>
-                {
-                    this.state.shows? <div><img  src={step1} ></img><p>Stay safe.</p></div> : null
-                }
-                
-            </div>
-                <div className='earth'> <button className='button-size'
- 
- onClick={()=>{this.setState({show2:!this.state.show2})}}>{ this.state.show2 ? <FaAngleDown/>:<FaAngleRight/>}
- </button> Help Others</div>
-                 <div>
-                {
-                    this.state.show2? <div><img  src={step2} ></img><p>Help Others.</p></div> : null
-                }
-                
-            </div>
-                <div className='earth'> <button className='button-size'
- 
- onClick={()=>{this.setState({show3:!this.state.show3})}}>{ this.state.show3 ?<FaAngleDown/>:<FaAngleRight/>}</button>Don't Panic.</div>
-                <div>
-                {
-                    this.state.show3? <div><img  src={step3} ></img><p>Don't Panic.</p></div> : null
-                }
-                
-           
-               
-                
-            </div>
-            </ul>
-            </div>
-        <div className='side-div-Result'>
-            <h2 className='h4-earthquake'> Share With</h2>
-           
-            <ul className='side-div-p'>
-           
-                <div className='social-media'>
-                    <FaFacebookF/>
-                    <FaInstagram/>
-                    <VscTwitter/>
-                    <FaYoutube/>
-                    <FaLinkedin/>
-                
-                
-            </div>
-            </ul>
-          </div>
-          <footer> <p className='footer'> This Information is not Authenticated by any Official Source</p></footer>
-        </>
+         <Marker onClick={this.onMarkerClick}
+                 position= {{lat: this.props.location.state.data.location.Lat , lng: this.props.location.state.data.location.Long }} />
         
+         <InfoWindow onClose={this.onInfoWindowClose}>
+             
+         </InfoWindow>
+        </Map>
+        
+                 </section>
+                 </div>
+      <div>
+        <h3>Deaths = {this.props.location.state.data.Deaths.Estimation}</h3>
+         <h3>Displaced = {this.props.location.state.data.Affecteds.Estimation}</h3>
+        <canvas
+        height={10}
+        width={10}
+          ref={chart => {
+            this.chart = chart;
+          }}
+        />
+        
+      </div>
+      </>
     );
-}}
+  }
+}
 
-export default DeathResult;
 
+
+export default GoogleApiWrapper({
+  apiKey: ('AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4')
+})(Blog)

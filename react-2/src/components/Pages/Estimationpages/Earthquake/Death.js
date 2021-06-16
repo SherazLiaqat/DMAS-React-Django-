@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import Result from "../../Chart/Result";
+import { Link,useHistory } from 'react-router-dom';
 
 import "./Death.css";
 
@@ -45,6 +46,23 @@ const Death = () => {
   
 });
 }
+const history = useHistory();
+const DelayReturnToHomePage = (e) => {
+
+   setTimeout(() => {
+      var pageType = {
+          pathname: '/DeathResult',
+          state: {
+            data:users
+          }
+        }
+        history.push(pageType); 
+ 
+ 
+   }, 1700)
+ }
+
+
   return (
     <>
       <div className="main">
@@ -122,7 +140,7 @@ const Death = () => {
           </div>
           
           <button className="DeathButton-Earthquake" onClick={contactinfo }> Estimate</button>
-        
+          <button className="DeathButton" onClick={DelayReturnToHomePage}>Result</button>
        
       </div>
       <div>
