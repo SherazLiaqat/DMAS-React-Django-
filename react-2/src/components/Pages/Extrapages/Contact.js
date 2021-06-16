@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
+
+import '../Authenticationpages/Signuppages/Signup.css';
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
 import { BiMessageRounded } from "react-icons/bi";

@@ -16,7 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import axios from "axios";
-
+import './Signup.css';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -36,6 +36,11 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+  },
+  textbox:{
+
+display:'flex',
+width: '100%',
   },
 }));
 
@@ -79,11 +84,12 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-        
-       Welcome back!<br/> Help out the Pendamic suffering people.
+        Sign UP
+      
         
       
         </Typography>
+        <div className={classes.textbox} >
         <TextField
             variant="outlined"
             margin="normal"
@@ -112,6 +118,7 @@ export default function SignIn() {
             value={lastname}
             onChange={(e) => setlastname(e.target.value)}
           />
+          </div>
           <TextField
             variant="outlined"
             margin="normal"
@@ -159,7 +166,7 @@ export default function SignIn() {
             required
             fullWidth
             name="password2"
-            label="Password"
+            label=" Confirm Password"
             type="password"
             id="password2"
             //autoComplete="current-password"

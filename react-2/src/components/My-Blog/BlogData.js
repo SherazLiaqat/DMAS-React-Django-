@@ -48,7 +48,7 @@ console.log(data);
 
     if (this.state.users !== null) {
       users = this.state.users.map(user => (
-          
+          <div className="Main-BlogData-Container">
         <div className="site-content">
        
         <div className="posts">
@@ -91,6 +91,7 @@ console.log(data);
          
         </div>
         
+        </div>
         </div>
       ));
     }

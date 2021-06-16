@@ -82,7 +82,7 @@ console.log(data);
               </p>
               
              
-              <Link to={`/BlogData/${user.slug}`} className="stretched-link">Read More &nbsp; </Link>
+              <Link to={`/BlogData/${user.slug}`} className="button-blog">Read More &nbsp; <i className="fas fa-arrow-right" /> </Link>
               
                 
               

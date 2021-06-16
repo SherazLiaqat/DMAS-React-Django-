@@ -1,3 +1,7 @@
+.Main-BlogData-Container{
+  justify-content: center;
+  display: flex;
+}
 .site-content {
   display: grid;
   grid-template-columns: 65% 35%;
@@ -54,7 +58,11 @@
   margin: 4rem 0;
   
 }
+.button-blog{
+  background-color: skyblue;
+ 
 
+}
 .site-content .pagination a {
   padding: 0.6rem 0.9rem;
   border-radius: 2rem;

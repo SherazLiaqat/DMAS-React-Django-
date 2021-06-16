@@ -15,22 +15,15 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import axios from "axios";
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-     
-      
-     
-    </Typography>
-  );
-}
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(3),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    
   },
  
   avatar: {
@@ -83,7 +76,7 @@ export default function SignIn() {
         
       
         </Typography>
-      
+     <div className={classes.form}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -111,11 +104,12 @@ export default function SignIn() {
             value={Password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <FormControlLabel 
+         
+          <FormControlLabel className={classes.form}
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          
+         
           
           <Button 
             type="submit"
@@ -139,7 +133,7 @@ export default function SignIn() {
               </Link>
             </Grid>
           </Grid>
-        
+          </div>
       </div>
       <Box mt={8}>
         

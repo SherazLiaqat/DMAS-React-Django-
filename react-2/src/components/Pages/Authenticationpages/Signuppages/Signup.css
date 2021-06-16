@@ -1,5 +1,7 @@
 
-    
+    .MuiContainer-maxWidthXs {
+      max-width: 550px !important;
+  }
 
 
 .form-container {
