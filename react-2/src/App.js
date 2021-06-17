@@ -42,7 +42,7 @@ import DeathResult from "./components/ResultPages/Earthqauke/DeathResult";
 import DeadResult from "./components/ResultPages/Flood/DeadResult";
 import AffectedResult from "./components/ResultPages/Earthqauke/AffectedResult";
 import InjuredResult from "./components/ResultPages/Earthqauke/InjuredResult";
-import DisplacedResult from "./components/ResultPages/Flood/DisplacedResult";
+
 import chart from "./components/Pages/Chart/Result";
 import Result from "./components/Pages/Chart/Result";
 import MyNews from "./components/News/News";
@@ -104,7 +104,7 @@ function App() {
           <Route path="/DeathResult" component={DeathResult} exact />
           <Route path="/InjuredResult" component={InjuredResult} exact />
           <Route path="/DeadResult" component={DeadResult} exact />
-          <Route path="/DisplacedResult" component={DisplacedResult} exact />
+          
           <Route path="/Demo" component={Demo} />
           <Route path='/Map' component={Map} />
           

@@ -17,13 +17,28 @@
 .Bar-graph{
     
     
+   
+   
     justify-content: center;
     display: flex;
-    width: 50%;
+    margin: 50px ;
+    
+}
+
+.map-result{
+   position:absolute;
+
+}
+.map-result-inner{
+    width: 70%; 
+    height: 100%;
+     margin:0px auto;
+      display:inline-block;
 }
 .main-card-result{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .card-result1{
     margin: 20px;
@@ -37,6 +52,7 @@
     overflow: hidden;
     width: 20%;
     border-bottom: 10px solid #DE924B;
+    
 }
 .card-result2{
     margin: 20px;
@@ -50,6 +66,7 @@
     overflow: hidden;
     width: 20%;
     border-bottom: 10px solid skyblue;
+    
 }
 .card-result3{
     margin: 20px;
@@ -63,8 +80,12 @@
     overflow: hidden;
     width: 20%;
     border-bottom: 10px solid seagreen;
+    
 }
 
+.paragraph-result{
+    font-size: 14px;
+}
 .main-container{
     display: inline-table;
     color: black;

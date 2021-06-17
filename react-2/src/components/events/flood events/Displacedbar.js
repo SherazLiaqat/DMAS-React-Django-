@@ -47,7 +47,7 @@ class Floodbar extends React.Component {
       type: "bar",
       data: {
         datasets: [{
-            label: "No. of Earthquakes in Years",
+            label: "No. of Floods in Years",
             data: this.state.users.Displaced,
             
             backgroundColor: "#DE924B",
