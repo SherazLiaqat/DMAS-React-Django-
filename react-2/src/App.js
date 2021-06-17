@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Signup from "./components/Pages/Authenticationpages/Signuppages/Signup";
 import Awareness from "./components/Pages/Awareness";
 import Home from "./components/Pages/Home";
-import Product from "./components/Pages/Blog";
+import Product from "./components/events/Earthquake events/Deathbar";
 import News from "./components/Pages/News";
 import Earthquakeinfo from "./components/Pages/Infopages/Earthquakeinfo";
 //import Flood from './components/Pages/Infopages/Floodinfo';
@@ -15,9 +15,9 @@ import Floodinfo from "./components/Pages/Infopages/Floodinfo";
 import Login from "./components/Pages/Authenticationpages/Loginpages/Login";
 import Fireinfo from "./components/Pages/Infopages/Fireinfo";
 import Covid19 from "./components/Pages/Infopages/Covid-19info";
-import Heavyraininfo from "./components/Pages/Infopages/Heavyrain";
+
 import Carditem from "./components/Card/CardItems";
-import Blog from "./components/Pages/Blog";
+import Blog from "./components/events/Earthquake events/Deathbar";
 //import Fireinfo from './components/Pages/Infopages/Fireinfo';
 import About from "./components/Pages/Extrapages/About";
 import Contact from "./components/Pages/Extrapages/Contact";
@@ -90,7 +90,7 @@ function App() {
           <Route path="/Floodinfo" component={Floodinfo} exact />
           <Route path="/Fireinfo" component={Fireinfo} exact />
           <Route path="/Covid19" component={Covid19} exact />
-          <Route path="/Heavyrain" component={Heavyraininfo} exact />
+          
           <Route path="/Fireinfo" component={Fireinfo} />
           <Route path="/About" component={About} exact />
           <Route path="/Locust" component={Locust} exact />

@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 import React, { Component } from 'react';
 
 import blog1 from "../images/blog1.png";
-import BlogData from "./BlogData";
+import './BlogData.css';
 
 //import  Pagination from './News/Pagination';
 let p=0;
@@ -49,7 +49,7 @@ console.log(data);
     if (this.state.users !== null) {
       users = this.state.users.map(user => (
           <div className="Main-BlogData-Container">
-        <div className="site-content">
+        <div className="site-content-BlogData">
        
         <div className="posts">
 
@@ -58,11 +58,11 @@ console.log(data);
             data-aos="zoom-in"
             data-aos-delay={200}
           >
-            <div className="post-image">
+            <div className="post-image-Blog-data">
               <div>
-                <img src={user.photo} className="imgg" alt="blog-image" />
+                <img src={user.photo} className="imgg-Blog-data" alt="blog-image" />
               </div>
-              <div className="post-info flex-row">
+              <div className="post-info-Blog-data">
                 <span>
                   <i className="fas fa-user text-gray" />
                   &nbsp;&nbsp;Admin

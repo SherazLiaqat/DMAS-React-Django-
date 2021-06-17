@@ -123,9 +123,9 @@ class DeathResult extends React.Component {
             </div>
           </div>
           <div>
-            <div className="map-result">
+            <div >
               <Map
-                className="map-result-inner"
+                
                 google={this.props.google}
                 zoom={2}
                 center={{

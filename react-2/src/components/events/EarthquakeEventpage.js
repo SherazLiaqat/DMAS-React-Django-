@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Blog from "../Pages/Blog";
-import Heavyrain from "../Pages/Infopages/Heavyrain";
+import Deathbar from "./Earthquake events/Deathbar";
+import Deathdpie from "./Earthquake events/Deathpie";
+
 import Affectedbar from "./Earthquake events/Affectedbar";
 import Affectedpie from "./Earthquake events/Affectedpie";
 import Injuredbar from "./Earthquake events/Injuredbar";
@@ -16,10 +17,10 @@ export const Event = () => {
     <div className="div-main">
       <h1>Earthquake deaths</h1>
       <div className="event-container-Blog">
-        <Blog />
+        <Deathbar  />
       </div>
       <div className="event-container-HeavyRain">
-        <Heavyrain />
+        <Deathdpie />
       </div>
       <div>
         <h1>Injuried</h1>
