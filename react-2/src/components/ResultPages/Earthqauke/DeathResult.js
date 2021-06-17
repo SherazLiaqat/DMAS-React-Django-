@@ -82,13 +82,14 @@ class Blog extends React.Component {
 
     return (
       <>
-        <div>
+        <div className='result-body'>
         
-        </div>
+        
         <div>
           <h1> This is Result</h1>
           <div className="main-card-result">
-          <div className="card-result">
+          <div className="card-result1">
+            
             <h1>Death</h1>
           <h3>Estimation = {this.props.location.state.data.Deaths.Estimation}</h3>
           
@@ -96,15 +97,15 @@ class Blog extends React.Component {
 
           
           </div>
-          <div className="card-result">
+          <div className="card-result2">
           <h1>Affected</h1>
           
           <h3>Estimation = {this.props.location.state.data.Affecteds.Estimation}</h3>
         <p> System Estimate That {this.props.location.state.data.Affecteds.range} People Get Injured Due to Earthquake.</p>
           </div>
-          <div className="card-result">
+          <div className="card-result3">
           <h1>Injured</h1>
-          <h3>Estimation = {this.props.location.state.data.Deaths.Injureds}</h3>
+          <h3>Estimation = {this.props.location.state.data.Injureds.Estimation}</h3>
           
         <p> System Estimate That {this.props.location.state.data.Injureds.range} People Get Injured Due to Earthquake.</p>
           </div>
@@ -112,7 +113,7 @@ class Blog extends React.Component {
          
 
           
-          <canvas
+          <canvas className='Bar-graph'
             height={200}
             width={600}
             ref={chart => {
@@ -134,6 +135,7 @@ class Blog extends React.Component {
 
           </section>
   
+</div>
 </div>
       </>
     );

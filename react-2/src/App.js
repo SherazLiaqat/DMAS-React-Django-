@@ -26,7 +26,7 @@ import Death from "./components/Pages/Estimationpages/Earthquake/Death";
 import Affected from "./components/Pages/Estimationpages/Earthquake/Affected";
 import Injured from "./components/Pages/Estimationpages/Earthquake/Injured";
 import Locust from "./components/Pages/Infopages/Locusts";
-import Event from "./components/Pages/Extrapages/Event";
+import Event from "./components/events/Event";
 import Api from "./components/Pages/Api/Api";
 //import NewsApi from './components/Pages/Api/NewsApi/NewsApi';
 import am4core from "./components/Pages/Api/NewsApi/NewsApi";

@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import Blog from "../../Pages/Blog";
-import Heavyrain from "../Infopages/Heavyrain";
-import Affectedbar from "../../events/Earthquake events/Affectedbar";
-import Affectedpie from "../../events/Earthquake events/Affectedpie";
-import Injuredbar from "../../events/Earthquake events/Injuredbar";
-import Injuredpie from "../../events/Earthquake events/Injuredpie";
+import Blog from "../Pages/Blog";
+import Heavyrain from "../Pages/Infopages/Heavyrain";
+import Affectedbar from "./Earthquake events/Affectedbar";
+import Affectedpie from "./Earthquake events/Affectedpie";
+import Injuredbar from "./Earthquake events/Injuredbar";
+import Injuredpie from "./Earthquake events/Injuredpie";
 import Utils from "util";
 import axios from "axios";
 import "./Event.css";
 import { PostAddSharp } from "@material-ui/icons";
 
 export const Event = () => {
+  
   return (
     <div className="div-main">
       <h1>Earthquake deaths</h1>

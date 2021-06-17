@@ -28,16 +28,6 @@ class Blog extends React.Component {
 
 
 
-
-
-
-
-
-
-
-  
-
-
   configureChart = () => {
     const chartCanvas = ReactDOM.findDOMNode(this.chart);
 

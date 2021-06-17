@@ -15,8 +15,11 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+//import validation from './Validation';
+import {Formik} from 'formik';
 import axios from "axios";
 import './Signup.css';
+import { values } from 'lodash';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -37,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+ 
   textbox:{
 
 display:'flex',
@@ -52,7 +56,7 @@ export default function SignIn() {
   const [firstname,setfirstname]=useState("");
   const [lastname,setlastname]=useState("");
   const [users,setusers]=useState("");
-
+  //const [errors,setErrors]=useState({});
   const signupinfo = async () => {
     let formfield = new FormData();
     formfield.append("fname",firstname);
@@ -62,6 +66,7 @@ export default function SignIn() {
     formfield.append("pass1", Password);
     formfield.append("pass2", Password2);
    
+    //setErrors(validation(values));
   
    await axios({
     method: "post",
@@ -75,7 +80,7 @@ export default function SignIn() {
   });
   }
   const classes = useStyles();
-
+ 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -84,7 +89,8 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-        Sign UP
+        Sign UP<br/>
+        Please fill this form to Create Account
       
         
       
@@ -104,6 +110,7 @@ export default function SignIn() {
             value={firstname}
             onChange={(e) => setfirstname(e.target.value)}
           />
+          
            <TextField
             variant="outlined"
             margin="normal"
@@ -118,6 +125,7 @@ export default function SignIn() {
             value={lastname}
             onChange={(e) => setlastname(e.target.value)}
           />
+          
           </div>
           <TextField
             variant="outlined"
@@ -133,6 +141,7 @@ export default function SignIn() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
+           
            <TextField
             variant="outlined"
             margin="normal"

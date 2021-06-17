@@ -1,4 +1,6 @@
-
+.result-body{
+   background-color:  #FAFAFA;
+}
 .map{
     justify-content: center;
     display: flex;
@@ -13,14 +15,17 @@
     display: flex;
 }
 .Bar-graph{
-    background-color: chartreuse;
+    
+    
+    justify-content: center;
+    display: flex;
     width: 50%;
 }
 .main-card-result{
     display: flex;
     justify-content: center;
 }
-.card-result{
+.card-result1{
     margin: 20px;
     padding: 20px;
     justify-content: space-between;
@@ -31,7 +36,35 @@
     border-radius: 10px;
     overflow: hidden;
     width: 20%;
+    border-bottom: 10px solid #DE924B;
 }
+.card-result2{
+    margin: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    width: 20%;
+    border-bottom: 10px solid skyblue;
+}
+.card-result3{
+    margin: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    width: 20%;
+    border-bottom: 10px solid seagreen;
+}
+
 .main-container{
     display: inline-table;
     color: black;
