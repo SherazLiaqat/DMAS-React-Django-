@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Button} from '../Button/Button';
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
+import {Nav,NavDropdown,} from 'react-bootstrap';
 import './Navbar.css';
 import Dropdowns from './Dropdowns';
 import { FaHome } from 'react-icons/fa';
@@ -104,7 +105,7 @@ function Navbar() {
                 
                 className='nav-links'
                 onClick={closeMobileMenu}>
-                Earthquake<IoMdArrowDropdown onClick/>
+                Estimation<IoMdArrowDropdown onClick/>
               
               </Link>
 
@@ -121,7 +122,7 @@ function Navbar() {
                 
                 className='nav-links'
                 onClick={closeMobileMenu}>
-                Flood <IoMdArrowDropdown onClick/>
+                Event <IoMdArrowDropdown onClick/>
                 
               </Link>
               {dropdowns && <Dropdowns />}
@@ -167,6 +168,13 @@ function Navbar() {
                 Log In
               </Link>
             </li>
+           {/* <Nav>
+              <NavDropdown title="user name"><IoMdArrowDropdown />
+                <NavDropdown.Item>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>*/}
           </ul>
           
           {button && <Button buttonStyle='btn--outline'>LOG IN</Button>}

@@ -1,13 +1,13 @@
 export const MenuItems = [
     {
-      title: 'Death Estemation',
-      path: '/Dead',
+      title: 'Earthqauke',
+      path: '/Event',
       cName: 'dropdown-link'
     },
     
     {
-      title: 'Affected Displacement',
-      path: '/Affectedpeopel',
+      title: 'Flood',
+      path: '/Floodevent',
       cName: 'dropdown-link'
     }
    

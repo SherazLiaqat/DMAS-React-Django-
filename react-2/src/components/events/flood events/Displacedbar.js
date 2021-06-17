@@ -1,8 +1,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {defaults } from 'react-chartjs-2';
 import Chart from 'chart.js';
 import csv from 'd3';
+defaults.global.tooltips.enabled = true
 class Floodbar extends React.Component {
   
   state = {
@@ -16,7 +18,7 @@ class Floodbar extends React.Component {
 
    async componentDidMount() {
     const url =
-    "http://127.0.0.1:8000/Earthquake_Events/";
+    "http://127.0.0.1:8000/Flood_Events/";
   const response = await fetch(url);
   const data = await response.json();
 
@@ -46,14 +48,14 @@ class Floodbar extends React.Component {
       data: {
         datasets: [{
             label: "No. of Earthquakes in Years",
-            data: this.state.users.data,
+            data: this.state.users.Displaced,
             
             backgroundColor: "#DE924B",
             borderColor: "#DE924B",
             borderWidth: 1,
           },{
             label: "Line Dataset 2",
-            data: this.state.users.data,
+            data: this.state.users.Displaced,
             type: "line",
             borderColor: 'rgba(54,162,235,1)',
             fill: false,
@@ -62,7 +64,7 @@ class Floodbar extends React.Component {
             // pointRadius: 0,
             //pointStyle: "circle",
           }],
-        labels:this.state.users.lebel
+        labels:this.state.users.Displaced_years
       },
       options: {
         scales: {

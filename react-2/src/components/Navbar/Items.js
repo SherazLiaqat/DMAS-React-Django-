@@ -1,7 +1,7 @@
 export const Items = [
     {
       title: 'Earhquake',
-      path: '/Death',
+      path: '/Event',
       cName: 'Dropdown-link'
     },
     

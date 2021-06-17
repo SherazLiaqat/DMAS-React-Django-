@@ -1,13 +1,13 @@
 import React, { useState,useEffect,row,Component } from 'react'
 import { Pie, defaults } from 'react-chartjs-2';
-import "./Chart.css";
+//import "./Chart.css";
 import ReactDOM from 'react-dom';
 import Chart from 'chart.js';
 import {csv} from 'd3';
-defaults.global.tooltips.enabled = false
+defaults.global.tooltips.enabled = true
 defaults.global.legend.position = 'bottom'
 
-class Floodpie  extends React.Component {
+class Deadpie  extends React.Component {
   state = {
     users: null,
    
@@ -19,7 +19,7 @@ class Floodpie  extends React.Component {
 
    async componentDidMount() {
     const url =
-    "http://127.0.0.1:8000/Earthquake_Events/";
+    "http://127.0.0.1:8000/Flood_Events/";
   const response = await fetch(url);
   const data = await response.json();
 
@@ -66,4 +66,4 @@ class Floodpie  extends React.Component {
 }
 
 
-export default Floodpie
+export default Deadpie

@@ -26,7 +26,7 @@ import Death from "./components/Pages/Estimationpages/Earthquake/Death";
 import Affected from "./components/Pages/Estimationpages/Earthquake/Affected";
 import Injured from "./components/Pages/Estimationpages/Earthquake/Injured";
 import Locust from "./components/Pages/Infopages/Locusts";
-import Event from "./components/events/Event";
+import Event from "./components/events/EarthquakeEventpage";
 import Api from "./components/Pages/Api/Api";
 //import NewsApi from './components/Pages/Api/NewsApi/NewsApi';
 import am4core from "./components/Pages/Api/NewsApi/NewsApi";
@@ -52,6 +52,7 @@ import Hero from "./components/My-Blog/Hero";
 import Demo from './components/Demo';
 import Map from "./components/Map";
 import BlogData from "./components/My-Blog/BlogData";
+import FloodEventpage from "./components/events/FloodEventpage";
 function App() {
   return (
     <>
@@ -80,6 +81,7 @@ function App() {
           <Route path='/BlogData/:slug' component={BlogData} />
           <Route path="/MyNews" component={MyNews} />
           <Route path="/MyBlog" component={MyBlog} exact />
+          <Route path="/Floodevent" component={FloodEventpage} exact />
         </Switch>
 
         <Switch>
