@@ -125,7 +125,11 @@ class Blog extends React.Component {
         <div>
   <section>
 
-            <Map classNam="Map" google={this.props.google} zoomfit={2}  >
+            <Map classNam="Map" google={this.props.google} zoomfit={2}  center={{
+              lat: this.props.location.state.data.location.Lat,
+              lng: this.props.location.state.data.location.Long
+
+            }} >
 
               <Marker onClick={this.onMarkerClick}
                 position={{ lat: this.props.location.state.data.location.Lat, lng: this.props.location.state.data.location.Long }} />

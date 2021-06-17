@@ -42,7 +42,7 @@ const Death = () => {
 }).then((response) => {
   console.log(response.data);
   setusers(response.data);
-  
+  DelayReturnToHomePage(response.data);
   
 });
 }
@@ -53,7 +53,7 @@ const DelayReturnToHomePage = (e) => {
       var pageType = {
           pathname: '/DeathResult',
           state: {
-            data:users
+            data:e
           }
         }
         history.push(pageType); 
@@ -140,7 +140,7 @@ const DelayReturnToHomePage = (e) => {
           </div>
           
           <button className="DeathButton-Earthquake" onClick={contactinfo }> Estimate</button>
-          <button className="DeathButton" onClick={DelayReturnToHomePage}>Result</button>
+          
        
       </div>
       <div>

@@ -1,8 +1,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { defaults } from 'react-chartjs-2';
 import Chart from 'chart.js';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+defaults.global.tooltips.enabled = true
 class Blog extends React.Component {
   
   state = {
@@ -78,33 +80,60 @@ class Blog extends React.Component {
     return (
       
       <>
-      <div>
-        <section>
+       <div className='result-body'>
         
-        <Map classNam="Map" google={this.props.google} zoom={-2}>
+        
+        <div>
+          <h1> This is Result</h1>
+          <div className="main-card-result">
+          <div className="card-result1">
+            
+            <h1>Death</h1>
+          <h3>Estimation = {this.props.location.state.data.Deaths.Estimation}</h3>
+          
+        <p> System Estimate That {this.props.location.state.data.Deaths.range} People Get Injured Due to Earthquake.</p>
+
+          
+          </div>
+          <div className="card-result2">
+          <h1>Affected</h1>
+          
+          <h3>Estimation = {this.props.location.state.data.Displaceds.Estimation}</h3>
+        <p> System Estimate That {this.props.location.state.data.Displaceds.range} People Get Injured Due to Earthquake.</p>
+          </div>
+          
+          </div>
          
-         <Marker onClick={this.onMarkerClick}
-                 position= {{lat: this.props.location.state.data.Location.Lat , lng: this.props.location.state.data.Location.Long }} />
-        
-         <InfoWindow onClose={this.onInfoWindowClose}>
+
+          
+          <canvas className='Bar-graph'
+            height={200}
+            width={600}
+            ref={chart => {
+              this.chart = chart;
+            }}
+          />
+
+        </div>
+        <div>
+  <section>
+
+            <Map classNam="Map" google={this.props.google} zoomfit={2} center={{
+              lat: this.props.location.state.data.Location.Lat,
+              lng: this.props.location.state.data.Location.Long
+
+            }}  >
+
+              <Marker onClick={this.onMarkerClick}
+                position={{ lat: this.props.location.state.data.Location.Lat, lng: this.props.location.state.data.Location.Long }} />
+
              
-         </InfoWindow>
-        </Map>
-        
-                 </section>
-                 </div>
-      <div>
-        <h3>Deaths = {this.props.location.state.data.Deaths.Estimation}</h3>
-         <h3>Displaced = {this.props.location.state.data.Displaceds.Estimation}</h3>
-        <canvas
-        height={10}
-        width={10}
-          ref={chart => {
-            this.chart = chart;
-          }}
-        />
-        
-      </div>
+            </Map>
+
+          </section>
+  
+</div>
+</div>
       </>
     );
   }
