@@ -327,6 +327,7 @@ def Earthquake_Estimation(request):
         else:
             Oceania=1
         print(Continent)
+        credentials = {"type":Earthquake_Type,"continent":Continent,"magnitude":Magnitude,"lat":Latitude,"long":Longitude}
         Dead = Earthquake_Dead_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude)
         range,value = death_range(Dead[0])
         location = {"Lat":Latitude,"Long":Longitude}
@@ -337,7 +338,7 @@ def Earthquake_Estimation(request):
         Affected = Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude)
         range,value = Affected_range(Affected[0])
         Affecteds = {"Estimation":Affected[0],"range":range,"value":value}
-        result = {"location":location,"Deaths":Deaths,"Injureds":Injureds,"Affecteds":Affecteds}
+        result = {"location":location,"credential":credentials,"Deaths":Deaths,"Injureds":Injureds,"Affecteds":Affecteds}
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
@@ -384,13 +385,14 @@ def Flood_Estimation(request):
         print(c_y)
         print("form end")
         location = {"Lat":c_x,"Long":c_y}
+        credentials = {"severity":severity,"affected_area":affected,"magnitude":magnitude,"lat":c_x,"long":c_y}
         Dead = Flood_Dead_Predictions(severity,affected,magnitude,c_x,c_y)
         range,value = death_range(Dead[0])
         Deaths = {"Estimation":Dead[0],"range":range,"value":value}
         Displaced = Flood_Displaced_Predictions(severity,affected,magnitude,c_x,c_y)
         range,value = death_range(Displaced[0])
         Displaceds = {"Estimation":Displaced[0],"range":range,"value":value}
-        result = {"Location":location,"Deaths":Deaths,"Displaceds":Displaceds}
+        result = {"Location":location,"credential":credentials,"Deaths":Deaths,"Displaceds":Displaceds}
         print('end')
         return Response(result)
     res = {"msg":"Something is wrong!"}
