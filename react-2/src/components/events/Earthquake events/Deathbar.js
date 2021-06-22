@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import Chart from 'chart.js';
 import csv from 'd3';
 let formfield =null;
+let methods=null;
+
 class Blog extends React.Component {
   
   state = {
@@ -18,15 +20,14 @@ class Blog extends React.Component {
 
    async componentDidMount() {
      
-
-     
-     
-    const url =
-    "http://127.0.0.1:8000/Earthquake_Events/"
-   
-  const response = await fetch(url);
+    const requestOptions = {
+      
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ country: this.props.val })
+  };
+  const response = await fetch('http://127.0.0.1:8000/Earthquake_Events/', requestOptions);
   const data = await response.json();
-
 console.log(this.props.val);
   this.setState({ users: data });
     this.configureChart();
@@ -36,6 +37,7 @@ console.log(this.props.val);
 
 
   configureChart = () => {
+    
     const chartCanvas = ReactDOM.findDOMNode(this.chart);
 
     const mixedChart = new Chart(chartCanvas, {
@@ -84,11 +86,12 @@ console.log(this.props.val);
       
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      
+      let r =this.state.users.deaths
     
     return (
       <div>
-         {this.props.val}
+         <h1>hello{this.props.val}</h1>
+    <h1>Death{r}</h1>
         <canvas
         height={500}
         width={1000}

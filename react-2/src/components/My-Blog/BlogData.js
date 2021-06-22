@@ -2,7 +2,7 @@
 import "./Blog.css";
 import { Button } from '@material-ui/core';
 import React, { Component } from 'react';
-
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import blog1 from "../images/blog1.png";
 import './BlogData.css';
 
@@ -79,7 +79,7 @@ console.log(data);
               {user.title}
               </a>
               <p >
-              {user.content}
+              { ReactHtmlParser(user.content) }
               </p>
               
              {/* <button className="btn post-btn">
