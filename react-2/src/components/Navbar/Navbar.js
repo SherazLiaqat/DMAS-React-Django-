@@ -135,18 +135,10 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Live
+                Live News
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link
-                to='/MyNews'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                News
-              </Link>
-            </li>
+           
            
             <li className='nav-item'>
               <Link

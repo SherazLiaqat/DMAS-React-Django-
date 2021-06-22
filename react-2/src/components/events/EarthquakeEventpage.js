@@ -41,12 +41,13 @@ export const Event = ({ handleCountryChange })=> {
       </NativeSelect>
     </FormControl>
     <h1>Earthquake Happened</h1>
+    <p style={{textAlign:'center'}}> Number of earthqauake happend in Last years</p>
       <div className="event-container-Blog">
         <Earthquakes
         
           />
       </div>
-      <h1>Earthquake deaths</h1>
+      <h1>Earthquake Deaths</h1>
       <div className="event-container-Blog">
         <Deathbar
         val={filter}

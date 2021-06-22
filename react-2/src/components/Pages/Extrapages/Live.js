@@ -24,9 +24,9 @@ const Live = () => {
             <CardItem
               src="images/flood.jpg"
               text="Explore the Earthqake Live Information..."
-              path="/Floodinfo"
-              label="Earthquake"
-              path="/"
+              path="/EarthquakeLive"
+              label="EarthquakeLive"
+              
               target="_blank"
             />
           </ul>

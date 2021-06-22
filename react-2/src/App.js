@@ -31,8 +31,9 @@ import Api from "./components/Pages/Api/Api";
 
 import Live from "./components/Pages/Extrapages/Live";
 import CovidLive from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidLive";
+import EarthquakeLive from "./components/Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive";
 import FloodLive from "./components/Pages/Extrapages/LiveEvents/FloodLive/FloodLive";
-import EarthquakeLive from "./components/News/Readmore";
+import Readmore from "./components/News/Readmore";
 import MyBlog from "./components/My-Blog/Blog";
 import ScrollToTop from "./components/ScrollToTop";
 import Dead from "./components/Pages/Estimationpages/Flood/Dead";
@@ -99,6 +100,7 @@ function App() {
           <Route path="/CovidLive" component={CovidLive} exact />
           <Route path="/FloodLive" component={FloodLive} exact />
           <Route path="/EarthquakeLive" component={EarthquakeLive} exact />
+          <Route path="/Readmore" component={Readmore } exact />
           
           <Route path="/DeathResult" component={DeathResult} exact />
          
