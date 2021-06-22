@@ -22,9 +22,10 @@ function Footer() {
           </div>
           <div className='footer-link-items'>
             <h2>Explore</h2>
-            <Link to='/Eartquakeinfo'>Earthquake Event</Link>
-            <Link to='/Map'>Flood Event</Link>
-            <Link to='/Demo'>Weather</Link>
+            <Link to='/Death'>Estimation</Link>
+            <Link to='/Event'>Earthquake Event</Link>
+            <Link to='/FloodEvent'>Flood Event</Link>
+            <Link to='/Api'>Weather</Link>
             
           </div>
         </div>
@@ -35,7 +36,7 @@ function Footer() {
             <Link to='/Floodinfo' target="_blank">Flood</Link>
             <Link to='/Covid-19info' target="_blank">Covid-19</Link>
             <Link to='/Fireinfo' target="_blank">Fire</Link>
-            <Link to='/Locust' target="_blank">Locust</Link>
+            
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
