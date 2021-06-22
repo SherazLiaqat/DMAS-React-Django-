@@ -1,5 +1,6 @@
 import React from "react";
 import {BeatLoader} from 'react-spinners';
+import "./FloodLive.css";
 
 
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
@@ -106,12 +107,31 @@ Readmore=()=>{
 
     return (
     <>
+ 
 
-     
     <div>
       
        <h1>Flood Live News with Mapping</h1>
-       
+       <section className="floodmap" >
+        
+        <Map  google={this.props.google} zoom={1}>
+         
+        {this.state.users.map(user => (
+            <Marker
+              position={{ lat: user.lat, lng: user.long }}
+              
+              
+            />
+            
+        ))}
+        
+         <InfoWindow onClose={this.onInfoWindowClose}>
+             
+         </InfoWindow>
+        </Map>
+        
+        
+      </section>
         <p className="news-paragraph">
           Here You can read about latest flood occured around the world
         </p>
@@ -137,19 +157,7 @@ Readmore=()=>{
             </a>
             
           </section></div>
-         <section>
         
-<Map classNam="Map" google={this.props.google} zoom={1}>
- 
- <Marker onClick={this.onMarkerClick}
-         position= {{lat: 45 , lng: 25 }} />
-
- <InfoWindow onClose={this.onInfoWindowClose}>
-     
- </InfoWindow>
-</Map>
-
-         </section>
       </div>
       </>
     );
