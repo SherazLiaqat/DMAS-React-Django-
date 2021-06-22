@@ -1,37 +1,34 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from 'react';
+import { NativeSelect, FormControl } from '@material-ui/core';
 
-import {
-  withGoogleMap,
-  withScriptjs,
-  GoogleMap,
-  Marker,
-  InfoWindow
-} from "react-google-maps";
+import fetchCountries from "../components/FetchCountries"
 
 
 
-function Map(){
-  return(
-    <GoogleMap>
-    defaultZoom={10}
-    defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
-    <Marker
-   position={{ lat: 45.4211, lng: -75.6903 }}
-   />
-    </GoogleMap> 
-  )
-}
-const MapWrapped = withScriptjs(withGoogleMap(Map));
+const Countries = ({ handleCountryChange }) => {
+  const [countries, setCountries] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-export default function MainMap() {
+  useEffect(() => {
+    const fetchAPI = async () => {
+      setCountries(await fetchCountries());
+    };
+
+    fetchAPI();
+  });
+  if (loading) {
+    return <p>Data is loading...</p>;
+  }
+
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
-      <MapWrapped
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4`}
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `100%` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
-      />
-    </div>
+    <FormControl >
+      <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
+        <option value="">United States</option>
+        {countries}
+      {/* {countries.map((country, i) => <option key={i} value={country}>{country}</option>)} */}
+      </NativeSelect>
+    </FormControl>
   );
-}
+};
+
+export default Countries;

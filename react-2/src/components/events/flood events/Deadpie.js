@@ -2,6 +2,7 @@ import React, { useState,useEffect,row,Component } from 'react'
 import { Pie, defaults } from 'react-chartjs-2';
 //import "./Chart.css";
 import ReactDOM from 'react-dom';
+import { NativeSelect, FormControl } from '@material-ui/core';
 import Chart from 'chart.js';
 import {csv} from 'd3';
 defaults.global.tooltips.enabled = true
@@ -23,7 +24,7 @@ class Deadpie  extends React.Component {
   const response = await fetch(url);
   const data = await response.json();
 
-
+console.log(data.Country);
   this.setState({ users: data });
     this.configureChart();
   }
@@ -50,9 +51,15 @@ class Deadpie  extends React.Component {
   };
  
   render() {
+
+   
     return (
+      <>
+     
+    
+      
       <div>
-         
+      
         <canvas
         height={600}
         width={400}
@@ -61,6 +68,7 @@ class Deadpie  extends React.Component {
           }}
         />
       </div>
+      </>
     );
   }
 }

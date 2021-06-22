@@ -3,10 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Chart from 'chart.js';
 import csv from 'd3';
+let formfield =null;
 class Blog extends React.Component {
   
   state = {
     users: null,
+    country:null,
    
   }
 
@@ -15,12 +17,14 @@ class Blog extends React.Component {
   chart = null;
 
    async componentDidMount() {
+     
     const url =
     "http://127.0.0.1:8000/Earthquake_Events/";
+   
   const response = await fetch(url);
   const data = await response.json();
 
-
+console.log(this.props.val);
   this.setState({ users: data });
     this.configureChart();
   }
@@ -35,15 +39,15 @@ class Blog extends React.Component {
       type: "bar",
       data: {
         datasets: [{
-            label: "No. of Earthquakes in Years",
-            data: this.state.users.data,
+            label: "No. of Death in Years",
+            data: this.state.users.deaths,
             
             backgroundColor: "#DE924B",
             borderColor: "#DE924B",
             borderWidth: 1,
           },{
-            label: "Line Dataset 2",
-            data: this.state.users.data,
+            label: "No. of Death in Years",
+            data: this.state.users.deaths,
             type: "line",
             borderColor: 'rgba(54,162,235,1)',
             fill: false,
@@ -52,7 +56,7 @@ class Blog extends React.Component {
             // pointRadius: 0,
             //pointStyle: "circle",
           }],
-        labels:this.state.users.lebel
+        labels:this.state.users.deaths_years
       },
       options: {
         scales: {
@@ -81,7 +85,7 @@ class Blog extends React.Component {
     
     return (
       <div>
-         
+         {this.props.val}
         <canvas
         height={500}
         width={1000}

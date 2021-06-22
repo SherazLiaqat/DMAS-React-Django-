@@ -34,7 +34,7 @@ class Affectedbar extends React.Component {
             borderWidth: 1,
           },
           {
-            label: "Line Dataset 2",
+            label: "No. of Affected in Years",
             data: this.state.users.Affected,
             type: "line",
             borderColor: "rgba(54,162,235,1)",

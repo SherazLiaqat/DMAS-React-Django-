@@ -39,7 +39,7 @@ export const fetchDailyData = async () => {
     }
   };
 
-export const fetchCountries = async () => {
+export  const fetchCountries = async () => {
   try {
     const { data: { countries } } = await axios.get(`${url}/countries`);
 
@@ -48,3 +48,4 @@ export const fetchCountries = async () => {
     return error;
   }
 };
+export default fetchCountries;

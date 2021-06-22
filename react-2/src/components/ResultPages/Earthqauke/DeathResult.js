@@ -114,8 +114,7 @@ class DeathResult extends React.Component {
 
             <div className="Bar-graph">
               <canvas
-                height={200}
-                width={600}
+               
                 ref={(chart) => {
                   this.chart = chart;
                 }}
@@ -123,7 +122,7 @@ class DeathResult extends React.Component {
             </div>
           </div>
           <div>
-            <div >
+            <div className="Mapadj" >
               <Map
                 
                 google={this.props.google}

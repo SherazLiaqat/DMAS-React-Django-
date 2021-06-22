@@ -54,7 +54,7 @@ class Deadbar extends React.Component {
             borderColor: "#DE924B",
             borderWidth: 1,
           },{
-            label: "Line Dataset 2",
+            label: "No. of Deaths Due to Floods in Years",
             data: this.state.users.deaths,
             type: "line",
             borderColor: 'rgba(54,162,235,1)',

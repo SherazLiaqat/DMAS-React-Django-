@@ -1,3 +1,10 @@
+.Mapadj{
+    padding-bottom: 50%;
+    
+    padding-right: 20%;
+    
+}
+
 .result-body{
    background-color:  #FAFAFA;
 }
@@ -21,7 +28,10 @@
    
     justify-content: center;
     display: flex;
+    padding-left: 20%;
+    padding-right: 20%;
     margin: 50px ;
+    margin-top: 6%;
     
 }
 

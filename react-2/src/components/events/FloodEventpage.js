@@ -2,7 +2,7 @@ import React from 'react'
 import './Event.css';
 import Displacedpie from './flood events/Displacedpie';
 import Displacedbar from './flood events/Displacedbar';
-import Deadbar from './flood events/Displacedbar';
+import Deadbar from './flood events/Deadbar';
 import Deadpie from './flood events/Deadpie';
 const FloodEventpage = () => {
     return (

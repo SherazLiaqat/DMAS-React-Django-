@@ -53,6 +53,7 @@ import Demo from './components/Demo';
 import Map from "./components/Map";
 import BlogData from "./components/My-Blog/BlogData";
 import FloodEventpage from "./components/events/FloodEventpage";
+import { fetchCountries } from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index";
 function App() {
   return (
     <>
@@ -82,6 +83,7 @@ function App() {
           <Route path="/MyNews" component={MyNews} />
           <Route path="/MyBlog" component={MyBlog} exact />
           <Route path="/Floodevent" component={FloodEventpage} exact />
+          <Route path="/FetchCountries" componenfet={fetchCountries} exact />
         </Switch>
 
         <Switch>

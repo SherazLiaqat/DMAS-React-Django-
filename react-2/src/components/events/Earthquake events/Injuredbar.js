@@ -27,7 +27,7 @@ class Injuredbar extends React.Component {
         datasets: [
           {
             label: "No. of Injured in Years",
-            data: this.state.users.data,
+            data: this.state.users.Injured,
 
             backgroundColor: "#DE924B",
             borderColor: "#DE924B",
@@ -35,7 +35,7 @@ class Injuredbar extends React.Component {
           },
           {
             label: "Line Dataset 2",
-            data: this.state.users.data,
+            data: this.state.users.Injured,
             type: "line",
             borderColor: "rgba(54,162,235,1)",
             fill: false,
@@ -45,7 +45,7 @@ class Injuredbar extends React.Component {
             //pointStyle: "circle",
           },
         ],
-        labels: this.state.users.lebel,
+        labels: this.state.users.Injured_years,
       },
       options: {
         scales: {
