@@ -1,7 +1,8 @@
 
 import React, { usestate } from "react";
 import {BeatLoader} from 'react-spinners';
-import Earthquakelive from '../Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive';
+import Readmore from '../News/Readmore';
+
 import Pagination from "./Pagination";
 import {Modal} from '@material-ui/core'
 import "./News.css";
@@ -69,7 +70,7 @@ console.log(data);
                   {user.country}
                   &nbsp;&nbsp;
                 </span>
-                <span>
+                <span >
                   <i className="fas fa-calendar-alt text-gray" />
                   &nbsp;&nbsp;
                   {user.date}
@@ -88,10 +89,10 @@ console.log(data);
              HEADLINE: {user.headline}
               </a> 
              
-<Earthquakelive
+<Readmore
 val={user.description} >
 
-</Earthquakelive>
+</Readmore>
              
             
             </div>

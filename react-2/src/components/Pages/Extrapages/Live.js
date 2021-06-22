@@ -1,45 +1,59 @@
-import React from 'react'
-import Cards from '../../Card/Cards'
-import './Live.css';
-import CardItem from '../../Card/CardItems';
+import React from "react";
+import Cards from "../../Card/Cards";
+import "./Live.css";
+import CardItem from "../../Card/CardItems";
 const Live = () => {
-    return (
-        <div className='live'>
-            <h1 className='live-heading'>Explore The Live Information About Disaster</h1><br/><br/>
-            
-            <ul className='cards__items'>
+  return (
+    <div>
+     
+      <div className="cards">
+      <h1>Explore The Live Information About Disaster!</h1>
+    
+      <div className="cards__container">
+        <div className="cards__wrapper">
+          <ul className="cards__items">
             <CardItem
-              src='images\Floodlive.jpg'
-              text='Explore the Flood Information...'
-
-              label='Flood'
-
-              
-
-              path='/FloodLive'
-             
-
-              target="_blank"
-
-            />
-            <CardItem
-              src='images/corona.jpg'
-              text='Explore the COVID-19 Information...'
-              label='COVID-19'
-              path='/CovidLive'
+              path="/Earthquakeinfo"
+              src="images/img-11.jpg"
+              text="Explore the All News Information..."
+              label="All News"
               target="_blank"
               
+              path="/MyNews"
             />
             <CardItem
-              src='images/Live.jpg'
-              text='Explore the Earthquake Information...'
-              label='Earthquake'
-              path='/EarthquakeLive'
+              src="images/flood.jpg"
+              text="Explore the Earthqake Live Information..."
+              path="/Floodinfo"
+              label="Earthquake"
+              path="/"
               target="_blank"
             />
           </ul>
+          <ul className="cards__items">
+            <CardItem
+              src="images\fire.jpg"
+              text="Explore the Flood Live Information..."
+              label="Flood"
+              path="/FloodLive"
+              target="_blank"
+            />
+            <CardItem
+              src="images/covid.jpg"
+              text="Explore the COVID-19 Information..."
+              label="COVID-19"
+              path="/CovidLive"
+              target="_blank"
+            />
+          
+          </ul>
         </div>
-    )
-}
+      </div>
+    </div>
 
-export default Live
+    
+    </div>
+  );
+};
+
+export default Live;

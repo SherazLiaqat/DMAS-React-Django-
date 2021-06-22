@@ -11,7 +11,7 @@
 .loading{
     text-align: center;
     font-size: 28px;
-   height: 500vh;
+   height: 300vh;
 }
 .news-paragraph{
     text-align: center;
@@ -26,6 +26,7 @@
    
    
     border: 1px solid black;
+    border-radius: 50px;
   }
    .post-content-news > .post-image-news,
   .post-title-news {
@@ -50,7 +51,9 @@
     color: black;
   }
   .post-title-news p {
-    color: rgb(128, 118, 118);
+    line-height: 22px ;
+    color: darkslategray ;
+    font-size: 14px;
   }
   .post-btn-news {
     

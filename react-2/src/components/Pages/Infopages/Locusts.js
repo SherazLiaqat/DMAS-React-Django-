@@ -1,6 +1,6 @@
 import React,{Component,useRef} from "react";
 import "./Earthquakeinfo.css";
-import "./Locusts.css";
+//import "./Locusts.css";
 
 import downimage from "../../images/Locustmain.jpg";
 import grasshoper from "../../images/grashopper.jpg";
@@ -24,7 +24,9 @@ const Locust = () => {
   const gotogarden=()=>window.scrollTo({top: garden.current.offsetTop,behavior:'smooth'})
   return (
     <>
+    <div className='main-div-earthquake'>
       <div className="container ">
+      
         <h1 className="title-3">About Locusts</h1>
         <p className="paragraph">
           Locusts are large herbivorous insects that can be serious pests of
@@ -167,7 +169,7 @@ const Locust = () => {
           </li>
         </ul>
         <br />
-        <div className='side-div-Locust'>
+        <div className='side-div-earthquake'>
             <h3 className='h4-earthquake'> Locust Safy Preacution</h3>
            
             <ul className='side-div-p'>
@@ -184,23 +186,8 @@ const Locust = () => {
  </button > </div>
                 </ul>
                </div>
-      <div className='side-div-Result-info'>
-            <h2 className='h4-earthquake'> Share With</h2>
-           
-            <ul className='side-div-p'>
-           
-                <div className='social-media'>
-                    <FaFacebookF/>
-                    <FaInstagram/>
-                    <VscTwitter/>
-                    <FaYoutube/>
-                    <FaLinkedin/>
-                
-                
-            </div>
-            </ul>
-            </div>
-            </div>
+     
+            </div></div>
           
     </>
   );

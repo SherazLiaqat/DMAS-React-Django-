@@ -23,25 +23,23 @@ import About from "./components/Pages/Extrapages/About";
 import Contact from "./components/Pages/Extrapages/Contact";
 import Estimation from "./components/Pages/Extrapages/Estimation";
 import Death from "./components/Pages/Estimationpages/Earthquake/Death";
-import Affected from "./components/Pages/Estimationpages/Earthquake/Affected";
-import Injured from "./components/Pages/Estimationpages/Earthquake/Injured";
+
 import Locust from "./components/Pages/Infopages/Locusts";
 import Event from "./components/events/EarthquakeEventpage";
 import Api from "./components/Pages/Api/Api";
-//import NewsApi from './components/Pages/Api/NewsApi/NewsApi';
-import am4core from "./components/Pages/Api/NewsApi/NewsApi";
+
+
 import Live from "./components/Pages/Extrapages/Live";
 import CovidLive from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidLive";
 import FloodLive from "./components/Pages/Extrapages/LiveEvents/FloodLive/FloodLive";
-import EarthquakeLive from "./components/Pages/Extrapages/LiveEvents/EarthquakeLive/EarthquakeLive";
+import EarthquakeLive from "./components/News/Readmore";
 import MyBlog from "./components/My-Blog/Blog";
 import ScrollToTop from "./components/ScrollToTop";
 import Dead from "./components/Pages/Estimationpages/Flood/Dead";
 import Affectedpeopel from "./components/Pages/Estimationpages/Flood/Affectedpeopel";
 import DeathResult from "./components/ResultPages/Earthqauke/DeathResult";
 import DeadResult from "./components/ResultPages/Flood/DeadResult";
-import AffectedResult from "./components/ResultPages/Earthqauke/AffectedResult";
-import InjuredResult from "./components/ResultPages/Earthqauke/InjuredResult";
+
 
 import chart from "./components/Pages/Chart/Result";
 import Result from "./components/Pages/Chart/Result";
@@ -71,9 +69,9 @@ function App() {
           <Route path="/News" component={News} />
           <Route path="/Death" component={Death} />
           <Route path="/Dead" component={Dead} />
-          <Route path="/Affected" component={Affected} />
+          
           <Route path="/Affectedpeopel" component={Affectedpeopel} />
-          <Route path="/Injured" component={Injured} />
+          
           <Route path="/sign-up" component={Signup} />
           <Route path="/Login" component={Login} />
           <Route path="/Event" component={Event} />
@@ -102,9 +100,8 @@ function App() {
           <Route path="/FloodLive" component={FloodLive} exact />
           <Route path="/EarthquakeLive" component={EarthquakeLive} exact />
           
-          <Route path="/AffectedResult" component={AffectedResult} exact />
           <Route path="/DeathResult" component={DeathResult} exact />
-          <Route path="/InjuredResult" component={InjuredResult} exact />
+         
           <Route path="/DeadResult" component={DeadResult} exact />
           
           <Route path="/Demo" component={Demo} />

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 function ReadmoreDemo(props){
   
     function Readmore({children,maxchractercount=288}){
@@ -15,7 +15,7 @@ function ReadmoreDemo(props){
           {resultString}
          <p>
           <button onClick={toggleisTruncated} className="btn post-btn-news" >
-          {isTruncated?"Read More":"Read Less"} &nbsp; <i className="fas fa-arrow-right" />
+          {isTruncated?"Read More " :"Read Less"} &nbsp; <i className="fas fa-arrow-right" />
               </button></p>
         </p>
         

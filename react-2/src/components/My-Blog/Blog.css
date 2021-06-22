@@ -44,7 +44,9 @@
   color: black;
 }
 .post-content .post-title p {
-  color: rgb(128, 118, 118);
+  line-height: 22px ;
+  color: darkslategray ;
+  font-size: 14px;
 }
 .site-content .post-content .post-title .post-btn {
   border-radius: 0;

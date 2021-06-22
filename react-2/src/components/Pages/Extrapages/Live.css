@@ -1,8 +1,10 @@
+
 .live{
     background: color #f7f7f7;
     margin: 60px ;
     
 }
+
 @media screen and (max-width: 660px){
     .live-heading {
         text-align: center;
