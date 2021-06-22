@@ -8,28 +8,7 @@ import { VscTwitter} from 'react-icons/vsc';
 function Footer() {
   return (
     <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Join the Disaster Volunteer Connecction and help people to Survive at the time of Disaster
-        </p>
-        <p className='footer-subscription-text'>
-          You can Search anything here.
-        </p>
-        <div className='input-areas'>
-          <form>
-            <input
-              className='footer-input'
-              name='Search'
-              type='text'
-              placeholder='Search.'
-              to='/Blog'
-            />
-            <Link to='/Blog'>
-            <button className='Button'>Search</button>
-            </Link>
-          </form>
-        </div>
-      </section>
+     
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
@@ -37,15 +16,16 @@ function Footer() {
             <Link to='/About' target="_blank"> About Us</Link>
             
             <Link to='/Contact' target="_blank">Contact Us</Link>
+            
+            <Link to='/Live'>Live News</Link>
             <Link to='/MyBlog'>Blog</Link>
-            <Link to='/MyNews'>News</Link>
           </div>
           <div className='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/Eartquakeinfo'>Contact</Link>
-            <Link to='/Map'>Support</Link>
-            <Link to='/Demo'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
+            <h2>Explore</h2>
+            <Link to='/Eartquakeinfo'>Earthquake Event</Link>
+            <Link to='/Map'>Flood Event</Link>
+            <Link to='/Demo'>Weather</Link>
+            
           </div>
         </div>
         <div className='footer-link-wrapper'>
