@@ -18,8 +18,11 @@ class Blog extends React.Component {
 
    async componentDidMount() {
      
+
+     
+     
     const url =
-    "http://127.0.0.1:8000/Earthquake_Events/";
+    "http://127.0.0.1:8000/Earthquake_Events/"
    
   const response = await fetch(url);
   const data = await response.json();
