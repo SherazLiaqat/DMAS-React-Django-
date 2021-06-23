@@ -110,7 +110,7 @@ Readmore=()=>{
      
     <div>
       
-       <h1>Flood Live News with Mapping</h1>
+       <h1>Earthqauke Live News with Mapping</h1>
        
         <p className="news-paragraph">
           Here You can read about latest flood occured around the world

@@ -1,5 +1,6 @@
 import React from "react";
 import {BeatLoader} from 'react-spinners';
+import Readmore from '../../../../News/Readmore';
 import "./FloodLive.css";
 
 
@@ -11,7 +12,7 @@ let p=0;
   state = {
     users: null,
     loading: true,
-    visible:288,
+    
     
     
   }
@@ -34,11 +35,7 @@ console.log(data);
     });
     //this.Readmore=this.Readmore.bind(this);
   }
-Readmore=()=>{
-  this.setState((old)=>{
-    return{visible: old.visible+ 5000}
-  })
-}
+
 
  
   
@@ -88,14 +85,10 @@ Readmore=()=>{
               <a href="">
              HEADLINE: {user.headline}
               </a> 
-              <p>
-              {user.description}
-                
-              </p>
+              <Readmore
+val={user.description} >
 
-              <button onClick={this.Readmore } className="btn post-btn-news" >
-                Read More &nbsp; <i className="fas fa-arrow-right" />
-              </button>
+</Readmore>
             
             </div>
           </div>

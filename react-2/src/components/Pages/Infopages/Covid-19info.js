@@ -1,10 +1,29 @@
-import React from 'react'
-import './Earthquakeinfo.css';
+import React,{Component} from 'react'
+
 import hand from '../../images/hand.jpg';
 import symptoms from '../../images/symptoms1.jpg';
 import covid from '../../images/covid1.jpg';
 import symptomdetails from '../../images/symptomdetails1.jpg';
-const Covid19 = () => {
+import step1 from "../../images/Step1.jpg";
+import step2 from "../../images/Step2.jpg";
+import step3 from "../../images/Step3.jpg";
+import step4 from "../../images/Step4.jpg";
+import step5 from "../../images/Step5.jpg";
+import step6 from "../../images/Step6.jpg";
+import step7 from "../../images/Step7.jpg";
+import { FaAngleDown, FaAngleRight } from "react-icons/fa";
+import "./Earthquakeinfo.css";
+class Covid19 extends React.Component {
+    state = {
+        istogleOn: false,
+      };
+      toglepersonhandler = () => {
+        this.setState((state) => ({
+          istogleOn: !state.istogleOn,
+        }));
+      };
+    render() {
+        
     return (
         <>
         <div className="container ">
@@ -94,7 +113,205 @@ Most people with COVID-19 recover from the virus without the need for hospital t
   </div>
  
 
- 
+  <div className="side-div-earthquake">
+          <h3 className="h4-earthquake"> Covid-19 Precautions</h3>
+
+          <ul className="side-div-p">
+            <div className="earth">
+              <button
+                className="button-size"
+                onClick={() => {
+                  this.setState({ shows: !this.state.shows });
+                }}
+              >
+                {this.state.shows ? <FaAngleDown /> : <FaAngleRight />}
+              </button>
+              Secure Your Space
+            </div>
+
+            <div>
+              {this.state.shows ? (
+                <div>
+                  <img src={step1}></img>
+                  <p>
+                    Step 1: Secure your space by identifying hazards and
+                    securing moveable items.
+                  </p>
+                </div>
+              ) : null}
+            </div>
+            <div className="earth">
+              {" "}
+              <button
+                className="button-size"
+                onClick={() => {
+                  this.setState({ show2: !this.state.show2 });
+                }}
+              >
+                {this.state.show2 ? <FaAngleDown /> : <FaAngleRight />}
+              </button>{" "}
+              Plan to be Safe{" "}
+            </div>
+            <div>
+              {this.state.show2 ? (
+                <div>
+                  <img src={step2}></img>
+                  <p>
+                    Step 2: Plan to be safe by creating a disaster plan and
+                    deciding how you will communicate in an emergency.
+                  </p>
+                </div>
+              ) : null}
+            </div>
+            <div className="earth">
+              {" "}
+              <button
+                className="button-size"
+                onClick={() => {
+                  this.setState({ show3: !this.state.show3 });
+                }}
+              >
+                {this.state.show3 ? <FaAngleDown /> : <FaAngleRight />}
+              </button>
+              Organize Disaster Supplies
+            </div>
+            <div>
+              {this.state.show3 ? (
+                <div>
+                  <img src={step3}></img>
+                  <p>
+                    Step 3: Organize disaster supplies in convenient locations.
+                  </p>
+                </div>
+              ) : null}
+            </div>
+            <div className="earth">
+              {" "}
+              <button
+                className="button-size"
+                onClick={() => {
+                  this.setState({ show4: !this.state.show4 });
+                }}
+              >
+                {this.state.show4 ? <FaAngleDown /> : <FaAngleRight />}
+              </button>
+              Minimize Financial Hardship
+            </div>
+            <div>
+              {this.state.show4 ? (
+                <div>
+                  <img src={step4}></img>
+                  <p>
+                    Step 4: Minimize financial hardship by organizing important
+                    documents, strengthening your property, and considering
+                    insurance.
+                  </p>
+                </div>
+              ) : null}
+            </div>
+            <div className="earth">
+              {" "}
+              <button
+                className="button-size"
+                onClick={() => {
+                  this.setState({ show5: !this.state.show5 });
+                }}
+              >
+                {this.state.show5 ? <FaAngleDown /> : <FaAngleRight />}
+              </button>
+              Drop, Cover, and Hold On
+            </div>
+            <div>
+              {this.state.show5 ? (
+                <div>
+                  <img src={step5}></img>
+                  <p>
+                    Step 5: Drop, cover, and hold on when the earth shakes..
+                  </p>
+                </div>
+              ) : null}
+            </div>
+            <div className="earth">
+              {" "}
+              <button
+                className="button-size"
+                onClick={() => {
+                  this.setState({ show6: !this.state.show6 });
+                }}
+              >
+                {this.state.show6 ? <FaAngleDown /> : <FaAngleRight />}
+              </button>
+              Improve Safety
+            </div>
+            <div>
+              {this.state.show6 ? (
+                <div>
+                  <img src={step6}></img>
+                  <p>
+                    Step 6: Improve safety after earthquakes by evacuating if
+                    necessary, helping the injured, and preventing further
+                    damage.
+                  </p>
+                </div>
+              ) : null}
+            </div>
+            <div className="earth">
+              {" "}
+              <button
+                className="button-size"
+                onClick={() => {
+                  this.setState({ show7: !this.state.show7 });
+                }}
+              >
+                {this.state.show7 ? <FaAngleDown /> : <FaAngleRight />}
+              </button>{" "}
+              Reconnect and Restore
+            </div>
+            <div>
+              {this.state.show7 ? (
+                <div>
+                  <img src={step7}></img>
+                  <p>
+                    Step 7: Restore daily life by reconnecting with others,
+                    repairing damage, and rebuilding community.
+                  </p>
+                </div>
+              ) : null}
+            </div>
+          </ul>
+          <h3 className="h4-earthquake"> Helpful Links</h3>
+          <ul className="side-div-p">
+            <a href="http://cms.ndma.gov.pk/" target="_blank">
+              NDMA{" "}
+            </a>{" "}
+            <br />
+            <a href="https://www.fema.gov/" target="_blank">
+              FEMA{" "}
+            </a>{" "}
+            <br />
+            <a href="https://www.ready.gov/" target="_blank">
+              Ready.Gov
+            </a>{" "}
+            <br />
+            <a href="https://www.weather.gov/" target="_blank">
+              National Weather Service
+            </a>{" "}
+            <br />
+            <a href="https://mil.wa.gov/" target="_blank">
+              {" "}
+              WA State EMD
+            </a>{" "}
+            <br />
+            <a
+              href="https://waterdata.usgs.gov/wa/nwis/current?type=flow"
+              target="_blank"
+            >
+              USGS-Real Time Data
+            </a>{" "}
+            <br />
+            <br />
+          </ul>
+        </div>
      
      
  
@@ -102,7 +319,7 @@ Most people with COVID-19 recover from the virus without the need for hospital t
         </>
      )
  }
- 
+}
  export default Covid19
  
    

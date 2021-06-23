@@ -67,7 +67,7 @@ const DelayReturnToHomePage = (e) => {
   return (
     <>
       <div className="main">
-        <h1> Estimate Death's Due to Earthquake Instantly</h1>
+        <h1> Estimate Damage Due to Earthquake Instantly</h1>
 
         <label className="Change">Earthquake Type:</label>
         <select

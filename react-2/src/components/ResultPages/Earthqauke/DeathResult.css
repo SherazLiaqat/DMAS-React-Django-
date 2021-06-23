@@ -8,6 +8,22 @@
 .result-body{
    background-color:  #FAFAFA;
 }
+.user-data{
+    justify-content: center;
+    display: flex;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 20px;
+    margin: 0 240px;
+    border-radius: 10px;
+    border-bottom: 10px solid lightgray;
+}
+.user-text{
+justify-content: center;
+flex-wrap: wrap;
+display: flex;
+
+}
 .map{
     justify-content: center;
     display: flex;
@@ -52,9 +68,9 @@
 }
 .card-result1{
     margin: 20px;
-    padding: 20px;
+    padding: 15px;
     justify-content: space-between;
-    background-color: #f7f7f7;
+    background-color: #fff;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -66,9 +82,9 @@
 }
 .card-result2{
     margin: 20px;
-    padding: 20px;
+    padding: 15px;
     justify-content: space-between;
-    background-color: #f7f7f7;
+    background-color: #fff;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -80,9 +96,9 @@
 }
 .card-result3{
     margin: 20px;
-    padding: 20px;
+    padding: 15px;
     justify-content: space-between;
-    background-color: #f7f7f7;
+    background-color: #fff;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -150,4 +166,33 @@ background-color: #fff;
     width: 50%;
     display: inline-table;
     background-color: green;
+}
+@media screen and (max-width: 660px) {
+.main-card-result{
+    display: grid;
+    
+}
+.card-result1{
+    width: auto;
+}
+.card-result2{
+    width: auto;
+}
+.card-result3{
+    width: auto;
+}
+.Bar-graph{
+    margin: auto;
+}
+.Mapadj{
+    padding-bottom: 240%;
+    padding-top: 20%;
+}
+
+}
+@media screen and (max-width: 1024px) {
+    .Mapadj{
+        padding-bottom: 120%;
+        
+    }
 }

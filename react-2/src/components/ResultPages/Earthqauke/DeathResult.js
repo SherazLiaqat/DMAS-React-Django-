@@ -65,66 +65,70 @@ class DeathResult extends React.Component {
     return (
       <>
         <div className="result-body">
-          <div>
-            <h1> Estimated Result Due To Earthqauke</h1>
-            <div className="main-card-result">
-              <div className="card-result1">
-                <h2 className="result-heading">Death</h2>
-                <h3>
-                  Estimation :{" "}
-                  {this.props.location.state.data.Deaths.Estimation}
-                </h3>
+          <h1> Estimated Result Due To Earthqauke</h1>
+          {/*  <div className="user-data">
+           <div className="user-text">
+            <h3>Latitude</h3>{this.props.location.state.data.credential.lat} 
+            <h3>Longitude</h3>{this.props.location.state.data.credential.long}
+            <h3>Magnitude</h3>{this.props.location.state.data.credential.magnitude}</div>
+            </div> */}
 
-                <p className="paragraph-result">
-                  {" "}
-                  System Estimate That{" "}
-                  {this.props.location.state.data.Deaths.range} People Died Due
-                  to Earthquake.
-                </p>
-              </div>
-              <div className="card-result2">
-                <h2 className="result-heading">Affected</h2>
+          <div className="main-card-result">
+            <div className="card-result1">
+              <h2 className="result-heading">Death</h2>
+              <h3>
+                Estimation : {this.props.location.state.data.Deaths.Estimation}
+              </h3>
 
-                <h3>
-                  Estimation :{" "}
-                  {this.props.location.state.data.Affecteds.Estimation}
-                </h3>
-                <p className="paragraph-result">
-                  {" "}
-                  System Estimate That{" "}
-                  {this.props.location.state.data.Affecteds.range} People
-                  Affected Due to Earthquake.
-                </p>
-              </div>
-              <div className="card-result3">
-                <h2 className="result-heading">Injured</h2>
-                <h3>
-                  Estimation :{" "}
-                  {this.props.location.state.data.Injureds.Estimation}
-                </h3>
-
-                <p className="paragraph-result">
-                  {" "}
-                  System Estimate That{" "}
-                  {this.props.location.state.data.Injureds.range} People Injured
-                  Due to Earthquake.
-                </p>
-              </div>
+              <p className="paragraph-result">
+                {" "}
+                System Estimate That{" "}
+                {this.props.location.state.data.Deaths.range} People Died Due to
+                Earthquake.
+              </p>
             </div>
+            <div className="card-result2">
+              <h2 className="result-heading">Affected</h2>
 
-            <div className="Bar-graph">
-              <canvas
-               
-                ref={(chart) => {
-                  this.chart = chart;
-                }}
-              />
+              <h3>
+                Estimation :{" "}
+                {this.props.location.state.data.Affecteds.Estimation}
+              </h3>
+              <p className="paragraph-result">
+                {" "}
+                System Estimate That{" "}
+                {this.props.location.state.data.Affecteds.range} People Affected
+                Due to Earthquake.
+              </p>
+            </div>
+            <div className="card-result3">
+              <h2 className="result-heading">Injured</h2>
+              <h3>
+                Estimation :{" "}
+                {this.props.location.state.data.Injureds.Estimation}
+              </h3>
+
+              <p className="paragraph-result">
+                {" "}
+                System Estimate That{" "}
+                {this.props.location.state.data.Injureds.range} People Injured
+                Due to Earthquake.
+              </p>
             </div>
           </div>
+
+          <div className="Bar-graph">
+            <canvas
+              style={{ width: "1000", height: "600" }}
+              ref={(chart) => {
+                this.chart = chart;
+              }}
+            />
+          </div>
+
           <div>
-            <div className="Mapadj" >
+            <div className="Mapadj">
               <Map
-                
                 google={this.props.google}
                 zoom={2}
                 center={{
