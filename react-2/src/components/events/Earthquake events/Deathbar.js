@@ -20,7 +20,7 @@ class Blog extends React.Component {
 
    async componentDidMount() {
      
-    const requestOptions = {
+    /*const requestOptions = {
       
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
@@ -28,11 +28,10 @@ class Blog extends React.Component {
   };
   const response = await fetch('http://127.0.0.1:8000/Earthquake_Events/', requestOptions);
   const data = await response.json();
-console.log(this.props.val);
-  this.setState({ users: data });
-    this.configureChart();
+  this.setState({ users: data });*/
+  console.log(this.props.deaths);
+  this.configureChart();
   }
-
 
 
 
@@ -45,14 +44,14 @@ console.log(this.props.val);
       data: {
         datasets: [{
             label: "No. of Death in Years",
-            data: this.state.users.deaths,
+            data: this.props.deaths,
             
             backgroundColor: "#DE924B",
             borderColor: "#DE924B",
             borderWidth: 1,
           },{
             label: "No. of Death in Years",
-            data: this.state.users.deaths,
+            data: this.props.deaths,
             type: "line",
             borderColor: 'rgba(54,162,235,1)',
             fill: false,
@@ -61,7 +60,7 @@ console.log(this.props.val);
             // pointRadius: 0,
             //pointStyle: "circle",
           }],
-        labels:this.state.users.deaths_years
+        labels:this.props.deaths_years
       },
       options: {
         scales: {
@@ -86,12 +85,11 @@ console.log(this.props.val);
       
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      let r =this.state.users.deaths
+      
     
     return (
       <div>
-         <h1>hello{this.props.val}</h1>
-    <h1>Death{r}</h1>
+         
         <canvas
         height={500}
         width={1000}

@@ -213,38 +213,38 @@ def Flood_Events(request):
 
 @api_view(['GET','POST'])
 def Earthquake_Events(request):
-    earthquake_no = []
-    year_lebel = []
-    earthquake = pd.read_excel("static/Earthquake.xlsx")
-    positions = []
     if request.method=='POST':
+        earthquake_no = []
+        year_lebel = []
+        earthquake = pd.read_excel("static/Earthquake.xlsx")
+        positions = []
         country_filter = request.data.get('country')
         print(country_filter)
         if country_filter!='all':
             earthquake = earthquake[earthquake['Country']==str(country_filter)]
-    index = earthquake.index
-    print(len(earthquake))
-    country = earthquake['Country']
-    lat = earthquake['Latitude']
-    longi = earthquake['Longitude']
-    for i in index:
-        a=[country[i],float(lat[i]),float(longi[i])]
-        positions.append(a)
-    count = earthquake['Year'].value_counts()
-    country = earthquake['Country'].unique()
-    country.sort()
-    count = count.sort_index()
-    for i in count:
-        earthquake_no.append(i)
-    for j in count.index:
-        year_lebel.append(j)
-    deaths,deaths_years,dead_count,dead_label = deathgraph(earthquake['Total Deaths'],earthquake['Year'],earthquake['Dead'])
-    Injured,Injured_years,Injured_count,Injured_label = Injuredgraph(earthquake['No Injured'],earthquake['Year'],earthquake['Injured'])
-    Affected,Affected_years,Affected_count,Affected_label = Affectedgraph(earthquake['Total Affected'],earthquake['Year'],earthquake['Affected'])
-    context = {'positions':positions,'Country':country,'data':earthquake_no,'lebel':year_lebel,'deaths':deaths,'deaths_years':deaths_years,'dead_count':dead_count,'dead_label':dead_label,
-        'Injured':Injured,'Injured_years':Injured_years,'Injured_label':Injured_label,'Injured_count':Injured_count,'Affected':Affected,'Affected_years':Affected_years,
-        'Affected_count':Affected_count,'Affected_label':Affected_label}
-    return Response(context)
+        index = earthquake.index
+        print(len(earthquake))
+        country = earthquake['Country']
+        lat = earthquake['Latitude']
+        longi = earthquake['Longitude']
+        for i in index:
+            a=[country[i],float(lat[i]),float(longi[i])]
+            positions.append(a)
+        count = earthquake['Year'].value_counts()
+        country = earthquake['Country'].unique()
+        country.sort()
+        count = count.sort_index()
+        for i in count:
+            earthquake_no.append(i)
+        for j in count.index:
+            year_lebel.append(j)
+        deaths,deaths_years,dead_count,dead_label = deathgraph(earthquake['Total Deaths'],earthquake['Year'],earthquake['Dead'])
+        Injured,Injured_years,Injured_count,Injured_label = Injuredgraph(earthquake['No Injured'],earthquake['Year'],earthquake['Injured'])
+        Affected,Affected_years,Affected_count,Affected_label = Affectedgraph(earthquake['Total Affected'],earthquake['Year'],earthquake['Affected'])
+        context = {'positions':positions,'Country':country,'data':earthquake_no,'lebel':year_lebel,'deaths':deaths,'deaths_years':deaths_years,'dead_count':dead_count,'dead_label':dead_label,
+            'Injured':Injured,'Injured_years':Injured_years,'Injured_label':Injured_label,'Injured_count':Injured_count,'Affected':Affected,'Affected_years':Affected_years,
+            'Affected_count':Affected_count,'Affected_label':Affected_label}
+        return Response(context)
 
 
 

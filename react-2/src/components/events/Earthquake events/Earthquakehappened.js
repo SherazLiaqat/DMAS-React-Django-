@@ -18,19 +18,17 @@ class Blog extends React.Component {
 
    async componentDidMount() {
      
-    const url =
+    /*const url =
     "http://127.0.0.1:8000/Earthquake_Events/";
    
   const response = await fetch(url);
   const data = await response.json();
 
-console.log(this.props.val);
   this.setState({ users: data });
+  */
+ console.log(this.props.data);
     this.configureChart();
   }
-
-
-
 
   configureChart = () => {
     const chartCanvas = ReactDOM.findDOMNode(this.chart);
@@ -40,14 +38,14 @@ console.log(this.props.val);
       data: {
         datasets: [{
             label: "No. of Earthquake in Years",
-            data: this.state.users.data,
+            data: this.props.data,
             
             backgroundColor: "#DE924B",
             borderColor: "#DE924B",
             borderWidth: 1,
           },{
             label: "No. of Earthquake in Years",
-            data: this.state.users.data,
+            data: this.props.data,
             type: "line",
             borderColor: 'rgba(54,162,235,1)',
             fill: false,
@@ -56,7 +54,7 @@ console.log(this.props.val);
             // pointRadius: 0,
             //pointStyle: "circle",
           }],
-        labels:this.state.users.lebel
+        labels:this.props.label
       },
       options: {
         scales: {
