@@ -217,10 +217,11 @@ def Earthquake_Events(request):
         earthquake_no = []
         year_lebel = []
         earthquake = pd.read_excel("static/Earthquake.xlsx")
+        e=earthquake
         positions = []
         country_filter = request.data.get('country')
         print(country_filter)
-        if country_filter!='all':
+        if country_filter!='Global':
             earthquake = earthquake[earthquake['Country']==str(country_filter)]
         index = earthquake.index
         print(len(earthquake))
@@ -231,7 +232,7 @@ def Earthquake_Events(request):
             a=[country[i],float(lat[i]),float(longi[i])]
             positions.append(a)
         count = earthquake['Year'].value_counts()
-        country = earthquake['Country'].unique()
+        country = e['Country'].unique()
         country.sort()
         count = count.sort_index()
         for i in count:
@@ -245,6 +246,7 @@ def Earthquake_Events(request):
             'Injured':Injured,'Injured_years':Injured_years,'Injured_label':Injured_label,'Injured_count':Injured_count,'Affected':Affected,'Affected_years':Affected_years,
             'Affected_count':Affected_count,'Affected_label':Affected_label}
         return Response(context)
+    return Response({"msg":"Something is wrong"})
 
 
 

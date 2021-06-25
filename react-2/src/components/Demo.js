@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /*import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import axios from "axios";
@@ -120,3 +121,155 @@ class PostRequestAsyncAwait extends React.Component {
 }
 
 export default PostRequestAsyncAwait ;*/
+=======
+import React, { useState, useEffect } from 'react';
+import { Line, Bar,Pie } from 'react-chartjs-2';
+
+import { fetchDailyData } from '../components/Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index';
+
+import styles from '../components/Pages/Extrapages/LiveEvents/CovidlLive/Chart/Chart.module.css';
+
+const Chart = () => {
+  const [dailyData, setDailyData] = useState({});
+
+  useEffect(() => {
+    const fetchMyAPI = async () => {
+      const initialDailyData = await fetchDailyData();
+
+      setDailyData(initialDailyData);
+    };
+
+    fetchMyAPI();
+  }, []);
+
+  const barChart = (
+    
+      <Bar
+        data={{
+          labels: ['Infected', 'Recovered', 'Deaths'],
+          datasets: [
+            {
+              label: 'People',
+              backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+              data: [13, 11, 10],
+            },
+            {
+                labels: 'sat,lat,long',
+                data: [13,14,16],
+                type: "line",
+                borderColor: 'rgba(54,162,235,1)',
+                fill: false,
+                borderWidth: 2,
+                backgroundColor:'black',
+              },
+          ],
+          
+        }}
+        options={{}}
+        
+      />
+      
+    
+  );
+
+  const lineCharts = (
+   
+      <Bar
+      data={{
+        labels: ['Infected', 'Recovered', 'Deaths'],
+        datasets: [
+          {
+            label: 'People',
+            backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+            data: [13, 11, 10],
+          },
+          {
+              labels: 'sat,lat,long',
+              data: [13,14,16],
+              type: "line",
+              borderColor: 'rgba(54,162,235,1)',
+              fill: false,
+              borderWidth: 2,
+              backgroundColor:'black',
+            },
+        ],
+        
+      }}
+      options={{}}
+      />
+    
+  );
+  const lineChart = (
+   
+    <Bar
+    data={{
+        labels: ['Infected', 'Recovered', 'Deaths'],
+        datasets: [
+          {
+            label: 'People',
+            backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+            data: [13, 11, 10],
+          },
+          {
+              labels: 'sat,lat,long',
+              data: [13,14,16],
+              type: "line",
+              borderColor: 'rgba(54,162,235,1)',
+              fill: false,
+              borderWidth: 2,
+              backgroundColor:'black',
+            },
+        ],
+        
+      }}
+      options={{}}
+    />
+  
+);
+const pie=(
+    <Pie
+    data={{
+        
+        label:["Low", "Medium", "High", "Very High", "Extreme"],
+          datasets: [
+            {
+              data: [12,34,45,23,32],
+              backgroundColor: [
+                "#1a8604",
+                "#0839f0",
+                "#e9f308",
+                "#fe7104",
+                "#f61212",
+              ],
+            },
+          ],
+  
+          labels: ["Low", "Medium", "High", "Very High", "Extreme"],
+        
+    }}
+    
+    
+    />
+
+)
+
+  return (
+      <>
+    <div className={styles.container}>
+      { barChart }
+    </div>
+    <div className={styles.container}>
+     heeel{ lineChart}
+    </div>
+    <div className={styles.container}>
+     heeel{ lineCharts}
+    </div>
+    <div className={styles.container}>
+     heeel{pie}
+    </div>
+    </>
+  );
+};
+
+export default Chart;
+>>>>>>> Stashed changes

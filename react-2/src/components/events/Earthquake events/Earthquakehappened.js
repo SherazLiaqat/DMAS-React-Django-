@@ -27,9 +27,9 @@ class Blog extends React.Component {
   this.setState({ users: data });
   */
  console.log(this.props.data);
-    this.configureChart();
-  }
 
+    this.configureChart(this.props.data);
+  }
   configureChart = () => {
     const chartCanvas = ReactDOM.findDOMNode(this.chart);
 
@@ -83,12 +83,14 @@ class Blog extends React.Component {
     
     return (
       <div>
-         {this.props.val}
+         
         <canvas
+        
         height={500}
         width={1000}
           ref={chart => {
             this.chart = chart;
+            
           }}
         />
       </div>

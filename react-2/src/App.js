@@ -47,7 +47,8 @@ import Result from "./components/Pages/Chart/Result";
 import MyNews from "./components/News/News";
 import { Scroller } from "./components/Scroller";
 import Hero from "./components/My-Blog/Hero";
-
+import Earthquakehappened from "./components/events/Earthquake events/Earthquakehappened";
+import Deathbar from "./components/events/Earthquake events/Deathbar";
 import Demo from './components/Demo';
 import Map from "./components/Map";
 import BlogData from "./components/My-Blog/BlogData";
@@ -82,7 +83,7 @@ function App() {
           <Route path="/MyNews" component={MyNews} />
           <Route path="/MyBlog" component={MyBlog} exact />
           <Route path="/Floodevent" component={FloodEventpage} exact />
-          <Route path="/FetchCountries" componenfet={fetchCountries} exact />
+          
         </Switch>
 
         <Switch>
@@ -91,7 +92,7 @@ function App() {
           <Route path="/Floodinfo" component={Floodinfo} exact />
           <Route path="/Fireinfo" component={Fireinfo} exact />
           <Route path="/Covid19" component={Covid19} exact />
-          
+          <Route path="/FetchCountries" componenfet={fetchCountries} exact />
           <Route path="/Fireinfo" component={Fireinfo} />
           <Route path="/About" component={About} exact />
           <Route path="/Locust" component={Locust} exact />
@@ -105,7 +106,8 @@ function App() {
           <Route path="/DeathResult" component={DeathResult} exact />
          
           <Route path="/DeadResult" component={DeadResult} exact />
-          
+          <Route path="/Earthquakehappened" component={Earthquakehappened} exact />
+          <Route path="/Deathbar" component={Deathbar} exact />
           <Route path="/Demo" component={Demo} />
           <Route path='/Map' component={Map} />
           
