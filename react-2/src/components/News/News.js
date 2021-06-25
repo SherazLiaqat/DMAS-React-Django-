@@ -14,7 +14,7 @@ export default class News extends React.Component {
   state = {
     users: null,
     loading: true,
-    /*visible:288,*/
+  
     
     
   }

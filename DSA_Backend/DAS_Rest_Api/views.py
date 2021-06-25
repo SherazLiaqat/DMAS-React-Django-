@@ -80,12 +80,14 @@ def floodLive(request, page):
     for i in range(5):
         type = str(news['data'][i]['fields']['type'][0]['name'])
         headline = str(news['data'][i]['fields']['name'])
+        discription = news['data'][i]['fields']['description']
         country = news['data'][i]['fields']['country'][0]['name']
         d = str(news['data'][i]['fields']['date']['created']).split('T')
         date = d[0]
         lat = float(news['data'][i]['fields']['country'][0]['location']['lat'])
         long = float(news['data'][i]['fields']['country'][0]['location']['lon'])
-        data.append({'headline':headline,'type':type,'date':date,'country':country,'lat':lat,'long':long})
+        
+        data.append({'headline':headline,'description':discription,'type':type,'date':date,'country':country,'lat':lat,'long':long})
     news = {'News':data}
     return Response(news)
 

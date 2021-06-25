@@ -23,7 +23,7 @@ const Api = () => {
     const override = `
     display: block;
     margin: 0 auto;
-    border-color: red;
+    border-color: green;
     `;
     useEffect(() => {
       getData();
@@ -34,7 +34,8 @@ const Api = () => {
           <h2 className="title"><i className="fa fa-cloud"></i>Explore the Weather Information </h2>
           <div className="search-form">
             <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Enter your city name"/>
-            <button type="button" onClick={() => getData()}>Search</button>
+           
+            <button type="submit" onClick={() => getData()}> Search</button>
           </div>
           {loading ? (
             <div className="loader-container">

@@ -1,6 +1,5 @@
 import React,{Component,useRef} from "react";
 import "./Earthquakeinfo.css";
-//import "./Locusts.css";
 
 import downimage from "../../images/Locustmain.jpg";
 import grasshoper from "../../images/grashopper.jpg";
