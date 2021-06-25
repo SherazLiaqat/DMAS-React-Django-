@@ -56,11 +56,12 @@ const c=''
           datasets: [
             {
               label: 'No. of Earthquake Happen in Years',
-              backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+              backgroundColor: "red",
+              borderColor: "#DE924B",
               data: user.data,
             },
             {
-                labels: 'No. of Earthquake Happen in Years',
+                label: 'No. of Earthquake Happen in Years',
                 data: user.data,
                 type: "line",
                 borderColor: 'rgba(54,162,235,1)',
@@ -86,7 +87,7 @@ const c=''
         datasets: [
           {
             label: 'No. of Death in Years',
-            backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+            backgroundColor: ['rgba(0, 0, 255, 0.5)', ],
             data: user.deaths,
           },
           {
@@ -101,7 +102,7 @@ const c=''
         ],
         
       }}
-      options={{}}
+      
       />
     
   );

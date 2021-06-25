@@ -1,12 +1,12 @@
-export default function validation(values) {
+const Validation=(values)=> {
     let errors = {};
-    /*if (!values.firstname()) {
+    if (!values.firstname) {
       errors.firstname = 'First name is required';
     }
-    if (!values.lastname()) {
+    if (!values.lastname) {
       errors.lastname = 'lastname required';
-    }*/
-    if (!values.username()) {
+    }
+    if (!values.username) {
       errors.username = 'Username required';
     }
     // else if (!/^[A-Za-z]+/.test(values.name.trim())) {
@@ -31,3 +31,4 @@ export default function validation(values) {
     }
     return errors;
   }
+  export default Validation;

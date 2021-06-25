@@ -15,7 +15,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-//import validation from './Validation';
+import validation from './Validation';
 
 import axios from "axios";
 import './Signup.css';
@@ -56,7 +56,7 @@ export default function SignIn() {
   const [firstname,setfirstname]=useState("");
   const [lastname,setlastname]=useState("");
   const [users,setusers]=useState("");
-  //const [errors,setErrors]=useState({});
+ const [errors,setErrors]=useState({});
   const signupinfo = async () => {
     let formfield = new FormData();
     formfield.append("fname",firstname);
@@ -75,7 +75,7 @@ export default function SignIn() {
   }).then((response) => {
     console.log(response.data);
     setusers(response.data);
-    
+    setErrors(validation(values))
     
   });
   }
@@ -90,7 +90,7 @@ export default function SignIn() {
         </Avatar>
         <Typography component="h1" variant="h5">
         Sign UP<br/>
-        Please fill this form to Create Account
+        Please fill this form to Create Account 
       
         
       
@@ -110,6 +110,7 @@ export default function SignIn() {
             value={firstname}
             onChange={(e) => setfirstname(e.target.value)}
           />
+          {errors.firstname &&<p>{errors.firstname}</p>}
           
            <TextField
             variant="outlined"
