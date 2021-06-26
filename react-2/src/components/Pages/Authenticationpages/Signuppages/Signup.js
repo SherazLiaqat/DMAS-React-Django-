@@ -46,6 +46,11 @@ const useStyles = makeStyles((theme) => ({
 display:'flex',
 width: '100%',
   },
+  errormessage:{
+color:'red',
+display:'block'
+
+  }
 }));
 
 export default function SignIn() {
@@ -110,7 +115,7 @@ export default function SignIn() {
             value={firstname}
             onChange={(e) => setfirstname(e.target.value)}
           />
-          {errors.firstname &&<p>{errors.firstname}</p>}
+          {errors.firstname &&<p className={classes.errormessage}>{errors.firstname}</p>}
           
            <TextField
             variant="outlined"
@@ -126,7 +131,8 @@ export default function SignIn() {
             value={lastname}
             onChange={(e) => setlastname(e.target.value)}
           />
-          
+            
+          {errors.lastname &&<p>{errors.lastname}</p>}
           </div>
           <TextField
             variant="outlined"
@@ -142,7 +148,8 @@ export default function SignIn() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-           
+            
+          {errors.username &&<p>{errors.username}</p>}
            <TextField
             variant="outlined"
             margin="normal"
@@ -156,7 +163,9 @@ export default function SignIn() {
             type="Email"
             value={email}
             onChange={(e) => setemail(e.target.value)}
-          />
+          
+           />
+          {errors.email &&<p>{errors.email}</p>} 
           <TextField
             variant="outlined"
             margin="normal"
@@ -170,6 +179,7 @@ export default function SignIn() {
             value={Password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {errors.Password &&<p>{errors.Password}</p>} 
            <TextField
             variant="outlined"
             margin="normal"
@@ -183,7 +193,7 @@ export default function SignIn() {
             value={Password2}
             onChange={(e) => setPassword2(e.target.value)}
           />
-        
+        {errors.Password2 &&<p>{errors.Password2}</p>} 
           
           
           <Button 
