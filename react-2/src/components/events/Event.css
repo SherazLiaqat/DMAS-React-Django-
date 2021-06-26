@@ -1,21 +1,27 @@
-.event-container-Blog {
-  margin: 20px;
 
+.bargraph {
+ margin: 50px;
+ padding: 60px;
+ background-color: green;
+  justify-content: center;
+}
+
+.event-container-pie {
+  margin: 20px;
   justify-content: center;
   display: flex;
 }
-
-.event-container-HeavyRain {
-  margin-top: 20px;
+.country-selecter{
   justify-content: center;
   display: flex;
+  
 }
 @media screen and (max-width: 660px) {
   .event-container-Blog {
-   width:50%
+   width:100%
   }
 
-  .event-container-HeavyRain {
+  .event-container-pie {
    width:100%
   }
 }

@@ -17,16 +17,14 @@ import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons
 import { VscTwitter} from 'react-icons/vsc';
 
 const Locust = () => {
-  const affected=useRef(null);
-  const gotoaffected=()=>window.scrollTo({top: affected.current.offsetTop,behavior:'smooth'})
-  const garden=useRef(null);
-  const gotogarden=()=>window.scrollTo({top: garden.current.offsetTop,behavior:'smooth'})
+ 
   return (
     <>
-    <div className='main-div-earthquake'>
-      <div className="container ">
+    
+    <div >
+      <div >
       
-        <h1 className="title-3">About Locusts</h1>
+        <h1 style={{margin:'20px'}}>About Locusts</h1>
         <p className="paragraph">
           Locusts are large herbivorous insects that can be serious pests of
           agriculture due to their ability to form dense and highly mobile
@@ -84,7 +82,7 @@ const Locust = () => {
             locusts do.
           </p>
         </ul>
-        <h3 ref={garden} className="title-4" >
+        <h3  className="title-4" >
           How to protect kitchen gardens from locusts/Grasshoper
         </h3>
 
@@ -134,7 +132,7 @@ const Locust = () => {
           2003-2005 plague, which caused an estimated $2.5 billion in crop
           damage.
         </p>
-        <h3 className="title-4"ref={affected}>
+        <h3 className="title-4">
           What countries are currently affected by this
         </h3>
         <img src={threat} className="img"></img>
@@ -168,26 +166,10 @@ const Locust = () => {
           </li>
         </ul>
         <br />
-        <div className='side-div-earthquake'>
-            <h3 className='h4-earthquake'> Locust Safy Preacution</h3>
-           
-            <ul className='side-div-p'>
-           
-                <div className='earth'>
-                    
-                
-                    
-                     <button className='button-size' onClick={gotoaffected}>Affected Countries </button></div>
-             
-             
-                <div className='earth'> <button className='button-size' onClick={gotogarden}>Protect Garden 
- 
- </button > </div>
-                </ul>
-               </div>
+        
      
             </div></div>
-          
+            
     </>
   );
 };

@@ -4,7 +4,13 @@
 }
 .site-content {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 50% 35%;
+}
+.blog-heading{
+  background-color: lightgray;
+  border-bottom: 10px solid skyblue;
+  padding: 50px;
+  margin: 50px;
 }
 .post-content {
   width: 100%;

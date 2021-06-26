@@ -1,27 +1,23 @@
 import React, { useState, useEffect } from "react";
-import Deathbar from "./Earthquake events/Deathbar";
-import Deathdpie from "./Earthquake events/Deathpie";
-import Earthquakes from "./Earthquake events/Earthquakehappened";
-import { Line, Bar,Pie,defaults } from 'react-chartjs-2';
-import Affectedbar from "./Earthquake events/Affectedbar";
-import Affectedpie from "./Earthquake events/Affectedpie";
-import Injuredbar from "./Earthquake events/Injuredbar";
-import Injuredpie from "./Earthquake events/Injuredpie";
 
+import { Line, Bar,Pie,defaults } from 'react-chartjs-2';
+
+import styles from '../Pages/Extrapages/LiveEvents/CovidlLive/CountryPicker/CountryPicker.module.css';
 import { NativeSelect, FormControl } from '@material-ui/core';
 import fetchCountries from '../Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index'
 import axios from "axios";
 import "./Event.css";
 import { PostAddSharp } from "@material-ui/icons";
-defaults.global.tooltips.enabled = true
+
 //country
 const c=''
+
  const Event = ({handleCountryChange})=> {
   const [user,setuser]=useState("");
   
 
     const [countries, setCountries] = useState([]);
-    const [filter,setFilter]=useState("all");
+    const [filter,setFilter]=useState("Global");
   
     useEffect(() => {
       
@@ -50,24 +46,26 @@ const c=''
 
     const barChart = (
     
-      <Bar
+      <Bar 
+     
         data={{
           labels: user.lebel,
           datasets: [
             {
-              label: 'No. of Earthquake Happen in Years',
-              backgroundColor: "red",
-              borderColor: "#DE924B",
+              label: 'No. of Earthquake Happend in Years',
+              backgroundColor: "#DE924B",
+            borderColor: "#DE924B",
               data: user.data,
             },
             {
-                label: 'No. of Earthquake Happen in Years',
+                labels: 'No. of Earthquake Happen in Years',
                 data: user.data,
                 type: "line",
-                borderColor: 'rgba(54,162,235,1)',
+                borderColor: 'rgba(54,165,235,1)',
                 fill: false,
                 borderWidth: 2,
                 backgroundColor:'black',
+               
               },
           ],
           
@@ -76,18 +74,18 @@ const c=''
         
       />
       
-    
+      
   );
 
   const lineCharts = (
-   
+    <div className='event-bar'>
       <Bar
       data={{
         labels: user.deaths_years,
         datasets: [
           {
             label: 'No. of Death in Years',
-            backgroundColor: ['rgba(0, 0, 255, 0.5)', ],
+            backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
             data: user.deaths,
           },
           {
@@ -102,9 +100,9 @@ const c=''
         ],
         
       }}
-      
+      options={{}}
       />
-    
+    </div>
   );
   const lineChart = (
    
@@ -145,7 +143,7 @@ const lineCharty = (
           data: user.Affected,
         },
         {
-            labels: ['sat'],
+            label:'No. of Affected People in Years' ,
             data: user.Affected,
             type: "line",
             borderColor: 'rgba(54,162,235,1)',
@@ -214,12 +212,13 @@ const injuriedpie=(
 
 )
 const Affectedpie=(
-  <Pie
+  <Pie 
   data={{
       
       label:["Low", "Medium", "High", "Very High", "Extreme"],
         datasets: [
           {
+            
             data: user.Affected_count,
             backgroundColor: [
               "#1a8604",
@@ -243,37 +242,44 @@ const Affectedpie=(
     <>
 
 
-    <div>
   
-    {filter}
-    </div>
     <div className="div-main">
-    <select
-          className="Changing"
-          id="Type"
-          name="Type"
-          onChange={(e) => setFilter(e.target.value)}
-          onClick={callback}
-        >
-          <option>Global</option>
-          {countries.map((country) => <option  value={country}>{country}</option>)}
-        </select>
-       
+    
+      
     <h1>Earthquake Happened</h1>
     <p style={{textAlign:'center'}}> Number of earthqauake happend in Last years</p>
-      <div className="event-container-Blog">
-      { barChart }
+    <div className="country-selecter">
+    <FormControl className={styles.formControl}>
+      <NativeSelect   onChange={(e) => setFilter(e.target.value)}
+          onClick={callback}
+          id="Type"
+          name="Type"
+      
+      >
+         <option>Global</option>
+          {countries.map((country) => <option  value={country}>{country}</option>)}
+      </NativeSelect>
+    </FormControl>
+    </div>
+      <div >
+      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of Earthquake happen in {filter}</p>
+     
+      { barChart  }
       </div>
-      <h1>Earthquake Deaths</h1>
-      <div className="event-container-Blog">
+      <h1 style={{marginTop:'30px'}}>Earthquake Deaths</h1>
+      
+      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of Deaths Due To Earthquake in {filter}</p>
+
       { lineChart}
-      </div>
+      
       <div className="event-container-HeavyRain">
       {deathpie}
       </div>
       <div>
-        <h1>Injuried</h1>
+        <h1 style={{marginTop:'30px'}}>Injuried</h1>
         <div className="event-container-Blog">
+      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of inJuries Due To Earthquake in {filter}</p>
+
         { lineCharty}
         </div>
         <div className="event-container-HeavyRain">
@@ -281,14 +287,16 @@ const Affectedpie=(
         </div>
       </div>
       <div>
-        <h1>Affected </h1>
+        <h1 style={{marginTop:'30px'}}>Affected </h1>
         <div className="event-container-Blog">
+        <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}> Number of earthqauake happend in Last years</p>
         { lineCharts}
         </div>
-        <div className="event-container-HeavyRain">
+        <div className="event-container-pie">
         {Affectedpie}
         </div>
       </div>
+      <h4 style={{marginBottom:'20px'}}>To See data in Tabular form <a href="/Earthquakecsv">Click here</a></h4>
     </div>
     </>
   );

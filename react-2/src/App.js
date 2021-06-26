@@ -54,6 +54,7 @@ import Map from "./components/Map";
 import BlogData from "./components/My-Blog/BlogData";
 import FloodEventpage from "./components/events/FloodEventpage";
 import { fetchCountries } from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index";
+import EarthquakeCsv from "./components/events/EarthquakeCsv";
 function App() {
   return (
     <>
@@ -83,6 +84,7 @@ function App() {
           <Route path="/MyNews" component={MyNews} />
           <Route path="/MyBlog" component={MyBlog} exact />
           <Route path="/Floodevent" component={FloodEventpage} exact />
+          <Route path="/Earthquakecsv" component={EarthquakeCsv} exact />
           
         </Switch>
 

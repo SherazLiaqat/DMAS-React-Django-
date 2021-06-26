@@ -364,7 +364,7 @@ class Floodinfo extends React.Component {
               >
                 {this.state.shows ? <FaAngleDown /> : <FaAngleRight />}
               </button>
-              Secure Your Space
+              flood fighters
             </div>
 
             <div>
@@ -372,8 +372,7 @@ class Floodinfo extends React.Component {
                 <div>
                   <img src={step1}></img>
                   <p>
-                    Step 1: Secure your space by identifying hazards and
-                    securing moveable items.
+                    Step 1: Providing training in effective flood fighting methods for mitigating a flood
                   </p>
                 </div>
               ) : null}
@@ -457,14 +456,14 @@ class Floodinfo extends React.Component {
               >
                 {this.state.show5 ? <FaAngleDown /> : <FaAngleRight />}
               </button>
-              Drop, Cover, and Hold On
+              Flood Operations Center
             </div>
             <div>
               {this.state.show5 ? (
                 <div>
                   <img src={step5}></img>
                   <p>
-                    Step 5: Drop, cover, and hold on when the earth shakes..
+                    Step 5: Activating our Flood Operations Center when flooding is imminent or occurring to coordinate response between local agencies and provide technical assistance as requested
                   </p>
                 </div>
               ) : null}
@@ -486,7 +485,7 @@ class Floodinfo extends React.Component {
                 <div>
                   <img src={step6}></img>
                   <p>
-                    Step 6: Improve safety after earthquakes by evacuating if
+                    Step 6: Improve safety after Floods by evacuating if
                     necessary, helping the injured, and preventing further
                     damage.
                   </p>
@@ -517,38 +516,8 @@ class Floodinfo extends React.Component {
               ) : null}
             </div>
           </ul>
-          <h3 className="h4-earthquake"> Helpful Links</h3>
-          <ul className="side-div-p">
-            <a href="http://cms.ndma.gov.pk/" target="_blank">
-              NDMA{" "}
-            </a>{" "}
-            <br />
-            <a href="https://www.fema.gov/" target="_blank">
-              FEMA{" "}
-            </a>{" "}
-            <br />
-            <a href="https://www.ready.gov/" target="_blank">
-              Ready.Gov
-            </a>{" "}
-            <br />
-            <a href="https://www.weather.gov/" target="_blank">
-              National Weather Service
-            </a>{" "}
-            <br />
-            <a href="https://mil.wa.gov/" target="_blank">
-              {" "}
-              WA State EMD
-            </a>{" "}
-            <br />
-            <a
-              href="https://waterdata.usgs.gov/wa/nwis/current?type=flow"
-              target="_blank"
-            >
-              USGS-Real Time Data
-            </a>{" "}
-            <br />
-            <br />
-          </ul>
+          
+          
         </div>
       </>
     );

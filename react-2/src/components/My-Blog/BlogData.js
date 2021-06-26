@@ -59,35 +59,25 @@ console.log(data);
             data-aos-delay={200}
           >
             <div className="post-image-Blog-data">
-              <div>
-                <img src={user.photo} className="imgg-Blog-data" alt="blog-image" />
-              </div>
-              <div className="post-info-Blog-data">
-                <span>
-                  <i className="fas fa-user text-gray" />
-                  &nbsp;&nbsp;Admin
-                </span>
-                <span>
-                  <i className="fas fa-calendar-alt text-gray" />
-                  &nbsp;&nbsp;{user.time}
-                </span>
-                
-              </div>
+             
+             
             </div>
             <div className="post-title">
               <a href="">
               {user.title}
               </a>
-              <p >
+              <hr />
               { ReactHtmlParser(user.content) }
-              </p>
+              
+              
+
               
              {/* <button className="btn post-btn">
                 Read More &nbsp; <i className="fas fa-arrow-right" />
               </button>*/}
             </div>
           </div>
-          <hr />
+          
          
         </div>
         

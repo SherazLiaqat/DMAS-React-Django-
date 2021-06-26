@@ -43,12 +43,12 @@ const useStyles = makeStyles((theme) => ({
  
   textbox:{
 
-display:'flex',
+
 width: '100%',
   },
   errormessage:{
 color:'red',
-display:'block'
+
 
   }
 }));
@@ -132,8 +132,8 @@ export default function SignIn() {
             onChange={(e) => setlastname(e.target.value)}
           />
             
-          {errors.lastname &&<p>{errors.lastname}</p>}
-          </div>
+          {errors.lastname &&<p className={classes.errormessage}>{errors.lastname}</p>}
+          
           <TextField
             variant="outlined"
             margin="normal"
@@ -149,7 +149,7 @@ export default function SignIn() {
             onChange={(e) => setUsername(e.target.value)}
           />
             
-          {errors.username &&<p>{errors.username}</p>}
+          {errors.username &&<p className={classes.errormessage}>{errors.username}</p>}
            <TextField
             variant="outlined"
             margin="normal"
@@ -165,7 +165,7 @@ export default function SignIn() {
             onChange={(e) => setemail(e.target.value)}
           
            />
-          {errors.email &&<p>{errors.email}</p>} 
+          {errors.email &&<p className={classes.errormessage}>{errors.email}</p>} 
           <TextField
             variant="outlined"
             margin="normal"
@@ -179,7 +179,7 @@ export default function SignIn() {
             value={Password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {errors.Password &&<p>{errors.Password}</p>} 
+          {errors.password &&<p className={classes.errormessage}>{errors.password}</p>} 
            <TextField
             variant="outlined"
             margin="normal"
@@ -193,9 +193,9 @@ export default function SignIn() {
             value={Password2}
             onChange={(e) => setPassword2(e.target.value)}
           />
-        {errors.Password2 &&<p>{errors.Password2}</p>} 
+        {errors.password2 &&<p className={classes.errormessage}>{errors.password2}</p>} 
           
-          
+        </div>
           <Button 
             type="submit"
             fullWidth
