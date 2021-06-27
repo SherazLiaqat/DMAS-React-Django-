@@ -54,6 +54,10 @@ color:'red',
 }));
 
 export default function SignIn() {
+  const [value,setValues]=useState({
+    firstname:""
+  });
+  
   const [username,setUsername]=useState("");
   const [email,setemail]=useState("");
   const [Password,setPassword]=useState("");
@@ -80,9 +84,44 @@ export default function SignIn() {
   }).then((response) => {
     console.log(response.data);
     setusers(response.data);
-    setErrors(validation(values))
+   
     
+   
   });
+  }
+  const handleChange=async()=>{
+    let errors = {};
+    if (!firstname) {
+      errors.firstname = 'First name is required';
+    }
+    if (!lastname) {
+      errors.lastname = 'lastname required';
+    }
+    if (!username) {
+      errors.username = 'Username required';
+    }
+    // else if (!/^[A-Za-z]+/.test(values.name.trim())) {
+     //  errors.name = 'Enter a valid name';
+    // }
+  
+    if (!email) {
+      errors.email = 'Email required';
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = 'Email address is invalid';
+    }
+    if (!Password) {
+      errors.password = 'Password is required';
+    } else if (Password.length < 6) {
+      errors.password = 'Password needs to be 6 characters or more';
+    }
+  
+    if (!Password2) {
+      errors.password2 = 'Password is required';
+    } else if (Password2 !== Password) {
+      errors.password2 = 'Passwords does not match';
+    }
+    
+    setErrors(errors);
   }
   const classes = useStyles();
  
@@ -112,9 +151,11 @@ export default function SignIn() {
            // autoComplete="name"
             //autoFocus
             type="text"
-            value={firstname}
+            value={values.firstname}
+            
             onChange={(e) => setfirstname(e.target.value)}
           />
+          
           {errors.firstname &&<p className={classes.errormessage}>{errors.firstname}</p>}
           
            <TextField
@@ -202,7 +243,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             //className={classes.submit}
-            onClick={signupinfo}
+            onClick={handleChange}
             
           >
             Sign Up

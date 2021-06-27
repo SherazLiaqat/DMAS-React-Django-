@@ -10,7 +10,7 @@ const Validation=(values)=> {
       errors.username = 'Username required';
     }
     // else if (!/^[A-Za-z]+/.test(values.name.trim())) {
-    //   errors.name = 'Enter a valid name';
+     //  errors.name = 'Enter a valid name';
     // }
   
     if (!values.email) {
