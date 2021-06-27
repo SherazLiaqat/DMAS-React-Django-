@@ -1,5 +1,5 @@
 from rest_framework.authtoken.models import Token
-from .models import Blog, Contact
+from .models import Blog, Contact,UserProfile
 import math
 from .serializers import BlogModelSerializer, ContactModelSerializer
 import requests
@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
-#from django.core.files.storage import FileSystemStorage
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 @api_view(['GET'])
@@ -464,54 +464,56 @@ def signup(request):
     msg ={"Something is wrong!"}
     return Response(msg)
 
-
-# @api_view(['GET','POST'])
-# def myprofile(request,username):
-#     user = User.objects.get(username=username)
-#     try:
-#         profile = UserProfile.objects.get(user=user.id)
-#     except:
-#         profile = UserProfile.objects.create(user=request.user,bio="",files="avater.png")
-#     if request.method=='POST':
-#         user_name= request.data.get('username')
-#         try:
-#             photo = request.FILES['profile']
-#         except:
-#             profile = UserProfile.objects.get(user=user.id)
-#             photo = profile.files
-#         bio = request.data.get('bio')
-#         fname= request.data.get('f_name')
-#         lname= request.data.get('l_name')
-#         email= request.data.get('email')
-#         pass1= request.data.get('pass1')
-#         pass2= request.data.get('pass2')
-#         if len(username) > 10 or len(username) < 5:
-#             res = {"Username must be under 5 to 10 characters"}
-#             return Response(res)
-#         elif not username.isalnum():
-#             res = {"Username should only contain letters and numbers"}
-#             return Response(res)
-#         elif pass1 != pass2:
-#             res = {"Passwords do not match"}
-#             return Response(res)
-#         else:
-#             user = User.objects.get(username=username)
-#             user.username = user_name
-#             user.first_name = fname
-#             user.last_name = lname
-#             user.email = email
-#             user.set_password(str(pass1))
-#             login(request,user)
-#             user.save()
-#             fs = FileSystemStorage()
-#             fs.save(photo.name, photo)
-#             profile.files = photo.name
-#             profile.bio = bio
-#             profile.save()
-#             res = {"Profile successfully Updated!"}
-#             return Response(res)
-#     msg ={"Something is wrong!"}
-#     return Response(msg)
+from .serializers import UserModelSerializer,ProfileModelSerializer
+@api_view(['GET','POST'])
+def myprofile(request,username):
+    user = User.objects.get(username=username)
+    try:
+        profile = UserProfile.objects.get(user=user.id)
+    except:
+        profile = UserProfile.objects.create(user=user,bio="",files="avater.png")
+    userdata = UserModelSerializer(user).data
+    profiledata = ProfileModelSerializer(profile).data
+    if request.method=='POST':
+        user_name= request.data.get('username')
+        try:
+            photo = request.FILES['profile']
+        except:
+            profile = UserProfile.objects.get(user=user.id)
+            photo = profile.files
+        bio = request.data.get('bio')
+        fname= request.data.get('f_name')
+        lname= request.data.get('l_name')
+        email= request.data.get('email')
+        pass1= request.data.get('pass1')
+        pass2= request.data.get('pass2')
+        if len(username) > 10 or len(username) < 5:
+            res = {"Username must be under 5 to 10 characters"}
+            return Response(res)
+        elif not username.isalnum():
+            res = {"Username should only contain letters and numbers"}
+            return Response(res)
+        elif pass1 != pass2:
+            res = {"Passwords do not match"}
+            return Response(res)
+        else:
+            user = User.objects.get(username=username)
+            user.username = user_name
+            user.first_name = fname
+            user.last_name = lname
+            user.email = email
+            user.set_password(str(pass1))
+            login(request,user)
+            user.save()
+            fs = FileSystemStorage()
+            fs.save(photo.name, photo)
+            profile.files = photo.name
+            profile.bio = bio
+            profile.save()
+            res = {"Profile successfully Updated!"}
+            return Response(res)
+    msg ={"user":userdata,"profile":profiledata}
+    return Response(msg)
 
 
 @api_view(['GET','POST'])

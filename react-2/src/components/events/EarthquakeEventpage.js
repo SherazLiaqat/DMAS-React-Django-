@@ -250,13 +250,34 @@ const Affectedpie=(
   
 
 )
+
 const image =
 <div style={{color:"red",border:"1px solid white"}}>
     <LocationOnIcon/>
     </div>
-
   return (
     <>
+ <div style={{ height: '76vh',marginBottom:'5%' ,width: '100%' }}> 
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4" }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        
+{position.map((u)=>(
+       <Marker
+          lat={u[1]}
+          lng={u[2]}
+          icon={image}
+        />
+        ))}
+        <marker
+        position={{lat:43,long:30}}
+        />
+      </GoogleMapReact>
+    </div>
+
+    <div>
  
 
    
@@ -286,10 +307,10 @@ const image =
       >
         
 {position.map((u)=>(
-       <Marker
+       <AnyReactComponent
           lat={u[1]}
           lng={u[2]}
-          icon={image}
+          text="My Marker"
         />
         ))}
       
@@ -332,7 +353,10 @@ const image =
       </div>
       <h4 style={{marginBottom:'20px'}}>To See data in Tabular form <a href="/Earthquakecsv">Click here</a></h4>
     </div>
+    </div>
     </>
+    
   );
 };
+
 export default Event; 

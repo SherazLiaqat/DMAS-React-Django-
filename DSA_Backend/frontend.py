@@ -121,7 +121,7 @@ def signup():
     #response msg
     data = r.json()
     print(data)
-signup()
+#signup()
 def login():
     URL = "http://127.0.0.1:8000/login/"
     data = {"username":"mubashar","pass":"mubashar"}
@@ -132,3 +132,21 @@ def login():
     data = r.json()
     print(data)
 #login()
+def profileget():
+    URL = "http://127.0.0.1:8000/myprofile/mubashar"
+    headers = {'Content-Type': 'application/json'}
+    r = requests.get(url = URL, headers=headers)
+    #response msg
+    data = r.json()
+    print(data)
+profileget()
+def profileupdate():
+    URL = "http://127.0.0.1:8000/myprofile/mubashar"
+    data = {"f_name":"Mubashar","l_name":"Ateeq","username":"mubashar","email":"mubashar@gmail.com","pass1":"mubashar","pass2":"mubashar","bio":"hello g"}
+    json_data = json.dumps(data)
+    headers = {'Content-Type': 'application/json'}
+    r = requests.post(url = URL, headers=headers, data = json_data)
+    #response msg
+    data = r.json()
+    print(data)
+#profileupdate()
