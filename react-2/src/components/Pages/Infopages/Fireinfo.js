@@ -25,21 +25,21 @@ class Fireinfo extends React.Component {
     return (
       <>
         <div className="container ">
-          <h1 className="title-3">Fire : Fire Safety Awareness</h1>
+          <h1 className="title-3">Fire : Fire Safety Awareness<br/>Preparedness</h1>
 
-          <p className="paragraph">
-            There are general Fire safety precautions you should follow
+          <p className='paragraph1'>
+            <strong>safety precautions</strong>  you should follow
             regardless of where you live. Taking time to review tip s about the
-            following Covid-19 safety issues can help you create a safer and
+            following fire safety issues can help you create a safer and
             more secure living environment for you, your friends, and family..{" "}
           </p>
-          <img src={fire} className="img"></img>
+          
 
           <h2 className="title-4">
             Under what conditions does Fire spread easily?
           </h2>
-          <ul className="paragraph">
-            <p>
+          
+            <p className='paragraph1'>
               Any situation in which people are in close proximity to one
               another for long periods of time increases the risk of
               transmission. Indoor locations, especially settings where there is
@@ -50,7 +50,7 @@ class Fireinfo extends React.Component {
               Confined and enclosed spaces with poor ventilation. The risk of
               Fire spreading is higher in places where these “3Cs” overlap.
             </p>
-          </ul>
+          
           <h3 className="title-4">
             Can Fire be transmitted through feces or urine?
           </h3>
@@ -270,29 +270,7 @@ class Fireinfo extends React.Component {
             </li>
             <li>Keep children and pets away from cooking areas</li>
           </ul>
-          <p className="paragraph">
-            For more information on safe cooking check out this{" "}
-            <span
-              class="media-element file-default"
-              data-delta="1"
-              data-fid="103"
-              data-media-element="1"
-            >
-              <img
-                class="file-icon"
-                alt="PDF icon"
-                title="application/pdf"
-                src="/modules/file/icons/application-pdf.png"
-              />
-              <a
-                type="application/pdf; length=617212"
-                href="https://fireprevention.utexas.edu/sites/fireprevention.utexas.edu/files/CookingSafety.pdf"
-              >
-                Cooking Safety Fact Sheet
-              </a>
-            </span>{" "}
-            from the National Fire Protection Association.
-          </p>
+         
           <h3 className="title-4">In the Event of Stovetop Fire:</h3>
           <ul className="paragraph">
             <li>
@@ -408,6 +386,7 @@ class Fireinfo extends React.Component {
               electric shock … This means you should use GFCIs in your kitchen,
               laundry room, bathroom, and outdoor locations
             </li>
+            
             <li>
               Replace or repair frayed, loose, or otherwise damaged cords on all
               electronics
@@ -437,6 +416,7 @@ class Fireinfo extends React.Component {
               Commission over safety concerns.{" "}
             </li>
           </ul>
+          <img src={fire} className="img"></img>
           <h2 className="title-4">Extension Cords and Surge Suppressers</h2>
           <img src={smokefire} className="img"></img>
           <ul className="paragraph">
@@ -754,7 +734,7 @@ class Fireinfo extends React.Component {
               >
                 {this.state.shows ? <FaAngleDown /> : <FaAngleRight />}
               </button>
-              Secure Your Space
+              Fire alarms and detectors
             </div>
 
             <div>
@@ -762,8 +742,7 @@ class Fireinfo extends React.Component {
                 <div>
                   <img src={step1}></img>
                   <p>
-                    Step 1: Secure your space by identifying hazards and
-                    securing moveable items.
+                    Step 1: You need to provide a method for detecting a fire quickly and raising the alarm. The warning system, when it has been set off from any point, should be clearly heard throughout the premises. It should provide enough warning for people to evacuate the building safely..
                   </p>
                 </div>
               ) : null}
@@ -778,15 +757,14 @@ class Fireinfo extends React.Component {
               >
                 {this.state.show2 ? <FaAngleDown /> : <FaAngleRight />}
               </button>{" "}
-              Plan to be Safe{" "}
+              Escape routes
             </div>
             <div>
               {this.state.show2 ? (
                 <div>
                   <img src={step2}></img>
                   <p>
-                    Step 2: Plan to be safe by creating a disaster plan and
-                    deciding how you will communicate in an emergency.
+                    Step 2: You need to ensure that there are enough exits through the building, and that they are in the right places. This will allow you to guarantee that, in the event of a fire anywhere in the building, there is at least one free route available..
                   </p>
                 </div>
               ) : null}
@@ -801,14 +779,16 @@ class Fireinfo extends React.Component {
               >
                 {this.state.show3 ? <FaAngleDown /> : <FaAngleRight />}
               </button>
-              Organize Disaster Supplies
+              ​Evacuation of disabled people
             </div>
             <div>
               {this.state.show3 ? (
                 <div>
-                  <img src={step3}></img>
+                 
                   <p>
-                    Step 3: Organize disaster supplies in convenient locations.
+                    Step 3: You need to make arrangements to ensure the safe evacuation of everybody in your premises.
+
+Your fire risk assessment​ should identify groups of people at risk, taking particular care of vulnerable groups or individuals. For example children, the elderly and people with disabilities..
                   </p>
                 </div>
               ) : null}
@@ -823,16 +803,14 @@ class Fireinfo extends React.Component {
               >
                 {this.state.show4 ? <FaAngleDown /> : <FaAngleRight />}
               </button>
-              Minimize Financial Hardship
+              Fire extinguishers 
             </div>
             <div>
               {this.state.show4 ? (
                 <div>
                   <img src={step4}></img>
                   <p>
-                    Step 4: Minimize financial hardship by organizing important
-                    documents, strengthening your property, and considering
-                    insurance.
+                    Step 4:Always corporate with Fire extinguishers   People that are likely to use fire extinguishers should receive training on how to use them. You need to ensure that fire extinguishers are serviced annually..
                   </p>
                 </div>
               ) : null}
@@ -874,9 +852,9 @@ class Fireinfo extends React.Component {
             <div>
               {this.state.show6 ? (
                 <div>
-                  <img src={step6}></img>
+                  
                   <p>
-                    Step 6: Improve safety after earthquakes by evacuating if
+                    Step 6: Improve safety after fire Attack by evacuating if
                     necessary, helping the injured, and preventing further
                     damage.
                   </p>
@@ -898,8 +876,8 @@ class Fireinfo extends React.Component {
             <div>
               {this.state.show7 ? (
                 <div>
-                  <img src={step7}></img>
-                  <p>
+                  
+                  <p >
                     Step 7: Restore daily life by reconnecting with others,
                     repairing damage, and rebuilding community.
                   </p>
@@ -907,38 +885,7 @@ class Fireinfo extends React.Component {
               ) : null}
             </div>
           </ul>
-          <h3 className="h4-earthquake"> Helpful Links</h3>
-          <ul className="side-div-p">
-            <a href="http://cms.ndma.gov.pk/" target="_blank">
-              NDMA{" "}
-            </a>{" "}
-            <br />
-            <a href="https://www.fema.gov/" target="_blank">
-              FEMA{" "}
-            </a>{" "}
-            <br />
-            <a href="https://www.ready.gov/" target="_blank">
-              Ready.Gov
-            </a>{" "}
-            <br />
-            <a href="https://www.weather.gov/" target="_blank">
-              National Weather Service
-            </a>{" "}
-            <br />
-            <a href="https://mil.wa.gov/" target="_blank">
-              {" "}
-              WA State EMD
-            </a>{" "}
-            <br />
-            <a
-              href="https://waterdata.usgs.gov/wa/nwis/current?type=flow"
-              target="_blank"
-            >
-              USGS-Real Time Data
-            </a>{" "}
-            <br />
-            <br />
-          </ul>
+         
         </div>
       </>
     );

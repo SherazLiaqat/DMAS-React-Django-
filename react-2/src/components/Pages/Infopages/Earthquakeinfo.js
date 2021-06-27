@@ -74,20 +74,20 @@ import { VscTwitter} from 'react-icons/vsc';
                 
     
                    
-                    <h3 className='title-4'> The Recommended Earthquake Protection Method</h3>
+                    <h3 className='title-4'> Recommended Earthquake Protection Method</h3>
                     <div className='paragraph'>
                     <p>In recent years, an E-mail has been circulating that describes the “<b>triangle of life</b>,” an
                         alternative to the long-established “<b>Drop, Cover, and Hold</b>” advise. “Drop, Cover, Hold” is
                         still the official recommendation in the United States by many experts including State Emergency
                         Management, the Red Cross, and the Lewis County Division of Emergency Management.</p>
-                    <p>Earthquakes seldom cause complete building collapse in the United States. The greatest danger is from
-                        falling or flying objects. The “Drop, Cover, and Hold” technique is designed to provide the greatest
-                        protection from this type of situation.</p>
+                   
                    
                     
                     </div>
                     
-    
+                    <p className='paragraph1'>Earthquakes seldom cause complete building collapse in the United States. The greatest danger is from
+                        falling or flying objects. The “Drop, Cover, and Hold” technique is designed to provide the greatest
+                        protection from this type of situation.</p>
     
                     
                     <p className='title-4'><b>Why Is “Drop, Cover and Hold” Recommended?</b></p>
@@ -199,7 +199,7 @@ import { VscTwitter} from 'react-icons/vsc';
     
            
             <h4 className="title-4"> <i class="fa fa-wheelchair"></i>Wheelchair</h4>
-            <img  src={wheelchair} className='img'></img>
+            
             <div clasNAclassNames="content">
                 <div >
                     <ul className='paragraph'>
@@ -249,11 +249,11 @@ import { VscTwitter} from 'react-icons/vsc';
     
     
                  
-            <h4 className="title-4">What Rescuers and Experts “DO NOT” Recommend You Do During An Earthquake</h4>
-            <img  src={help} className='img'></img>
+            <h4 className="title-4"> Rescuers and Experts “DO NOT” Recommend<br></br> During An Earthquake</h4>
+            
             <div className="content">
                 <div className='last-paragraph' >
-                    <ul className='paragraph'>
+                    <ul style={{marginBottom:'50px'}} className='paragraph'>
                     
                         <li ><h2>DO NOT</h2> run outside or to other rooms during shaking. The area near the exterior walls of
                             a building is the most dangerous place to be. Windows, facades and architectural details are
@@ -269,20 +269,8 @@ import { VscTwitter} from 'react-icons/vsc';
     
     
                            
-                    <p className="title-4"><b>For the best opportunity to reduce injury risk and improve your chances of survival in an
-                            earthquake, practice the following:</b></p>
-                            
-                    <ul className='paragraph'>
-                        <li><b>DROP</b> down onto your hands and knees (before the earthquake knocks you down). This
-                            position protects you from falling, but allows you to still move if necessary.</li>
-                        <li><b>COVER</b> your head and neck (and your entire body if possible) under a sturdy table or desk.
-                            If there is no shelter nearby, get down near an interior wall (or next to low-lying furniture
-                            that won’t fall on you), and cover your head and neck with your arms and hands.</li>
-                        <li><b>HOLD ON</b> to your shelter (or to your head and neck) until the shaking stops. Be prepared
-                            to move with your shelter if the shaking shifts.</li>
-                    </ul>
-                    <p className='paragraph'><h2>Additional preparedness information is available at:</h2><a
-                            href="http://www.ready.gov">www.Ready.gov</a><br/><br/></p>
+                   
+                  
                     
                 </div>
             </div>
@@ -367,7 +355,7 @@ import { VscTwitter} from 'react-icons/vsc';
                 
             </div>
             </ul>
-            <h3 className='h4-earthquake'> Helpful Links</h3>
+            <h3 style={{marginTop:'40px'}} className='h4-earthquake'> Helpful Links</h3>
             <ul className='side-div-p'>
             < a href='http://cms.ndma.gov.pk/' target="_blank">NDMA </a> <br/> 
             < a href="https://www.fema.gov/" target="_blank">FEMA </a> <br/> 

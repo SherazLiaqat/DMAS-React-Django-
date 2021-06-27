@@ -126,16 +126,15 @@ Most people with COVID-19 recover from the virus without the need for hospital t
               >
                 {this.state.shows ? <FaAngleDown /> : <FaAngleRight />}
               </button>
-              Secure Your Space
+              Wash Your Hand
             </div>
 
             <div>
               {this.state.shows ? (
                 <div>
-                  <img src={step1}></img>
-                  <p>
-                    Step 1: Secure your space by identifying hazards and
-                    securing moveable items.
+                  
+                  <p style={{fontSize:'14px'}}>
+                    Step 1: wash your hands frequently for 20 Seconds.
                   </p>
                 </div>
               ) : null}
@@ -150,15 +149,14 @@ Most people with COVID-19 recover from the virus without the need for hospital t
               >
                 {this.state.show2 ? <FaAngleDown /> : <FaAngleRight />}
               </button>{" "}
-              Plan to be Safe{" "}
+              Hand Senitizer{" "}
             </div>
             <div>
               {this.state.show2 ? (
                 <div>
-                  <img src={step2}></img>
-                  <p>
-                    Step 2: Plan to be safe by creating a disaster plan and
-                    deciding how you will communicate in an emergency.
+                  
+                  <p style={{fontSize:'14px',textAlign:'center'}}>
+                    Step 2: Always Senitize your hand when you go outside.
                   </p>
                 </div>
               ) : null}
@@ -173,14 +171,15 @@ Most people with COVID-19 recover from the virus without the need for hospital t
               >
                 {this.state.show3 ? <FaAngleDown /> : <FaAngleRight />}
               </button>
-              Organize Disaster Supplies
+              Wearing a face mask
             </div>
             <div>
               {this.state.show3 ? (
                 <div>
-                  <img src={step3}></img>
-                  <p>
-                    Step 3: Organize disaster supplies in convenient locations.
+                 
+                  <p style={{fontSize:'14px'}}>
+                    Step 3: Wearing a face mask when you are around others.
+There are two types of face masks, fabric masks (which you can make yourself and are suitable for most people) and medical masks.
                   </p>
                 </div>
               ) : null}
@@ -195,108 +194,41 @@ Most people with COVID-19 recover from the virus without the need for hospital t
               >
                 {this.state.show4 ? <FaAngleDown /> : <FaAngleRight />}
               </button>
-              Minimize Financial Hardship
+              Making Distance
             </div>
             <div>
               {this.state.show4 ? (
                 <div>
-                  <img src={step4}></img>
-                  <p>
-                    Step 4: Minimize financial hardship by organizing important
-                    documents, strengthening your property, and considering
-                    insurance.
+                  
+                  <p style={{fontSize:'14px'}}>
+                    Step 4: Staying at least one metre away from people as much as possible, and even greater distance when you are indoors.
                   </p>
                 </div>
               ) : null}
             </div>
-            <div className="earth">
-              {" "}
-              <button
-                className="button-size"
-                onClick={() => {
-                  this.setState({ show5: !this.state.show5 });
-                }}
-              >
-                {this.state.show5 ? <FaAngleDown /> : <FaAngleRight />}
-              </button>
-              Drop, Cover, and Hold On
-            </div>
-            <div>
-              {this.state.show5 ? (
-                <div>
-                  <img src={step5}></img>
-                  <p>
-                    Step 5: Drop, cover, and hold on when the earth shakes..
-                  </p>
-                </div>
-              ) : null}
-            </div>
-            <div className="earth">
-              {" "}
-              <button
-                className="button-size"
-                onClick={() => {
-                  this.setState({ show6: !this.state.show6 });
-                }}
-              >
-                {this.state.show6 ? <FaAngleDown /> : <FaAngleRight />}
-              </button>
-              Improve Safety
-            </div>
-            <div>
-              {this.state.show6 ? (
-                <div>
-                  <img src={step6}></img>
-                  <p>
-                    Step 6: Improve safety after earthquakes by evacuating if
-                    necessary, helping the injured, and preventing further
-                    damage.
-                  </p>
-                </div>
-              ) : null}
-            </div>
-            <div className="earth">
-              {" "}
-              <button
-                className="button-size"
-                onClick={() => {
-                  this.setState({ show7: !this.state.show7 });
-                }}
-              >
-                {this.state.show7 ? <FaAngleDown /> : <FaAngleRight />}
-              </button>{" "}
-              Reconnect and Restore
-            </div>
-            <div>
-              {this.state.show7 ? (
-                <div>
-                  <img src={step7}></img>
-                  <p>
-                    Step 7: Restore daily life by reconnecting with others,
-                    repairing damage, and rebuilding community.
-                  </p>
-                </div>
-              ) : null}
-            </div>
+           
+           
+          
+           
+           
+           
           </ul>
-          <h3 className="h4-earthquake"> Helpful Links</h3>
+          <h3 style={{marginTop:'40px'}} className="h4-earthquake"> Helpful Links</h3>
           <ul className="side-div-p">
             <a href="http://cms.ndma.gov.pk/" target="_blank">
               NDMA{" "}
             </a>{" "}
             <br />
-            <a href="https://www.fema.gov/" target="_blank">
-              FEMA{" "}
+            <a href="https://www.dawn.com/news/1623947" target="_blank">
+              Dawn.com{" "}
             </a>{" "}
             <br />
-            <a href="https://www.ready.gov/" target="_blank">
-              Ready.Gov
+            <a href="https://covid.gov.pk/" target="_blank">
+              covid.Gov
             </a>{" "}
             <br />
-            <a href="https://www.weather.gov/" target="_blank">
-              National Weather Service
-            </a>{" "}
-            <br />
+            
+            
             <a href="https://mil.wa.gov/" target="_blank">
               {" "}
               WA State EMD

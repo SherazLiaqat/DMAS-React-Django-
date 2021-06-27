@@ -64,7 +64,7 @@ class FloodLive extends React.Component {
                   </span>
                   <span>
                   &nbsp;&nbsp;<i className="fas fa-calendar-alt text-gray" />
-                    &nbsp;&nbsp; {user.country}
+                    &nbsp;&nbsp; {user.country}&nbsp;&nbsp;
                   </span>
                   <span>Status: &nbsp;&nbsp;{user.status}</span>
                   <span>Type: &nbsp;&nbsp;{user.type}</span>

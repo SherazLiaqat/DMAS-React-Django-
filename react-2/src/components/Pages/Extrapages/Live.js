@@ -14,7 +14,7 @@ const Live = () => {
           <ul className="cards__items">
             <CardItem
               path="/Earthquakeinfo"
-              src="images/img-11.jpg"
+              src="images/news.jpg"
               text="Explore the All News Information..."
               label="All News"
               target="_blank"
@@ -22,7 +22,7 @@ const Live = () => {
               path="/MyNews"
             />
             <CardItem
-              src="images/flood.jpg"
+              src="images/quake.jpg"
               text="Explore the Earthqake Live Information..."
               path="/EarthquakeLive"
               label="EarthquakeLive"
@@ -32,7 +32,7 @@ const Live = () => {
           </ul>
           <ul className="cards__items">
             <CardItem
-              src="images\fire.jpg"
+              src="images\flood12.jpg"
               text="Explore the Flood Live Information..."
               label="Flood"
               path="/FloodLive"

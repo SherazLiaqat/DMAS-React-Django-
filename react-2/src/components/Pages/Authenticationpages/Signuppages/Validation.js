@@ -1,9 +1,9 @@
 const Validation=(values)=> {
     let errors = {};
-    if (!values.firstname) {
+    if (!values.fname) {
       errors.firstname = 'First name is required';
     }
-    if (!values.lastname) {
+    if (!values.lname) {
       errors.lastname = 'lastname required';
     }
     if (!values.username) {
