@@ -23,7 +23,7 @@ function Cards() {
               path="/Earthquakeinfo"
             />
             <CardItem
-              src="images/flood.jpg"
+              src="images/flood2.jpg"
               text="Explore the Flood Information..."
               path="/Floodinfo"
               label="Flood"
@@ -33,7 +33,7 @@ function Cards() {
           </ul>
           <ul className="cards__items">
             <CardItem
-              src="images\fire.jpg"
+              src="images\fire1.jpg"
               text="Explore the Fire Information..."
               label="Fire"
               path="/Fireinfo"

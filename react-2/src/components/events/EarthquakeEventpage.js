@@ -17,8 +17,12 @@ const Marker = ({ icon }) => <div>{icon}</div>;
  const Event = ({props})=> {
   const [user,setuser]=useState("");
   
+<<<<<<< Updated upstream
 
     const [countries, setCountries] = useState([]);
+=======
+  const [countries, setCountries] = useState([]);
+>>>>>>> Stashed changes
     const [position, setPosition] = useState([]);
     const [filter,setFilter]=useState("Global");
   
@@ -257,6 +261,7 @@ const image =
     </div>
   return (
     <>
+<<<<<<< Updated upstream
  <div style={{ height: '76vh',marginBottom:'5%' ,width: '100%' }}> 
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4" }}
@@ -278,6 +283,8 @@ const image =
     </div>
 
     <div>
+=======
+>>>>>>> Stashed changes
  
 
    
@@ -307,7 +314,7 @@ const image =
       >
         
 {position.map((u)=>(
-       <AnyReactComponent
+       <Marker
           lat={u[1]}
           lng={u[2]}
           text="My Marker"

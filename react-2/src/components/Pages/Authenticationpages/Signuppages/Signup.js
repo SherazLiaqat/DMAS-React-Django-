@@ -1,7 +1,7 @@
 
 
 
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -20,6 +20,7 @@ import validation from './Validation';
 import axios from "axios";
 import './Signup.css';
 import { values } from 'lodash';
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -53,7 +54,7 @@ color:'red',
   }
 }));
 
-export default function SignIn() {
+export default function SignIn(/*{submitForm}*/) {
   
   
   const [username,setUsername]=useState("");
@@ -64,6 +65,7 @@ export default function SignIn() {
   const [lastname,setlastname]=useState("");
   const [users,setusers]=useState("");
  const [errors,setErrors]=useState({});
+ /*const [dataIsCorrect,setdataIsCorrect]=useState(false);*/
  const [fine,setFine]=useState("");
   const signupinfo = async () => {
     let formfield = new FormData();
@@ -89,6 +91,7 @@ export default function SignIn() {
   });
   }
   const handleChange=async()=>{
+    /*setdataIsCorrect(true);*/
     setFine("ok")
     let errors = {};
     if (!firstname) {
@@ -100,7 +103,7 @@ export default function SignIn() {
     if (!username) {
       errors.username = 'Username required';
     }
-    else if (!username.length < 5   ) {
+    else if (username.length < 5   ) {
       errors.username= 'User name must be greater then 5 '; 
     }
     // else if (!/^[A-Za-z]+/.test(values.name.trim())) {
@@ -135,7 +138,11 @@ if(fine=="fine"){
 }
   }
   const classes = useStyles();
- 
+ /*useEffect(()=>{
+if(Object.keys(errors).length ===  0 && dataIsCorrect){
+  submitForm(true);
+}
+ },[errors])*/
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />

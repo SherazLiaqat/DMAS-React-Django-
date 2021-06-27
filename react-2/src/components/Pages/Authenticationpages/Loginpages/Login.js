@@ -15,7 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import axios from "axios";
-
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -63,10 +63,28 @@ export default function SignIn() {
   }).then((response) => {
     console.log(response.data);
     setusers(response.data);
+    DelayReturnToHomePage(response.data);
+
     
     
   });
   }
+  const history = useHistory();
+const DelayReturnToHomePage = (e) => {
+
+   setTimeout(() => {
+   
+      var pageType = {
+          pathname: '/Navbar',
+          state: {
+            data:e
+          }
+        }
+        history.push(pageType); 
+ 
+ 
+   }, 1700)
+ }
   const handleChange=async()=>{
     if(alert(users)){
       
@@ -88,7 +106,6 @@ export default function SignIn() {
     
    
   }
- 
  
   const classes = useStyles();
 
@@ -152,6 +169,7 @@ export default function SignIn() {
           >
             Sign In
           </Button>
+          
           <Grid container>
             <Grid item xs>
               <Link href="" variant="body2">

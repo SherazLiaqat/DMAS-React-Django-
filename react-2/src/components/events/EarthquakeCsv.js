@@ -1,5 +1,5 @@
 import React from 'react'
-import Earthquakefile from '../../components/images/Earthquake.xlsx';
+
 const EarthquakeCsv = () => {
     return (
         <div>

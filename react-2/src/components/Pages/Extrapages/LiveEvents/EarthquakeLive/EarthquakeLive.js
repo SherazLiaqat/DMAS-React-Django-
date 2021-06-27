@@ -83,13 +83,25 @@ Readmore=()=>{
              HEADLINE: {user.headline}
               </a> 
               <p>
-              {user.description}
-                
+                In the region of {user.country} Earthquake happen in date {user.data} the magintude latitude and Longitude of their regions are gven here
               </p>
+<<<<<<< Updated upstream
 <a href="/Earthquakelivedata">Read more&nbsp; <i className="fas fa-arrow-right" /></a>
               <button onClick={this.Readmore } className="btn post-btn-news" >
                 Read More &nbsp; <i className="fas fa-arrow-right" />
               </button>
+=======
+              
+             <h4>Magnitude:{user.mag}</h4> 
+             <h4>Latitude:{user.lat}</h4> 
+             <h4>longitude:{user.long}</h4> 
+              
+              
+                
+              
+
+             
+>>>>>>> Stashed changes
             
             </div>
           </div>
@@ -111,6 +123,20 @@ Readmore=()=>{
         <p className="news-paragraph">
           Here You can read about latest flood occured around the world
         </p>
+        <section className="floodmap">
+        
+        <Map  google={this.props.google} zoom={1} style={{margin:' 2% 11%'}}>
+         
+        {this.state.users.map((user) => (
+                <Marker position={{ lat: user.lat, lng: user.long }} />
+              ))}
+        
+         <InfoWindow onClose={this.onInfoWindowClose}>
+             
+         </InfoWindow>
+        </Map>
+        
+                 </section>
             {users}
          
             <div className="pagination-News">
@@ -133,19 +159,7 @@ Readmore=()=>{
             </a>
             
           </section></div>
-         <section>
-        
-<Map classNam="Map" google={this.props.google} zoom={1}>
- 
- <Marker onClick={this.onMarkerClick}
-         position= {{lat: 45 , lng: 25 }} />
-
- <InfoWindow onClose={this.onInfoWindowClose}>
-     
- </InfoWindow>
-</Map>
-
-         </section>
+       
       </div>
       </>
     );

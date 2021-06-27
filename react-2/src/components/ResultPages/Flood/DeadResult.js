@@ -102,7 +102,7 @@ class Blog extends React.Component {
             </div>
           </div>
           <div>
-            <section>
+          <div className="Mapadj">
               <Map
                 classNam="Map"
                 google={this.props.google}
@@ -120,7 +120,7 @@ class Blog extends React.Component {
                   }}
                 />
               </Map>
-            </section>
+            </div>
           </div>
         </div>
       </>

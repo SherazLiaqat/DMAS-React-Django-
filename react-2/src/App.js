@@ -55,7 +55,11 @@ import BlogData from "./components/My-Blog/BlogData";
 import FloodEventpage from "./components/events/FloodEventpage";
 import { fetchCountries } from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index";
 import EarthquakeCsv from "./components/events/EarthquakeCsv";
+<<<<<<< Updated upstream
 import Earthquakelivedata from "./components/Pages/Extrapages/LiveEvents/EarthquakeLive/Earthquakelivedata";
+=======
+import FloodCsv from "./components/events/Floodeventcsv";
+>>>>>>> Stashed changes
 function App() {
   return (
     <>
@@ -66,6 +70,7 @@ function App() {
         <Navbar />
 
         <Switch>
+        <Route path="/Navbar" component={Navbar} exact />
           <Route path="/" component={Home} exact />
           <Route path="/Awareness" component={Awareness} />
           <Route path="/Contact" component={Contact} />
@@ -86,7 +91,11 @@ function App() {
           <Route path="/MyBlog" component={MyBlog} exact />
           <Route path="/Floodevent" component={FloodEventpage} exact />
           <Route path="/Earthquakecsv" component={EarthquakeCsv} exact />
+<<<<<<< Updated upstream
           <Route path="/Earthquakelivedata" component={Earthquakelivedata} exact />
+=======
+          <Route path="/Floodeventcsv" component={FloodCsv} exact />
+>>>>>>> Stashed changes
         </Switch>
 
         <Switch>

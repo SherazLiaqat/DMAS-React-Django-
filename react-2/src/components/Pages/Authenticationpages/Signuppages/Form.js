@@ -1,42 +1,16 @@
-
-import { useState, useEffect } from 'react';
-
-const Form = (callback, validate) => {
-  const [values, setValues] = useState({
-    username: '',
-    email: '',
-    password: '',
-    password2: ''
-  });
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = e => {
-    const { name, value } = e.target;
-    setValues({
-      ...values,
-      [name]: value
-    });
+/*import React,{useState} from 'react'
+import FormSuccess from './FormSucess';
+import Signup from './Signup';
+const Form = () => {
+  const [formIsSubmitted,setformIsSubmitted]=useState(false);
+  const submitForm=()=>{
+    setformIsSubmitted(true)
   };
+  return (
+    <div>
+      {!formIsSubmitted?(<Signup submitForm={submitForm}/>):(<FormSuccess/>)}
+    </div>
+  )
+}
 
-  const handleSubmit = e => {
-    e.preventDefault();
-
-    setErrors(validate(values));
- setIsSubmitting(true);
-  };
-
-   useEffect(
-    () => {
-      if (Object.keys(errors).length === 0 && isSubmitting) {
-        callback();
-      }
-    },
-    [errors]
-  );
-
-  return { handleChange, handleSubmit, values, errors };
-    
-};
-
-export default Form;
+export default Form*/

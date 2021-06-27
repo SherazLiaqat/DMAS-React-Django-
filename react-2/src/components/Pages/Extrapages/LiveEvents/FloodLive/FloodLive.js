@@ -90,11 +90,16 @@ class FloodLive extends React.Component {
           </p>
           <section className="floodmap">
 
+<<<<<<< Updated upstream
             
 
             <Map  google={this.props.google} zoom={1} style={{margin:'31%'}}>
 
             
+=======
+
+            <Map  google={this.props.google} zoom={1} style={{margin:' 2% 11%'}}>
+>>>>>>> Stashed changes
 
               {this.state.users.map((user) => (
                 <Marker position={{ lat: user.lat, lng: user.long }} />

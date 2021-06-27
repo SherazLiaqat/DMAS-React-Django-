@@ -54,7 +54,7 @@ const Dead = () => {
       <div className="main">
         <h1 >
          
-          Estimate The Deaths's Due to Flood
+          Estimate The Damage Due to Flood<br/>and help Disaster Suffering people
          
         </h1>
 

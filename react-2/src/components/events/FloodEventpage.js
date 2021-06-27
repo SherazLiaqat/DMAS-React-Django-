@@ -260,7 +260,7 @@ const Dispalcedpie=(
         </div>
       </div>
      
-      <h4 style={{marginBottom:'20px'}}>To See data in Tabular form <a href="/Earthquakecsv">Click here</a></h4>
+      <h4 style={{marginBottom:'20px'}}>To See data in Tabular form <a href="/Floodeventcsv">Click here</a></h4>
     </div>
     </>
   );

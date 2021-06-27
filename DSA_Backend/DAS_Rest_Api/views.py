@@ -157,6 +157,7 @@ def Flood_Events(request):
         year_lebel = []
         positions = []
         Flood = pd.read_csv("static/Flood.csv",encoding="latin-1")
+        f=Flood
         country_filter = request.data.get('country')
         if country_filter!='Global':
             Flood = Flood[Flood['Country']==str(country_filter)]
@@ -169,7 +170,7 @@ def Flood_Events(request):
             positions.append(a)
         count = Flood['Year'].value_counts()
         count = count.sort_index()
-        country = Flood['Country'].unique()
+        country = f['Country'].unique()
         country.sort()
         for i in count:
             Flood_no.append(i)
