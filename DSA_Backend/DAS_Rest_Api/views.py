@@ -1,5 +1,5 @@
 from rest_framework.authtoken.models import Token
-from .models import Blog, Contact, UserProfile
+from .models import Blog, Contact#, UserProfile
 import math
 from .serializers import BlogModelSerializer, ContactModelSerializer
 import requests
@@ -7,14 +7,13 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
-from django.core.files.storage import FileSystemStorage
+#from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
-@api_view(['GET','POST'])
+@api_view(['GET'])
 def blog(request, page):
     if request.method == 'GET':
         if page is not None:
-            print(page)
             no_of_posts = 5
             blogs = Blog.objects.all()
             blogs = blogs[(page-1)*no_of_posts: page*no_of_posts]
@@ -22,26 +21,10 @@ def blog(request, page):
                 date = str(blogs[b].time)
                 date = date.split(" ")
                 blogs[b].time = date[0]
-            print(blogs[0].time)
             serializer = BlogModelSerializer(blogs, many = True)
             return Response(serializer.data)
         data = {'msg':'No more blogs!'}
         return Response(data)
-    
-    if request.method == 'POST':
-        query=request.data.get('search')
-        blogtitle=Blog.objects.filter(title__icontains=query)
-        blogintro=Blog.objects.filter(short_desc__icontains=query)
-        blogs=blogtitle.union(blogintro)
-        if page is not None:
-            print(page)
-            no_of_posts = 5
-            blogs=blogs[(page-1)*no_of_posts:page*no_of_posts]
-            serializer = BlogModelSerializer(blogs, many = True)
-            return Response(serializer.data)
-        data = {'msg':'No more blogs!'}
-        return Response(data)
-
 
 @api_view(['GET'])
 def blogpost(request, slug):
@@ -98,10 +81,6 @@ def earthquakeLive(request, page):
     response = requests.get(url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=4")
     news = response.json()
     data = list()
-    #deaths = []
-    #injured = []
-    #affected = []
-    #len(data['features']) for complete retreive data
     next = (page-1)*5
     for i in range(next,next+5):
         title = news['features'][i]['properties']['title']
@@ -110,7 +89,6 @@ def earthquakeLive(request, page):
         except:
             p = news['features'][i]['properties']['place'].split('-')
         place = p[-1]
-        #time formatting
         time_strap = str(news['features'][i]['properties']['time'])
         time_strap = int(time_strap[:10])
         time_strap = datetime.fromtimestamp(time_strap)
@@ -118,21 +96,16 @@ def earthquakeLive(request, page):
         time_ = time_strap.strftime("%X")
         time_strap = date_+" "+time_
         time = time_strap
-        #mag = news['features'][i]['properties']['mag']
-        #url = news['features'][i]['properties']['url']
-        #alert = news['features'][i]['properties']['alert']
-        #magType = news['features'][i]['properties']['magType']
+        mag = news['features'][i]['properties']['mag']
         coordinates = news['features'][i]['geometry']['coordinates']
-        data.append({'headline':title,'country':place,'data':time,'lat':coordinates[1],'long':coordinates[0]})
-        """
-        if data['features'][0]['properties']['tsunami']==0:
-            type = 1
-        else:
-            type = 0
-        deaths.append(Earthquake_Dead_Predictions(type, 0, 0, 1, 0, 0, mag[0],coordinates[i][1], coordinates[i][0]))
-        injured.append(Earthquake_Injured_Predictions(type, 0, 0, 1, 0, 0, mag[0],coordinates[i][1], coordinates[i][0]))
-        affected.append(Earthquake_Affected_Predictions(mag[0],coordinates[i][1], coordinates[i][0]))
-        """
+        data.append({'headline':title,'country':place,'data':time,'lat':coordinates[1],'long':coordinates[0],'mag':mag})
+        # if data['features'][0]['properties']['tsunami']==0:
+        #     type = 1
+        # else:
+        #     type = 0
+        # deaths.append(Earthquake_Dead_Predictions(type, 0, 0, 1, 0, 0, mag[0],coordinates[i][1], coordinates[i][0]))
+        # injured.append(Earthquake_Injured_Predictions(type, 0, 0, 1, 0, 0, mag[0],coordinates[i][1], coordinates[i][0]))
+        # affected.append(Earthquake_Affected_Predictions(mag[0],coordinates[i][1], coordinates[i][0]))
     news = {'News':data}
     return Response(news)
 
@@ -170,7 +143,6 @@ def contact(request):
         serrializer = ContactModelSerializer(data = json_data)
         if serrializer.is_valid():
             serrializer.save()
-            #give response
             res = {'msg':'Data Saved!'}
             return Response(res)
         return Response(serrializer.errors)
@@ -186,7 +158,6 @@ def Flood_Events(request):
         positions = []
         Flood = pd.read_csv("static/Flood.csv",encoding="latin-1")
         country_filter = request.data.get('country')
-        print(country_filter)
         if country_filter!='Global':
             Flood = Flood[Flood['Country']==str(country_filter)]
         index = Flood.index
@@ -205,8 +176,6 @@ def Flood_Events(request):
         for j in count.index:
             year_lebel.append(j)
         deaths,deaths_years,dead_count,dead_label = deathgraph(Flood['Dead'],Flood['Year'],Flood['Death'])
-        print(dead_count)
-        print(dead_label)
         Displaced,Displaced_years,Displaced_count,Displaced_label = Injuredgraph(Flood['Displaced'],Flood['Year'],Flood['Displace'])
         context = {'positions':positions,'Country':country,'data':Flood_no,'lebel':year_lebel,'deaths':deaths,'deaths_years':deaths_years,'dead_count':dead_count,'dead_label':dead_label,
             'Displaced':Displaced,'Displaced_years':Displaced_years,'Displaced_label':Displaced_label,'Displaced_count':Displaced_count}
@@ -223,11 +192,9 @@ def Earthquake_Events(request):
         e=earthquake
         positions = []
         country_filter = request.data.get('country')
-        print(country_filter)
         if country_filter!='Global':
             earthquake = earthquake[earthquake['Country']==str(country_filter)]
         index = earthquake.index
-        print(len(earthquake))
         country = earthquake['Country']
         lat = earthquake['Latitude']
         longi = earthquake['Longitude']
@@ -331,7 +298,6 @@ def Earthquake_Estimation(request):
             Europe=1
         else:
             Oceania=1
-        print(Continent)
         credentials = {"type":Earthquake_Type,"continent":Continent,"magnitude":Magnitude,"lat":Latitude,"long":Longitude}
         Dead = Earthquake_Dead_Predictions(Type, Africa, Americas, Asia, Europe, Oceania, Magnitude, Latitude, Longitude)
         range,value = death_range(Dead[0])
@@ -376,19 +342,11 @@ def Earthquake_Affected_Predictions(Magnitude, Latitude, Longitude):
 @api_view(['GET','POST'])
 def Flood_Estimation(request):
     if request.method=='POST':
-        print('This is')
         severity= request.data.get('Severity')
-        print("Severity")
-        print(severity)
         affected= request.data.get('Affected Area')
-        print(affected)
         magnitude= request.data.get('Magnitude')
-        print(magnitude)
         c_x= request.data.get('Centroid X')
-        print(c_x)
         c_y= request.data.get('Centroid Y')
-        print(c_y)
-        print("form end")
         location = {"Lat":c_x,"Long":c_y}
         credentials = {"severity":severity,"affected_area":affected,"magnitude":magnitude,"lat":c_x,"long":c_y}
         Dead = Flood_Dead_Predictions(severity,affected,magnitude,c_x,c_y)
@@ -398,7 +356,6 @@ def Flood_Estimation(request):
         range,value = death_range(Displaced[0])
         Displaceds = {"Estimation":Displaced[0],"range":range,"value":value}
         result = {"Location":location,"credential":credentials,"Deaths":Deaths,"Displaceds":Displaceds}
-        print('end')
         return Response(result)
     res = {"msg":"Something is wrong!"}
     return Response(res)
@@ -485,17 +442,17 @@ def signup(request):
         lname= request.data.get('lname')
         email= request.data.get('email')
         pass1= request.data.get('pass1')
-        pass2= request.data.get('pass2')
-        #checks
-        if len(username) > 10 or len(username) < 5:
-            res = {"Username must be under 5 to 10 characters"}
-            return Response(res)
-        elif not username.isalnum():
-            res = {"Username should only contain letters and numbers"}
-            return Response(res)
-        elif pass1 != pass2:
-            res = {"Passwords do not match"}
-            return Response(res)
+        #pass2= request.data.get('pass2')
+        # #checks
+        # if len(username) > 10 or len(username) < 5:
+        #     res = {"Username must be under 5 to 10 characters"}
+        #     return Response(res)
+        # elif not username.isalnum():
+        #     res = {"Username should only contain letters and numbers"}
+        #     return Response(res)
+        # elif pass1 != pass2:
+        #     res = {"Passwords do not match"}
+        #     return Response(res)
         #create user
         myuser=User.objects.create_user(username,email,pass1)
         myuser.first_name=fname
@@ -508,53 +465,53 @@ def signup(request):
     return Response(msg)
 
 
-@api_view(['GET','POST'])
-def myprofile(request,username):
-    user = User.objects.get(username=username)
-    try:
-        profile = UserProfile.objects.get(user=user.id)
-    except:
-        profile = UserProfile.objects.create(user=request.user,bio="",files="avater.png")
-    if request.method=='POST':
-        user_name= request.data.get('username')
-        try:
-            photo = request.FILES['profile']
-        except:
-            profile = UserProfile.objects.get(user=user.id)
-            photo = profile.files
-        bio = request.data.get('bio')
-        fname= request.data.get('f_name')
-        lname= request.data.get('l_name')
-        email= request.data.get('email')
-        pass1= request.data.get('pass1')
-        pass2= request.data.get('pass2')
-        if len(username) > 10 or len(username) < 5:
-            res = {"Username must be under 5 to 10 characters"}
-            return Response(res)
-        elif not username.isalnum():
-            res = {"Username should only contain letters and numbers"}
-            return Response(res)
-        elif pass1 != pass2:
-            res = {"Passwords do not match"}
-            return Response(res)
-        else:
-            user = User.objects.get(username=username)
-            user.username = user_name
-            user.first_name = fname
-            user.last_name = lname
-            user.email = email
-            user.set_password(str(pass1))
-            login(request,user)
-            user.save()
-            fs = FileSystemStorage()
-            fs.save(photo.name, photo)
-            profile.files = photo.name
-            profile.bio = bio
-            profile.save()
-            res = {"Profile successfully Updated!"}
-            return Response(res)
-    msg ={"Something is wrong!"}
-    return Response(msg)
+# @api_view(['GET','POST'])
+# def myprofile(request,username):
+#     user = User.objects.get(username=username)
+#     try:
+#         profile = UserProfile.objects.get(user=user.id)
+#     except:
+#         profile = UserProfile.objects.create(user=request.user,bio="",files="avater.png")
+#     if request.method=='POST':
+#         user_name= request.data.get('username')
+#         try:
+#             photo = request.FILES['profile']
+#         except:
+#             profile = UserProfile.objects.get(user=user.id)
+#             photo = profile.files
+#         bio = request.data.get('bio')
+#         fname= request.data.get('f_name')
+#         lname= request.data.get('l_name')
+#         email= request.data.get('email')
+#         pass1= request.data.get('pass1')
+#         pass2= request.data.get('pass2')
+#         if len(username) > 10 or len(username) < 5:
+#             res = {"Username must be under 5 to 10 characters"}
+#             return Response(res)
+#         elif not username.isalnum():
+#             res = {"Username should only contain letters and numbers"}
+#             return Response(res)
+#         elif pass1 != pass2:
+#             res = {"Passwords do not match"}
+#             return Response(res)
+#         else:
+#             user = User.objects.get(username=username)
+#             user.username = user_name
+#             user.first_name = fname
+#             user.last_name = lname
+#             user.email = email
+#             user.set_password(str(pass1))
+#             login(request,user)
+#             user.save()
+#             fs = FileSystemStorage()
+#             fs.save(photo.name, photo)
+#             profile.files = photo.name
+#             profile.bio = bio
+#             profile.save()
+#             res = {"Profile successfully Updated!"}
+#             return Response(res)
+#     msg ={"Something is wrong!"}
+#     return Response(msg)
 
 
 @api_view(['GET','POST'])

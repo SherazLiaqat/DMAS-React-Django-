@@ -28,11 +28,11 @@ class Contact(models.Model):
         return self.name
 
 
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.CharField(max_length=200,default="")
-    files = models.FileField()
-#upload_to='media', default='media/avatar.png'
+# class UserProfile(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     bio = models.CharField(max_length=200,default="")
+#     files = models.FileField()
+# #upload_to='media', default='media/avatar.png'
 
-    def __str__(self):
-        return self.user.username
+#     def __str__(self):
+#         return self.user.username

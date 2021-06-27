@@ -18,7 +18,7 @@ urlpatterns = [
     path('Flood_Events/', views.Flood_Events),
     path('Earthquake_Events/', views.Earthquake_Events),
     path('signup/', views.signup),
-    path('myprofile/<str:username>', views.myprofile),
+    # path('myprofile/<str:username>', views.myprofile),
     path('login/', views.Login),
     path('logout/', views.Logout),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
