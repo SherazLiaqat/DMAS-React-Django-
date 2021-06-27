@@ -2,20 +2,27 @@ import React, { useState, useEffect } from "react";
 
 import { Line, Bar,Pie,defaults } from 'react-chartjs-2';
 import styles from '../Pages/Extrapages/LiveEvents/CovidlLive/CountryPicker/CountryPicker.module.css';
-import GoogleMapReact,{marker} from 'google-map-react';
+import GoogleMapReact from 'google-map-react';
 import { NativeSelect, FormControl } from '@material-ui/core';
 import fetchCountries from '../Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index'
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 import axios from "axios";
 import "./Event.css";
+import { color } from "d3";
 //import { PostAddSharp } from "@material-ui/icons";
 defaults.global.tooltips.enabled = true
 //country
 const c=''
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const Marker = ({ icon }) => <div>{icon}</div>;
  const Event = ({props})=> {
   const [user,setuser]=useState("");
   
+<<<<<<< Updated upstream
   const [countries, setCountries] = useState([]);
+=======
+
+    const [countries, setCountries] = useState([]);
+>>>>>>> Stashed changes
     const [position, setPosition] = useState([]);
     const [filter,setFilter]=useState("Global");
   
@@ -164,7 +171,7 @@ const defaultProps = {
     lat: 10.99835602,
     lng: 77.01502627
   },
-  zoom: 11
+  zoom: 1
 };
 
 const deathpie=(
@@ -247,9 +254,37 @@ const Affectedpie=(
   
 
 )
+const image =
+<div style={{color:"red",border:"1px solid white"}}>
+    <LocationOnIcon/>
+    </div>
 
   return (
     <>
+<<<<<<< Updated upstream
+=======
+ <div style={{ height: '76vh',marginBottom:'5%' ,width: '100%' }}> 
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4" }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        
+{position.map((u)=>(
+       <Marker
+          lat={u[1]}
+          lng={u[2]}
+          icon={image}
+        />
+        ))}
+        <marker
+        position={{lat:43,long:30}}
+        />
+      </GoogleMapReact>
+    </div>
+
+    <div>
+>>>>>>> Stashed changes
  
 
    

@@ -86,7 +86,7 @@ class FloodLive extends React.Component {
         <div>
           <h1>Flood Live News with Mapping</h1>
           <section className="floodmap">
-            <Map google={this.props.google} zoom={1}>
+            <Map google={this.props.google} zoom={1} style={{ height: '50vh',marginBottom:'5%' ,width: '100%' }}>
               {this.state.users.map((user) => (
                 <Marker position={{ lat: user.lat, lng: user.long }} />
               ))}

@@ -112,7 +112,7 @@ def earthquakeLive(request, page):
 @api_view(['GET'])
 def weather(request,location): 
     city = location
-    url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=6c562dc1286349aeb43143853211303&q="+ city +"&mca=no&fx=no&num_of_days=2&alerts=yes&format=json"
+    url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=377e8cebcd69405baa782556212706&q="+ city +"&mca=no&fx=no&num_of_days=2&alerts=yes&format=json"
     response = requests.request("GET", url)
     weather = response.json()
     try:

@@ -103,14 +103,14 @@ class App extends Component {
               onClick={() => this.makeHttpRequestWithPage(1)}
               className="pages"
             >
-              {p + 1}
+              {p+1}
             </a>
             <a
               href="#"
               onClick={() => this.makeHttpRequestWithPage(2)}
               className="pages"
             >
-              {p + 2}
+              {p+2}
             </a>
             <a href="#" onClick={() => this.makeHttpRequestWithPage(1)}>
               <i className="fas fa-chevron-right" />
