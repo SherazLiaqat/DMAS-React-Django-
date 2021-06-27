@@ -34,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
+  errormessage:{
+    color:'red',
+    
+    
+      },
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
@@ -43,6 +48,7 @@ export default function SignIn() {
   const [username,setUsername]=useState("");
   const [Password,setPassword]=useState("");
   const [users,setusers]=useState("");
+  const [errors,setErrors]=useState({});
 
   const Logininfo = async () => {
     let formfield = new FormData();
@@ -61,11 +67,30 @@ export default function SignIn() {
     
   });
   }
+  const handleChange=async()=>{
+    Logininfo();
+    let errors = {};
+    setErrors(errors);
+    if (!username) {
+      errors.username = 'Username required';
+    }
+   
+  
+    if (!Password) {
+      errors.Password = 'Password is required';
+    } 
+  
+   
+    
+   
+  }
+ 
+ 
   const classes = useStyles();
 
   return (
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
+      
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
@@ -91,6 +116,7 @@ export default function SignIn() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
+            {errors.username &&<p className={classes.errormessage}>{errors.username}</p>}
           <TextField
             variant="outlined"
             margin="normal"
@@ -104,7 +130,7 @@ export default function SignIn() {
             value={Password}
             onChange={(e) => setPassword(e.target.value)}
           />
-         
+           {errors.Password &&<p className={classes.errormessage}>{errors.Password}</p>}
           <FormControlLabel className={classes.form}
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
@@ -117,7 +143,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             //className={classes.submit}
-            onClick={Logininfo}
+            onClick={handleChange}
           >
             Sign In
           </Button>

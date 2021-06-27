@@ -54,6 +54,7 @@ Readmore=()=>{
 
     if (this.state.users !== null) {
       users = this.state.users.map(user => (
+        <div className="Main-News-Container">
         <div className="site-content-news">
         <div className="posts">
           <div
@@ -67,20 +68,15 @@ Readmore=()=>{
                 <span>
                   <i className="fas fa-map-marker-alt text-gray" />
                   &nbsp;&nbsp;
-                  {user.date}
+                  {user.country}&nbsp;&nbsp;
                 </span>
                 <span>
                   <i className="fas fa-calendar-alt text-gray" />
                   &nbsp;&nbsp;{" "}
-                  {user.country}
+                  {user.data}
                 
                 </span>
-                <span>
-                Status: &nbsp;&nbsp;{user.status}
-                </span>
-                <span>
-                Type: &nbsp;&nbsp;{user.type}
-                </span> 
+               
               </div>
             </div>
             <div className="post-title-news">
@@ -99,6 +95,7 @@ Readmore=()=>{
             </div>
           </div>
         </div>
+      </div>
       </div>
       ));
     }

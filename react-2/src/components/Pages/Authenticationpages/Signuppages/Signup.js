@@ -23,7 +23,7 @@ import { values } from 'lodash';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -54,9 +54,7 @@ color:'red',
 }));
 
 export default function SignIn() {
-  const [value,setValues]=useState({
-    firstname:""
-  });
+  
   
   const [username,setUsername]=useState("");
   const [email,setemail]=useState("");
@@ -66,6 +64,7 @@ export default function SignIn() {
   const [lastname,setlastname]=useState("");
   const [users,setusers]=useState("");
  const [errors,setErrors]=useState({});
+ const [fine,setFine]=useState("");
   const signupinfo = async () => {
     let formfield = new FormData();
     formfield.append("fname",firstname);
@@ -90,6 +89,7 @@ export default function SignIn() {
   });
   }
   const handleChange=async()=>{
+    setFine("ok")
     let errors = {};
     if (!firstname) {
       errors.firstname = 'First name is required';
@@ -99,6 +99,9 @@ export default function SignIn() {
     }
     if (!username) {
       errors.username = 'Username required';
+    }
+    else if (!username.length < 5   ) {
+      errors.username= 'User name must be greater then 5 '; 
     }
     // else if (!/^[A-Za-z]+/.test(values.name.trim())) {
      //  errors.name = 'Enter a valid name';
@@ -120,8 +123,16 @@ export default function SignIn() {
     } else if (Password2 !== Password) {
       errors.password2 = 'Passwords does not match';
     }
-    
+    else{
+      setFine("fine");
+    }
     setErrors(errors);
+    check(errors);
+  }
+  const check= (error)=>{
+if(fine=="fine"){
+  signupinfo();
+}
   }
   const classes = useStyles();
  

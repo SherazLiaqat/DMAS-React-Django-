@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import { Line, Bar,Pie,defaults } from 'react-chartjs-2';
-import Affectedbar from "./Earthquake events/Affectedbar";
-import Affectedpie from "./Earthquake events/Affectedpie";
-import Injuredbar from "./Earthquake events/Injuredbar";
-import Injuredpie from "./Earthquake events/Injuredpie";
 import styles from '../Pages/Extrapages/LiveEvents/CovidlLive/CountryPicker/CountryPicker.module.css';
 import GoogleMapReact,{marker} from 'google-map-react';
 import { NativeSelect, FormControl } from '@material-ui/core';
@@ -19,8 +15,8 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
  const Event = ({props})=> {
   const [user,setuser]=useState("");
   
-
-    const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState([]);
+    const [position, setPosition] = useState([]);
     const [filter,setFilter]=useState("Global");
   
     useEffect(() => {
@@ -41,6 +37,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
     console.log(data);
     console.log(filter)
     setuser(data);
+    setPosition(data.positions)
     setCountries(data.Country);
     };
 
@@ -253,30 +250,9 @@ const Affectedpie=(
 
   return (
     <>
- <div style={{ height: '76vh',marginBottom:'5%' ,width: '100%' }}> 
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        
-{user.positions.map((u)=>(
-       <AnyReactComponent
-          lat={u[1]}
-          lng={u[2]}
-          text="My Marker"
-        />
-        ))}
-        <marker
-        position={{lat:43,long:30}}
-        />
-      </GoogleMapReact>
-    </div>
-
-    <div>
  
-    {filter}
-    </div>
+
+   
     <div className="div-main">
     
       
@@ -294,6 +270,23 @@ const Affectedpie=(
           {countries.map((country) => <option  value={country}>{country}</option>)}
       </NativeSelect>
     </FormControl>
+    </div>
+    <div style={{ height: '76vh',marginBottom:'5%' ,width: '100%' }}> 
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4" }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        
+{position.map((u)=>(
+       <AnyReactComponent
+          lat={u[1]}
+          lng={u[2]}
+          text="My Marker"
+        />
+        ))}
+      
+      </GoogleMapReact>
     </div>
       <div >
       <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of Earthquake happen in {filter}</p>
