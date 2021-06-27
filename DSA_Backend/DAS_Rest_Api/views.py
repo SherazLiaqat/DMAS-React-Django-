@@ -1,5 +1,5 @@
 from rest_framework.authtoken.models import Token
-from .models import Blog, Contact#, UserProfile
+from .models import Blog, Contact
 import math
 from .serializers import BlogModelSerializer, ContactModelSerializer
 import requests
