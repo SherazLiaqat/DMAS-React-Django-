@@ -6,6 +6,7 @@ import GoogleMapReact,{marker} from 'google-map-react';
 import { NativeSelect, FormControl } from '@material-ui/core';
 import fetchCountries from '../Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index'
 import axios from "axios";
+import RoomIcon from '@material-ui/icons/Room';
 import "./Event.css";
 //import { PostAddSharp } from "@material-ui/icons";
 defaults.global.tooltips.enabled = true
@@ -138,7 +139,7 @@ const defaultProps = {
     lat: 10.99835602,
     lng: 77.01502627
   },
-  zoom: 11
+  zoom: 1
 };
 
 const deathpie=(
@@ -193,6 +194,10 @@ const Dispalcedpie=(
   />
 
 )
+const image =
+<div style={{color:"#F7544C"}}>
+    <RoomIcon/>
+    </div>
 
   return (
     <>
@@ -228,7 +233,7 @@ const Dispalcedpie=(
        <AnyReactComponent
           lat={u[1]}
           lng={u[2]}
-          text="My Marker"
+          text={image}
         />
         ))}
       

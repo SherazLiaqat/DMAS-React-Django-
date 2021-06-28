@@ -5,7 +5,7 @@ import styles from '../Pages/Extrapages/LiveEvents/CovidlLive/CountryPicker/Coun
 import GoogleMapReact from 'google-map-react';
 import { NativeSelect, FormControl } from '@material-ui/core';
 import fetchCountries from '../Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index'
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import RoomIcon from '@material-ui/icons/Room';
 import axios from "axios";
 import "./Event.css";
 import { color } from "d3";
@@ -17,12 +17,7 @@ const Marker = ({ icon }) => <div>{icon}</div>;
  const Event = ({props})=> {
   const [user,setuser]=useState("");
   
-<<<<<<< Updated upstream
-
-    const [countries, setCountries] = useState([]);
-=======
   const [countries, setCountries] = useState([]);
->>>>>>> Stashed changes
     const [position, setPosition] = useState([]);
     const [filter,setFilter]=useState("Global");
   
@@ -256,35 +251,11 @@ const Affectedpie=(
 )
 
 const image =
-<div style={{color:"red",border:"1px solid white"}}>
-    <LocationOnIcon/>
+<div style={{color:"#F7544C"}}>
+    <RoomIcon/>
     </div>
   return (
     <>
-<<<<<<< Updated upstream
- <div style={{ height: '76vh',marginBottom:'5%' ,width: '100%' }}> 
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyBdnBgsXjTaRSv3_d5MOBpeCOuBghDWZK4" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        
-{position.map((u)=>(
-       <Marker
-          lat={u[1]}
-          lng={u[2]}
-          icon={image}
-        />
-        ))}
-        <marker
-        position={{lat:43,long:30}}
-        />
-      </GoogleMapReact>
-    </div>
-
-    <div>
-=======
->>>>>>> Stashed changes
  
 
    
@@ -317,7 +288,7 @@ const image =
        <Marker
           lat={u[1]}
           lng={u[2]}
-          text="My Marker"
+          icon={image}
         />
         ))}
       
@@ -360,7 +331,7 @@ const image =
       </div>
       <h4 style={{marginBottom:'20px'}}>To See data in Tabular form <a href="/Earthquakecsv">Click here</a></h4>
     </div>
-    </div>
+    
     </>
     
   );

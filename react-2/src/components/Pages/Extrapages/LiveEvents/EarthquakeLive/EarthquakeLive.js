@@ -85,12 +85,6 @@ Readmore=()=>{
               <p>
                 In the region of {user.country} Earthquake happen in date {user.data} the magintude latitude and Longitude of their regions are gven here
               </p>
-<<<<<<< Updated upstream
-<a href="/Earthquakelivedata">Read more&nbsp; <i className="fas fa-arrow-right" /></a>
-              <button onClick={this.Readmore } className="btn post-btn-news" >
-                Read More &nbsp; <i className="fas fa-arrow-right" />
-              </button>
-=======
               
              <h4>Magnitude:{user.mag}</h4> 
              <h4>Latitude:{user.lat}</h4> 
@@ -101,7 +95,6 @@ Readmore=()=>{
               
 
              
->>>>>>> Stashed changes
             
             </div>
           </div>

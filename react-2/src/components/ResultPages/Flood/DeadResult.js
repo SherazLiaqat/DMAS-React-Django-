@@ -34,7 +34,7 @@ class Blog extends React.Component {
             borderWidth: 1,
           },
         ],
-        labels: ["Deaths", "Injureds"],
+        labels: ["Deaths", "Displaced"],
       },
       options: {
         scales: {
@@ -76,7 +76,7 @@ class Blog extends React.Component {
                 </p>
               </div>
               <div className="card-result2">
-                <h2 className="result-heading">Affected</h2>
+                <h2 className="result-heading">Displaced</h2>
 
                 <h3>
                   Estimation :{" "}
@@ -122,6 +122,7 @@ class Blog extends React.Component {
               </Map>
             </div>
           </div>
+          <footer style={{textAlign:'center',marginBottom:'5px'}}>This information is not Authenticated by any Official source</footer>
         </div>
       </>
     );

@@ -146,6 +146,8 @@ class DeathResult extends React.Component {
               </Map>
             </div>
           </div>
+          <footer style={{textAlign:'center',marginBottom:'5px'}}>This information is not Authenticated by any Official source</footer>
+
         </div>
       </>
     );
