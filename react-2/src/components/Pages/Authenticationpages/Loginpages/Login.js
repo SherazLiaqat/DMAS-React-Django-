@@ -68,6 +68,10 @@ export default function SignIn() {
   });
   }
   const handleChange=async()=>{
+    if(alert(users)){
+      
+    }
+    else{alert(users.msg)}
     Logininfo();
     let errors = {};
     setErrors(errors);
@@ -144,6 +148,7 @@ export default function SignIn() {
             color="primary"
             //className={classes.submit}
             onClick={handleChange}
+            alert={users}
           >
             Sign In
           </Button>

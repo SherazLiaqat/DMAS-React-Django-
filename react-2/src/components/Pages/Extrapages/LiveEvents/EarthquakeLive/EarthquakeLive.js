@@ -1,7 +1,6 @@
 import React from "react";
 import {BeatLoader} from 'react-spinners';
 
-
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 let p=0;
@@ -10,7 +9,7 @@ let p=0;
   state = {
     users: null,
     loading: true,
-    visible:288,
+   
     
     
   }
@@ -27,6 +26,7 @@ let p=0;
 
     const data = await response.json();
 console.log(data);
+
     this.setState({
       users: data.News,loading: false 
       
@@ -34,10 +34,9 @@ console.log(data);
     //this.Readmore=this.Readmore.bind(this);
   }
 Readmore=()=>{
-  this.setState((old)=>{
-    return{visible: old.visible+ 5000}
-  })
-}
+ 
+  }
+
 
  
   
@@ -87,7 +86,7 @@ Readmore=()=>{
               {user.description}
                 
               </p>
-
+<a href="/Earthquakelivedata">Read more&nbsp; <i className="fas fa-arrow-right" /></a>
               <button onClick={this.Readmore } className="btn post-btn-news" >
                 Read More &nbsp; <i className="fas fa-arrow-right" />
               </button>

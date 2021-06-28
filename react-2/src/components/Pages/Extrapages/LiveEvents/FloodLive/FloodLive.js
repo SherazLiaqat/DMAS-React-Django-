@@ -89,15 +89,13 @@ class FloodLive extends React.Component {
             Here You can read about latest flood occured around the world
           </p>
           <section className="floodmap">
-<<<<<<< Updated upstream
-            <Map google={this.props.google} zoom={1} style={{ height: '50vh',marginBottom:'5%' ,width: '100%' }}>
-=======
-<<<<<<< HEAD
+
+            
+
             <Map  google={this.props.google} zoom={1} style={{margin:'31%'}}>
-=======
-            <Map google={this.props.google} zoom={1} style={{ height: '50vh',marginBottom:'5%' ,width: '100%' }}>
->>>>>>> 9354aef15e390d93318816b7280bdb345d01ba78
->>>>>>> Stashed changes
+
+            
+
               {this.state.users.map((user) => (
                 <Marker position={{ lat: user.lat, lng: user.long }} />
               ))}
