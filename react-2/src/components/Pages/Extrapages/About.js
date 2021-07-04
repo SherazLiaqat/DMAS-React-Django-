@@ -5,9 +5,7 @@ import './About.css';
 
 const About = () => {
   const [header] = React.useState({
-    subHeader: "Vision",
-    text:
-      "Our aim to reach our audience in a multitude of formats, create more opportunities to work more closely with our stakeholders, and overall continually improve our content and design to make disaster Assistance a better resource and experience for our guests and help for disaster suffering people",
+    
   });
   const [state] = React.useState([
     { id: 1, title: "Name:", text: "Sheraz Liaqat" },

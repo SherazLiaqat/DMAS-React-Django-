@@ -92,7 +92,7 @@ const Marker = ({ icon }) => <div>{icon}</div>;
             data: user.deaths,
           },
           {
-              labels: 'sat,lat,long',
+              label: 'No. of Death in Years',
               data: user.deaths,
               type: "line",
               borderColor: 'rgba(54,162,235,1)',
@@ -119,7 +119,7 @@ const Marker = ({ icon }) => <div>{icon}</div>;
             data: user.Injured,
           },
           {
-              labels: 'sat,lat,long',
+            label: 'No. of Death in Years',
               data: user.Injured,
               type: "line",
               borderColor: 'rgba(54,162,235,1)',

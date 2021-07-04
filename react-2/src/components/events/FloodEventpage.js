@@ -86,12 +86,12 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
         labels: user.deaths_years,
         datasets: [
           {
-            label: 'No. of Death in Years',
+            
             backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
             data: user.deaths,
           },
           {
-              labels: 'sat,lat,long',
+            label: 'No. of Death in Years',
               data: user.deaths,
               type: "line",
               borderColor: 'rgba(54,162,235,1)',
@@ -118,7 +118,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
             data: user.Injured,
           },
           {
-              labels: 'sat,lat,long',
+            label: 'No. of displaced in Years',
               data: user.Displaced,
               type: "line",
               borderColor: 'rgba(54,162,235,1)',
