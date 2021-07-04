@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,Fragment } from 'react';
 import {Button} from '../Button/Button';
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
@@ -13,6 +13,7 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 //import {fatimes} from 'react-icons/fa';
 
 function Navbar() {
+  const [isAuth, setIsAuth] = useState(false);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [dropdown, setDropdown] = useState(false);
@@ -29,6 +30,9 @@ function Navbar() {
   };
 
   useEffect(() => {
+    if (localStorage.getItem('token') !== null) {
+      setIsAuth(true);
+    }
     showButton();
   }, []);
 
@@ -152,14 +156,32 @@ function Navbar() {
            
 
             <li>
-              <Link
-                to='/Login'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Log In
-              </Link>
+            <ul>
+        {isAuth === true ? (
+          <Fragment>
+            {' '}
+           
+            <li>
+              <Link to='/logout'>Logout</Link>
             </li>
+          </Fragment>
+        ) : (
+          <Fragment>
+            {' '}
+            <li>
+              <Link to='/login'>Login</Link>
+            </li>
+            <li>
+              <Link to='/signup'>Signup</Link>
+            </li>
+          </Fragment>
+        )}
+      </ul>
+            </li>
+            <nav>
+      
+     
+    </nav>
            {/* <Nav>
               <NavDropdown title="user name"><IoMdArrowDropdown />
                 <NavDropdown.Item>

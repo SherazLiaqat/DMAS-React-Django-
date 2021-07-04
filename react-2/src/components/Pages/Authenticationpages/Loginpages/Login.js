@@ -1,6 +1,6 @@
 
 //MATERIAL UI LOGIN
- import React,{useState} from 'react';
+ import React,{useState,useEffect} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -16,6 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import axios from "axios";
 import { useHistory } from 'react-router-dom';
+import { useRafState } from 'react-use';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -49,7 +50,14 @@ export default function SignIn() {
   const [Password,setPassword]=useState("");
   const [users,setusers]=useState("");
   const [errors,setErrors]=useState({});
-
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    if (localStorage.getItem('Token') !== null) {
+      window.location.replace('http://localhost:3000/Awareness');
+    } else {
+      setLoading(false);
+    }
+  }, []);
   const Logininfo = async () => {
     let formfield = new FormData();
     formfield.append("username",username );
@@ -63,34 +71,25 @@ export default function SignIn() {
   }).then((response) => {
     console.log(response.data);
     setusers(response.data);
-    DelayReturnToHomePage(response.data);
+   
+    if (users.Token) {
+      localStorage.clear();
+      localStorage.setItem('token', users.Token);
+      window.location.replace('http://localhost:3000/Awareness');
+    } else {
+      setUsername('');
+      setPassword('');
+      localStorage.clear();
+      setErrors(true);
+    }
 
     
     
   });
   }
-  const history = useHistory();
-const DelayReturnToHomePage = (e) => {
-
-   setTimeout(() => {
-   
-      var pageType = {
-          pathname: '/Navbar',
-          state: {
-            data:e
-          }
-        }
-        history.push(pageType); 
  
- 
-   }, 1700)
- }
   const handleChange=async()=>{
-    if(alert(users)){
-      
-    }
-    else{alert(users.msg)}
-    Logininfo();
+    
     let errors = {};
     setErrors(errors);
     if (!username) {
@@ -101,7 +100,9 @@ const DelayReturnToHomePage = (e) => {
     if (!Password) {
       errors.Password = 'Password is required';
     } 
-  
+  else{
+    Logininfo()
+  }
    
     
    
@@ -122,7 +123,7 @@ const DelayReturnToHomePage = (e) => {
         
       
         </Typography>
-     <div className={classes.form}>
+     <div className={classes.form} onSubmit={Logininfo}>
           <TextField
             variant="outlined"
             margin="normal"
