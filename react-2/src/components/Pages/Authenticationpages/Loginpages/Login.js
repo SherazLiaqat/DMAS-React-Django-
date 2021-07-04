@@ -72,10 +72,13 @@ export default function SignIn() {
     console.log(response.data);
     setusers(response.data);
    
-    if (users.Token) {
-      localStorage.clear();
-      localStorage.setItem('token', users.Token);
+    if (response.data.Token) {
+      
+      localStorage.setItem('token', response.data.Token);
+      
+      localStorage.setItem("username",response.data.username);
       window.location.replace('http://localhost:3000/Awareness');
+      console.log("next")
     } else {
       setUsername('');
       setPassword('');

@@ -56,6 +56,8 @@ import FloodEventpage from "./components/events/FloodEventpage";
 import { fetchCountries } from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index";
 import EarthquakeCsv from "./components/events/EarthquakeCsv";
 import FloodCsv from "./components/events/Floodeventcsv";
+import Logout from "./components/Pages/Authenticationpages/Loginpages/Logout";
+import Profile from "./components/Pages/Authenticationpages/Loginpages/Profile";
 function App() {
   return (
     <>
@@ -79,6 +81,8 @@ function App() {
           
           <Route path="/sign-up" component={Signup} />
           <Route path="/Login" component={Login} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/logout" component={Logout} />
           <Route path="/Event" component={Event} />
           <Route path="/Live" component={Live} />
           <Route path="/Hero" component={Hero} />

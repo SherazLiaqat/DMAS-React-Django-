@@ -1,7 +1,8 @@
-import React, { useState, useEffect,Fragment } from 'react';
+import React, { useState, useEffect,Fragment, useLayoutEffect } from 'react';
 import {Button} from '../Button/Button';
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
+import ProfileDropdown from './ProfileDropdown';
 //import {Nav,NavDropdown,} from 'react-bootstrap';
 import './Navbar.css';
 import Dropdowns from './Dropdowns';
@@ -18,8 +19,11 @@ function Navbar() {
   const [button, setButton] = useState(true);
   const [dropdown, setDropdown] = useState(false);
   const [dropdowns, setDropdowns] = useState(false);
+  const [Profiledropdown, setProfileDropdown] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  
+  const username=localStorage.getItem('username')
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -52,6 +56,22 @@ function Navbar() {
       setDropdown(false);
     } else {
       setDropdown(false);
+    }
+  };
+  const onMouseEnterr = () => {
+    if (window.innerWidth < 960) {
+     
+      setProfileDropdown(false);
+    } else {
+      setProfileDropdown(true);
+    }
+  };
+
+  const onMouseLeavee = () => {
+    if (window.innerWidth < 960) {
+      setProfileDropdown(false);
+    } else {
+      setProfileDropdown(false);
     }
   };
   const onMouseEnters = () => {
@@ -159,21 +179,35 @@ function Navbar() {
             <ul>
         {isAuth === true ? (
           <Fragment>
-            {' '}
-           
-            <li>
-              <Link to='/logout'>Logout</Link>
-            </li>
+            
+            <ul className='nav-item'
+            onMouseEnter={onMouseEnterr}
+            onMouseLeave={onMouseLeavee}
+            >
+            
+              <Link
+              
+                
+                className='nav-links'
+                onClick={closeMobileMenu}>
+              {username}<IoMdArrowDropdown onClick/>
+                
+              </Link>
+              {Profiledropdown && <ProfileDropdown />}
+             
+            </ul>
           </Fragment>
         ) : (
           <Fragment>
-            {' '}
-            <li>
-              <Link to='/login'>Login</Link>
-            </li>
-            <li>
-              <Link to='/signup'>Signup</Link>
-            </li>
+            
+            
+            <div className='hero-btns' style={{margin:"15px",justifyContent:'center'}}>
+          <Link 
+          to='/Login'>
+        <button className='Button-home'> Login</button>
+        
+        </Link>
+        </div>
           </Fragment>
         )}
       </ul>
@@ -191,7 +225,7 @@ function Navbar() {
             </Nav>*/}
           </ul>
           
-          {button && <Button buttonStyle='btn--outline'>LOG IN</Button>}
+         
         </div>
       </nav>
      
