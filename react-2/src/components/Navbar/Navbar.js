@@ -176,7 +176,7 @@ function Navbar() {
            
 
             <li>
-            <ul>
+            <ul className='Navbar-Login' >
         {isAuth === true ? (
           <Fragment>
             
@@ -216,13 +216,7 @@ function Navbar() {
       
      
     </nav>
-           {/* <Nav>
-              <NavDropdown title="user name"><IoMdArrowDropdown />
-                <NavDropdown.Item>
-                  Logout
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>*/}
+         
           </ul>
           
          

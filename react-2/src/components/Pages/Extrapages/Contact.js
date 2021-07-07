@@ -101,8 +101,8 @@ const Contact = () => {
         <h4 className="Header"> HAVE ANY QUERY?</h4>
         <h1 className="Header2"> Contact Us</h1>
         <p className="intro">
-          Please complete the form below to contact us. We will do our best to
-          get back to you as soon as possible!
+        Feel free to contact us! if you have some concerns over website's content or
+you can give us your precious feedback.
         </p>
         <div className="Contact-Div-Location">
           <div className="divlocation">
@@ -211,8 +211,7 @@ const Contact = () => {
           Contact Us
         </button>
         <p className="last">
-          Thank You! For Reaching Out We Will get back to you as soon as
-          Possible.
+       
         </p>
         <br />
       </div>

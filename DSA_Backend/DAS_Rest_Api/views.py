@@ -472,7 +472,7 @@ def myprofile(request,username):
     try:
         profile = UserProfile.objects.get(user=user.id)
     except:
-        profile = UserProfile.objects.create(user=user,bio="",files="avater.png")
+        profile = UserProfile.objects.create(user=user,bio="",files="avatar.png")
     userdata = UserModelSerializer(user).data
     profiledata = ProfileModelSerializer(profile).data
     if request.method=='POST':

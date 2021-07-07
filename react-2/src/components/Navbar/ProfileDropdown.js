@@ -14,15 +14,15 @@ function Dropdowns() {
         onClick={handleClick}
         className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
       >
-        {Profileitem.map((items, index) => {
+        {Profileitem.map((item, index) => {
           return (
             <li key={index}>
               <Link
-                className={items.cName}
-                to={items.path}
+                className={item.cName}
+                to={item.path}
                 onClick={() => setClick(false)}
               >
-                {items.title}
+                {item.title}
               </Link>
             </li>
           );
