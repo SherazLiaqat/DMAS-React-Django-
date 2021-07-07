@@ -1,6 +1,6 @@
 
 import React, { usestate } from "react";
-
+import './Profile.css';
 
 
 
@@ -55,18 +55,36 @@ console.log(data.user.username);
     return (
 
     <div>
-      <div style={{justifyContent:'center',alignItems:'center',}}>
+      <div style={{justifyContent:'center',display:'flex',margin:'20px',borderRadius: '50%',
+    }}>
      <img  src={avatar} alt="blog-image" />
+     
      </div>
-        First Name:{fname}
-        Last Name:{lname}
-        UserNmae{name}
-        Email{email}
+     <div className='Profile-info' style={{marginBottom:'40px'}}>
+     <label className='Profile-label'>Your Bio</label>
+     <div className='Profile-detail'>
+       <p>{bio}</p>
+     
+        </div>
+        </div>
+     <div className='Profile-info'>
+     <label className='Profile-label'>Your Info</label>
+     <div className='Profile-detail'>
+     <div style={{display:'flex',justifyContent:'space-around' ,marginLeft:'-290px'}}>
+        <h4>First-Name:</h4>{fname}</div>
+  
+        <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-298px'}}>
+        <h4>Last-Name:</h4>{lname}</div>
+        <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-283px'}}>
+        <h4>UserName:</h4>{name}</div>
+        <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-283px'}}>
+        <h4>E-mail:</h4>{email}</div>
+        </div>
+        </div>
         <div>
           
-          <div>
-            {bio}
-          </div>
+        
+         
         </div>
       </div>
     );

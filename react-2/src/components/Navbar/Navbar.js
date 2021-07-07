@@ -201,7 +201,7 @@ function Navbar() {
           <Fragment>
             
             
-            <div className='hero-btns' style={{margin:"18px"}}>
+            <div className='hero-btns' style={{margin:"15px",justifyContent:'center'}}>
           <Link 
           to='/Login'>
         <button className='Button-home'> Login</button>
