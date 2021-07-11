@@ -4,6 +4,35 @@ import './Profile.css';
 
 
 
+import profile from '../../../images/sheraz.jpg';
+import { Typography } from '@material-ui/core'
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
+import Timeline from '../Loginpages/Timeline';
+import CustomTimeline,{CustomTimelineSeprator} from '../Loginpages/Timeline';
+
+import { TimelineItem } from '@material-ui/lab';
+import { TimelineContent } from '@material-ui/lab';
+//import CustomButton from "../Button/Button";
+import GetAppIcon from '@material-ui/icons/GetApp';
+
+const CustomTimelineItem=({icon,text,link,title})=>(
+<TimelineItem>
+    <CustomTimelineSeprator/>
+        <TimelineContent className="Timeline-content">
+            {link?(<Typography className="Timelineitem-text">
+<span>{title}:</span>
+<a href={link} target='_blank'>
+    {text}
+</a>
+            </Typography>):(<Typography className="Timelineitem-text">
+                <span>{title}:</span>{text}
+            </Typography>)}
+        </TimelineContent>
+    
+</TimelineItem>
+)
+
+
 export default class News extends React.Component {
   state = {
     users: null,
@@ -55,31 +84,57 @@ console.log(data.user.username);
 
       const avatar=this.state.avatar
     return (
+      <div className="profile container-shadow">
+      <div className='profile-name'>
+          
+          <Typography className='name'> My Profile</Typography>
+          <Typography className='title'>{name} </Typography>
+          
 
-    <div>
+      </div>
+      <div className='profile-image'>
+          <img src={profile} alt="profile"/>
+          
+      </div>
+      <div className='profile-information'>
+          <CustomTimeline icon={<PersonOutlineIcon/>}>
+        <CustomTimelineItem title="First-Name"  text={fname} />
+        <CustomTimelineItem title="Last Name" text={lname}/>
+        <CustomTimelineItem title="UserName" text={name}/>
+        <CustomTimelineItem title="Email" text={email}/>
+       
+          </CustomTimeline >
+          
+          
+          
+          
+         
+      </div>
+  </div>
+   );
+  }}
+
+   {/* <div>
       <div style={{justifyContent:'center',display:'flex',margin:'20px',borderRadius: '50%',
     }}>
      <img  src={avatar} alt="blog-image" />
      
      </div>
-     <div className='Profile-info' style={{marginBottom:'40px'}}>
-     <label className='Profile-label'>Your Bio</label>
-     <div className='Profile-detail'>
-       <p>{bio}</p>
      
-        </div>
-        </div>
      <div className='Profile-info'>
      <label className='Profile-label'>Your Info</label>
      <div className='Profile-detail'>
-     <div style={{display:'flex',justifyContent:'space-around' ,marginLeft:'-290px'}}>
-        First-Name:{fname} </div>
+     <div >
+        First-Name:
+        
+        {fname} 
+        </div>
   
-        <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-298px'}}>
+        <div >
         Last-Name:{lname}</div>
-        <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-283px'}}>
+        <div >
         UserName:         {name}</div>
-        <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-283px'}}>
+        <div >
         E-mail:{email}</div>
         </div>
         </div>
@@ -88,6 +143,5 @@ console.log(data.user.username);
         
          
         </div>
-      </div>
-    );
-  }}
+      </div>*/} 
+   

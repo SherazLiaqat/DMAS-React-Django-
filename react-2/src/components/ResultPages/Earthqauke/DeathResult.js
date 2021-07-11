@@ -129,7 +129,7 @@ class DeathResult extends React.Component {
 
           <div>
             <div className="Mapadj">
-              <Map
+              <Map style={{margin:' 2% 18%',height:'70%'}}
                 google={this.props.google}
                 zoom={2}
                 center={{

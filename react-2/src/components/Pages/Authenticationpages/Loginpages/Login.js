@@ -15,6 +15,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from 'react-router-dom';
 import { useRafState } from 'react-use';
 
@@ -79,6 +81,10 @@ export default function SignIn() {
       
       localStorage.setItem("username",response.data.username);
       window.location.replace('http://localhost:3000/Awareness');
+     toast.success('Successfuly Login!',{
+      position:"top-center",
+      marginTop:'20px'
+     })
       console.log("next")
     } else {
       setUsername('');
@@ -192,7 +198,9 @@ export default function SignIn() {
       <Box mt={8}>
         
       </Box>
+      <ToastContainer />
     </Container>
+     
   );
   }
  

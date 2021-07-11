@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons/fa';
 import { VscTwitter} from 'react-icons/vsc';
 
-
+import disaster from '../images/disaster.png';
 function Footer() {
   return (
     <div className='footer-container'>
@@ -52,7 +52,7 @@ function Footer() {
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-            DAS<FaMedrt/>
+            DMAS<img className='icon-img' src={disaster}/>
               
             </Link>
           </div>

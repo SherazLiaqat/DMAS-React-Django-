@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link,useHistory } from 'react-router-dom';
+import {BeatLoader} from 'react-spinners';
 import "./Dead.css";
 import axios from 'axios';
 const Dead = () => {
@@ -10,6 +11,7 @@ const Dead = () => {
   const [CentriodsX, setCentriodsX] = useState("");
   const [CentriodsY, setCentriodsY] = useState("");
   const [users, setusers] = useState("");
+  const [loading,setLoading]=useState(false);
   const Floodinfo = async () => {
     let formfield = new FormData();
     formfield.append("Severity", Severity);
@@ -17,6 +19,7 @@ const Dead = () => {
     formfield.append("Magnitude", Magnitude);
     formfield.append("Centroid X", CentriodsX);
     formfield.append("Centroid Y", CentriodsY);
+    setLoading(true);
     await axios({
       method: "POST",
       url: "http://127.0.0.1:8000/floodEstimation/",
@@ -49,6 +52,11 @@ const Dead = () => {
   const [amount2, setamount2] = useState();
   const [amount3, setamount3] = useState();
   const toFixed = 0.0;*/
+  if (loading==true) {
+    return <div className="loading">Loading
+   <BeatLoader/>
+   </div>
+  }
   return (
     <>
       <div className="main">

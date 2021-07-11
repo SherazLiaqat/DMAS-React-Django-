@@ -1,5 +1,5 @@
 .Mapadj{
-    padding-bottom: 50%;
+    padding-bottom: 40%;
     
     padding-right: 20%;
     
@@ -168,6 +168,8 @@ background-color: #fff;
     background-color: green;
 }
 @media screen and (max-width: 660px) {
+  
+   
 .main-card-result{
     display: grid;
     
@@ -185,8 +187,8 @@ background-color: #fff;
     margin: auto;
 }
 .Mapadj{
-    padding-bottom: 240%;
-    padding-top: 20%;
+   height: 50%;
+   
 }
 
 }

@@ -34,7 +34,12 @@
     margin-left: 0.5rem;
     font-size: 1.8rem;
   }
-  
+  .icon-img{
+    width:2rem;
+    border-radius: 100px;
+    
+    
+  }
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(11, auto);

@@ -104,7 +104,8 @@ class Blog extends React.Component {
           <div>
           <div className="Mapadj">
               <Map
-                classNam="Map"
+              style={{margin:' 2% 20%',height:'70%'}}
+               
                 google={this.props.google}
                 zoom/*fit*/={2}
                 center={{

@@ -10,7 +10,8 @@ import { FaHome } from 'react-icons/fa';
 import { FaMedrt } from 'react-icons/fa';
 import { FaBars,FaTimes } from 'react-icons/fa';
 import { IoMdArrowDropdown } from 'react-icons/io';
-
+import icon from '../images/FYP.png';
+import disaster from '../images/disaster.png';
 //import {fatimes} from 'react-icons/fa';
 
 function Navbar() {
@@ -96,8 +97,9 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            
+            <img className='icon-img' src={disaster}/>
             Disaster Assistance
-            < FaMedrt/>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
          {click? <FaTimes className='fa-bars'/>:<FaBars className='fa-bars'/>}
@@ -141,14 +143,14 @@ function Navbar() {
             onMouseLeave={onMouseLeaves}
             >
             
-              <Link
+              <ul
               
                 
                 className='nav-links'
                 onClick={closeMobileMenu}>
                 Event <IoMdArrowDropdown onClick/>
                 
-              </Link>
+              </ul>
               {dropdowns && <Dropdowns />}
              
             </li>
