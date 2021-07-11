@@ -55,14 +55,8 @@ color:'red',
 }));
 
 export default function SignIn(/*{submitForm}*/) {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    if (localStorage.getItem('msg') == "Your Account is successfully created") {
-      window.location.replace('http://localhost:3000/Awareness');
-    } else {
-      setLoading(false);
-    }
-  }, []);
+  
+ 
   const [username,setUsername]=useState("");
   const [email,setemail]=useState("");
   const [Password,setPassword]=useState("");
@@ -94,10 +88,13 @@ export default function SignIn(/*{submitForm}*/) {
     
     if (response.data=="Your Account is successfully created") {
       
-      localStorage.setItem('token', response.data);
+      
+      localStorage.setItem('password', Password);
+      
+      localStorage.setItem("username", username);
       
       
-      window.location.replace('http://localhost:3000/');
+      window.location.replace('http://localhost:3000/login');
       console.log("next")
     }
     
@@ -158,6 +155,7 @@ if(Object.keys(errors).length ===  0 && dataIsCorrect){
 }
  },[errors])*/
   return (
+   
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>

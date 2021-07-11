@@ -384,13 +384,13 @@ def death_range(result):
         range = "0 to 10"
         value = 10
     elif result == "Medium":
-        range = "0 to 30"
+        range = "10 to 30"
         value = 30
     elif result == "High":
-        range = "0 to 50"
+        range = "30 to 50"
         value = 50
     elif result=="Very High":
-        range = "0 to 100"
+        range = "50 to 100"
         value = 100
     else:
         range = "more than 100"
@@ -402,13 +402,13 @@ def Injured_range(result):
         range = "0 to 20"
         value = 20
     elif result == "Medium":
-        range = "0 to 50"
+        range = "20 to 50"
         value = 50
     elif result == "High":
-        range = "0 to 100"
+        range = "50 to 100"
         value = 100
     elif result=="Very High":
-        range = "0 to 200"
+        range = "100 to 200"
         value = 200
     else:
         range = "more than 200"
@@ -420,13 +420,13 @@ def Affected_range(result):
         range = "0 to 50"
         value = 50
     elif result == "Medium":
-        range = "0 to 100"
+        range = "50 to 100"
         value = 100
     elif result == "High":
-        range = "0 to 200"
+        range = "100 to 200"
         value = 200
     elif result=="Very High":
-        range = "0 to 300"
+        range = "200 to 300"
         value = 300
     else:
         range = "more than 300"

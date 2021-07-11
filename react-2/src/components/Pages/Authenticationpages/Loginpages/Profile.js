@@ -17,7 +17,7 @@ export default class News extends React.Component {
     
     
   }
-
+  
 
   componentDidMount() {
     const username=localStorage.getItem('username')
@@ -41,8 +41,10 @@ console.log(data.user.username);
       
     });
   }
+ 
 
   render() {
+    
    
     
       const name=this.state.users
@@ -71,14 +73,14 @@ console.log(data.user.username);
      <label className='Profile-label'>Your Info</label>
      <div className='Profile-detail'>
      <div style={{display:'flex',justifyContent:'space-around' ,marginLeft:'-290px'}}>
-        <h4>First-Name:</h4>{fname}</div>
+        First-Name:{fname} </div>
   
         <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-298px'}}>
-        <h4>Last-Name:</h4>{lname}</div>
+        Last-Name:{lname}</div>
         <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-283px'}}>
-        <h4>UserName:</h4>{name}</div>
+        UserName:         {name}</div>
         <div style={{display:'flex',justifyContent:'space-around',marginLeft:'-283px'}}>
-        <h4>E-mail:</h4>{email}</div>
+        E-mail:{email}</div>
         </div>
         </div>
         <div>

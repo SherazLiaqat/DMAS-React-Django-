@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn() {
-  const [username,setUsername]=useState("");
-  const [Password,setPassword]=useState("");
+  const [username,setUsername]=useState(localStorage.getItem('username'));
+  const [Password,setPassword]=useState(localStorage.getItem('password'));
   const [users,setusers]=useState("");
   const [errors,setErrors]=useState({});
   const [loading, setLoading] = useState(true);
@@ -60,9 +60,10 @@ export default function SignIn() {
   }, []);
   const Logininfo = async () => {
     let formfield = new FormData();
+    
     formfield.append("username",username );
     formfield.append("pass", Password);
-   
+    
   
    await axios({
     method: "post",

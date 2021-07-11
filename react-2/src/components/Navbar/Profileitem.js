@@ -3,13 +3,13 @@ export const Profileitem = [
     {
       title: 'Profile',
       path: '/profile',
-      cName: 'Dropdown-link'
+      cName: 'dropdown-link'
     },
     
     {
       title: 'Logout',
       path: '/logout',
-      cName: 'Dropdown-link'
+      cName: 'dropdown-link'
     }
    
   ];

@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { useState } from "react";
 import Result from "../../Chart/Result";
 import { Link,useHistory } from 'react-router-dom';
-
+import {BeatLoader} from 'react-spinners';
 import "./Death.css";
+import { TrendingUpRounded } from "@material-ui/icons";
 
 
  
@@ -22,7 +23,7 @@ const Death = () => {
  const [Type,setType]=useState("");
  const [Continent,setContinent]=useState("");
  const [users,setusers]=useState("");
- const [count,setcount]=useState("");
+ const [loading,setLoading]=useState(false);
  
  
  
@@ -34,6 +35,8 @@ const Death = () => {
   formfield.append("Magnitude", Magnitude);
   formfield.append("Latitude", Latitude);
   formfield.append("Longitude", Longitude);
+  setLoading(true);
+   
 
  await axios({
   method: "POST",
@@ -48,7 +51,6 @@ const Death = () => {
 }
 const history = useHistory();
 const DelayReturnToHomePage = (e) => {
-
    setTimeout(() => {
    
       var pageType = {
@@ -62,10 +64,15 @@ const DelayReturnToHomePage = (e) => {
  
    }, 1700)
  }
-
-
+ 
+ if (loading==true) {
+  return <div className="loading">Loading
+ <BeatLoader/>
+ </div>
+}
   return (
     <>
+   
       <div className="main">
         <h1> Estimate Damage Due to Earthquake Instantly</h1>
 

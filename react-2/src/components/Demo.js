@@ -3,15 +3,16 @@ import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-export default function SimpleMap(){
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627
-    },
-    zoom: 11
-  };
-
+class Demo extends React.Component{
+ 
+  render(){
+    const defaultProps = {
+      center: {
+        lat: 10.99835602,
+        lng: 77.01502627
+      },
+      zoom: 11
+    };
   return (
     // Important! Always set the container height explicitly
     <div style={{ height: '100vh', width: '100%' }}>
@@ -27,5 +28,7 @@ export default function SimpleMap(){
         />
       </GoogleMapReact>
     </div>
-  );
+  )
+  }
 }
+export default Demo

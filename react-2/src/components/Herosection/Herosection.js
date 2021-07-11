@@ -11,7 +11,7 @@ function Herosection() {
   
   const [downs, setDowns] = useState(false);
   const onMouseEnters = () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 280) {
       setDowns(false);
     } else {
       setDowns(true);
@@ -19,7 +19,7 @@ function Herosection() {
   };
 
   const onMouseLeaves = () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 280) {
       setDowns(false);
     } else {
       setDowns(false);

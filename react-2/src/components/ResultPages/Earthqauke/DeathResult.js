@@ -32,16 +32,16 @@ class DeathResult extends React.Component {
             label: "Estimated Result ",
             data: [
               data.Deaths.value,
-              data.Affecteds.value,
               data.Injureds.value,
+              data.Affecteds.value,
             ],
 
-            backgroundColor: ["#DE924B", "skyblue", "seagreen"],
+            backgroundColor: ["#DE924B", "seagreen", "skyblue"],
             borderColor: "#DE924B",
             borderWidth: 1,
           },
         ],
-        labels: ["Deaths", "Affected", "Injured"],
+        labels: ["Deaths", "Injured", "Affected"],
       },
       options: {
         scales: {
@@ -87,20 +87,7 @@ class DeathResult extends React.Component {
                 Earthquake.
               </p>
             </div>
-            <div className="card-result2">
-              <h2 className="result-heading">Affected</h2>
-
-              <h3>
-                Estimation :{" "}
-                {this.props.location.state.data.Affecteds.Estimation}
-              </h3>
-              <p className="paragraph-result">
-                {" "}
-                System Estimate That{" "}
-                {this.props.location.state.data.Affecteds.range} People Affected
-                Due to Earthquake.
-              </p>
-            </div>
+           
             <div className="card-result3">
               <h2 className="result-heading">Injured</h2>
               <h3>
@@ -112,6 +99,20 @@ class DeathResult extends React.Component {
                 {" "}
                 System Estimate That{" "}
                 {this.props.location.state.data.Injureds.range} People Injured
+                Due to Earthquake.
+              </p>
+            </div>
+            <div className="card-result2">
+              <h2 className="result-heading">Affected</h2>
+
+              <h3>
+                Estimation :{" "}
+                {this.props.location.state.data.Affecteds.Estimation}
+              </h3>
+              <p className="paragraph-result">
+                {" "}
+                System Estimate That{" "}
+                {this.props.location.state.data.Affecteds.range} People Affected
                 Due to Earthquake.
               </p>
             </div>

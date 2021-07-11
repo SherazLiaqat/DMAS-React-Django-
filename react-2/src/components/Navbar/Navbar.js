@@ -26,7 +26,7 @@ function Navbar() {
   const username=localStorage.getItem('username')
 
   const showButton = () => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 280) {
       setButton(false);
     } else {
       setButton(true);
@@ -40,10 +40,10 @@ function Navbar() {
     showButton();
   }, []);
 
-  window.addEventListener('resize', showButton);
+  
 
   const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 280) {
      
       setDropdown(false);
     } else {
@@ -52,14 +52,14 @@ function Navbar() {
   };
 
   const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 280) {
       setDropdown(false);
     } else {
       setDropdown(false);
     }
   };
   const onMouseEnterr = () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 280) {
      
       setProfileDropdown(false);
     } else {
@@ -68,14 +68,14 @@ function Navbar() {
   };
 
   const onMouseLeavee = () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 280) {
       setProfileDropdown(false);
     } else {
       setProfileDropdown(false);
     }
   };
   const onMouseEnters = () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 280) {
       setDropdowns(false);
     } else {
       setDropdowns(true);
@@ -83,7 +83,7 @@ function Navbar() {
   };
 
   const onMouseLeaves = () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 280) {
       setDropdowns(false);
     } else {
       setDropdowns(false);
