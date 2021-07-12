@@ -1,9 +1,19 @@
 .main {
   background-color: #f7f7f7;
   margin: 8px;
-  width: 99%;
+ 
   /*width: 75%;*/
   
+}
+.class{
+  color: red;
+  margin-left: 70px;
+  font-size: small;
+}
+.class1{
+  color: red;
+  margin-left: 85px;
+  font-size: small;
 }
 .side-div {
   display: inline-table;
@@ -48,17 +58,17 @@
 }
 .Box {
   margin-left: 0.5rem;
-  width: 30rem;
+  width: 50%;
   height: 2rem;
 }
 .Box2 {
   margin-left: 1.3rem;
-  width: 30rem;
+  width: 50%;
   height: 2rem;
 }
 .Box3 {
   margin-left: 0.7rem;
-  width: 30rem;
+  width: 50%;
   height: 2rem;
 }
 
@@ -72,14 +82,13 @@
 }
 .Changing {
   cursor: pointer;
-  padding: 5px;
+  padding: 7px;
+  width: 20%;
   margin-left: 70px;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 660px) {
-  .main {
-    width: 98%;
-  }
+  
   .Change {
     padding: 5px;
   }
@@ -91,22 +100,31 @@
   }
   .Box {
     width: 100%;
+    margin: auto;
   }
   .Box2 {
     width: 100%;
-    margin-left: 0.5rem;
+    margin: auto;
   }
   .Box3 {
     width: 100%;
+    margin: auto;
   }
   .form-inputs-Death {
     margin-left: 1rem;
   }
   .DeathButton-Earthquake {
-    padding: 8px;
-    font-size: 15px;
-    margin-left: 1.7rem;
-    margin-bottom: 2rem;
+   margin-left: 15px;
+  }
+  .class{
+    
+    margin-left: auto;
+    
+  }
+  .class1{
+   
+    margin-left: auto;
+    
   }
   .side-div {
     display: inline-table;

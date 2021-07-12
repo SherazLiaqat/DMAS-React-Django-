@@ -21,11 +21,13 @@ const About = () => {
     <div className="about">
       <div className="container">
         <div className="common">
+        <h1 > About Us</h1>
           <h1 className="mainHeader">{header.subHeader}</h1>
           <p className="mainContent">{header.text}</p>
           <div className="commonBorder"></div>
         </div>
         <div className="row  h-650 alignCenter">
+          
           <div className="col-6">
             <div className="about__img">
               <img src="/images/about.jpg" alt="disaster" />
@@ -41,7 +43,7 @@ const About = () => {
               survivors with information, support, services, and a means to access and apply for disaster assistance
                through joint data-sharing efforts between federal, tribal, state, local, and private sector partners.
               </div>
-              <h1 > About Us</h1>
+             
               <div className="about__info-p2">
               The DisasterAssistance is used to build relationships and help promote the addition of new assistance for our website. 
               The policy defines the criteria we use to consider agreements to exchange data, links, or information with partners.

@@ -24,7 +24,7 @@ const Death = () => {
  const [Continent,setContinent]=useState("");
  const [users,setusers]=useState("");
  const [loading,setLoading]=useState(false);
- 
+ const [errors,setErrors]=useState({});
  
  
  
@@ -69,6 +69,28 @@ const DelayReturnToHomePage = (e) => {
   return <div className="loading">Loading
  <BeatLoader/>
  </div>
+}
+const handleChange=async()=>{
+    
+  let errors = {};
+  setErrors(errors);
+  if (!Magnitude) {
+    errors.Magnitude = 'Magnitude is required';
+  }
+ 
+
+  if (!Longitude) {
+    errors.Longitude = 'Longitude is required';
+  } 
+if  (!Latitude) {
+    errors.Latitude = 'Latitude is required';
+  } 
+else{
+  contactinfo()
+}
+ 
+  
+ 
 }
   return (
     <>
@@ -115,6 +137,7 @@ const DelayReturnToHomePage = (e) => {
             onChange={(event) => setamount(event.target.value)}*/
               placeholder="Enter Magnitude..."
             />
+            {errors.Magnitude &&<p className='class'>{errors.Magnitude}</p>}
           </div>
 
           <div className="form-inputs-Death">
@@ -130,6 +153,7 @@ const DelayReturnToHomePage = (e) => {
             onChange={(event) => setamount2(event.target.value)}*/
               placeholder="Enter Latitude..."
             />
+            {errors.Latitude &&<p className='class'>{errors.Latitude}</p>}
           </div>
           <div className="form-inputs-Death">
             <label className="form-label">Longitude:</label>
@@ -145,9 +169,10 @@ const DelayReturnToHomePage = (e) => {
             onChange={(event) => setamount3(event.target.value)}*/
               placeholder="Enter Longitude..."
             />
+            {errors.Longitude &&<p className='class'>{errors.Longitude}</p>}
           </div>
           
-          <button className="DeathButton-Earthquake" onClick={contactinfo }> Estimate</button>
+          <button className="DeathButton-Earthquake" onClick={handleChange }> Estimate</button>
           
        
       </div>

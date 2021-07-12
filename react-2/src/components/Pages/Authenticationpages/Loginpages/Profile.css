@@ -1,9 +1,12 @@
+body{
+    overflow-x: hidden;
+}
 .profile{
     background-color: white;
     border-radius:6px ;
     margin: 30px;
-    margin-left: 36%;
-    width: 30%;
+    margin-left: 30%;
+    width: 40%;
    
 }
 .container-shadow{
@@ -31,20 +34,20 @@
 }
 .profile-image{
     margin-top: -20px;
-    
+    height: 50%;
     -webkit-clip-path:polygon(0 12%, 100% 0, 100% 85%, 0% 100%);
     clip-path:polygon(0 11%, 100% 0, 100% 88%, 0% 100%);
 }
 .profile-image img{
     width: 100%;
-    
+   
 
 }
 .profile-information{
     top:0;
     left: 0;
     margin: -40px 10px 20px;
-   
+   padding-bottom: 20px;
 }
 .Timeline-content{
    
@@ -69,7 +72,12 @@
     color: black;
 }
 
-
+@media screen and (max-width: 660px) {
+.profile{
+    width: 100%;
+margin: auto;
+}
+}
 /*.Profile-info{
     margin-bottom: 10px;
     position: relative;

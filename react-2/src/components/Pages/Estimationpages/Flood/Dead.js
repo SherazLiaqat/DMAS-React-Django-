@@ -12,6 +12,7 @@ const Dead = () => {
   const [CentriodsY, setCentriodsY] = useState("");
   const [users, setusers] = useState("");
   const [loading,setLoading]=useState(false);
+  const [errors,setErrors]=useState({});
   const Floodinfo = async () => {
     let formfield = new FormData();
     formfield.append("Severity", Severity);
@@ -57,6 +58,33 @@ const Dead = () => {
    <BeatLoader/>
    </div>
   }
+  const handleChange=async()=>{
+    
+    let errors = {};
+    setErrors(errors);
+    if (!Magnitude) {
+      errors.Magnitude = 'Magnitude is required';
+    }
+    if (!Severity) {
+      errors.Severity = 'Severity is required';
+    }
+  
+    if (!AffectedArea) {
+      errors.AffectedArea = 'Please select Affected Area';
+    } 
+  if  (!CentriodsX) {
+      errors.CentriodsX = 'Please select Centroid-X';
+    } 
+    if  (!CentriodsY) {
+      errors.CentriodsY = 'Please select Centroid-Y';
+    } 
+  else{
+    Floodinfo()
+  }
+   
+    
+   
+  }
   return (
     <>
       <div className="main">
@@ -73,12 +101,13 @@ const Dead = () => {
           name="Severity"
           onChange={(e) => setSeverity ((e.target.value))}
         >
-          <h1>Select Severity</h1>
-          <option>1</option>
+          
+          <option  ></option>
+          <option  >1</option>
           <option>1.5</option>
           <option>2</option>
         </select>
-
+        {errors.Severity &&<p className='class'>{errors.Severity}</p>}
         <div className="form-inputs-Death">
           <label className="form-label">Affected Area:</label>
           <input
@@ -91,6 +120,7 @@ const Dead = () => {
             onChange={(event) => setamount(event.target.value)}*/
             placeholder="Enter Affected Area..."
           />
+           {errors.AffectedArea &&<p className='class1'>{errors.AffectedArea}</p>}
         </div>
 
         <div className="form-inputs-Death">
@@ -105,6 +135,7 @@ const Dead = () => {
             onChange={(event) => setamount1(event.target.value)}*/
             placeholder="Enter Magnitude..."
           />
+          {errors.Magnitude &&<p className='class1'>{errors.Magnitude}</p>}
         </div>
 
      {/*  <div className="form-inputs-Death">
@@ -129,6 +160,7 @@ const Dead = () => {
             onChange={(event) => setamount3(event.target.value)}*/
             placeholder="Enter Centroid X..."
           />
+          {errors.CentriodsX &&<p className='class1'>{errors.CentriodsX}</p>}
         </div>
         <div className="form-inputs-Death">
           <label className="form-label">Centriods Y:</label>
@@ -142,9 +174,10 @@ const Dead = () => {
             onChange={(event) => setamount4(event.target.value)}*/
             placeholder="Enter Centroid Y..."
           />
+           {errors.CentriodsY &&<p className='class1'>{errors.CentriodsY}</p>}
         </div>
         
-        <button className="DeathButton" onClick={Floodinfo}> Estimate</button>
+        <button className="DeathButton" onClick={handleChange}> Estimate</button>
         {/*<Link to={`/DeadResult/`} className="stretched-link"> &nbsp;Estimate </Link>*/}
         <br />
         <br />

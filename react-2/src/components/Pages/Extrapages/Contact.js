@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
-import '../Authenticationpages/Signuppages/Signup.css';
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
 import { BiMessageRounded } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
 import { HiOutlineMailOpen } from "react-icons/hi";
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 const Contact = () => {
@@ -15,7 +15,7 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  
+  const [errors,setErrors]=useState({});
 
   const contactinfo = async () => {
     let formfield = new FormData();
@@ -30,7 +30,10 @@ const Contact = () => {
     data: formfield,
   }).then((response) => {
     console.log(response.data);
-    alert('Your response Has been Submitted! Thankyou')
+    toast.success('Thank You! your Request has been Submitted',{
+      position:"top-center",
+      marginTop:'20px'
+     })
   });
 }
 
@@ -95,12 +98,36 @@ const Contact = () => {
        if(this.valid()){
        alert("Form has been submited")}
      }*/
-
+     const handleChange=async()=>{
+    
+      let errors = {};
+      setErrors(errors);
+      if (!username) {
+        errors.username = 'Username is required';
+      }
+     
+    
+      if (!email) {
+        errors.email = 'Email is required';
+      } 
+    if  (!subject) {
+        errors.subject = 'Subject is required';
+      } 
+      if  (!message) {
+        errors.message = 'Message is required';
+      } 
+    else{
+      contactinfo()
+    }
+     
+      
+     
+    }
     return (
       <div className="main-body">
         <h4 className="Header"> HAVE ANY QUERY?</h4>
         <h1 className="Header2"> Contact Us</h1>
-        <p className="intro">
+        <p className="intro" >
         Feel free to contact us! if you have some concerns over website's content or
 you can give us your precious feedback.
         </p>
@@ -135,7 +162,7 @@ you can give us your precious feedback.
           <div className="form-inputs1">
             <label className="form-label1">
               <FaUserAlt />
-              Your Name*
+              UserName*
             </label>
             <input
               className="form-input"
@@ -146,6 +173,7 @@ you can give us your precious feedback.
               onChange={(e) => setuserName(e.target.value)}
               /* onChange={(event)=>{this.setState({username:event.target.value})}}*/
             />
+            {errors.username &&<p className='class-error'>{errors.username}</p>}
             <div>
               
             </div>
@@ -153,7 +181,7 @@ you can give us your precious feedback.
           <div className="form-inputs1">
             <label className="form-label1">
               <MdEmail />
-              Your E-mail
+              Email Adress
             </label>
             <input
               className="form-input"
@@ -165,7 +193,7 @@ you can give us your precious feedback.
 
               /* onChange={(event)=>{this.setState({username:event.target.value})}}*/
             />
-
+{errors.email &&<p className='class-error'>{errors.email}</p>}
            
           </div>
         </div>
@@ -185,7 +213,7 @@ you can give us your precious feedback.
               /* onChange={(event)=>{this.setState({username:event.target.value})}}*/
             />
 
-            
+{errors.subject &&<p className='class-error'>{errors.subject}</p>}
           </div>
 
           <div className="form-inputs2">
@@ -202,11 +230,11 @@ you can give us your precious feedback.
               onChange={(e) => setMessage(e.target.value)}
               /*  onChange={(event)=>{this.setState({username:event.target.value})}}*/
             />
-
+{errors.message &&<p className='class-error'>{errors.message}</p>}
             
           </div>
         </div>
-        <button className="contactButton" onClick={contactinfo}/* onClick={()=>this.submit()}*/>
+        <button className="contactButton" onClick={handleChange}/* onClick={()=>this.submit()}*/>
           {" "}
           Contact Us
         </button>
@@ -214,6 +242,7 @@ you can give us your precious feedback.
        
         </p>
         <br />
+        <ToastContainer />
       </div>
     );
   }

@@ -94,7 +94,9 @@ margin-right: -130px;
     .nav-item {
       height: 55px;
     }
-   
+   .Navbar-Login{
+     margin: auto;
+   }
     .navbar-logo {
       color: #fff;
       justify-self: start;
@@ -208,7 +210,7 @@ margin-right: -130px;
           text-decoration: none;
           font-size: 23px;
           display: flex;
-          align-items:flex-start;
+          
         }
         .fa-bars {
          margin-right: -0.5rem;
