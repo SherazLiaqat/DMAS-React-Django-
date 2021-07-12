@@ -11,7 +11,7 @@ import { FaMedrt } from 'react-icons/fa';
 import { FaBars,FaTimes } from 'react-icons/fa';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import icon from '../images/FYP.png';
-import disaster from '../images/disaster.png';
+import disaster from '../images/FYP.png';
 //import {fatimes} from 'react-icons/fa';
 
 function Navbar() {

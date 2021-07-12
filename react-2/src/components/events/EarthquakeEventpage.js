@@ -4,7 +4,7 @@ import { Line, Bar,Pie,defaults } from 'react-chartjs-2';
 import styles from '../Pages/Extrapages/LiveEvents/CovidlLive/CountryPicker/CountryPicker.module.css';
 import GoogleMapReact from 'google-map-react';
 import { NativeSelect, FormControl } from '@material-ui/core';
-import fetchCountries from '../Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index'
+
 import RoomIcon from '@material-ui/icons/Room';
 import axios from "axios";
 import "./Event.css";

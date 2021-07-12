@@ -34,7 +34,13 @@ const Contact = () => {
       position:"top-center",
       marginTop:'20px'
      })
+     setuserName('');
+     setEmail('');
+     setSubject('');
+     setMessage('');
+     localStorage.clear();
   });
+  
 }
 
   {
@@ -99,7 +105,7 @@ const Contact = () => {
        alert("Form has been submited")}
      }*/
      const handleChange=async()=>{
-    
+      localStorage.clear();
       let errors = {};
       setErrors(errors);
       if (!username) {

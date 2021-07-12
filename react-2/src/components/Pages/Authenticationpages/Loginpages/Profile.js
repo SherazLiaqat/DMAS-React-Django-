@@ -4,10 +4,9 @@ import './Profile.css';
 
 
 
-import profile from '../../../images/sheraz.jpg';
+import profile from '../../../images/avatar2.jpg';
 import { Typography } from '@material-ui/core'
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
-import Timeline from '../Loginpages/Timeline';
 import CustomTimeline,{CustomTimelineSeprator} from '../Loginpages/Timeline';
 
 import { TimelineItem } from '@material-ui/lab';

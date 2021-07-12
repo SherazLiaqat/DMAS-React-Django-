@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaMedrt,FaFacebookF,FaYoutube,FaInstagram,FaLinkedin} from 'react-icons/fa';
 import { VscTwitter} from 'react-icons/vsc';
 
-import disaster from '../images/disaster.png';
+import disaster from '../images/FYP.png';
 function Footer() {
   return (
     <div className='footer-container'>

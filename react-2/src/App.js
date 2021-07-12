@@ -6,28 +6,23 @@ import Footer from "./components/Footer/Footer";
 import Signup from "./components/Pages/Authenticationpages/Signuppages/Signup";
 import Awareness from "./components/Pages/Awareness";
 import Home from "./components/Pages/Home";
-import Product from "./components/events/Earthquake events/Deathbar";
-import News from "./components/Pages/News";
+
+
 import Earthquakeinfo from "./components/Pages/Infopages/Earthquakeinfo";
-//import Flood from './components/Pages/Infopages/Floodinfo';
-import Herosection from "./components/Herosection/Herosection";
+
 import Floodinfo from "./components/Pages/Infopages/Floodinfo";
 import Login from "./components/Pages/Authenticationpages/Loginpages/Login";
 import Fireinfo from "./components/Pages/Infopages/Fireinfo";
 import Covid19 from "./components/Pages/Infopages/Covid-19info";
 
-import Carditem from "./components/Card/CardItems";
-import Blog from "./components/events/Earthquake events/Deathbar";
-//import Fireinfo from './components/Pages/Infopages/Fireinfo';
 import About from "./components/Pages/Extrapages/About";
 import Contact from "./components/Pages/Extrapages/Contact";
-import Estimation from "./components/Pages/Extrapages/Estimation";
+
 import Death from "./components/Pages/Estimationpages/Earthquake/Death";
 
 import Locust from "./components/Pages/Infopages/Locusts";
 import Event from "./components/events/EarthquakeEventpage";
 import Api from "./components/Pages/Api/Api";
-
 
 import Live from "./components/Pages/Extrapages/Live";
 import CovidLive from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidLive";
@@ -37,23 +32,18 @@ import Readmore from "./components/News/Readmore";
 import MyBlog from "./components/My-Blog/Blog";
 import ScrollToTop from "./components/ScrollToTop";
 import Dead from "./components/Pages/Estimationpages/Flood/Dead";
-import Affectedpeopel from "./components/Pages/Estimationpages/Flood/Affectedpeopel";
+
 import DeathResult from "./components/ResultPages/Earthqauke/DeathResult";
 import DeadResult from "./components/ResultPages/Flood/DeadResult";
 
-
-import chart from "./components/Pages/Chart/Result";
-import Result from "./components/Pages/Chart/Result";
 import MyNews from "./components/News/News";
 import { Scroller } from "./components/Scroller";
-import Hero from "./components/My-Blog/Hero";
-import Earthquakehappened from "./components/events/Earthquake events/Earthquakehappened";
-import Deathbar from "./components/events/Earthquake events/Deathbar";
-import Demo from './components/Demo';
-import Map from "./components/Map";
+
+import Demo from "./components/Demo";
+
 import BlogData from "./components/My-Blog/BlogData";
 import FloodEventpage from "./components/events/FloodEventpage";
-import { fetchCountries } from "./components/Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index";
+
 import EarthquakeCsv from "./components/events/EarthquakeCsv";
 import FloodCsv from "./components/events/Floodeventcsv";
 import Logout from "./components/Pages/Authenticationpages/Loginpages/Logout";
@@ -68,25 +58,24 @@ function App() {
         <Navbar />
 
         <Switch>
-        <Route path="/Navbar" component={Navbar} exact />
+          <Route path="/Navbar" component={Navbar} exact />
           <Route path="/" component={Home} exact />
           <Route path="/Awareness" component={Awareness} />
           <Route path="/Contact" component={Contact} />
-          <Route path="/Blog" component={Blog} />
-          <Route path="/News" component={News} />
+
+          
           <Route path="/Death" component={Death} />
           <Route path="/Dead" component={Dead} />
-          
-          <Route path="/Affectedpeopel" component={Affectedpeopel} />
-          
+
+
           <Route path="/sign-up" component={Signup} />
           <Route path="/Login" component={Login} />
           <Route path="/profile" component={Profile} />
           <Route path="/logout" component={Logout} />
           <Route path="/Event" component={Event} />
           <Route path="/Live" component={Live} />
-          <Route path="/Hero" component={Hero} />
-          <Route path='/BlogData/:slug' component={BlogData} />
+
+          <Route path="/BlogData/:slug" component={BlogData} />
           <Route path="/MyNews" component={MyNews} />
           <Route path="/MyBlog" component={MyBlog} exact />
           <Route path="/Floodevent" component={FloodEventpage} exact />
@@ -95,30 +84,27 @@ function App() {
         </Switch>
 
         <Switch>
-        
           <Route path="/Earthquakeinfo" component={Earthquakeinfo} exact />
           <Route path="/Floodinfo" component={Floodinfo} exact />
           <Route path="/Fireinfo" component={Fireinfo} exact />
           <Route path="/Covid19" component={Covid19} exact />
-          <Route path="/FetchCountries" componenfet={fetchCountries} exact />
+         
           <Route path="/Fireinfo" component={Fireinfo} />
           <Route path="/About" component={About} exact />
           <Route path="/Locust" component={Locust} exact />
-          <Route path="/Estimation" component={Estimation} exact />
+          
           <Route path="/Api" component={Api} exact />
           <Route path="/CovidLive" component={CovidLive} exact />
           <Route path="/FloodLive" component={FloodLive} exact />
           <Route path="/EarthquakeLive" component={EarthquakeLive} exact />
-          <Route path="/Readmore" component={Readmore } exact />
-          
+          <Route path="/Readmore" component={Readmore} exact />
+
           <Route path="/DeathResult" component={DeathResult} exact />
-         
+
           <Route path="/DeadResult" component={DeadResult} exact />
-          <Route path="/Earthquakehappened" component={Earthquakehappened} exact />
-          <Route path="/Deathbar" component={Deathbar} exact />
+
           <Route path="/Demo" component={Demo} />
-          <Route path='/Map' component={Map} />
-          
+          <Route path="/Map" component={Map} />
         </Switch>
         <Footer />
       </Router>

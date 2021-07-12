@@ -4,8 +4,7 @@ import { Line, Bar,Pie,defaults } from 'react-chartjs-2';
 import styles from '../Pages/Extrapages/LiveEvents/CovidlLive/CountryPicker/CountryPicker.module.css';
 import GoogleMapReact,{marker} from 'google-map-react';
 import { NativeSelect, FormControl } from '@material-ui/core';
-import fetchCountries from '../Pages/Extrapages/LiveEvents/CovidlLive/CovidApi/Index'
-import axios from "axios";
+
 import RoomIcon from '@material-ui/icons/Room';
 import "./Event.css";
 //import { PostAddSharp } from "@material-ui/icons";
@@ -60,7 +59,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
               data: user.data,
             },
             {
-                label: 'No. of FloodHappen in Years',
+                label: 'No. of Flood Happen in Years',
                 data: user.data,
                 type: "line",
                 borderColor: 'rgba(54,165,235,1)',
@@ -113,9 +112,9 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
         labels: user.Displaced_years,
         datasets: [
           {
-            label: 'No. of Injuried People in Years',
+            label: 'No. of Dispaced People in Years',
             backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
-            data: user.Injured,
+            data: user.Displaced,
           },
           {
             label: 'No. of displaced in Years',
@@ -208,7 +207,7 @@ const image =
     
       
     <h1>Flood Happened</h1>
-    <p style={{textAlign:'center'}}> Number of earthqauake happend in Last years</p>
+    <p style={{textAlign:'center'}}> Number of Flood happen in Last years</p>
     <div className="country-selecter">
     <FormControl className={styles.formControl}>
       <NativeSelect   onChange={(e) => setFilter(e.target.value)}
@@ -240,13 +239,13 @@ const image =
       </GoogleMapReact>
     </div>
       <div >
-      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of Earthquake happen in {filter}</p>
+      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of Flood happen in {filter}</p>
      
       { globalChart  }
       </div>
       <h1 style={{marginTop:'30px'}}>Flood Deaths</h1>
       
-      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of Deaths Due To Earthquake in {filter}</p>
+      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of Deaths Due To Flood in {filter}</p>
 
       { deathCharts}
       
@@ -256,7 +255,7 @@ const image =
       <div>
         <h1 style={{marginTop:'30px'}}>Dispalced</h1>
         <div className="event-container-Blog">
-      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of inJuries Due To Earthquake in {filter}</p>
+      <p style={{textAlign:'center',marginTop:'15px',fontSize:'14px'}}>Number of inJuries Due To Flood in {filter}</p>
 
         { displacedchart}
         </div>

@@ -2,7 +2,7 @@
     background:black;
     width: 166px;
     position:absolute;
-    top: 80px;
+    
     list-style: none;
     text-align:start;
    
@@ -52,9 +52,9 @@
       display: none;
     }
     .dropdown-menu{
-      margin-left: 22rem;
+      margin-left: 10rem;
       position:relative;
-      top: 3px;
+     
      
     }
   }
@@ -63,7 +63,7 @@
       background:black;
       width: 166px;
       position:relative;
-      top: 80px;
+     
       list-style: none;
       text-align:start;
      

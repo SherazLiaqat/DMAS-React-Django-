@@ -58,6 +58,7 @@ export default function SignIn() {
       window.location.replace('http://localhost:3000/Awareness');
     } else {
       setLoading(false);
+      
     }
   }, []);
   const Logininfo = async () => {
@@ -87,6 +88,10 @@ export default function SignIn() {
      })
       console.log("next")
     } else {
+      toast.error('Invalid Credentials Please Try again!',{
+        position:"top-center",
+        marginTop:'20px'
+       })
       setUsername('');
       setPassword('');
       localStorage.clear();
@@ -97,7 +102,7 @@ export default function SignIn() {
     
   });
   }
- 
+  
   const handleChange=async()=>{
     
     let errors = {};
@@ -163,10 +168,7 @@ export default function SignIn() {
             onChange={(e) => setPassword(e.target.value)}
           />
            {errors.Password &&<p className={classes.errormessage}>{errors.Password}</p>}
-          <FormControlLabel className={classes.form}
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
+          
          
           
           <Button 
@@ -178,15 +180,11 @@ export default function SignIn() {
             onClick={handleChange}
             alert={users}
           >
-            Sign In
+            Log In
           </Button>
           
           <Grid container>
-            <Grid item xs>
-              <Link href="" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
+           
             <Grid item>
               <Link href="/Sign-up" variant="body2">
                 {"Don't have an account? Sign Up"}
